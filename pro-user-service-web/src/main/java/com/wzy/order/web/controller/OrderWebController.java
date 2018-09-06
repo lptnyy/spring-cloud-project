@@ -1,4 +1,4 @@
-package com.wzy.order.web;
+package com.wzy.order.web.controller;
 
 import com.wzy.order.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class OrderWebCtl {
+public class OrderWebController {
 
     @Autowired
     OrderService orderService;
