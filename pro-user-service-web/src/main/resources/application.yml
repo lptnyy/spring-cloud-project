@@ -7,3 +7,7 @@ server:
 spring:
   application:
     name: order-service-web
+
+feign:
+  hystrix:
+    enabled: true

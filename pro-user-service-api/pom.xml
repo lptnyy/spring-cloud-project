@@ -11,5 +11,11 @@
 
     <artifactId>pro-user-service-api</artifactId>
 
-
+    <dependencies>
+        <dependency>
+            <groupId>com.wzy.common</groupId>
+            <artifactId>pro-common</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
 </project>

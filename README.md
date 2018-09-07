@@ -1,11 +1,13 @@
 # spring-cloud
 (1) eureka
-<br/>
+<br/> 
 (2) actuator
 <br/>
 (3) feign
 <br/>
 (4) swagger2
 <br/>
-(5) Hystrix
+(5) hystrix
+<br/>
+(6) myBatis druid
 <br/>

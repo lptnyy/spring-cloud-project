@@ -6,6 +6,9 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="pro-common" />
+        <module name="pro-common-mapper" />
+        <module name="pro-common-pojo" />
         <module name="pro-eureka-service" />
         <module name="pro-user-service" />
         <module name="pro-user-service-api" />
@@ -13,10 +16,10 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
+      <module name="pro-common" target="1.8" />
+      <module name="pro-common-mapper" target="1.8" />
+      <module name="pro-common-pojo" target="1.8" />
       <module name="pro-eureka-service" target="1.8" />
-      <module name="pro-order-service" target="1.8" />
-      <module name="pro-order-service-api" target="1.8" />
-      <module name="pro-order-web" target="1.8" />
       <module name="pro-user-service" target="1.8" />
       <module name="pro-user-service-api" target="1.8" />
       <module name="pro-user-service-web" target="1.8" />

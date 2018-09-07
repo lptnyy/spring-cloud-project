@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/pro-common/pro-common.iml" filepath="$PROJECT_DIR$/pro-common/pro-common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pro-common-mapper/pro-common-mapper.iml" filepath="$PROJECT_DIR$/pro-common-mapper/pro-common-mapper.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pro-common-pojo/pro-common-pojo.iml" filepath="$PROJECT_DIR$/pro-common-pojo/pro-common-pojo.iml" />
       <module fileurl="file://$PROJECT_DIR$/pro-eureka-service/pro-eureka-service.iml" filepath="$PROJECT_DIR$/pro-eureka-service/pro-eureka-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/pro-user-service/pro-user-service.iml" filepath="$PROJECT_DIR$/pro-user-service/pro-user-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/pro-user-service-api/pro-user-service-api.iml" filepath="$PROJECT_DIR$/pro-user-service-api/pro-user-service-api.iml" />

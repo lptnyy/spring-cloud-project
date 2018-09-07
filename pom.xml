@@ -15,6 +15,9 @@
 		<module>pro-user-service</module>
 		<module>pro-user-service-api</module>
 		<module>pro-user-service-web</module>
+		<module>pro-common</module>
+		<module>pro-common-mapper</module>
+		<module>pro-common-pojo</module>
 	</modules>
 
 	<parent>

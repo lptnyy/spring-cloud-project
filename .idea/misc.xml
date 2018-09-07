@@ -8,6 +8,9 @@
         <option value="$PROJECT_DIR$/pro-user-service/pom.xml" />
         <option value="$PROJECT_DIR$/pro-user-service-api/pom.xml" />
         <option value="$PROJECT_DIR$/pro-user-service-web/pom.xml" />
+        <option value="$PROJECT_DIR$/pro-common/pom.xml" />
+        <option value="$PROJECT_DIR$/pro-common-mapper/pom.xml" />
+        <option value="$PROJECT_DIR$/pro-common-pojo/pom.xml" />
       </list>
     </option>
   </component>
