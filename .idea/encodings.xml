@@ -6,6 +6,8 @@
     <file url="file://$PROJECT_DIR$/pro-common-mapper" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/pro-common-pojo" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/pro-eureka-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-redis-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-redis-service-api" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/pro-user-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/pro-user-service-api" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/pro-user-service-web" charset="UTF-8" />

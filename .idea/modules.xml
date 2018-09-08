@@ -6,6 +6,8 @@
       <module fileurl="file://$PROJECT_DIR$/pro-common-mapper/pro-common-mapper.iml" filepath="$PROJECT_DIR$/pro-common-mapper/pro-common-mapper.iml" />
       <module fileurl="file://$PROJECT_DIR$/pro-common-pojo/pro-common-pojo.iml" filepath="$PROJECT_DIR$/pro-common-pojo/pro-common-pojo.iml" />
       <module fileurl="file://$PROJECT_DIR$/pro-eureka-service/pro-eureka-service.iml" filepath="$PROJECT_DIR$/pro-eureka-service/pro-eureka-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pro-redis-service/pro-redis-service.iml" filepath="$PROJECT_DIR$/pro-redis-service/pro-redis-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pro-redis-service-api/pro-redis-service-api.iml" filepath="$PROJECT_DIR$/pro-redis-service-api/pro-redis-service-api.iml" />
       <module fileurl="file://$PROJECT_DIR$/pro-user-service/pro-user-service.iml" filepath="$PROJECT_DIR$/pro-user-service/pro-user-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/pro-user-service-api/pro-user-service-api.iml" filepath="$PROJECT_DIR$/pro-user-service-api/pro-user-service-api.iml" />
       <module fileurl="file://$PROJECT_DIR$/pro-user-service-web/pro-user-service-web.iml" filepath="$PROJECT_DIR$/pro-user-service-web/pro-user-service-web.iml" />

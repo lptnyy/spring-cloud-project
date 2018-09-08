@@ -18,6 +18,8 @@
 		<module>pro-common</module>
 		<module>pro-common-mapper</module>
 		<module>pro-common-pojo</module>
+		<module>pro-redis-service-api</module>
+		<module>pro-redis-service</module>
 	</modules>
 
 	<parent>

@@ -1,0 +1,18 @@
+eureka:
+  instance:
+    status-page-url: http://localhost:${server.port}/swagger-ui.html
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+server:
+  port: 8091
+spring:
+  application:
+    name: redis-service
+
+management:
+  server:
+    port: 9001
+
+
+

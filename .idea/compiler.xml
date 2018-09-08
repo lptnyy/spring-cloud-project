@@ -10,6 +10,8 @@
         <module name="pro-common-mapper" />
         <module name="pro-common-pojo" />
         <module name="pro-eureka-service" />
+        <module name="pro-redis-service" />
+        <module name="pro-redis-service-api" />
         <module name="pro-user-service" />
         <module name="pro-user-service-api" />
         <module name="pro-user-service-web" />
@@ -20,6 +22,8 @@
       <module name="pro-common-mapper" target="1.8" />
       <module name="pro-common-pojo" target="1.8" />
       <module name="pro-eureka-service" target="1.8" />
+      <module name="pro-redis-service" target="1.8" />
+      <module name="pro-redis-service-api" target="1.8" />
       <module name="pro-user-service" target="1.8" />
       <module name="pro-user-service-api" target="1.8" />
       <module name="pro-user-service-web" target="1.8" />
