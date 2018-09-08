@@ -1,4 +1,4 @@
-package com.wzy.order;
+package com.wzy.user;
 
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
@@ -10,9 +10,9 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableEurekaClient
 @EnableSwagger2
 @MapperScan("com.wzy.mapper")
-public class OrderServiceStart {
+public class UserServiceStart {
 
     public static void main(String[] args) {
-		SpringApplication.run(OrderServiceStart.class, args);
+		SpringApplication.run(UserServiceStart.class, args);
 	}
 }

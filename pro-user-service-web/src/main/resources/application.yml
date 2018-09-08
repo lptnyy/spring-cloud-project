@@ -6,7 +6,7 @@ server:
   port: 8765
 spring:
   application:
-    name: order-service-web
+    name: user-service-web
 
 feign:
   hystrix:

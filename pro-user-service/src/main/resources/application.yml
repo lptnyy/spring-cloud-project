@@ -6,11 +6,11 @@ server:
   port: 8082
 spring:
   application:
-    name: order-service
+    name: user-service
 
   datasource:
     name: test
-    url: jdbc:mysql://localhost:3306/java-box
+    url: jdbc:mysql://localhost:3306/wx_shop
     username: root
     password: wangyang
     # druid 连接池
@@ -29,6 +29,10 @@ spring:
     testOnReturn: false
     poolPreparedStatements: true
     maxOpenPreparedStatements: 20
+
+mybatis:
+    type-aliases-package: com.wzy.pojo
+    mapper-locations: classpath:mapper/*.xml
 
 management:
   server:

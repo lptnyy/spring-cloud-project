@@ -1,4 +1,4 @@
-package com.wzy.order.web;
+package com.wzy.user.web;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -14,9 +14,9 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableSwagger2
 @EnableHystrix
 @ComponentScan("com.wzy")
-public class OrderWebStart {
+public class UserWebStart {
 
     public static void main(String[] args) {
-		SpringApplication.run(OrderWebStart.class, args);
+		SpringApplication.run(UserWebStart.class, args);
 	}
 }

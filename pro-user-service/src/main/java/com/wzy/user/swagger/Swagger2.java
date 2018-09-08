@@ -1,4 +1,4 @@
-package com.wzy.order.web.swagger;
+package com.wzy.user.swagger;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
