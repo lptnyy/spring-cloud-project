@@ -11,3 +11,5 @@
 <br/>
 (6) myBatis druid
 <br/>
+(7) redis
+<br/>
