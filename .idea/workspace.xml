@@ -2,32 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c2127a82-d7cf-4612-a396-ada750dda78c" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_generator_mybatis_generator_core_1_3_5.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pro-common-mapper/src/main/java/com/wzy/mapper/UserMapper.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pro-common-mapper/src/main/resources/generator/generatorConfig.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pro-common-mapper/src/main/resources/mapper/UserMapper.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pro-common-pojo/src/main/java/com/wzy/pojo/User.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pro-user-service-api/src/main/java/com/wzy/user/UserService.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pro-user-service-api/src/main/java/com/wzy/user/hystrix/UserServiceHystrix.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pro-user-service-web/src/main/java/com/wzy/user/web/controller/UserWebController.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pro-user-service-web/src/main/java/com/wzy/user/web/swagger/Swagger2.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pro-user-service/src/main/java/com/wzy/user/service/UserServiceImpl.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/pro-common-mapper/pom.xml" afterPath="$PROJECT_DIR$/pro-common-mapper/pom.xml" />
-      <change beforePath="$PROJECT_DIR$/pro-common-mapper/pro-common-mapper.iml" afterPath="$PROJECT_DIR$/pro-common-mapper/pro-common-mapper.iml" />
-      <change beforePath="$PROJECT_DIR$/pro-user-service-api/pom.xml" afterPath="$PROJECT_DIR$/pro-user-service-api/pom.xml" />
-      <change beforePath="$PROJECT_DIR$/pro-user-service-api/pro-user-service-api.iml" afterPath="$PROJECT_DIR$/pro-user-service-api/pro-user-service-api.iml" />
-      <change beforePath="$PROJECT_DIR$/pro-user-service-api/src/main/java/com/wzy/order/OrderService.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pro-user-service-api/src/main/java/com/wzy/order/hystrix/OrderServiceHystrix.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pro-user-service-web/pro-user-service-web.iml" afterPath="$PROJECT_DIR$/pro-user-service-web/pro-user-service-web.iml" />
-      <change beforePath="$PROJECT_DIR$/pro-user-service-web/src/main/java/com/wzy/order/web/OrderWebStart.java" afterPath="$PROJECT_DIR$/pro-user-service-web/src/main/java/com/wzy/user/web/UserWebStart.java" />
-      <change beforePath="$PROJECT_DIR$/pro-user-service-web/src/main/java/com/wzy/order/web/controller/OrderWebController.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pro-user-service-web/src/main/java/com/wzy/order/web/swagger/Swagger2.java" afterPath="$PROJECT_DIR$/pro-user-service/src/main/java/com/wzy/user/swagger/Swagger2.java" />
+      <change beforePath="$PROJECT_DIR$/pro-common/src/main/java/com/wzy/common/util/SerializableUtil.java" afterPath="$PROJECT_DIR$/pro-common/src/main/java/com/wzy/common/util/SerializableUtil.java" />
+      <change beforePath="$PROJECT_DIR$/pro-common/src/main/java/com/wzy/common/util/annotation/factory/Verification.java" afterPath="$PROJECT_DIR$/pro-common/src/main/java/com/wzy/common/util/annotation/factory/Verification.java" />
+      <change beforePath="$PROJECT_DIR$/pro-common/src/main/java/com/wzy/common/util/exception/MyException.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/pro-user-service-api/src/main/java/com/wzy/user/UserService.java" afterPath="$PROJECT_DIR$/pro-user-service-api/src/main/java/com/wzy/user/UserService.java" />
+      <change beforePath="$PROJECT_DIR$/pro-user-service-web/src/main/java/com/wzy/user/web/controller/UserWebController.java" afterPath="$PROJECT_DIR$/pro-user-service-web/src/main/java/com/wzy/user/web/controller/UserWebController.java" />
+      <change beforePath="$PROJECT_DIR$/pro-user-service-web/src/main/java/com/wzy/user/web/swagger/Swagger2.java" afterPath="$PROJECT_DIR$/pro-user-service-web/src/main/java/com/wzy/user/web/swagger/Swagger2.java" />
       <change beforePath="$PROJECT_DIR$/pro-user-service-web/src/main/resources/application.yml" afterPath="$PROJECT_DIR$/pro-user-service-web/src/main/resources/application.yml" />
-      <change beforePath="$PROJECT_DIR$/pro-user-service/pro-user-service.iml" afterPath="$PROJECT_DIR$/pro-user-service/pro-user-service.iml" />
-      <change beforePath="$PROJECT_DIR$/pro-user-service/src/main/java/com/wzy/order/OrderServiceStart.java" afterPath="$PROJECT_DIR$/pro-user-service/src/main/java/com/wzy/user/UserServiceStart.java" />
-      <change beforePath="$PROJECT_DIR$/pro-user-service/src/main/java/com/wzy/order/service/OrderServiceImpl.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pro-user-service/src/main/java/com/wzy/order/swagger/Swagger2.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/pro-user-service/src/main/java/com/wzy/user/service/UserServiceImpl.java" afterPath="$PROJECT_DIR$/pro-user-service/src/main/java/com/wzy/user/service/UserServiceImpl.java" />
+      <change beforePath="$PROJECT_DIR$/pro-user-service/src/main/java/com/wzy/user/swagger/Swagger2.java" afterPath="$PROJECT_DIR$/pro-user-service/src/main/java/com/wzy/user/swagger/Swagger2.java" />
       <change beforePath="$PROJECT_DIR$/pro-user-service/src/main/resources/application.yml" afterPath="$PROJECT_DIR$/pro-user-service/src/main/resources/application.yml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -50,7 +34,64 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="application.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pro-user-service/src/main/resources/application.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="21" lean-forward="false" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Swagger2.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pro-user-service/src/main/java/com/wzy/user/swagger/Swagger2.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="256">
+              <caret line="30" column="25" lean-forward="false" selection-start-line="25" selection-start-column="8" selection-end-line="30" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Swagger2.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pro-user-service-web/src/main/java/com/wzy/user/web/swagger/Swagger2.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserWebController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pro-user-service-web/src/main/java/com/wzy/user/web/controller/UserWebController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="12" column="25" lean-forward="false" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#675#676#0" expanded="true" />
+                <element signature="e#714#715#0" expanded="true" />
+                <element signature="e#881#882#0" expanded="true" />
+                <element signature="e#948#949#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application.yml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pro-user-service-web/src/main/resources/application.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -71,10 +112,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pro-order-service-api/src/main/java/com/wzy/order/config/FeginConfig.java" />
-        <option value="$PROJECT_DIR$/pro-order-service/src/main/java/com/wzy/order/service/OrderServiceImpl.java" />
-        <option value="$PROJECT_DIR$/pro-order-web/src/main/java/com/wzy/order/web/controller/OrderController.java" />
-        <option value="$PROJECT_DIR$/pro-order-service-api/src/main/java/com/wzy/order/OrderService.java" />
         <option value="$PROJECT_DIR$/pro-order-service/pom.xml" />
         <option value="$PROJECT_DIR$/pro-order-web/src/main/java/com/wzy/order/web/OrderWebStart.java" />
         <option value="$PROJECT_DIR$/pro-order-service-api/pom.xml" />
@@ -91,8 +128,6 @@
         <option value="$PROJECT_DIR$/pro-common/src/main/java/com/wzy/common/util/RegexUtil.java" />
         <option value="$PROJECT_DIR$/pro-common/src/main/java/com/wzy/common/util/AESOperator.java" />
         <option value="$PROJECT_DIR$/pro-common/src/main/java/com/wzy/common/util/jsonvo/JsonVo.java" />
-        <option value="$PROJECT_DIR$/pro-common/src/main/java/com/wzy/common/util/annotation/factory/Verification.java" />
-        <option value="$PROJECT_DIR$/pro-common/src/main/java/com/wzy/common/util/SerializableUtil.java" />
         <option value="$PROJECT_DIR$/pro-common/pom.xml" />
         <option value="$PROJECT_DIR$/pro-common/src/main/java/com/wzy/common/constant/Const.java" />
         <option value="$PROJECT_DIR$/pro-common-mapper/src/main/resources/application.properties" />
@@ -119,9 +154,15 @@
         <option value="$PROJECT_DIR$/pro-user-service-web/src/main/java/com/wzy/order/web/controller/OrderWebController.java" />
         <option value="$PROJECT_DIR$/pro-user-service-api/src/main/java/com/wzy/user/hystrix/OrderServiceHystrix.java" />
         <option value="$PROJECT_DIR$/pro-user-service-api/src/main/java/com/wzy/user/hystrix/UserServiceHystrix.java" />
+        <option value="$PROJECT_DIR$/pro-common/src/main/java/com/wzy/common/util/SerializableUtil.java" />
+        <option value="$PROJECT_DIR$/pro-common/src/main/java/com/wzy/common/util/annotation/factory/Verification.java" />
         <option value="$PROJECT_DIR$/pro-user-service-web/src/main/java/com/wzy/user/web/controller/UserWebController.java" />
-        <option value="$PROJECT_DIR$/pro-user-service-web/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/pro-user-service/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/pro-user-service-api/src/main/java/com/wzy/user/UserService.java" />
+        <option value="$PROJECT_DIR$/pro-user-service/src/main/java/com/wzy/user/service/UserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/pro-user-service/src/main/java/com/wzy/user/swagger/Swagger2.java" />
+        <option value="$PROJECT_DIR$/pro-user-service-web/src/main/java/com/wzy/user/web/swagger/Swagger2.java" />
+        <option value="$PROJECT_DIR$/pro-user-service-web/src/main/resources/application.yml" />
       </list>
     </option>
   </component>
@@ -233,7 +274,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.UserWebStart (1)">
+  <component name="RunManager" selected="Application.UserServiceStart (1)">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -619,10 +660,10 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.UserServiceStart (1)" />
-        <item index="1" class="java.lang.String" itemvalue="Application.UserWebStart (1)" />
-        <item index="2" class="java.lang.String" itemvalue="Application.UserServiceStart" />
-        <item index="3" class="java.lang.String" itemvalue="Spring Boot.ProEurekaServiceApplication" />
+        <item index="0" class="java.lang.String" itemvalue="Application.UserWebStart (1)" />
+        <item index="1" class="java.lang.String" itemvalue="Application.UserServiceStart (1)" />
+        <item index="2" class="java.lang.String" itemvalue="Spring Boot.ProEurekaServiceApplication" />
+        <item index="3" class="java.lang.String" itemvalue="Application.UserServiceStart" />
         <item index="4" class="java.lang.String" itemvalue="Application.UserWebStart" />
       </list>
     </recent_temporary>
@@ -650,7 +691,7 @@
       <workItem from="1536329502707" duration="1256000" />
       <workItem from="1536330771409" duration="1448000" />
       <workItem from="1536332230453" duration="2139000" />
-      <workItem from="1536408149466" duration="5866000" />
+      <workItem from="1536408149466" duration="8073000" />
     </task>
     <task id="LOCAL-00001" summary="修改目录权限">
       <created>1536241626739</created>
@@ -687,11 +728,18 @@
       <option name="project" value="LOCAL" />
       <updated>1536408679968</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="修改目录 添加mysql映射">
+      <created>1536415101293</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1536415101293</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44314000" />
+    <option name="totallyTimeSpent" value="46521000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="827" extended-state="0" />
@@ -712,7 +760,7 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3173484" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.42172074" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -740,7 +788,8 @@
     <MESSAGE value="修改目录权限" />
     <MESSAGE value="增加文档 以及 api 接口网站" />
     <MESSAGE value="增加 数据库配置" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加 数据库配置" />
+    <MESSAGE value="修改目录 添加mysql映射" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改目录 添加mysql映射" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -753,20 +802,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="6" column="18" lean-forward="false" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-common/src/main/java/com/wzy/common/util/annotation/check/IsContrastString.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="6" column="18" lean-forward="false" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-common/src/main/java/com/wzy/common/util/annotation/factory/Verification.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1516">
-          <caret line="106" column="0" lean-forward="false" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -784,96 +819,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pro-common/src/main/java/com/wzy/common/util/AESOperator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="604">
-          <caret line="122" column="42" lean-forward="false" selection-start-line="122" selection-start-column="42" selection-end-line="122" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-common/src/main/java/com/wzy/common/util/DateUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-common/src/main/java/com/wzy/common/util/MapUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-common/src/main/java/com/wzy/common/util/Md5Util.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-common/src/main/java/com/wzy/common/util/PageUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-common/src/main/java/com/wzy/common/util/RandomUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-common/src/main/java/com/wzy/common/util/RegexUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pro-common/src/main/java/com/wzy/common/util/MybaitsEntityUtil.java" />
-    <entry file="file://$PROJECT_DIR$/pro-common/src/main/java/com/wzy/common/util/jsonvo/JsonVoInterface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="17" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-common/src/main/java/com/wzy/common/util/SerializableUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="40" column="14" lean-forward="false" selection-start-line="40" selection-start-column="14" selection-end-line="40" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pro-common/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="37" column="21" lean-forward="false" selection-start-line="37" selection-start-column="21" selection-end-line="37" selection-end-column="21" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-common/src/main/java/com/wzy/common/constant/Const.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-common/src/main/java/com/wzy/common/util/Constent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="27" lean-forward="false" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-common/src/main/java/com/wzy/common/util/jsonvo/JsonVo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="22" column="14" lean-forward="false" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -933,14 +884,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pro-user-service-web/src/main/java/com/wzy/user/web/swagger/Swagger2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pro-common-mapper/src/main/java/com/wzy/pojo/User.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -961,14 +904,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="83">
           <caret line="14" column="12" lean-forward="false" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-user-service/src/main/java/com/wzy/user/swagger/Swagger2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -1030,29 +965,132 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pro-user-service/src/main/resources/application.yml">
+    <entry file="file://$PROJECT_DIR$/pro-user-service-api/src/main/java/com/wzy/user/hystrix/UserServiceHystrix.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="23" lean-forward="true" selection-start-line="28" selection-start-column="23" selection-end-line="28" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-user-service/src/main/java/com/wzy/user/service/UserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="29" column="5" lean-forward="false" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
+        <state relative-caret-position="225">
+          <caret line="17" column="12" lean-forward="false" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
           <folding>
-            <element signature="e#683#684#0" expanded="false" />
-            <element signature="e#730#731#0" expanded="false" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pro-user-service/src/main/java/com/wzy/user/UserServiceStart.java">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="14" column="25" lean-forward="false" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
+        <state relative-caret-position="705">
+          <caret line="47" column="17" lean-forward="false" selection-start-line="47" selection-start-column="17" selection-end-line="47" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-common/src/main/java/com/wzy/common/constant/Const.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-common/src/main/java/com/wzy/common/util/SerializableUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="36" column="37" lean-forward="false" selection-start-line="36" selection-start-column="37" selection-end-line="36" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-common/src/main/java/com/wzy/common/util/RegexUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="9" column="13" lean-forward="false" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-common/src/main/java/com/wzy/common/util/RandomUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-common/src/main/java/com/wzy/common/util/PageUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-common/src/main/java/com/wzy/common/util/Md5Util.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-common/src/main/java/com/wzy/common/util/MapUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-common/src/main/java/com/wzy/common/util/Constent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="27" lean-forward="false" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-common/src/main/java/com/wzy/common/util/DateUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-common/src/main/java/com/wzy/common/util/AESOperator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="122" column="42" lean-forward="false" selection-start-line="122" selection-start-column="42" selection-end-line="122" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-common/src/main/java/com/wzy/common/util/jsonvo/JsonVoInterface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="17" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-common/src/main/java/com/wzy/common/util/annotation/factory/Verification.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1213">
+          <caret line="11" column="21" lean-forward="false" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-common/src/main/java/com/wzy/common/util/annotation/check/IsContrastString.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="6" column="18" lean-forward="false" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-common/src/main/java/com/wzy/common/util/jsonvo/JsonVo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="22" column="14" lean-forward="false" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
           <folding />
         </state>
       </provider>
@@ -1065,49 +1103,75 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pro-user-service-api/src/main/java/com/wzy/user/hystrix/UserServiceHystrix.java">
+    <entry file="file://$PROJECT_DIR$/pro-user-service-api/src/main/java/com/wzy/user/UserService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="17" column="12" lean-forward="false" selection-start-line="17" selection-start-column="12" selection-end-line="17" selection-end-column="12" />
+        <state relative-caret-position="195">
+          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-user-service/src/main/java/com/wzy/user/UserServiceStart.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-user-service/src/main/java/com/wzy/user/service/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="13" column="20" lean-forward="false" selection-start-line="13" selection-start-column="20" selection-end-line="13" selection-end-column="20" />
           <folding>
-            <element signature="imports" expanded="false" />
+            <element signature="e#694#695#0" expanded="false" />
+            <element signature="e#741#742#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pro-user-service-api/src/main/java/com/wzy/user/UserService.java">
+    <entry file="file://$PROJECT_DIR$/pro-user-service-web/src/main/java/com/wzy/user/web/controller/UserWebController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="18" column="1" lean-forward="true" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+        <state relative-caret-position="136">
+          <caret line="12" column="25" lean-forward="false" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#675#676#0" expanded="true" />
+            <element signature="e#714#715#0" expanded="true" />
+            <element signature="e#881#882#0" expanded="true" />
+            <element signature="e#948#949#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-user-service-web/src/main/java/com/wzy/user/web/swagger/Swagger2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-user-service/src/main/java/com/wzy/user/swagger/Swagger2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="30" column="25" lean-forward="false" selection-start-line="25" selection-start-column="8" selection-end-line="30" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-user-service/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="21" lean-forward="false" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pro-user-service-web/src/main/resources/application.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="6" lean-forward="true" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-user-service-web/src/main/java/com/wzy/user/web/controller/UserWebController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="26" column="5" lean-forward="true" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
-          <folding>
-            <element signature="e#650#651#0" expanded="false" />
-            <element signature="e#689#690#0" expanded="false" />
-            <element signature="e#860#861#0" expanded="false" />
-            <element signature="e#927#928#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="705">
-          <caret line="47" column="17" lean-forward="false" selection-start-line="47" selection-start-column="17" selection-end-line="47" selection-end-column="17" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>

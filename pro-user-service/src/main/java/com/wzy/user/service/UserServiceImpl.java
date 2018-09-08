@@ -24,7 +24,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    @ApiOperation(value = "查询所有用户信息", notes = "note")
+    @ApiOperation(value = "查询所有用户信息", notes = "查询所有用户信息没有任何参数的")
     public List<User> getUserList() {
         return userMapper.getUserList();
     }

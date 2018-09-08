@@ -5,7 +5,6 @@ import com.wzy.common.util.Md5Util;
 import com.wzy.common.util.RegexUtil;
 import com.wzy.common.util.annotation.check.*;
 import com.wzy.common.util.annotation.set.SetStringMd5;
-import com.wzy.common.util.exception.MyException;
 import com.wzy.common.util.jsonvo.JsonVo;
 
 import java.lang.reflect.Field;
@@ -79,9 +78,7 @@ public class Verification {
                             }
                         }
                     } catch (IllegalAccessException e) {
-                        MyException.error(e.getMessage());
                     } catch (NoSuchFieldException e) {
-                        MyException.error(e.getMessage());
                     }
                 });
             });
@@ -100,13 +97,11 @@ public class Verification {
                             field.set(header,mdfValue);
                         }
                     } catch (IllegalAccessException e) {
-                        MyException.error(e.getMessage());
                     }
                 });
             });
 
         } catch (Exception e) {
-            MyException.error(e.getMessage());
         }
         return jsonVo;
     }

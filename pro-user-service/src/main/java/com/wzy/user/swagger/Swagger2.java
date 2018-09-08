@@ -17,7 +17,7 @@ public class Swagger2 {
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(apiInfo())
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.wzy.order"))
+                .apis(RequestHandlerSelectors.basePackage("com.wzy.user"))
                 .paths(PathSelectors.any())
                 .build();
     }
@@ -25,8 +25,8 @@ public class Swagger2 {
     private ApiInfo apiInfo() {
         return new ApiInfoBuilder()
                 .title("springboot利用swagger构建api文档")
-                .description("简单优雅的restfun风格，http://blog.csdn.net/saytime")
-                .termsOfServiceUrl("http://blog.csdn.net/saytime")
+                .description("用户服务接口文档")
+                .termsOfServiceUrl("http://github.com/lptnyy")
                 .version("1.0")
                 .build();
     }

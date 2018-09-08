@@ -14,6 +14,6 @@ public interface UserService {
     @RequestMapping(path = "/hi", method = RequestMethod.GET)
     public String hi();
 
-    @RequestMapping(path = "/getlist")
+    @RequestMapping(path = "/getlist", method = RequestMethod.GET)
     public List<User> getUserList();
 }

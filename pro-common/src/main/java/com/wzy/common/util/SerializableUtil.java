@@ -1,6 +1,5 @@
 package com.wzy.common.util;
 
-import com.wzy.common.util.exception.MyException;
 
 import java.io.*;
 
@@ -38,9 +37,7 @@ public class SerializableUtil<T> {
         try (ObjectInputStream inputStream = new ObjectInputStream(new ByteArrayInputStream(bytes))){
             obj = (T) inputStream.readObject();
         } catch (IOException e) {
-            MyException.error(e.getMessage());
         } catch (ClassNotFoundException e) {
-            MyException.error(e.getMessage());
         }
         return obj;
     }

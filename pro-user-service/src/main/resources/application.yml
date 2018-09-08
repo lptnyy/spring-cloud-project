@@ -1,9 +1,11 @@
 eureka:
+  instance:
+    status-page-url: http://localhost:${server.port}/swagger-ui.html
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
 server:
-  port: 8082
+  port: 8081
 spring:
   application:
     name: user-service
@@ -17,7 +19,7 @@ spring:
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: com.mysql.jdbc.Driver
     filters: stat
-    maxActive: 20
+    maxActive: 300
     initialSize: 1
     maxWait: 60000
     minIdle: 1
@@ -36,7 +38,7 @@ mybatis:
 
 management:
   server:
-    port: 9091
+    port: 9092
 
 
 
