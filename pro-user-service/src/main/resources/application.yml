@@ -10,9 +10,9 @@ spring:
 
   datasource:
     name: test
-    url: jdbc:mysql://127.0.0.1:3306/user
+    url: jdbc:mysql://localhost:3306/java-box
     username: root
-    password: root
+    password: wangyang
     # druid 连接池
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: com.mysql.jdbc.Driver
