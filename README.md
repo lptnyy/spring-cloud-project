@@ -1,16 +1,16 @@
 # spring-cloud
-(1) eureka
+(1) Eureka
 <br/> 
-(2) actuator
+(2) Actuator
 <br/>
-(3) feign
+(3) Feign Ribbon
 <br/>
-(4) swagger2
+(4) Swagger2
 <br/>
-(5) hystrix
+(5) Hystrix
 <br/>
-(6) myBatis druid
+(6) MyBatis druid
 <br/>
-(7) redis
+(7) Redis
 <br/>
-(8) zuul
+(8) Zuul
