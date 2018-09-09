@@ -1,6 +1,7 @@
 package com.wzy.user.web.controller;
 
 import com.alibaba.fastjson.JSON;
+import com.wzy.redis.RedisService;
 import com.wzy.user.UserService;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,9 +16,14 @@ public class UserWebController {
     @Autowired
     UserService userService;
 
+    @Autowired
+    RedisService redisService;
+
     @ApiOperation(value = "测试订单接口", notes = "测试订单的web接口")
     @RequestMapping(value = "/hi", method = RequestMethod.GET)
-    public String getOrder(){
+    public String getOrder() {
+        redisService.set("hhhk", "234");
+        System.out.println(redisService.get("hhhk"));
         return userService.hi();
     }
 

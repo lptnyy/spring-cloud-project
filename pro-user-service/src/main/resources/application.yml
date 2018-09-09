@@ -40,5 +40,9 @@ management:
   server:
     port: 9092
 
+feign:
+  hystrix:
+    enabled: true
+
 
 

@@ -1,4 +1,4 @@
-package com.wzy.redis.service.swagger;
+package com.wzy.redis.swagger;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
