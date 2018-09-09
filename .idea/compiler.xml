@@ -15,6 +15,7 @@
         <module name="pro-user-service" />
         <module name="pro-user-service-api" />
         <module name="pro-user-service-web" />
+        <module name="pro-zuul-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.8">
@@ -27,6 +28,7 @@
       <module name="pro-user-service" target="1.8" />
       <module name="pro-user-service-api" target="1.8" />
       <module name="pro-user-service-web" target="1.8" />
+      <module name="pro-zuul-service" target="1.8" />
       <module name="spring-cloud" target="1.8" />
     </bytecodeTargetLevel>
   </component>

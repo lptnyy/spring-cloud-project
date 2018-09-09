@@ -1,0 +1,26 @@
+server:
+  port: 7071
+
+eureka:
+  instance:
+    status-page-url: http://localhost:${server.port}/swagger-ui.html
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+spring:
+  application:
+    name: zuul-service
+
+
+management:
+  server:
+    port: 9093
+zuul:
+  routes:
+    user:
+      path: /user/**
+      serviceId: user-service-web
+
+
+

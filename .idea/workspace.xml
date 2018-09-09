@@ -2,24 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c2127a82-d7cf-4612-a396-ada750dda78c" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/pro-redis-service-api/src/main/java/com/wzy/redis/RedisService.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pro-redis-service-api/src/main/java/com/wzy/redis/hystrix/RedisServiceHystrix.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pro-redis-service/src/main/java/com/wzy/redis/config/RedisConfig.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pro-redis-service/src/main/java/com/wzy/redis/service/RedisServiceImpl.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_afterburner_2_9_6.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_hystrix_hystrix_metrics_event_stream_1_5_12.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_hystrix_hystrix_serialization_1_5_12.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_zuul_zuul_core_1_3_1.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_4.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_reactivex_rxjava_reactive_streams_1_2_1.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_netflix_zuul_2_0_1_RELEASE.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_netflix_hystrix_2_0_1_RELEASE.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_netflix_zuul_2_0_1_RELEASE.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/pro-zuul-service/pom.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/pro-zuul-service/pro-zuul-service.iml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/pro-zuul-service/src/main/java/com/wzy/zuul/ZuulServiceStart.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/pro-zuul-service/src/main/resources/application.yml" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/pro-redis-service-api/pom.xml" afterPath="$PROJECT_DIR$/pro-redis-service-api/pom.xml" />
-      <change beforePath="$PROJECT_DIR$/pro-redis-service/src/main/java/com/wzy/redis/service/RedisServiceStart.java" afterPath="$PROJECT_DIR$/pro-redis-service/src/main/java/com/wzy/redis/RedisServiceStart.java" />
-      <change beforePath="$PROJECT_DIR$/pro-redis-service/src/main/java/com/wzy/redis/service/swagger/Swagger2.java" afterPath="$PROJECT_DIR$/pro-redis-service/src/main/java/com/wzy/redis/swagger/Swagger2.java" />
-      <change beforePath="$PROJECT_DIR$/pro-redis-service/src/main/resources/application.yml" afterPath="$PROJECT_DIR$/pro-redis-service/src/main/resources/application.yml" />
-      <change beforePath="$PROJECT_DIR$/pro-user-service-web/pom.xml" afterPath="$PROJECT_DIR$/pro-user-service-web/pom.xml" />
-      <change beforePath="$PROJECT_DIR$/pro-user-service-web/pro-user-service-web.iml" afterPath="$PROJECT_DIR$/pro-user-service-web/pro-user-service-web.iml" />
-      <change beforePath="$PROJECT_DIR$/pro-user-service-web/src/main/java/com/wzy/user/web/UserWebStart.java" afterPath="$PROJECT_DIR$/pro-user-service-web/src/main/java/com/wzy/user/web/UserWebStart.java" />
       <change beforePath="$PROJECT_DIR$/pro-user-service-web/src/main/java/com/wzy/user/web/controller/UserWebController.java" afterPath="$PROJECT_DIR$/pro-user-service-web/src/main/java/com/wzy/user/web/controller/UserWebController.java" />
-      <change beforePath="$PROJECT_DIR$/pro-user-service/pom.xml" afterPath="$PROJECT_DIR$/pro-user-service/pom.xml" />
-      <change beforePath="$PROJECT_DIR$/pro-user-service/pro-user-service.iml" afterPath="$PROJECT_DIR$/pro-user-service/pro-user-service.iml" />
-      <change beforePath="$PROJECT_DIR$/pro-user-service/src/main/java/com/wzy/user/UserServiceStart.java" afterPath="$PROJECT_DIR$/pro-user-service/src/main/java/com/wzy/user/UserServiceStart.java" />
-      <change beforePath="$PROJECT_DIR$/pro-user-service/src/main/java/com/wzy/user/service/UserServiceImpl.java" afterPath="$PROJECT_DIR$/pro-user-service/src/main/java/com/wzy/user/service/UserServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/pro-user-service/src/main/resources/application.yml" afterPath="$PROJECT_DIR$/pro-user-service/src/main/resources/application.yml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -35,6 +36,7 @@
     <ignored path="$PROJECT_DIR$/pro-common-pojo/target/" />
     <ignored path="$PROJECT_DIR$/pro-redis-service/target/" />
     <ignored path="$PROJECT_DIR$/pro-redis-service-api/target/" />
+    <ignored path="$PROJECT_DIR$/pro-zuul-service/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -43,7 +45,95 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="UserWebController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pro-user-service-web/src/main/java/com/wzy/user/web/controller/UserWebController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pro-zuul-service/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="17" column="21" lean-forward="false" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pro-user-service/src/main/resources/application.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pro-zuul-service/src/main/resources/application.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="278">
+              <caret line="20" column="9" lean-forward="true" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="application.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pro-user-service-web/src/main/resources/application.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="10" lean-forward="false" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ZuulServiceStart.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pro-zuul-service/src/main/java/com/wzy/zuul/ZuulServiceStart.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="14" column="5" lean-forward="true" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#411#412#0" expanded="true" />
+                <element signature="e#478#479#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserWebStart.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pro-user-service-web/src/main/java/com/wzy/user/web/UserWebStart.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="24" column="5" lean-forward="false" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+              <folding>
+                <element signature="e#839#840#0" expanded="true" />
+                <element signature="e#893#894#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="73">
+              <caret line="56" column="0" lean-forward="false" selection-start-line="56" selection-start-column="0" selection-end-line="59" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -64,9 +154,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pro-common/src/main/java/com/wzy/common/util/AESOperator.java" />
-        <option value="$PROJECT_DIR$/pro-common/src/main/java/com/wzy/common/util/jsonvo/JsonVo.java" />
-        <option value="$PROJECT_DIR$/pro-common/pom.xml" />
         <option value="$PROJECT_DIR$/pro-common/src/main/java/com/wzy/common/constant/Const.java" />
         <option value="$PROJECT_DIR$/pro-common-mapper/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/pro-common-mapper/src/main/java/com/wzy/mapper/config/DruidDataSourceConfiguration.java" />
@@ -95,7 +182,6 @@
         <option value="$PROJECT_DIR$/pro-user-service-web/src/main/java/com/wzy/user/web/swagger/Swagger2.java" />
         <option value="$PROJECT_DIR$/pro-user-service-web/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/pro-redis-service/src/main/java/com/wzy/redis/service/swagger/Swagger2.java" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/pro-redis-service/pom.xml" />
         <option value="$PROJECT_DIR$/pro-redis-service/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/pro-redis-service/src/main/java/com/wzy/redis/service/RedisServiceStart.java" />
@@ -109,12 +195,16 @@
         <option value="$PROJECT_DIR$/pro-redis-service-api/pom.xml" />
         <option value="$PROJECT_DIR$/pro-user-service-web/src/main/java/com/wzy/user/web/UserWebStart.java" />
         <option value="$PROJECT_DIR$/pro-redis-service-api/src/main/java/com/wzy/redis/RedisService.java" />
-        <option value="$PROJECT_DIR$/pro-user-service-web/src/main/java/com/wzy/user/web/controller/UserWebController.java" />
         <option value="$PROJECT_DIR$/pro-user-service/src/main/resources/application.yml" />
         <option value="$PROJECT_DIR$/pro-user-service/src/main/java/com/wzy/user/UserServiceStart.java" />
         <option value="$PROJECT_DIR$/pro-user-service-web/pom.xml" />
         <option value="$PROJECT_DIR$/pro-user-service/pom.xml" />
         <option value="$PROJECT_DIR$/pro-user-service/src/main/java/com/wzy/user/service/UserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/pro-zuul-service/pom.xml" />
+        <option value="$PROJECT_DIR$/pro-zuul-service/src/main/java/com/wzy/zuul/ZuulServiceStart.java" />
+        <option value="$PROJECT_DIR$/pro-zuul-service/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/pro-user-service-web/src/main/java/com/wzy/user/web/controller/UserWebController.java" />
       </list>
     </option>
   </component>
@@ -135,6 +225,15 @@
       <expand>
         <path>
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="pro-zuul-service" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="pro-zuul-service" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
           <item name="spring-cloud" type="9519ce18:MavenProjectsStructure$ProjectNode" />
         </path>
         <path>
@@ -147,7 +246,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
+    <option name="x" value="91" />
+    <option name="y" value="34" />
     <option name="width" value="1440" />
     <option name="height" value="827" />
   </component>
@@ -209,11 +309,11 @@
       <recent name="com.wzy.order.web.swagger" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/pro-zuul-service/src/main/resources" />
       <recent name="$PROJECT_DIR$/pro-redis-service/src/main/resources" />
       <recent name="$PROJECT_DIR$/pro-common-mapper/src/main/resources" />
       <recent name="$PROJECT_DIR$/pro-common/src/main/java/com/wzy/common" />
       <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/pro-user-service-web/src/main/resources" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -228,7 +328,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.UserWebStart (1)">
+  <component name="RunManager" selected="Application.ZuulServiceStart">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -244,25 +344,6 @@
         </pattern>
       </extension>
       <option name="MAIN_CLASS_NAME" value="com.wzy.user.UserServiceStart" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="pro-user-service" />
-      <envs />
-    </configuration>
-    <configuration name="UserServiceStart" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.wzy.order.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="com.wzy.order.UserServiceStart" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -291,6 +372,25 @@
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="pro-user-service-web" />
+      <envs />
+    </configuration>
+    <configuration name="ZuulServiceStart" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.wzy.zuul.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="com.wzy.zuul.ZuulServiceStart" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="pro-zuul-service" />
       <envs />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -610,21 +710,21 @@
       <item index="0" class="java.lang.String" itemvalue="Maven.generator" />
       <item index="1" class="java.lang.String" itemvalue="Spring Boot.OrderServiceStart" />
       <item index="2" class="java.lang.String" itemvalue="Spring Boot.OrderWebStart" />
-      <item index="3" class="java.lang.String" itemvalue="Application.UserServiceStart" />
-      <item index="4" class="java.lang.String" itemvalue="Spring Boot.ProEurekaServiceApplication" />
-      <item index="5" class="java.lang.String" itemvalue="Application.UserServiceStart (1)" />
-      <item index="6" class="java.lang.String" itemvalue="Application.UserWebStart (1)" />
-      <item index="7" class="java.lang.String" itemvalue="Spring Boot.RedisServiceStart" />
-      <item index="8" class="java.lang.String" itemvalue="Spring Boot.UserServiceStart" />
-      <item index="9" class="java.lang.String" itemvalue="Spring Boot.UserWebStart" />
+      <item index="3" class="java.lang.String" itemvalue="Spring Boot.ProEurekaServiceApplication" />
+      <item index="4" class="java.lang.String" itemvalue="Application.UserServiceStart (1)" />
+      <item index="5" class="java.lang.String" itemvalue="Application.UserWebStart (1)" />
+      <item index="6" class="java.lang.String" itemvalue="Spring Boot.RedisServiceStart" />
+      <item index="7" class="java.lang.String" itemvalue="Spring Boot.UserServiceStart" />
+      <item index="8" class="java.lang.String" itemvalue="Spring Boot.UserWebStart" />
+      <item index="9" class="java.lang.String" itemvalue="Application.ZuulServiceStart" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.UserServiceStart (1)" />
-        <item index="1" class="java.lang.String" itemvalue="Application.UserWebStart (1)" />
-        <item index="2" class="java.lang.String" itemvalue="Spring Boot.RedisServiceStart" />
-        <item index="3" class="java.lang.String" itemvalue="Spring Boot.ProEurekaServiceApplication" />
-        <item index="4" class="java.lang.String" itemvalue="Application.UserServiceStart" />
+        <item index="0" class="java.lang.String" itemvalue="Application.UserWebStart (1)" />
+        <item index="1" class="java.lang.String" itemvalue="Application.UserServiceStart (1)" />
+        <item index="2" class="java.lang.String" itemvalue="Application.ZuulServiceStart" />
+        <item index="3" class="java.lang.String" itemvalue="Spring Boot.RedisServiceStart" />
+        <item index="4" class="java.lang.String" itemvalue="Spring Boot.ProEurekaServiceApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -652,7 +752,7 @@
       <workItem from="1536330771409" duration="1448000" />
       <workItem from="1536332230453" duration="2139000" />
       <workItem from="1536408149466" duration="9932000" />
-      <workItem from="1536480794096" duration="10164000" />
+      <workItem from="1536480794096" duration="13340000" />
     </task>
     <task id="LOCAL-00001" summary="修改目录权限">
       <created>1536241626739</created>
@@ -717,18 +817,32 @@
       <option name="project" value="LOCAL" />
       <updated>1536418802273</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="调通redis 模块">
+      <created>1536493669147</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1536493669148</updated>
+    </task>
+    <task id="LOCAL-00011" summary="追加zuul">
+      <created>1536493735168</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1536493735168</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58544000" />
+    <option name="totallyTimeSpent" value="61720000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="827" extended-state="0" />
+    <frame x="91" y="34" width="1440" height="827" extended-state="0" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.080829754" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28898427" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -742,11 +856,11 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4583921" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21720733" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19742489" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19742489" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="SciView" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -773,37 +887,25 @@
     <MESSAGE value="修改目录 添加mysql映射" />
     <MESSAGE value="配置 eureka 显示接口文档" />
     <MESSAGE value="增加redis 模块项目" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加redis 模块项目" />
+    <MESSAGE value="调通redis 模块" />
+    <MESSAGE value="追加zuul" />
+    <option name="LAST_COMMIT_MESSAGE" value="追加zuul" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="6" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/pro-user-service-web/src/main/java/com/wzy/user/web/UserWebStart.java</url>
+          <line>23</line>
+          <properties />
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="7" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pro-common-mapper/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="676">
-          <caret line="62" column="12" lean-forward="false" selection-start-line="62" selection-start-column="12" selection-end-line="62" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-common-pojo/src/main/java/com/wzy/pojo/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-125">
-          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-common-mapper/src/main/resources/mapper/UserMapper.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="344">
-          <caret line="97" column="9" lean-forward="true" selection-start-line="97" selection-start-column="9" selection-end-line="97" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pro-common-mapper/src/main/java/com/wzy/mapper/UserMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -917,30 +1019,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pro-user-service-web/src/main/java/com/wzy/user/web/swagger/Swagger2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pro-common/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="210">
-            <caret line="14" column="5" lean-forward="false" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
-            <folding />
-          </first_editor>
-          <second_editor />
         </state>
       </provider>
     </entry>
@@ -1060,50 +1143,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pro-user-service-web/src/main/java/com/wzy/user/web/controller/UserWebController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="27" column="5" lean-forward="true" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-user-service-web/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-openfeign-core/2.0.1.RELEASE/spring-cloud-openfeign-core-2.0.1.RELEASE.jar!/org/springframework/cloud/openfeign/EnableFeignClients.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="18" column="18" lean-forward="false" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-user-service-web/src/main/java/com/wzy/user/web/UserWebStart.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="20" column="26" lean-forward="false" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-user-service-web/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-494">
-          <caret line="28" column="38" lean-forward="false" selection-start-line="28" selection-start-column="38" selection-end-line="28" selection-end-column="38" />
           <folding />
         </state>
       </provider>
@@ -1128,14 +1171,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
           <caret line="22" column="14" lean-forward="true" selection-start-line="22" selection-start-column="14" selection-end-line="22" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-user-service/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="39" column="8" lean-forward="false" selection-start-line="39" selection-start-column="8" selection-end-line="39" selection-end-column="8" />
           <folding />
         </state>
       </provider>
@@ -1176,6 +1211,104 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="675">
           <caret line="49" column="19" lean-forward="true" selection-start-line="49" selection-start-column="19" selection-end-line="49" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="225">
+            <caret line="15" column="8" lean-forward="true" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-user-service-web/src/main/java/com/wzy/user/web/swagger/Swagger2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="14">
+          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-user-service-web/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="73">
+          <caret line="56" column="0" lean-forward="false" selection-start-line="56" selection-start-column="0" selection-end-line="59" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-zuul-service/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="21" lean-forward="false" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-user-service/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-user-service-web/src/main/java/com/wzy/user/web/UserWebStart.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="24" column="5" lean-forward="false" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+          <folding>
+            <element signature="e#839#840#0" expanded="true" />
+            <element signature="e#893#894#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-zuul-service/src/main/java/com/wzy/zuul/ZuulServiceStart.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="5" lean-forward="true" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#411#412#0" expanded="true" />
+            <element signature="e#478#479#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-user-service-web/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="10" lean-forward="false" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-zuul-service/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="278">
+          <caret line="20" column="9" lean-forward="true" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-user-service-web/src/main/java/com/wzy/user/web/controller/UserWebController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1233,7 +1366,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>spring-cloud</last-edited>
+          <last-edited>pro-zuul-service</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

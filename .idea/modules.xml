@@ -11,6 +11,7 @@
       <module fileurl="file://$PROJECT_DIR$/pro-user-service/pro-user-service.iml" filepath="$PROJECT_DIR$/pro-user-service/pro-user-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/pro-user-service-api/pro-user-service-api.iml" filepath="$PROJECT_DIR$/pro-user-service-api/pro-user-service-api.iml" />
       <module fileurl="file://$PROJECT_DIR$/pro-user-service-web/pro-user-service-web.iml" filepath="$PROJECT_DIR$/pro-user-service-web/pro-user-service-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pro-zuul-service/pro-zuul-service.iml" filepath="$PROJECT_DIR$/pro-zuul-service/pro-zuul-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/spring-cloud.iml" filepath="$PROJECT_DIR$/spring-cloud.iml" />
     </modules>
   </component>
