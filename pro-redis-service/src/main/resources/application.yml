@@ -11,7 +11,7 @@ spring:
     name: redis-service
   redis:
     database: 0
-    host: localhost
+    host: 192.168.30.199
     port: 6379
     password:
     jedis:
@@ -21,10 +21,17 @@ spring:
         max-wait: -1ms
         min-idle: 0
     timeout: 10000
+  zipkin:
+    base-url: http://localhost:10001
+    sleuth:
+      sampler:
+      percentage: 1.0
 
 management:
   server:
     port: 9001
+
+
 
 
 

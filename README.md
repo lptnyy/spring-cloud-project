@@ -14,3 +14,5 @@
 (7) Redis
 <br/>
 (8) Zuul
+<br/>
+(8) Sleuth zipkin

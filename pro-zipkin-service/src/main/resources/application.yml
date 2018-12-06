@@ -1,20 +1,20 @@
-server:
-  port: 8765
-
 eureka:
   instance:
     status-page-url: http://localhost:${server.port}/swagger-ui.html
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
+server:
+  port: 10001
 spring:
   application:
-    name: user-service-web
-  zipkin:
-    base-url: http://localhost:10001
-    sleuth:
-      sampler:
-      percentage: 1.0
-feign:
-  hystrix:
-    enabled: true
+    name: zipkin-service
+management:
+  server:
+    port: 11001
+  metrics:
+    web:
+      server:
+        auto-time-requests: false
+
+
