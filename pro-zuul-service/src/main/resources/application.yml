@@ -11,11 +11,21 @@ eureka:
 spring:
   application:
     name: zuul-service
-
+  boot:
+    admin:
+      client:
+        url: http://localhost:12001
 
 management:
   server:
-    port: 9093
+    port: 9094
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
 zuul:
   routes:
     user:
