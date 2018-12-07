@@ -5,16 +5,11 @@ eureka:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
 server:
-  port: 10001
+  port: 12001
 spring:
   application:
-    name: zipkin-service
-management:
-  server:
-    port: 11001
-  metrics:
-    web:
-      server:
-        auto-time-requests: false
+    name: admin-service-ui
+
+
 
 

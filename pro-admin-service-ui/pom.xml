@@ -9,28 +9,18 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>pro-user-service</artifactId>
+    <artifactId>pro-admin-service-ui</artifactId>
 
     <dependencies>
         <dependency>
             <groupId>de.codecentric</groupId>
-            <artifactId>spring-boot-admin-starter-client</artifactId>
+            <artifactId>spring-boot-admin-server</artifactId>
             <version>2.0.4</version>
         </dependency>
         <dependency>
-            <groupId>com.wzy</groupId>
-            <artifactId>pro-common-mapper</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>com.wzy</groupId>
-            <artifactId>pro-user-service-api</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>com.wzy</groupId>
-            <artifactId>pro-redis-service-api</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <groupId>de.codecentric</groupId>
+            <artifactId>spring-boot-admin-server-ui</artifactId>
+            <version>2.0.4</version>
         </dependency>
     </dependencies>
 </project>

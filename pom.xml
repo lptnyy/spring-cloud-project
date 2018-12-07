@@ -22,6 +22,7 @@
 		<module>pro-redis-service</module>
 		<module>pro-zuul-service</module>
 		<module>pro-zipkin-service</module>
+		<module>pro-admin-service-ui</module>
 	</modules>
 
 	<parent>

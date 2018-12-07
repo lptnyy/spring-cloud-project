@@ -17,8 +17,13 @@
 <br/>
 (8) Zuul
 <br/>
-(8) Sleuth zipkin
+(9) Sleuth zipkin
 ![Image text](https://freenetfile.oss-ap-southeast-1.aliyuncs.com/WeChat%20Screenshot_20181206145435.png)
 <br/>
 ![Image text](https://freenetfile.oss-ap-southeast-1.aliyuncs.com/WeChat%20Screenshot_20181206145445.png)
 <br/>
+(10) Admin
+<br/>
+![Image text](https://freenetfile.oss-ap-southeast-1.aliyuncs.com/WeChat%20Screenshot_20181207113300.png)
+<br/>
+![Image text](https://freenetfile.oss-ap-southeast-1.aliyuncs.com/WeChat%20Screenshot_20181207112551.png)

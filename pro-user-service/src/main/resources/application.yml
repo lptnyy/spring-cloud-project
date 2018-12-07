@@ -7,6 +7,10 @@ eureka:
 server:
   port: 8081
 spring:
+  boot:
+    admin:
+      client:
+        url: http://localhost:12001
   zipkin:
     base-url: http://localhost:10001
     sleuth:
@@ -14,7 +18,6 @@ spring:
       percentage: 1.0
   application:
     name: user-service
-
   datasource:
     name: test
     url: jdbc:mysql://localhost:3306/java_box
@@ -36,15 +39,19 @@ spring:
     testOnReturn: false
     poolPreparedStatements: true
     maxOpenPreparedStatements: 20
-
 mybatis:
     type-aliases-package: com.wzy.pojo
     mapper-locations: classpath:mapper/*.xml
-
 management:
   server:
     port: 9092
-
+  endpoints:
+      web:
+        exposure:
+          include: "*"
+  endpoint:
+      health:
+        show-details: always
 feign:
   hystrix:
     enabled: true

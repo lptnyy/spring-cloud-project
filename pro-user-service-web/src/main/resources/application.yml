@@ -8,6 +8,10 @@ eureka:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
 spring:
+  boot:
+    admin:
+      client:
+        url: http://localhost:12001
   application:
     name: user-service-web
   zipkin:
@@ -18,3 +22,14 @@ spring:
 feign:
   hystrix:
     enabled: true
+
+management:
+  server:
+    port: 9093
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always

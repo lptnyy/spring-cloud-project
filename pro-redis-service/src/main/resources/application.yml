@@ -26,11 +26,21 @@ spring:
     sleuth:
       sampler:
       percentage: 1.0
+  boot:
+    admin:
+      client:
+        url: http://localhost:12001
 
 management:
   server:
     port: 9001
-
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+      health:
+        show-details: always
 
 
 
