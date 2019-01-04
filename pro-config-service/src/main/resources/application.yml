@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: config-service
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: classpath:/config # 搜索src/main/resource 下的properties文件夹下的文件
+  profiles:
+    active: native  # 配置使用本地储存
+server:
+  port: 13001
+eureka:
+  client:
+    service-url:
+      default-zone: http://localhost:8761/eureka
+    fetch-registry: false
+
