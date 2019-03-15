@@ -1,26 +1,6 @@
-eureka:
-  instance:
-    status-page-url: http://localhost:${server.port}/swagger-ui.html
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
 server:
   port: 8091
 spring:
-  application:
-    name: redis-service
-  redis:
-    database: 0
-    host: 192.168.30.199
-    port: 6379
-    password:
-    jedis:
-      pool:
-        max-active: 8
-        max-idle: 8
-        max-wait: -1ms
-        min-idle: 0
-    timeout: 10000
   zipkin:
     base-url: http://localhost:10001
     sleuth:

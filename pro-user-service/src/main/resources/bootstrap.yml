@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: user-service
+  cloud:
+    config:
+      profile: dev
+      name: user-service
+      discovery:
+        enabled: true
+        service-id: config-service
+eureka:
+  instance:
+    status-page-url: http://localhost:${server.port}/swagger-ui.html
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/

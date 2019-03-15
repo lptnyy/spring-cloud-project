@@ -23,6 +23,7 @@
 		<module>pro-zuul-service</module>
 		<module>pro-zipkin-service</module>
 		<module>pro-admin-service-ui</module>
+		<module>pro-config-service</module>
 	</modules>
 
 	<parent>

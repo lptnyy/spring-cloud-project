@@ -1,9 +1,3 @@
-eureka:
-  instance:
-    status-page-url: http://localhost:${server.port}/swagger-ui.html
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
 server:
   port: 8081
 spring:
@@ -16,8 +10,6 @@ spring:
     sleuth:
       sampler:
       percentage: 1.0
-  application:
-    name: user-service
   datasource:
     name: test
     url: jdbc:mysql://localhost:3306/java_box
