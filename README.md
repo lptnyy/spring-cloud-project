@@ -27,3 +27,7 @@
 ![Image text](https://freenetfile.oss-ap-southeast-1.aliyuncs.com/WeChat%20Screenshot_20181207113300.png)
 <br/>
 ![Image text](https://freenetfile.oss-ap-southeast-1.aliyuncs.com/WeChat%20Screenshot_20181207112551.png)
+<br/>
+Config bus rabbitmq
+<br/>  
+配置中心执行post请求 http://wangzhenyu-pc:13001/actuator/bus-refresh

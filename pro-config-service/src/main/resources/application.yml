@@ -9,6 +9,12 @@ spring:
   profiles:
     active: native  # 配置使用本地储存
 
+  rabbitmq:
+    host: 192.168.30.199
+    port: 5672
+    username: admin
+    password: admin
+
 server:
   port: 13001
 eureka:
@@ -16,3 +22,8 @@ eureka:
     service-url:
       default-zone: http://localhost:8761/eureka
 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: bus-refresh
