@@ -1,33 +1,65 @@
 server:
   port: 8091
+
+eureka:
+  instance:
+    status-page-url: http://localhost:${server.port}/swagger-ui.html
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
 spring:
   rabbitmq:
     host: 192.168.30.199
     port: 5672
     username: admin
     password: admin
-
+  application:
+    name: redis-service
+  cloud:
+    config:
+      profile: dev
+      name: redis-service
+      discovery:
+        enabled: true
+        service-id: config-service
+  redis:
+    database: 0
+    host: 192.168.30.199
+    port: 6379
+    password:
+    jedis:
+      pool:
+        max-active: 8
+        max-idle: 8
+        max-wait: -1ms
+        min-idle: 0
+    timeout: 10000
   zipkin:
     base-url: http://localhost:10001
     sleuth:
       sampler:
       percentage: 1.0
+    sender:
+      type: web  # 引入mq 不这么设置会冲突
   boot:
     admin:
       client:
         url: http://localhost:12001
+        instance:
+          service-base-url: http://localhost:8091
 
 management:
   server:
-    port: 9001
+    port: 15001
   endpoints:
     web:
       exposure:
         include: "*"
   endpoint:
-      health:
-        show-details: always
+    health:
+      show-details: always
 
-
-
-
+feign:
+  hystrix:
+    enabled: true

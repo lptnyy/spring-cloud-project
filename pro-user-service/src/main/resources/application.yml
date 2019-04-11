@@ -11,11 +11,15 @@ spring:
     admin:
       client:
         url: http://localhost:12001
+        instance:
+          service-base-url: http://localhost:8081
   zipkin:
     base-url: http://localhost:10001
     sleuth:
       sampler:
       percentage: 1.0
+    sender:
+      type: web  # 引入mq 不这么设置会冲突
   datasource:
     name: test
     url: jdbc:mysql://localhost:3306/java_box
@@ -42,7 +46,7 @@ mybatis:
     mapper-locations: classpath:mapper/*.xml
 management:
   server:
-    port: 9092
+    port: 15002
   endpoints:
       web:
         exposure:

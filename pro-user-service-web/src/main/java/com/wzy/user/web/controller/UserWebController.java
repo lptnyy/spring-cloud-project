@@ -15,14 +15,9 @@ public class UserWebController {
        @Autowired
     UserService userService;
 
-    @Autowired
-    RedisService redisService;
-
     @ApiOperation(value = "测试订单接口", notes = "测试订单的web接口")
     @RequestMapping(value = "/hi", method = RequestMethod.GET)
     public String getOrder() {
-        redisService.set("hhhk", "234");
-        System.out.println(redisService.get("hhhk"));
         return userService.hi();
     }
 

@@ -19,6 +19,8 @@ spring:
     sleuth:
       sampler:
       percentage: 1.0
+    sender:
+      type: web  # 引入mq 不这么设置会冲突
 feign:
   hystrix:
     enabled: true

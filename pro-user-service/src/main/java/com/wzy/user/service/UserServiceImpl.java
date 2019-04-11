@@ -32,8 +32,7 @@ public class UserServiceImpl implements UserService {
     @ApiOperation(value = "测试订单信息", notes = "就是测试接口")
     public String hi() {
         redisService.set("hhha1", "haha");
-        System.out.println(redisService.get("hhha1"));
-        return name;
+        return redisService.get("hhha1");
     }
 
     @Override
