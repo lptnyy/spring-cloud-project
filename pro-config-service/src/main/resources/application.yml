@@ -10,7 +10,12 @@ spring:
       enabled: true
       trace:
         enabled: true
-
+  boot:
+    admin:
+      client:
+        url: http://localhost:12001
+        instance:
+          service-base-url: http://localhost:8081
   profiles:
     active: native  # 配置使用本地储存
 
@@ -23,6 +28,8 @@ spring:
 
 server:
   port: 13001
+  tomcat:
+    max-http-post-size: 0
 eureka:
   client:
     service-url:
@@ -35,8 +42,5 @@ management:
     web:
       exposure:
         include: "*"
-  endpoint:
-    bus-refresh:
-      enabled: true
 
 

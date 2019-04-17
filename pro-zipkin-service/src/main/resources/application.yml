@@ -11,6 +11,10 @@ spring:
     name: zipkin-service
   main:
     allow-bean-definition-overriding: true
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/zipkin?zeroDateTimeBehavior=convertToNull&serverTimezone=GMT%2b8&charset=utf8mb4&useSSL=false
+    username: root
+    password: wangyang
 management:
   server:
     port: 11001
@@ -25,3 +29,5 @@ zipkin:
       password: admin
       username: admin
       queue: zipkin
+  storage:
+    type: mysql
