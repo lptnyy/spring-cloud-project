@@ -8,6 +8,11 @@ eureka:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
 spring:
+  rabbitmq:
+    host: 192.168.30.199
+    port: 5672
+    username: admin
+    password: admin
   boot:
     admin:
       client:
@@ -20,7 +25,7 @@ spring:
       sampler:
       percentage: 1.0
     sender:
-      type: web  # 引入mq 不这么设置会冲突
+      type: rabbit
 feign:
   hystrix:
     enabled: true
@@ -32,6 +37,3 @@ management:
     web:
       exposure:
         include: "*"
-  endpoint:
-    health:
-      show-details: always

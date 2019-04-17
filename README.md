@@ -1,4 +1,4 @@
-# spring-cloud
+# spring-cloud 升级为 Greenwich.RELEASE spring boot 2.1.4
 (1) Eureka
 <br/>
 ![Image text](https://freenetfile.oss-ap-southeast-1.aliyuncs.com/WeChat%20Screenshot_20181206145421.png)
@@ -17,7 +17,7 @@
 <br/>
 (8) Zuul
 <br/>
-(9) Sleuth zipkin
+(9) Sleuth zipkin rabbitmq
 ![Image text](https://freenetfile.oss-ap-southeast-1.aliyuncs.com/WeChat%20Screenshot_20181206145435.png)
 <br/>
 ![Image text](https://freenetfile.oss-ap-southeast-1.aliyuncs.com/WeChat%20Screenshot_20181206145445.png)
@@ -28,6 +28,6 @@
 <br/>
 ![Image text](https://freenetfile.oss-ap-southeast-1.aliyuncs.com/WeChat%20Screenshot_20181207112551.png)
 <br/>
-Config bus rabbitmq
+Config bus rabbitmq 配置中心执行post请求 http://wangzhenyu-pc:13001/actuator/bus-refresh
 <br/>  
-配置中心执行post请求 http://wangzhenyu-pc:13001/actuator/bus-refresh
+gateway 代替zuul

@@ -9,6 +9,8 @@ server:
 spring:
   application:
     name: zipkin-service
+  main:
+    allow-bean-definition-overriding: true
 management:
   server:
     port: 11001
@@ -16,5 +18,10 @@ management:
     web:
       server:
         auto-time-requests: false
-
-
+zipkin:
+  collector:
+    rabbitmq:
+      addresses: 192.168.30.199:5672
+      password: admin
+      username: admin
+      queue: zipkin

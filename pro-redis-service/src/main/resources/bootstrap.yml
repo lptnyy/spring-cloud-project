@@ -41,7 +41,7 @@ spring:
       sampler:
       percentage: 1.0
     sender:
-      type: web  # 引入mq 不这么设置会冲突
+      type: rabbit
   boot:
     admin:
       client:
@@ -56,10 +56,6 @@ management:
     web:
       exposure:
         include: "*"
-  endpoint:
-    health:
-      show-details: always
-
 feign:
   hystrix:
     enabled: true

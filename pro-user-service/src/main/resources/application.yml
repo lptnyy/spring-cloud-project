@@ -19,10 +19,10 @@ spring:
       sampler:
       percentage: 1.0
     sender:
-      type: web  # 引入mq 不这么设置会冲突
+      type: rabbit
   datasource:
     name: test
-    url: jdbc:mysql://localhost:3306/java_box
+    url: jdbc:mysql://localhost:3306/java_box?&serverTimezone=GMT
     username: root
     password: wangyang
     # druid 连接池
@@ -51,9 +51,6 @@ management:
       web:
         exposure:
           include: "*"
-  endpoint:
-      health:
-        show-details: always
 feign:
   hystrix:
     enabled: true

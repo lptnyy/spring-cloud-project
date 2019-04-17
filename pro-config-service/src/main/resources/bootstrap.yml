@@ -1,17 +1,16 @@
 spring:
   application:
     name: config-service
-  boot:
-    admin:
-      client:
-        url: http://localhost:12001
-        instance:
-          service-base-url: http://localhost:13001
   cloud:
     config:
       server:
         native:
           search-locations: classpath:/config # 搜索src/main/resource 下的properties文件夹下的文件
+    bus:
+      enabled: true
+      trace:
+        enabled: true
+
   profiles:
     active: native  # 配置使用本地储存
 
@@ -20,6 +19,7 @@ spring:
     port: 5672
     username: admin
     password: admin
+
 
 server:
   port: 13001
@@ -36,5 +36,7 @@ management:
       exposure:
         include: "*"
   endpoint:
-    health:
-      show-details: always
+    bus-refresh:
+      enabled: true
+
+

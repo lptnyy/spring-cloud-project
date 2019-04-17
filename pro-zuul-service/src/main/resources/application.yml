@@ -15,6 +15,13 @@ spring:
     admin:
       client:
         url: http://localhost:12001
+  zipkin:
+    base-url: http://localhost:10001
+    sleuth:
+      sampler:
+      percentage: 1.0
+    sender:
+      type: web  # 引入mq 不这么设置会冲突
 
 management:
   server:
