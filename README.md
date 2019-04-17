@@ -30,4 +30,4 @@
 <br/>
 Config bus rabbitmq 配置中心执行post请求 http://wangzhenyu-pc:13001/actuator/bus-refresh
 <br/>  
-gateway 代替zuul
+(11)gateway 代替zuul
