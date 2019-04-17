@@ -28,6 +28,6 @@
 <br/>
 ![Image text](https://freenetfile.oss-ap-southeast-1.aliyuncs.com/WeChat%20Screenshot_20181207112551.png)
 <br/>
-Config bus rabbitmq 配置中心执行post请求 http://wangzhenyu-pc:13001/actuator/bus-refresh
+(11)Config bus rabbitmq 配置中心执行post请求 http://wangzhenyu-pc:13001/actuator/bus-refresh
 <br/>  
-(11)gateway 代替zuul
+(12)gateway 代替zuul
