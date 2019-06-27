@@ -22,6 +22,7 @@ public class SsoConifg extends AuthorizationServerConfigurerAdapter {
     @Override
     public void configure(AuthorizationServerSecurityConfigurer oauthServer) throws Exception {
         oauthServer
+                .passwordEncoder(new SSoPassWord())
                 .realm("oauth2-resources") //code授权添加
                 .tokenKeyAccess("permitAll()")
                 .checkTokenAccess("isAuthenticated()") //allow check token
@@ -47,7 +48,7 @@ public class SsoConifg extends AuthorizationServerConfigurerAdapter {
         clients.inMemory()
                 .withClient(client_id)
                 .secret(secret)
-                .redirectUris("http://baidu.com")//code授权添加
+                //.redirectUris("http://baidu.com")//code授权添加
                 .authorizedGrantTypes("authorization_code","client_credentials", "password", "refresh_token")
                 .scopes("all")
                 .resourceIds("oauth2-resource")

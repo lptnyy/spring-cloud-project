@@ -31,28 +31,12 @@ public class SecurityConfigurerAdapter extends WebSecurityConfigurerAdapter {
      * @throws Exception
      */
     @Autowired
-    public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
+    public void configure(AuthenticationManagerBuilder auth) throws Exception {
         PasswordEncoder passwordEncoder = passwordEncoder();
         auth.inMemoryAuthentication() //认证信息存储到内存中
                 .passwordEncoder(passwordEncoder)
                 .withUser("user").password("123456")
                 .roles("ADMIN");
-    }
-
-    /**
-     * 自定义解析密码
-     */
-    public class SSoPassWord implements PasswordEncoder {
-
-        @Override
-        public String encode(CharSequence charSequence) {
-            return charSequence.toString();
-        }
-
-        @Override
-        public boolean matches(CharSequence charSequence, String s) {
-            return s.equals(charSequence.toString());
-        }
     }
 
     private PasswordEncoder passwordEncoder() {
