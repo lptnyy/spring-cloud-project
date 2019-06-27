@@ -25,7 +25,6 @@ spring:
     url: jdbc:mysql://localhost:3306/java_box?&serverTimezone=GMT
     username: root
     password: wangyang
-    # druid 连接池
     type: com.alibaba.druid.pool.DruidDataSource
     driver-class-name: com.mysql.jdbc.Driver
     filters: stat

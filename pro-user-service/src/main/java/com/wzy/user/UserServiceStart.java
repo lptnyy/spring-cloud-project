@@ -22,7 +22,6 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 })
 @EnableHystrix
 public class UserServiceStart {
-
     public static void main(String[] args) {
 		SpringApplication.run(UserServiceStart.class, args);
 	}

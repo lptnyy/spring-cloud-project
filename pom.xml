@@ -25,6 +25,7 @@
 		<module>pro-admin-service-ui</module>
 		<module>pro-config-service</module>
         <module>pro-gateway-service</module>
+        <module>pro-sso-service</module>
     </modules>
 
 	<parent>
