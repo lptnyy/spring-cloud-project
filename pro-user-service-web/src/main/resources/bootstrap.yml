@@ -1,10 +1,10 @@
 spring:
   application:
-    name: user-service
+    name: user-service-web
   cloud:
     config:
       profile: dev
-      name: user-service,redis-nosql,rabbitmq-middleware,zipkin-middleware,admin-middleware,mysql-sqldata
+      name: user-serviceweb,redis-nosql,rabbitmq-middleware,zipkin-middleware,admin-middleware,mysql-sqldata
       discovery:
         enabled: true
         service-id: config-service

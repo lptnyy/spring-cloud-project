@@ -1,0 +1,8 @@
+spring:
+  zipkin:
+    base-url: http://localhost:10001
+    sleuth:
+      sampler:
+      percentage: 1.0
+    sender:
+      type: rabbit

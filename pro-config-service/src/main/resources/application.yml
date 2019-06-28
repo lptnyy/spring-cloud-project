@@ -18,13 +18,11 @@ spring:
           service-base-url: http://localhost:8081
   profiles:
     active: native  # 配置使用本地储存
-
   rabbitmq:
     host: 192.168.30.199
     port: 5672
     username: admin
     password: admin
-
 
 server:
   port: 13001

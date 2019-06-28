@@ -1,2 +1,14 @@
 client_id: lptnyy
 secret: wangyang119
+server:
+  port: 8079
+management:
+  server:
+    port: 15004
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+feign:
+  hystrix:
+    enabled: true

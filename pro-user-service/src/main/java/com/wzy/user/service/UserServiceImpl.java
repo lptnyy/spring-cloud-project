@@ -24,9 +24,6 @@ public class UserServiceImpl implements UserService {
     @Autowired
     RedisService redisService;
 
-    @Value("${boxusername}")
-    String name;
-
     @Override
     @ApiOperation(value = "测试订单信息", notes = "就是测试接口")
     public String hi() {

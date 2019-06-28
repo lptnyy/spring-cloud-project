@@ -1,1 +1,15 @@
-boxusername: hahahaha2201111
+server:
+  port: 8081
+mybatis:
+  type-aliases-package: com.wzy.pojo
+  mapper-locations: classpath:mapper/*.xml
+management:
+  server:
+    port: 15002
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+feign:
+  hystrix:
+    enabled: true
