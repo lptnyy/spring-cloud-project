@@ -2,20 +2,16 @@ package com.wzy.mapper;
 
 import com.wzy.pojo.User;
 
-import java.util.List;
-
 public interface UserMapper {
-    int deleteByPrimaryKey(Integer userId);
+    int deleteByPrimaryKey(Integer id);
 
     int insert(User record);
 
     int insertSelective(User record);
 
-    User selectByPrimaryKey(Integer userId);
+    User selectByPrimaryKey(Integer id);
 
     int updateByPrimaryKeySelective(User record);
 
     int updateByPrimaryKey(User record);
-
-    List<User> getUserList();
 }

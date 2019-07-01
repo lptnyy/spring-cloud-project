@@ -26,10 +26,4 @@ public class UserWebController {
         logger.info("调用成功了");
         return userService.hi();
     }
-
-    @ApiOperation(value = "查询所有用户信息", notes = "测试订单的web接口")
-    @RequestMapping(value = "/admin/getUserList", method = RequestMethod.GET)
-    public String getUserList() {
-        return JSON.toJSONString(userService.getUserList());
-    }
 }

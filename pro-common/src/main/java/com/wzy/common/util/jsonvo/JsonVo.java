@@ -2,7 +2,7 @@ package com.wzy.common.util.jsonvo;
 
 import com.wzy.common.util.AESOperator;
 
-public class JsonVo {
+public class JsonVo{
     boolean jsonp = false;
     Object object;
     Integer sumPage;

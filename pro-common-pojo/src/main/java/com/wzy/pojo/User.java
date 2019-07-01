@@ -1,55 +1,56 @@
 package com.wzy.pojo;
 
+import java.math.BigDecimal;
 import java.util.Date;
 
 public class User {
-    private Integer userId;
+    private Integer id;
 
-    private String userName;
+    private BigDecimal balance;
 
-    private String userPass;
+    private String username;
 
-    private String userCode;
+    private String userpass;
 
-    private Date createTime;
+    private Date createtime;
 
-    public Integer getUserId() {
-        return userId;
+    public Integer getId() {
+        return id;
     }
 
-    public void setUserId(Integer userId) {
-        this.userId = userId;
+    public void setId(Integer id) {
+        this.id = id;
     }
 
-    public String getUserName() {
-        return userName;
+    public BigDecimal getBalance() {
+        return balance;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName == null ? null : userName.trim();
+    public void setBalance(BigDecimal balance) {
+        this.balance = balance;
     }
 
-    public String getUserPass() {
-        return userPass;
+    public String getUsername() {
+        return username;
     }
 
-    public void setUserPass(String userPass) {
-        this.userPass = userPass == null ? null : userPass.trim();
+    public void setUsername(String username) {
+        this.username = username == null ? null : username.trim();
     }
 
-    public String getUserCode() {
-        return userCode;
+    public String getUserpass() {
+        return userpass;
     }
 
-    public void setUserCode(String userCode) {
-        this.userCode = userCode == null ? null : userCode.trim();
+    public void setUserpass(String userpass) {
+        this.userpass = userpass == null ? null : userpass.trim();
     }
 
-    public Date getCreateTime() {
-        return createTime;
+    public Date getCreatetime() {
+        return createtime;
     }
 
-    public void setCreateTime(Date createTime) {
-        this.createTime = createTime;
+    public void setCreatetime(Date createtime) {
+        this.createtime = createtime;
     }
 }

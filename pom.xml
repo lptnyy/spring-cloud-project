@@ -26,7 +26,11 @@
 		<module>pro-config-service</module>
         <module>pro-gateway-service</module>
         <module>pro-sso-service</module>
-    </modules>
+        <module>pro-order-service-api</module>
+		<module>pro-order-service</module>
+		<module>pro-product-service-api</module>
+		<module>pro-product-service</module>
+	</modules>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>

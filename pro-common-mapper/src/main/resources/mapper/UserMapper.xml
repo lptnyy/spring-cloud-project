@@ -2,97 +2,92 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.wzy.mapper.UserMapper" >
   <resultMap id="BaseResultMap" type="com.wzy.pojo.User" >
-    <id column="user_id" property="userId" jdbcType="INTEGER" />
-    <result column="user_name" property="userName" jdbcType="VARCHAR" />
-    <result column="user_pass" property="userPass" jdbcType="VARCHAR" />
-    <result column="user_code" property="userCode" jdbcType="VARCHAR" />
-    <result column="create_time" property="createTime" jdbcType="TIMESTAMP" />
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="balance" property="balance" jdbcType="DECIMAL" />
+    <result column="username" property="username" jdbcType="VARCHAR" />
+    <result column="userpass" property="userpass" jdbcType="VARCHAR" />
+    <result column="createTime" property="createtime" jdbcType="TIMESTAMP" />
   </resultMap>
   <sql id="Base_Column_List" >
-    user_id, user_name, user_pass, user_code, create_time
+    id, balance, username, userpass, createTime
   </sql>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
     select 
     <include refid="Base_Column_List" />
-    from wx_user
-    where user_id = #{userId,jdbcType=INTEGER}
+    from user
+    where id = #{id,jdbcType=INTEGER}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
-    delete from wx_user
-    where user_id = #{userId,jdbcType=INTEGER}
+    delete from user
+    where id = #{id,jdbcType=INTEGER}
   </delete>
   <insert id="insert" parameterType="com.wzy.pojo.User" >
-    insert into wx_user (user_id, user_name, user_pass, 
-      user_code, create_time)
-    values (#{userId,jdbcType=INTEGER}, #{userName,jdbcType=VARCHAR}, #{userPass,jdbcType=VARCHAR}, 
-      #{userCode,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP})
+    insert into user (id, balance, username, 
+      userpass, createTime)
+    values (#{id,jdbcType=INTEGER}, #{balance,jdbcType=DECIMAL}, #{username,jdbcType=VARCHAR}, 
+      #{userpass,jdbcType=VARCHAR}, #{createtime,jdbcType=TIMESTAMP})
   </insert>
   <insert id="insertSelective" parameterType="com.wzy.pojo.User" >
-    insert into wx_user
+    insert into user
     <trim prefix="(" suffix=")" suffixOverrides="," >
-      <if test="userId != null" >
-        user_id,
+      <if test="id != null" >
+        id,
       </if>
-      <if test="userName != null" >
-        user_name,
+      <if test="balance != null" >
+        balance,
       </if>
-      <if test="userPass != null" >
-        user_pass,
+      <if test="username != null" >
+        username,
       </if>
-      <if test="userCode != null" >
-        user_code,
+      <if test="userpass != null" >
+        userpass,
       </if>
-      <if test="createTime != null" >
-        create_time,
+      <if test="createtime != null" >
+        createTime,
       </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
-      <if test="userId != null" >
-        #{userId,jdbcType=INTEGER},
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
       </if>
-      <if test="userName != null" >
-        #{userName,jdbcType=VARCHAR},
+      <if test="balance != null" >
+        #{balance,jdbcType=DECIMAL},
       </if>
-      <if test="userPass != null" >
-        #{userPass,jdbcType=VARCHAR},
+      <if test="username != null" >
+        #{username,jdbcType=VARCHAR},
       </if>
-      <if test="userCode != null" >
-        #{userCode,jdbcType=VARCHAR},
+      <if test="userpass != null" >
+        #{userpass,jdbcType=VARCHAR},
       </if>
-      <if test="createTime != null" >
-        #{createTime,jdbcType=TIMESTAMP},
+      <if test="createtime != null" >
+        #{createtime,jdbcType=TIMESTAMP},
       </if>
     </trim>
   </insert>
   <update id="updateByPrimaryKeySelective" parameterType="com.wzy.pojo.User" >
-    update wx_user
+    update user
     <set >
-      <if test="userName != null" >
-        user_name = #{userName,jdbcType=VARCHAR},
+      <if test="balance != null" >
+        balance = #{balance,jdbcType=DECIMAL},
       </if>
-      <if test="userPass != null" >
-        user_pass = #{userPass,jdbcType=VARCHAR},
+      <if test="username != null" >
+        username = #{username,jdbcType=VARCHAR},
       </if>
-      <if test="userCode != null" >
-        user_code = #{userCode,jdbcType=VARCHAR},
+      <if test="userpass != null" >
+        userpass = #{userpass,jdbcType=VARCHAR},
       </if>
-      <if test="createTime != null" >
-        create_time = #{createTime,jdbcType=TIMESTAMP},
+      <if test="createtime != null" >
+        createTime = #{createtime,jdbcType=TIMESTAMP},
       </if>
     </set>
-    where user_id = #{userId,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.wzy.pojo.User" >
-    update wx_user
-    set user_name = #{userName,jdbcType=VARCHAR},
-      user_pass = #{userPass,jdbcType=VARCHAR},
-      user_code = #{userCode,jdbcType=VARCHAR},
-      create_time = #{createTime,jdbcType=TIMESTAMP}
-    where user_id = #{userId,jdbcType=INTEGER}
+    update user
+    set balance = #{balance,jdbcType=DECIMAL},
+      username = #{username,jdbcType=VARCHAR},
+      userpass = #{userpass,jdbcType=VARCHAR},
+      createTime = #{createtime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=INTEGER}
   </update>
-  <select id="getUserList" resultMap="BaseResultMap">
-    select
-    <include refid="Base_Column_List" />
-    from wx_user
-  </select>
 </mapper>

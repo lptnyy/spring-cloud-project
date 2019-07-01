@@ -1,11 +1,11 @@
 server:
-  port: 8084
+  port: 8086
 mybatis:
   type-aliases-package: com.wzy.pojo
   mapper-locations: classpath:mapper/*.xml
 management:
   server:
-    port: 15002
+    port: 15003
   endpoints:
     web:
       exposure:

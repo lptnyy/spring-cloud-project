@@ -5,7 +5,7 @@
 <generatorConfiguration>
 
     <!-- 数据库驱动:选择你的本地硬盘上面的数据库驱动包-->
-    <classPathEntry  location="/Users/lptnyy/Downloads/jar/mysql-connector-java-5.1.46.jar"/>
+    <classPathEntry  location="D:\jar/mysql-connector-java-5.1.46.jar"/>
     <context id="DB2Tables"  targetRuntime="MyBatis3">
         <commentGenerator>
             <property name="suppressDate" value="true"/>
@@ -13,7 +13,7 @@
             <property name="suppressAllComments" value="true"/>
         </commentGenerator>
         <!--数据库链接URL，用户名、密码 -->
-        <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://localhost:3306/wx_shop" userId="root" password="wangyang">
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://localhost:3306/orderdb" userId="root" password="wangyang">
         </jdbcConnection>
         <javaTypeResolver>
             <property name="forceBigDecimals" value="false"/>
@@ -33,6 +33,6 @@
         </javaClientGenerator>
         <!-- 要生成的表 tableName是数据库中的表名或视图名 domainObjectName是实体类名-->
 
-        <table tableName="wx_user" domainObjectName="User" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
+        <table tableName="order" domainObjectName="Order" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
     </context>
 </generatorConfiguration>

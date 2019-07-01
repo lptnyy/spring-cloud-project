@@ -1,7 +1,7 @@
 client_id: lptnyy
 secret: wangyang119
 server:
-  port: 8079
+  port: 8083
 management:
   server:
     port: 15004
