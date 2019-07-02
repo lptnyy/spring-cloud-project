@@ -1,8 +1,9 @@
 package com.wzy.pojo;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class Pdt {
+public class Pdt implements Serializable {
     private Integer id;
 
     private Integer num;

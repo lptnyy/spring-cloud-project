@@ -13,21 +13,21 @@
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
     select 
     <include refid="Base_Column_List" />
-    from order
+    from orderinfo
     where id = #{id,jdbcType=INTEGER}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
-    delete from order
+    delete from orderinfo
     where id = #{id,jdbcType=INTEGER}
   </delete>
+
   <insert id="insert" parameterType="com.wzy.pojo.Order" >
-    insert into order (id, price, stat, 
-      createTime)
-    values (#{id,jdbcType=INTEGER}, #{price,jdbcType=INTEGER}, #{stat,jdbcType=INTEGER}, 
-      #{createtime,jdbcType=TIMESTAMP})
+    insert into orderinfo (price, stat)
+    values (#{price,jdbcType=INTEGER}, #{stat,jdbcType=INTEGER})
   </insert>
+
   <insert id="insertSelective" parameterType="com.wzy.pojo.Order" >
-    insert into order
+    insert into orderinfo
     <trim prefix="(" suffix=")" suffixOverrides="," >
       <if test="id != null" >
         id,
@@ -58,7 +58,7 @@
     </trim>
   </insert>
   <update id="updateByPrimaryKeySelective" parameterType="com.wzy.pojo.Order" >
-    update order
+    update orderinfo
     <set >
       <if test="price != null" >
         price = #{price,jdbcType=INTEGER},
@@ -73,7 +73,7 @@
     where id = #{id,jdbcType=INTEGER}
   </update>
   <update id="updateByPrimaryKey" parameterType="com.wzy.pojo.Order" >
-    update order
+    update orderinfo
     set price = #{price,jdbcType=INTEGER},
       stat = #{stat,jdbcType=INTEGER},
       createTime = #{createtime,jdbcType=TIMESTAMP}

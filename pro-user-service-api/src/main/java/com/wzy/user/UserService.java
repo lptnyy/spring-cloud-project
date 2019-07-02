@@ -13,4 +13,11 @@ public interface UserService {
 
     @RequestMapping(path = "/hi", method = RequestMethod.GET)
     public String hi();
+
+    /**
+     * 修改用户信息
+     * @return
+     */
+    @RequestMapping(path = "/updateUser", method = RequestMethod.GET)
+    public int updateUser();
 }

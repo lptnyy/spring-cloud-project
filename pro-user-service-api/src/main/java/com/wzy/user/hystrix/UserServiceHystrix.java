@@ -10,4 +10,9 @@ public class UserServiceHystrix implements UserService {
     public String hi() {
         return "服务器已经禁用";
     }
+
+    @Override
+    public int updateUser() {
+        return 0;
+    }
 }

@@ -1,5 +1,6 @@
 package com.wzy.order;
 
+import com.codingapi.txlcn.tc.config.EnableDistributedTransaction;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -21,6 +22,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
         @ComponentScan("com.wzy.redis")
 })
 @EnableHystrix
+@EnableDistributedTransaction
 public class StartOrderService {
     public static void main(String[] args) {
         SpringApplication.run(StartOrderService.class, args);

@@ -4,7 +4,7 @@ spring:
   cloud:
     config:
       profile: dev
-      name: order-service,redis-nosql,rabbitmq-middleware,zipkin-middleware,admin-middleware,mysql-sqldata
+      name: order-service,redis-nosql,rabbitmq-middleware,zipkin-middleware,admin-middleware,mysql-ordersqldata
       discovery:
         enabled: true
         service-id: config-service

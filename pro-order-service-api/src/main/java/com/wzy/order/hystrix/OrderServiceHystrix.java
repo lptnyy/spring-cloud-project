@@ -9,6 +9,6 @@ public class OrderServiceHystrix implements OrderService {
 
     @Override
     public int addOrder(Order order) {
-        return 0;
+        return -1;
     }
 }

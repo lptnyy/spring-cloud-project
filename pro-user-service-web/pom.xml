@@ -11,6 +11,11 @@
 
     <artifactId>pro-user-service-web</artifactId>
 
+    <properties>
+        <codingapi.txlcn.version>5.0.2.RELEASE</codingapi.txlcn.version>
+        <lombok.version>1.18.0</lombok.version>
+    </properties>
+
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -44,9 +49,24 @@
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
         <dependency>
+            <groupId>com.wzy</groupId>
+            <artifactId>pro-order-service-api</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <dependency>
             <groupId>net.logstash.logback</groupId>
             <artifactId>logstash-logback-encoder</artifactId>
             <version>5.2</version>
+        </dependency>
+        <dependency>
+            <groupId>com.codingapi.txlcn</groupId>
+            <artifactId>txlcn-tc</artifactId>
+            <version>${codingapi.txlcn.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.codingapi.txlcn</groupId>
+            <artifactId>txlcn-txmsg-netty</artifactId>
+            <version>${codingapi.txlcn.version}</version>
         </dependency>
     </dependencies>
 </project>

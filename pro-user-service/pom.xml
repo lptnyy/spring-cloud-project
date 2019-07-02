@@ -16,7 +16,6 @@
         <lombok.version>1.18.0</lombok.version>
     </properties>
 
-
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -71,11 +70,6 @@
         <dependency>
             <groupId>com.codingapi.txlcn</groupId>
             <artifactId>txlcn-tc</artifactId>
-            <version>${codingapi.txlcn.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.codingapi.txlcn</groupId>
-            <artifactId>txlcn-tm</artifactId>
             <version>${codingapi.txlcn.version}</version>
         </dependency>
         <dependency>
