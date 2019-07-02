@@ -8,7 +8,6 @@ import com.wzy.pojo.Order;
 import com.wzy.user.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Date;
 
@@ -21,7 +20,7 @@ public class WebService {
     OrderService orderService;
 
     @LcnTransaction
-    public String orderUpdate() throws Exception {
+    public String orderUpdate(){
         int num = userService.updateUser();
         Order order = new Order();
         order.setId(1);
@@ -29,6 +28,9 @@ public class WebService {
         order.setStat(1);
         order.setCreatetime(new Date());
         num = orderService.addOrder(order);
+        if (num == -1){
+            throw new IllegalStateException("by exFlag");
+        }
         return "";
     }
 }

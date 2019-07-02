@@ -15,5 +15,5 @@ public interface OrderService {
      * @return
      */
     @RequestMapping(path = "/addOrder", method=RequestMethod.POST)
-    public int addOrder(@RequestBody Order order) throws Exception;
+    public int addOrder(@RequestBody Order order);
 }
