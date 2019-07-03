@@ -28,8 +28,8 @@
 <br/>
 ![Image text](https://freenetfile.oss-ap-southeast-1.aliyuncs.com/WeChat%20Screenshot_20181207112551.png)
 <br/>
-(11)Config Bus Rabbitmq (统一配置中心)
-![Image text](image/config.png)<br/>
+(11)Config Bus Rabbitmq (统一配置中心)<br/>
+![Image text](image/config.png)
 <br/>
 (12)Gateway 代替zuul  实现了redis 限流 以及 熔断降级
 <br/>
