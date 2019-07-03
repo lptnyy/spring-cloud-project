@@ -1,5 +1,7 @@
 package com.wzy.pdt.service;
 
+import com.wzy.common.util.ServiceResponse;
+import com.wzy.common.util.ServiceResponseEnum;
 import com.wzy.pdt.ProductService;
 import com.wzy.pojo.Pdt;
 import io.swagger.annotations.Api;
@@ -14,7 +16,9 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     @ApiOperation(value = "测试订单信息", notes = "就是测试接口")
-    public int update(Pdt pdt) {
-        return 0;
+    public ServiceResponse update(Pdt pdt) {
+        ServiceResponse serviceResponse = new ServiceResponse();
+        serviceResponse.setCode(ServiceResponseEnum.SUCCESS.getValue());
+        return serviceResponse;
     }
 }

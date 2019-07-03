@@ -1,7 +1,8 @@
 package com.wzy.order.service;
 import com.codingapi.txlcn.tc.annotation.DTXPropagation;
-import com.codingapi.txlcn.tc.annotation.LcnTransaction;
 import com.codingapi.txlcn.tc.annotation.TxcTransaction;
+import com.wzy.common.util.ServiceResponse;
+import com.wzy.common.util.ServiceResponseEnum;
 import com.wzy.mapper.OrderMapper;
 import com.wzy.order.OrderService;
 import com.wzy.pojo.Order;
@@ -30,11 +31,10 @@ public class OrderServiceImpl implements OrderService {
     @ApiOperation(value = "测试订单信息", notes = "就是测试接口")
     @TxcTransaction(propagation = DTXPropagation.SUPPORTS)
     @Transactional
-    public int addOrder(@RequestBody Order order) {
-        int num = orderMapper.insert(order);
-        if (true){
-            throw new IllegalStateException("by exFlag");
-        }
-        return num;
+    public ServiceResponse addOrder(@RequestBody Order order) {
+        ServiceResponse serviceResponse = new ServiceResponse();
+        orderMapper.insert(order);
+        serviceResponse.setCode(ServiceResponseEnum.SUCCESS.getValue());
+        return serviceResponse;
     }
 }

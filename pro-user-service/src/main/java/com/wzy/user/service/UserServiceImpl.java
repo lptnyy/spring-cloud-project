@@ -3,6 +3,7 @@ package com.wzy.user.service;
 import com.codingapi.txlcn.tc.annotation.DTXPropagation;
 import com.codingapi.txlcn.tc.annotation.LcnTransaction;
 import com.codingapi.txlcn.tc.annotation.TxcTransaction;
+import com.wzy.common.util.ServiceResponse;
 import com.wzy.mapper.UserMapper;
 import com.wzy.pojo.User;
 import com.wzy.redis.RedisService;
@@ -29,20 +30,22 @@ public class UserServiceImpl implements UserService {
 
     @Override
     @ApiOperation(value = "测试订单信息", notes = "就是测试接口")
-    public String hi() {
+    public ServiceResponse hi() {
         redisService.set("hhha1", "haha");
-        return redisService.get("hhha1");
+        redisService.get("hhha1");
+        return ServiceResponse.getSUCCESS();
     }
 
     @Override
     @ApiOperation(value = "修改用户信息 测试分布式事务", notes = "就是测试接口")
     @TxcTransaction(propagation = DTXPropagation.SUPPORTS)
     @Transactional
-    public int updateUser() {
+    public ServiceResponse updateUser() {
         User user = new User();
         user.setId(1);
         user.setBalance(new BigDecimal("20"));
         user.setBalance(user.getBalance().add(new BigDecimal(("1"))));
-        return userMapper.updateByPrimaryKey(user);
+        userMapper.updateByPrimaryKey(user);
+        return ServiceResponse.getSUCCESS();
     }
 }

@@ -1,5 +1,6 @@
 package com.wzy.pdt.hystrix;
 
+import com.wzy.common.util.ServiceResponse;
 import com.wzy.pdt.ProductService;
 import com.wzy.pojo.Pdt;
 import org.springframework.stereotype.Component;
@@ -8,7 +9,7 @@ import org.springframework.stereotype.Component;
 public class ProductServiceHystrix implements ProductService {
 
     @Override
-    public int update(Pdt pdt){
-        return 0;
+    public ServiceResponse update(Pdt pdt){
+        return ServiceResponse.getFAIL();
     }
 }

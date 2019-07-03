@@ -1,5 +1,6 @@
 package com.wzy.order;
 
+import com.wzy.common.util.ServiceResponse;
 import com.wzy.order.hystrix.OrderServiceHystrix;
 import com.wzy.pojo.Order;
 import org.springframework.cloud.openfeign.FeignClient;
@@ -15,5 +16,5 @@ public interface OrderService {
      * @return
      */
     @RequestMapping(path = "/addOrder", method=RequestMethod.POST)
-    public int addOrder(@RequestBody Order order);
+    public ServiceResponse addOrder(@RequestBody Order order);
 }

@@ -1,5 +1,6 @@
 package com.wzy.user.hystrix;
 
+import com.wzy.common.util.ServiceResponse;
 import com.wzy.user.UserService;
 import org.springframework.stereotype.Component;
 
@@ -7,12 +8,12 @@ import org.springframework.stereotype.Component;
 public class UserServiceHystrix implements UserService {
 
     @Override
-    public String hi() {
-        return "服务器已经禁用";
+    public ServiceResponse hi() {
+        return ServiceResponse.getFAIL();
     }
 
     @Override
-    public int updateUser() {
-        return 0;
+    public ServiceResponse updateUser() {
+        return ServiceResponse.getFAIL();
     }
 }

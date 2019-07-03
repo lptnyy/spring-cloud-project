@@ -1,5 +1,6 @@
 package com.wzy.pdt;
 
+import com.wzy.common.util.ServiceResponse;
 import com.wzy.pdt.hystrix.ProductServiceHystrix;
 import com.wzy.pojo.Pdt;
 import org.springframework.cloud.openfeign.FeignClient;
@@ -12,5 +13,5 @@ public interface ProductService {
      * @param pdt
      * @return
      */
-    public int update(Pdt pdt);
+    public ServiceResponse update(Pdt pdt);
 }
