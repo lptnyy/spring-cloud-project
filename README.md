@@ -1,4 +1,7 @@
 # spring-cloud 升级为 Greenwich.RELEASE spring boot 2.1.4
+架构图<br/>
+![Image text](image/jg.png)
+<br/>
 (1) Eureka
 <br/>
 ![Image text](https://freenetfile.oss-ap-southeast-1.aliyuncs.com/WeChat%20Screenshot_20181206145421.png)
