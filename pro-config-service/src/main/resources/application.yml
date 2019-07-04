@@ -6,10 +6,9 @@ spring:
       server:
         native:
           search-locations: classpath:/config # 搜索src/main/resource 下的properties文件夹下的文件
-    bus:
-      enabled: true
-      trace:
-        enabled: true
+  bus:
+    trace:
+      enabled: true # 启用日志跟踪
   boot:
     admin:
       client:
@@ -23,7 +22,6 @@ spring:
     port: 5672
     username: admin
     password: admin
-
 server:
   port: 13001
   tomcat:
@@ -39,6 +37,6 @@ management:
   endpoints:
     web:
       exposure:
-        include: "*"
+        include: "*" # 暴露端点
 
 

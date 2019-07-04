@@ -1,18 +1,11 @@
-eureka:
-  instance:
-    status-page-url: http://localhost:${server.port}/swagger-ui.html
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
-
 spring:
   application:
     name: redis-service
   cloud:
     config:
       profile: dev
-      name: redis-service,redis-nosql,rabbitmq-middleware,zipkin-middleware,admin-middleware
+      name: eureka-middleware,redis-service,redis-nosql,rabbitmq-middleware,zipkin-middleware,admin-middleware
       discovery:
-        enabled: true
-        service-id: config-service
+        enabled: false
       override-none: true
+      uri: http://localhost:13001

@@ -38,6 +38,35 @@ spring:
                   thread:
                     timeoutInMilliseconds: 3000
           shareSecurityContext: true
+      - id: SSO-SERVICE                   #从注册中心获取服务
+        uri: lb://SSO-SERVICE
+        predicates:
+        - Path=/login/**
+        filters:
+        - StripPrefix=1
+        # 熔断降级配置
+        - name: Hystrix
+          args:
+            name: default
+            fallbackUri: 'forward:/defaultfallback'
+        - name: RequestRateLimiter
+          args:
+            # 使用SpEL名称引用Bean，与上面新建的RateLimiterConfig类中的bean的name相同
+            key-resolver: '#{@remoteAddrKeyResolver}'
+            # 每秒最大访问次数
+            redis-rate-limiter.replenishRate: 20
+            # 令牌桶最大容量
+            redis-rate-limiter.burstCapacity: 20
+        # hystrix 信号量隔离，3秒后自动超时
+        hystrix:
+          command:
+            default:
+              execution:
+                isolation:
+                  strategy: SEMAPHORE
+                  thread:
+                    timeoutInMilliseconds: 3000
+          shareSecurityContext: true
 
 management:
   server:

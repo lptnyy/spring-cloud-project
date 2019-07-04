@@ -9,4 +9,6 @@ eureka:
       default-zone: http://localhost:8761/eureka
     fetch-registry: false
     register-with-eureka: false
-    eureka-connection-idle-timeout-seconds: 10
+  server:
+    enable-self-preservation: true
+    eviction-interval-timer-in-ms: 6000

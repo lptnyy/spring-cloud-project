@@ -4,14 +4,8 @@ spring:
   cloud:
     config:
       profile: dev
-      name: user-service,redis-nosql,rabbitmq-middleware,zipkin-middleware,admin-middleware,mysql-usersqldata
+      name: eureka-middleware,user-service,redis-nosql,rabbitmq-middleware,zipkin-middleware,admin-middleware,mysql-usersqldata
       discovery:
-        enabled: true
-        service-id: config-service
+        enabled: false
       override-none: true
-eureka:
-  instance:
-    status-page-url: http://localhost:${server.port}/swagger-ui.html
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
+      uri: http://localhost:13001

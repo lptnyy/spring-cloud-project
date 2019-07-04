@@ -45,7 +45,7 @@ public class UserServiceImpl implements UserService {
         user.setId(1);
         user.setBalance(new BigDecimal("20"));
         user.setBalance(user.getBalance().add(new BigDecimal(("1"))));
-        userMapper.updateByPrimaryKey(user);
+        userMapper.updateByPrimaryKeySelective(user);
         return ServiceResponse.getSUCCESS();
     }
 }

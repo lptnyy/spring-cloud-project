@@ -5,6 +5,7 @@
     <id column="id" property="id" jdbcType="INTEGER" />
     <result column="balance" property="balance" jdbcType="DECIMAL" />
     <result column="username" property="username" jdbcType="VARCHAR" />
+    <result column="token" property="token" jdbcType="VARCHAR" />
     <result column="userpass" property="userpass" jdbcType="VARCHAR" />
     <result column="createTime" property="createtime" jdbcType="TIMESTAMP" />
   </resultMap>
@@ -16,6 +17,12 @@
     <include refid="Base_Column_List" />
     from user
     where id = #{id,jdbcType=INTEGER}
+  </select>
+  <select id="getUser" resultMap="BaseResultMap" parameterType="java.lang.String">
+    select
+    <include refid="Base_Column_List" />
+    from user
+    where username = #{username,jdbcType=VARCHAR}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
     delete from user

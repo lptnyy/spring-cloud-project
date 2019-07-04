@@ -1,54 +1,49 @@
 package com.wzy.adapter;
 
+import com.wzy.service.SSOUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 @Configuration
 public class SecurityConfigurerAdapter extends WebSecurityConfigurerAdapter {
 
-    @Override
-    public void configure(HttpSecurity http) throws Exception {
-        http.csrf().disable();
-        http.requestMatchers().antMatchers("/oauth/**","/login/**","/logout/**")
-                .and()
-                .authorizeRequests()
-                .antMatchers("/oauth/**").authenticated()
-                .and()
-                .formLogin().permitAll();
-    }
-
-    /**
-     * 认证信息管理
-     * spring5中摒弃了原有的密码存储格式，官方把spring security的密码存储格式改了
-     *
-     * @param auth
-     * @throws Exception
-     */
     @Autowired
-    public void configure(AuthenticationManagerBuilder auth) throws Exception {
-        PasswordEncoder passwordEncoder = passwordEncoder();
-        auth.inMemoryAuthentication() //认证信息存储到内存中
-                .passwordEncoder(passwordEncoder)
-                .withUser("user").password("123456")
-                .roles("ADMIN");
-    }
+    private SSOUserService userInfoService;
 
-    private PasswordEncoder passwordEncoder() {
-        return new SSoPassWord();
-    }
-
-    /**
-     * 需要配置这个支持password模式
-     */
-    @Override
     @Bean
-    public AuthenticationManager authenticationManagerBean() throws Exception {
-        return super.authenticationManagerBean();
+    public PasswordEncoder passwordEncoder() {
+        return new BCryptPasswordEncoder();
+    }
+
+    @Override
+    protected void configure(HttpSecurity http) throws Exception {
+        http.formLogin().loginPage("/authentication/require")//默认跳转的页面接口
+                .loginProcessingUrl("/authentication/form")
+                .and().authorizeRequests()
+                .antMatchers("/authentication/require",//设置取消安全验证路径
+                        "/authentication/form",
+                        "/oauth/authorize",
+                        "/oauth/token",
+                        "/**/*.js",
+                        "/**/*.css",
+                        "/**/*.jpg",
+                        "/**/*.png",
+                        "/**/*.woff2"
+                )
+                .permitAll()
+                .anyRequest().authenticated()
+                .and()
+                .csrf().disable();
+    }
+
+    @Override
+    protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+        auth.userDetailsService(userInfoService).passwordEncoder(new SSoPassWord());
     }
 }

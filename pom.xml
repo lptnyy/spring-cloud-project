@@ -30,6 +30,7 @@
 		<module>pro-order-service</module>
 		<module>pro-product-service-api</module>
 		<module>pro-product-service</module>
+		<module>pro-auth-service</module>
 	</modules>
 
 	<parent>
