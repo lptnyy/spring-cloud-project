@@ -1,26 +1,10 @@
 spring:
-  security:
-    oauth2:
-      client:
-        registration:
-          example:
-            client-id: lptnyy
-            client-secret: wangyang119
-            authorization-grant-type: authorization_code
-            redirect-uri-template: '{baseUrl}/login/oauth2/code/{registrationId}'
-            clientName: gateway-service
-        provider:
-          example:
-            authorization-uri: http://localhost:8083/oauth/authorize
-            token-uri: https://localhost:8083/oauth/token
-            jwt-key-uri: http://localhost:8083/oauth/token_key #optional you can also provide public key as property value in this application.yml but in this case you should override ReactiveJwtDecoder injection in JwtConfiguration.class
-            userNameAttribute: user_name
   application:
     name: gateway-service
   cloud:
     config:
       profile: dev
-      name: eureka-middleware,gateway-service,redis-nosql,rabbitmq-middleware,zipkin-middleware,admin-middleware
+      name: eureka-middleware,gateway-service,redis-nosql,rabbitmq-middleware,zipkin-middleware,admin-middleware,mysql-usersqldata
       discovery:
         enabled: false
       override-none: true

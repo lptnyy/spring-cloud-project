@@ -10,7 +10,6 @@ import java.util.Map;
  */
 @RestController
 public class DefaultHystrixController {
-
     @RequestMapping("/defaultfallback")
     public Map<String,String> defaultfallback(){
         System.out.println("降级操作...");
