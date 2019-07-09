@@ -28,11 +28,15 @@ public class SsoConifg extends AuthorizationServerConfigurerAdapter {
     @Override
     public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
         clients.inMemory()
-                .withClient(client_id)//服务ID
-                .secret(secret)//服务密文
-                .authorizedGrantTypes("authorization_code", "refresh_token")//授权类型
-                .scopes("all","read","write")//授权范围
-                .autoApprove(true);
+                .withClient("android")
+                .scopes("xx") //此处的scopes是无用的，可以随意设置
+                .secret("android")
+                .authorizedGrantTypes("password", "authorization_code", "refresh_token")
+                .and()
+                .withClient("webapp")
+                .scopes("xx")
+                .authorizedGrantTypes("implicit");
+
     }
 
     /**
@@ -52,7 +56,9 @@ public class SsoConifg extends AuthorizationServerConfigurerAdapter {
      */
     @Override
     public void configure(AuthorizationServerSecurityConfigurer security) throws Exception {
-        security.tokenKeyAccess("isAuthenticated()");
+        security
+                .tokenKeyAccess("permitAll()")
+                .tokenKeyAccess("isAuthenticated()");
     }
 
     /**

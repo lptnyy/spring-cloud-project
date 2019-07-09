@@ -12,6 +12,7 @@ import java.util.ArrayList;
 
 @Service
 public class SSOUserService implements UserDetailsService {
+
     @Resource
     UserMapper userMapper;
 

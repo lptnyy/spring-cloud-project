@@ -9,3 +9,10 @@ spring:
         enabled: false
       override-none: true
       uri: http://localhost:13001
+
+security:
+  oauth2:
+    resource:
+      id: user-service-web
+      user-info-uri: http://localhost:8083/user
+      prefer-token-info: false

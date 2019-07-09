@@ -33,11 +33,23 @@ management:
   endpoint:
     health:
       show-details: always
+
+security:
+  oauth2:
+    client:
+      access-token-uri: http://localhost:8083/oauth/token
+      user-authorization-uri: http://localhost:8083/oauth/authorize
+      client-id: webapp
+    resource:
+      user-info-uri: http://localhost:8083/user
+      prefer-token-info: false
+      jwt:
+        key-value: secret
+
 zuul:
   routes:
     user:
       path: /user/**
       serviceId: user-service-web
-
 
 
