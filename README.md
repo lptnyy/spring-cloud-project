@@ -40,3 +40,5 @@
 ![Image text](image/elk.png)<br/>
 (14)TX-LCN分布式事务框架(参考pro-user-service-web)<br/>
 ![Image text](image/tr.png)<br/>
+(15) 增加SSO 单点登录（正在整）
+http://localhost:8083/oauth/token?client_id=android&client_secret=android&grant_type=password&username=admin&password=123456
