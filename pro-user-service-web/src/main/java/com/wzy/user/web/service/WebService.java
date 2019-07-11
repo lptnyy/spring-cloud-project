@@ -1,8 +1,6 @@
 package com.wzy.user.web.service;
 
-import com.codingapi.txlcn.tc.annotation.DTXPropagation;
 import com.codingapi.txlcn.tc.annotation.LcnTransaction;
-import com.codingapi.txlcn.tc.annotation.TxcTransaction;
 import com.wzy.common.util.ServiceRun;
 import com.wzy.order.OrderService;
 import com.wzy.pojo.Order;
@@ -14,6 +12,7 @@ import java.util.Date;
 
 @Service
 public class WebService {
+
     @Autowired
     UserService userService;
 

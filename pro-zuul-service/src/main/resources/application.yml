@@ -39,7 +39,8 @@ security:
     client:
       access-token-uri: http://localhost:8083/oauth/token
       user-authorization-uri: http://localhost:8083/oauth/authorize
-      client-id: webapp
+      client-id: lptnyy
+      registered-redirect-uri: http://www.baid.com
     resource:
       user-info-uri: http://localhost:8083/user
       prefer-token-info: false
@@ -51,5 +52,9 @@ zuul:
     user:
       path: /user/**
       serviceId: user-service-web
-
+    sso:
+      path: /sso/**
+      serviceId: sso-service
+  sensitive-headers:
+  - Cookie,Set-Cookie,Authorization
 

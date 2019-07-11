@@ -1,5 +1,9 @@
-client_id: lptnyy
-secret: wangyang119
+webClient: lptnyy
+webSecret: wangyang119
+phoneClient: phoneClient
+phoneSecret: wangyang119
+redirectUris: 'http://www.baidu.com,http://localhost:7071/login,http://localhost:8085/update'
+
 server:
   port: 8083
 mybatis:

@@ -19,11 +19,20 @@ import org.springframework.security.oauth2.provider.token.store.JwtTokenStore;
 @Configuration
 @RefreshScope
 public class SsoConifg extends AuthorizationServerConfigurerAdapter {
-    @Value("${client_id}")
-    String client_id;
+    @Value("${webClient}")
+    String webClient;
 
-    @Value("${secret}")
-    String secret;
+    @Value("${webSecret}")
+    String webSecret;
+
+    @Value("${phoneClient}")
+    String phoneClient;
+
+    @Value("${phoneSecret}")
+    String phoneSecret;
+
+    @Value("${redirectUris}")
+    String redirectUris;
 
     @Autowired
     private AuthenticationManager authenticationManager;
@@ -35,17 +44,17 @@ public class SsoConifg extends AuthorizationServerConfigurerAdapter {
      */
     @Override
     public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
+        String[] strings = redirectUris.split(",");
         clients.inMemory()
-                .withClient("android")
+                .withClient(phoneClient)
                 .scopes("app") //此处的scopes是无用的，可以随意设置
-                .secret("android")
+                .secret(phoneSecret)
                 .authorizedGrantTypes("password", "authorization_code", "refresh_token")
                 .and()
-                .withClient("webapp")
-                .redirectUris("http://baidu.com"
-                        ,"http://localhost:8085/update")
+                .withClient(webClient)
                 .scopes("web")
-                .authorizedGrantTypes("implicit");
+                .redirectUris(strings)
+                .authorizedGrantTypes("authorization_code", "refresh_token");
 
     }
 

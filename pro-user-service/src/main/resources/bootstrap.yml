@@ -4,8 +4,9 @@ spring:
   cloud:
     config:
       profile: dev
-      name: eureka-middleware,user-service,redis-nosql,rabbitmq-middleware,zipkin-middleware,admin-middleware,mysql-usersqldata
+      name: eureka-middleware,user-service,redis-nosql,rabbitmq-middleware,zipkin-middleware,admin-middleware,mysql-usersqldata,oauth2-res
       discovery:
         enabled: false
       override-none: true
       uri: http://localhost:13001
+
