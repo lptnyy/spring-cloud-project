@@ -26,7 +26,7 @@ public class WebService {
         order.setPrice(1);
         order.setStat(1);
         order.setCreatetime(new Date());
-        // LCN 模式 如果有熔断方面的配置 需要在分布式事务开启方进行手动验证 抛出异常 不然分布式事务将失效
+        // LCN 模式 调用外部服务有熔断方面的配置 需要在分布式事务开启方进行手动验证 抛出异常 不然分布式事务失效
         new ServiceRun()
                 .run(()-> userService.updateUser())
                 .run(()-> orderService.addOrder(order));
