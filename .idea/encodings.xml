@@ -2,15 +2,25 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-admin-service-ui" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/pro-common" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/pro-common-mapper" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/pro-common-pojo" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-config-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/pro-eureka-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-gateway-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-order-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-order-service-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-product-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-product-service-api" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/pro-redis-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/pro-redis-service-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-sso-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-stream-user-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/pro-user-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/pro-user-service-api" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/pro-user-service-web" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-zipkin-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/pro-zuul-service" charset="UTF-8" />
   </component>
 </project>

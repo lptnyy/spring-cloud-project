@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: userstream-service
+  cloud:
+    config:
+      profile: dev
+      name: eureka-middleware,userstream-service,redis-nosql,rabbitmq-middleware,zipkin-middleware,admin-middleware,mysql-usersqldata
+      discovery:
+        enabled: false
+      override-none: true
+      uri: http://localhost:13001
+

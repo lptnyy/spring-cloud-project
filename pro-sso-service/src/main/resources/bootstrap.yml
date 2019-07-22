@@ -9,3 +9,8 @@ spring:
         enabled: false
       override-none: true
       uri: http://localhost:13001
+server:
+  servlet:
+    session:
+      cookie:
+        name: ssocookie

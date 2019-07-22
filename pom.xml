@@ -30,7 +30,8 @@
 		<module>pro-order-service</module>
 		<module>pro-product-service-api</module>
 		<module>pro-product-service</module>
-	</modules>
+        <module>pro-stream-user-service</module>
+    </modules>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>

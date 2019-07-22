@@ -1,0 +1,15 @@
+server:
+  port: 8085
+mybatis:
+  type-aliases-package: com.wzy.pojo
+  mapper-locations: classpath:mapper/*.xml
+management:
+  server:
+    port: 15003
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+feign:
+  hystrix:
+    enabled: true

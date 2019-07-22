@@ -28,7 +28,8 @@ public class SecurityConfigurerAdapter extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http.formLogin().loginPage("/authentication/require")//默认跳转的页面接口
                 .loginProcessingUrl("/authentication/form")
-                .and().authorizeRequests()
+                .and()
+                .authorizeRequests()
                 .antMatchers("/authentication/require",//设置取消安全验证路径
                         "/authentication/form",
                         "/oauth/authorize",

@@ -1,5 +1,9 @@
 server:
   port: 7071
+  servlet:
+    session:
+      cookie:
+        name: zuulcookie
 
 eureka:
   instance:
@@ -40,7 +44,7 @@ security:
       access-token-uri: http://localhost:8083/oauth/token
       user-authorization-uri: http://localhost:8083/oauth/authorize
       client-id: lptnyy
-      registered-redirect-uri: http://www.baid.com
+      authentication-scheme: header
     resource:
       user-info-uri: http://localhost:8083/user
       prefer-token-info: false
@@ -52,9 +56,6 @@ zuul:
     user:
       path: /user/**
       serviceId: user-service-web
-    sso:
-      path: /sso/**
-      serviceId: sso-service
   sensitive-headers:
   - Cookie,Set-Cookie,Authorization
 
