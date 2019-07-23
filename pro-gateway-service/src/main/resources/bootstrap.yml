@@ -9,3 +9,16 @@ spring:
         enabled: false
       override-none: true
       uri: http://localhost:13001
+
+security:
+  oauth2:
+    client:
+      access-token-uri: http://localhost:8083/oauth/token
+      user-authorization-uri: http://localhost:8083/oauth/authorize
+      client-id: lptnyy
+      authentication-scheme: header
+    resource:
+      user-info-uri: http://localhost:8083/user
+      prefer-token-info: false
+      jwt:
+        key-value: secret

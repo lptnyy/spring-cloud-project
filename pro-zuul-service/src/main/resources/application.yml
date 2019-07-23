@@ -4,7 +4,6 @@ server:
     session:
       cookie:
         name: zuulcookie
-
 eureka:
   instance:
     status-page-url: http://localhost:${server.port}/swagger-ui.html
@@ -45,6 +44,7 @@ security:
       user-authorization-uri: http://localhost:8083/oauth/authorize
       client-id: lptnyy
       authentication-scheme: header
+      client-authentication-scheme: header
     resource:
       user-info-uri: http://localhost:8083/user
       prefer-token-info: false
@@ -52,10 +52,12 @@ security:
         key-value: secret
 
 zuul:
+  host:
+    connect-timeout-millis: 15000
+    socket-timeout-millis: 60000
   routes:
     user:
-      path: /user/**
+      path: /web/user/**
       serviceId: user-service-web
   sensitive-headers:
   - Cookie,Set-Cookie,Authorization
-
