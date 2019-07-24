@@ -4,6 +4,7 @@ import com.codingapi.txlcn.tc.annotation.LcnTransaction;
 import com.wzy.common.util.ServiceRun;
 import com.wzy.order.OrderService;
 import com.wzy.pojo.Order;
+import com.wzy.user.RoleService;
 import com.wzy.user.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -17,10 +18,14 @@ public class WebService {
     UserService userService;
 
     @Autowired
+    RoleService roleService;
+
+    @Autowired
     OrderService orderService;
 
     @LcnTransaction
     public String orderUpdate(){
+        roleService.run();
         Order order = new Order();
         order.setId(1);
         order.setPrice(1);

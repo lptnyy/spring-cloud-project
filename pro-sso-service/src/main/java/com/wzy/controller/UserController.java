@@ -1,4 +1,4 @@
-package com.wzy.adapter;
+package com.wzy.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;

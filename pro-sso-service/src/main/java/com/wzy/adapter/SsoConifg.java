@@ -51,8 +51,9 @@ public class SsoConifg extends AuthorizationServerConfigurerAdapter {
                 .and()
                 .withClient(webClient)
                 .scopes("web")
+                .autoApprove(true)
                 .redirectUris(strings)
-                .authorizedGrantTypes("authorization_code", "refresh_token");
+                .authorizedGrantTypes("password","authorization_code", "refresh_token");
 
     }
 
