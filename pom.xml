@@ -31,7 +31,6 @@
 		<module>pro-product-service-api</module>
 		<module>pro-product-service</module>
         <module>pro-stream-user-service</module>
-		<module>pro-permission-system-web</module>
 	</modules>
 
 	<parent>
