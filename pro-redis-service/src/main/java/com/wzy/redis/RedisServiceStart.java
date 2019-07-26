@@ -9,7 +9,6 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableEurekaClient
 @EnableSwagger2
 public class RedisServiceStart {
-
 	public static void main(String[] args) {
 		SpringApplication.run(RedisServiceStart.class, args);
 	}

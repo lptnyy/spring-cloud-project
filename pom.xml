@@ -31,6 +31,10 @@
 		<module>pro-product-service-api</module>
 		<module>pro-product-service</module>
         <module>pro-stream-user-service</module>
+		<module>pro-role-service-api</module>
+		<module>pro-role-service</module>
+		<module>pro-role-web</module>
+		<module>pro-statc-resources</module>
 	</modules>
 
 	<parent>

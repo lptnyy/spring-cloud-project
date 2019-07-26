@@ -19,7 +19,6 @@ import java.math.BigDecimal;
 
 @RestController
 @Api(value = "订单接口")
-@RefreshScope
 public class UserServiceImpl implements UserService {
 
     @Resource

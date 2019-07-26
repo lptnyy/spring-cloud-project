@@ -4,6 +4,7 @@ server:
     session:
       cookie:
         name: zuulcookie
+
 eureka:
   instance:
     status-page-url: http://localhost:${server.port}/swagger-ui.html
@@ -56,6 +57,12 @@ zuul:
     connect-timeout-millis: 15000
     socket-timeout-millis: 60000
   routes:
+    web:
+      path: /static/**
+      url: http://localhost
+    role:
+      path: /
+      serviceId: role-service-web
     user:
       path: /web/user/**
       serviceId: user-service-web

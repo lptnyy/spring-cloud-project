@@ -15,52 +15,92 @@ public class ServiceResponse<T> implements Serializable {
     public T getObj() {
         return obj;
     }
+    boolean noData = true;
+
+    public static ServiceResponse SUCCESSServiceResponse = new ServiceResponse();
+    public static ServiceResponse FAILServiceResponse = new ServiceResponse();
 
     public static ServiceResponse getSUCCESS(){
-        ServiceResponse serviceResponse = new ServiceResponse();
-        serviceResponse.setCode(ServiceResponseEnum.SUCCESS.getValue());
-        return serviceResponse;
+        SUCCESSServiceResponse.setCode(ServiceResponseEnum.SUCCESS.getValue());
+        return SUCCESSServiceResponse;
     }
 
     public static ServiceResponse getFAIL(){
-        ServiceResponse serviceResponse = new ServiceResponse();
-        serviceResponse.setCode(ServiceResponseEnum.FAIL.getValue());
-        return serviceResponse;
+        FAILServiceResponse.setCode(ServiceResponseEnum.FAIL.getValue());
+        return FAILServiceResponse;
+    }
+
+    public ServiceResponse run(Exceutor exceutor) {
+        this.exceutor = exceutor;
+        return this;
     }
 
     public int getDataCount() {
         return dataCount;
     }
 
-    public void setDataCount(int dataCount) {
+    public ServiceResponse setDataCount(int dataCount) {
         this.dataCount = dataCount;
+        return this;
     }
 
-    public void setObj(T obj) {
+    public ServiceResponse setObj(T obj) {
         this.obj = obj;
+        return this;
     }
 
     public List<T> getLsObj() {
         return lsObj;
     }
 
-    public void setLsObj(List<T> lsObj) {
+    public ServiceResponse setLsObj(List<T> lsObj) {
         this.lsObj = lsObj;
+        return this;
     }
 
     public int getCode() {
         return code;
     }
 
-    public void setCode(int code) {
+    public ServiceResponse setCode(int code) {
         this.code = code;
+        return this;
+    }
+
+    public boolean isNoData() {
+        return noData;
+    }
+
+    public void setNoData(boolean noData) {
+        this.noData = noData;
     }
 
     public String getMsg() {
         return msg;
     }
 
-    public void setMsg(String msg) {
+    public ServiceResponse setMsg(String msg) {
         this.msg = msg;
+        return this;
     }
+
+    Exceutor exceutor;
+    public ServiceResponse build(){
+        try{
+            this.obj = (T) exceutor.run();
+            if (this.obj == null) {
+                this.noData = false;
+            }
+            this.setCode(ServiceResponseEnum.SUCCESS.getValue());
+        } catch (Exception e){
+            this.setCode(ServiceResponseEnum.FAIL.getValue());
+            throw e;
+        }
+        return this;
+    }
+
+    public interface Exceutor{
+        public Object run();
+    }
+
 }

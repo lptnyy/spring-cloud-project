@@ -1,0 +1,20 @@
+<input id="errorFocusId" type="hidden" th:field="*{errorFocusId}"/>
+<ul style="padding: 10px;">
+    <li th:each="error: *{errors}">
+        <span th:if="${#strings.indexOf(error.key,'E') != -1}" style="color: red;" th:text="${error.value}"></span>
+        <span th:if="${#strings.indexOf(error.key,'I') != -1}" th:text="${error.value}"></span>
+        <span th:if="${#strings.indexOf(error.key,'W') != -1}" style="color: #1E9FFF;" th:text="${error.value}"></span>
+    </li>
+</ul>
+<script type="text/javascript">
+    window.onload=function (){
+        var errorName = document.getElementById("errorFocusId").value;
+        if (errorName != '') {
+            document.getElementById(errorName).focus();
+        }
+        var url = document.location.toString();
+        if (url.indexOf("login") != -1) {
+            if(self!=top){top.location=self.location;}
+        }
+    }
+</script>

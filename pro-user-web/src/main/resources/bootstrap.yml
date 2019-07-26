@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: user-service-web
+  cloud:
+    config:
+      profile: dev
+      name: eureka-middleware,user-serviceweb,redis-nosql,rabbitmq-middleware,zipkin-middleware
+      discovery:
+        enabled: false
+      override-none: true
+      uri: http://localhost:13001
+  main:
+    allow-bean-definition-overriding: true
+

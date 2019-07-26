@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: role-service
+  cloud:
+    config:
+      profile: dev
+      name: eureka-middleware,role-service,redis-nosql,rabbitmq-middleware,zipkin-middleware,admin-middleware,mysql-rolesqldata,oauth2-res
+      discovery:
+        enabled: false
+      override-none: true
+      uri: http://localhost:13001
