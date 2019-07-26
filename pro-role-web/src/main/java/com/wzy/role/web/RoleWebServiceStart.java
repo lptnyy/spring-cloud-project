@@ -8,6 +8,7 @@ import org.springframework.cloud.netflix.hystrix.EnableHystrix;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.ComponentScans;
+import org.springframework.security.oauth2.config.annotation.web.configuration.EnableOAuth2Client;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @SpringBootApplication
@@ -22,9 +23,11 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
         @ComponentScan(value = "com.wzy.role")
 })
 @EnableDistributedTransaction
+@EnableOAuth2Client
 public class RoleWebServiceStart {
 
     public static void main(String[] args){
         SpringApplication.run(RoleWebServiceStart.class, args);
     }
+
 }

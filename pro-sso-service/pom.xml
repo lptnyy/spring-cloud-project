@@ -81,7 +81,7 @@
         </dependency>
         <dependency>
             <groupId>com.wzy</groupId>
-            <artifactId>pro-common-mapper</artifactId>
+            <artifactId>pro-user-service-api</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
     </dependencies>

@@ -4,6 +4,7 @@ import com.codingapi.txlcn.tc.annotation.DTXPropagation;
 import com.codingapi.txlcn.tc.annotation.LcnTransaction;
 import com.codingapi.txlcn.tc.annotation.TxcTransaction;
 import com.wzy.common.util.ServiceResponse;
+import com.wzy.common.util.Srfactory;
 import com.wzy.mapper.UserMapper;
 import com.wzy.pojo.User;
 import com.wzy.redis.RedisService;
@@ -46,5 +47,16 @@ public class UserServiceImpl implements UserService {
         user.setBalance(user.getBalance().add(new BigDecimal(("1"))));
         userMapper.updateByPrimaryKeySelective(user);
         return ServiceResponse.getSUCCESS();
+    }
+
+    @Override
+    @ApiOperation(value = "获取用户信息", notes = "通过账号获取用户信息")
+    public ServiceResponse userNameGetUser(User user) {
+        return Srfactory.sr()
+                .run(()->{
+                    System.out.println("users");
+                    return userMapper.getUser(user.getUsername());
+                })
+                .build();
     }
 }

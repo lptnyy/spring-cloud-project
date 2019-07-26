@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>pro-user-service-web</artifactId>
+    <artifactId>pro-user-web</artifactId>
 
     <properties>
         <codingapi.txlcn.version>5.0.2.RELEASE</codingapi.txlcn.version>

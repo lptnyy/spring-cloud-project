@@ -11,3 +11,22 @@ spring:
       uri: http://localhost:13001
   main:
     allow-bean-definition-overriding: true
+
+security:
+  oauth2:
+    client:
+      access-token-uri: http://localhost:8083/oauth/token
+      user-authorization-uri: http://localhost:8083/oauth/authorize
+      client-id: lptnyy
+      authentication-scheme: header
+      client-authentication-scheme: header
+    resource:
+      user-info-uri: http://localhost:8083/user
+      prefer-token-info: false
+      jwt:
+        key-value: secret
+
+
+logging:
+  level:
+    root: debug

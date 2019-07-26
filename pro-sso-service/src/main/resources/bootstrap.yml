@@ -4,7 +4,7 @@ spring:
   cloud:
     config:
       profile: dev
-      name: eureka-middleware,sso-service,redis-nosql,rabbitmq-middleware,zipkin-middleware,admin-middleware,mysql-usersqldata
+      name: eureka-middleware,sso-service,redis-nosql,rabbitmq-middleware,zipkin-middleware,admin-middleware
       discovery:
         enabled: false
       override-none: true
