@@ -1,5 +1,6 @@
 package com.wzy.service;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.wzy.common.util.ServiceResponse;
 import com.wzy.common.util.ServiceResponseEnum;
 import com.wzy.entity.VaUser;
@@ -11,9 +12,11 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import java.util.ArrayList;
+import java.util.LinkedHashMap;
 
 @Service
 public class SSOUserService implements UserDetailsService {
+
     @Autowired
     UserService userService;
 
@@ -23,8 +26,10 @@ public class SSOUserService implements UserDetailsService {
         user.setUsername(s);
         ServiceResponse<User> response = userService.userNameGetUser(user);
         if (response.getCode() == ServiceResponseEnum.SUCCESS.getValue()){
-            VaUser vaUser = new VaUser("admin","123456",new ArrayList<>());
+            user = response.toObjClass(User.class);
+            VaUser vaUser = new VaUser(user.getUsername(),user.getUserpass(),new ArrayList<>());
             vaUser.setEnabled(true);
+            return vaUser;
         }
         return null;
     }

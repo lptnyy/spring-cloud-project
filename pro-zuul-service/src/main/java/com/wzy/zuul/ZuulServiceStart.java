@@ -6,6 +6,16 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationDetails;
+import org.springframework.security.web.authentication.logout.LogoutSuccessHandler;
+import org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
 
 @SpringBootApplication
 @EnableEurekaClient
@@ -19,8 +29,21 @@ public class ZuulServiceStart extends WebSecurityConfigurerAdapter{
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
-        http.authorizeRequests()
-                .antMatchers("/actuator/**")
+        http.logout()
+                .logoutUrl("/reLogin")
+                .logoutSuccessUrl("/")
+                .logoutSuccessHandler(new LogoutSuccessHandler() {
+                    @Override
+                    public void onLogoutSuccess(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, Authentication authentication) throws IOException, ServletException {
+                        new SecurityContextLogoutHandler().logout(httpServletRequest, null, null);
+                        OAuth2AuthenticationDetails userDetails = (OAuth2AuthenticationDetails) authentication .getDetails();
+                        httpServletResponse.setHeader("referer","http://localhost:7071");
+                        httpServletResponse.sendRedirect("http://localhost:8083/oauth/exit?access_token="+userDetails.getTokenValue());
+                    }
+                })
+                .and()
+                .authorizeRequests()
+                .antMatchers("/actuator/**","/api/**")
                 .permitAll()
                 .anyRequest()
                 .authenticated()

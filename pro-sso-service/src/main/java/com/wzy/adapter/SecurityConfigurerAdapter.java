@@ -34,6 +34,7 @@ public class SecurityConfigurerAdapter extends WebSecurityConfigurerAdapter {
                         "/authentication/form",
                         "/oauth/authorize",
                         "/oauth/token",
+                        "/oauth/exit",
                         "/assets/**",
                         "/actuator/**",
                         "/**/*.js",

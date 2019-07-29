@@ -61,10 +61,14 @@ zuul:
       path: /static/**
       url: http://localhost
     role:
-      path: /
+      path: /**
       serviceId: role-service-web
     user:
       path: /web/user/**
       serviceId: user-service-web
   sensitive-headers:
   - Cookie,Set-Cookie,Authorization
+
+logging:
+  level:
+    root: debug

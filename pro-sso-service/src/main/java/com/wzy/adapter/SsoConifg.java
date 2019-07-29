@@ -35,6 +35,11 @@ public class SsoConifg extends AuthorizationServerConfigurerAdapter {
     @Autowired
     private AuthenticationManager authenticationManager;
 
+    @Bean
+    public AuthorizationServerEndpointsConfigurer getAuthorizationServerEndpointsConfigurer(){
+        return new AuthorizationServerEndpointsConfigurer();
+    }
+
     /**
      * 客户端一些配置
      * @param clients

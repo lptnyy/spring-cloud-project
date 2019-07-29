@@ -1,12 +1,13 @@
 security:
   oauth2:
     client:
-      clientId: lptnyy
-      userAuthorizationUri: http://localhost:8083/oauth/authorize
       access-token-uri: http://localhost:8083/oauth/token
+      user-authorization-uri: http://localhost:8083/oauth/authorize
+      client-id: lptnyy
+      authentication-scheme: header
+      client-authentication-scheme: header
     resource:
-      userInfoUri: http://localhost:8083/user
+      user-info-uri: http://localhost:8083/user
+      prefer-token-info: false
       jwt:
         key-value: secret
-    authorization:
-      check-token-access: http://localhost:8083/oauth/check_token

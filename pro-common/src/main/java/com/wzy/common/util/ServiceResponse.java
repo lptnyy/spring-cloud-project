@@ -1,4 +1,6 @@
 package com.wzy.common.util;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 import java.io.Serializable;
 import java.util.List;
 
@@ -16,6 +18,7 @@ public class ServiceResponse<T> implements Serializable {
         return obj;
     }
     boolean noData = true;
+    ObjectMapper mapper = new ObjectMapper();
 
     public static ServiceResponse SUCCESSServiceResponse = new ServiceResponse();
     public static ServiceResponse FAILServiceResponse = new ServiceResponse();
@@ -103,4 +106,7 @@ public class ServiceResponse<T> implements Serializable {
         public Object run();
     }
 
+    public T toObjClass(Class srClass){
+        return (T) mapper.convertValue(getObj(), srClass);
+    }
 }

@@ -20,6 +20,9 @@ public class RoleController {
     public ModelAndView main() {
         Object object = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         ModelAndView modelAndView = new ModelAndView("index");
+        modelAndView.addObject("user",object);
         return modelAndView;
     }
+
+    
 }
