@@ -1,14 +1,14 @@
-package com.wzy.entity;
+package com.wzy.pojo.sso;
 
-public class Role {
+public class VaRole {
     private Integer id;
     private String name;
 
-    public Role(){
+    public VaRole(){
 
     }
 
-    public Role(String name) {
+    public VaRole(String name) {
         this.name = name;
     }
 

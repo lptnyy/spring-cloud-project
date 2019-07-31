@@ -1,13 +1,13 @@
-package com.wzy.entity;
+package com.wzy.pojo.sso;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
-import java.security.Timestamp;
-import java.util.List;
-import java.util.ArrayList;
 
+import java.security.Timestamp;
+import java.util.ArrayList;
+import java.util.List;
 
 public class VaUser implements UserDetails {
     private Long id;
@@ -15,7 +15,7 @@ public class VaUser implements UserDetails {
     private String password;
     private String nickname;
     private boolean enabled = false;
-    private List<Role> roles;
+    private List<VaRole> roles;
     private String email;
     private String userface;
     private Timestamp regTime;
@@ -52,7 +52,7 @@ public class VaUser implements UserDetails {
     @JsonIgnore
     public List<GrantedAuthority> getAuthorities() {
         List<GrantedAuthority> authorities = new ArrayList<>();
-        for (Role role : roles) {
+        for (VaRole role : roles) {
             authorities.add(new SimpleGrantedAuthority("ROLE_" + role.getName()));
         }
         return authorities;
@@ -68,7 +68,7 @@ public class VaUser implements UserDetails {
         return username;
     }
 
-    public VaUser(String username, String password, List<Role> roles) {
+    public VaUser(String username, String password, List<VaRole> roles) {
         this.username = username;
         this.password = password;
         this.roles = roles;

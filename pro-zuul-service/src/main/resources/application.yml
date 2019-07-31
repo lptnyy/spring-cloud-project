@@ -13,6 +13,19 @@ eureka:
       defaultZone: http://localhost:8761/eureka/
 
 spring:
+  redis:
+    database: 0
+    host: 192.168.30.199
+    port: 6379
+    password:
+    jedis:
+      pool:
+        max-active: 8
+        max-idle: 8
+        max-wait: -1ms
+        min-idle: 0
+    timeout: 10000
+
   application:
     name: zuul-service
   boot:
@@ -26,6 +39,12 @@ spring:
       percentage: 1.0
     sender:
       type: web  # 引入mq 不这么设置会冲突
+  jta:
+    atomikos:
+      connectionfactory:
+        ignore-session-transacted-flag:
+  session:
+    store-type: redis
 
 management:
   server:
@@ -51,7 +70,6 @@ security:
       prefer-token-info: false
       jwt:
         key-value: secret
-
 zuul:
   host:
     connect-timeout-millis: 15000
@@ -59,7 +77,7 @@ zuul:
   routes:
     web:
       path: /static/**
-      url: http://localhost
+      url: http://localhost:81
     role:
       path: /**
       serviceId: role-service-web
@@ -68,6 +86,9 @@ zuul:
       serviceId: user-service-web
   sensitive-headers:
   - Cookie,Set-Cookie,Authorization
+feign:
+  httpclient:
+    enabled: true
 
 logging:
   level:

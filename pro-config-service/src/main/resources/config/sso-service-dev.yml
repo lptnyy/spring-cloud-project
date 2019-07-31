@@ -2,7 +2,7 @@ webClient: lptnyy
 webSecret: wangyang119
 phoneClient: phoneClient
 phoneSecret: wangyang119
-redirectUris: 'http://www.baidu.com,http://localhost:7071/login,http://localhost:8085/update'
+redirectUris: 'http://www.baidu.com,http://localhost:7071/login,http://localhost:8085/update,http://localhost/login'
 
 server:
   port: 8083
