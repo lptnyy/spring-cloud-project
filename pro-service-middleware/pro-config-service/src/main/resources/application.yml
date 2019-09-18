@@ -5,16 +5,18 @@ spring:
     config:
       server:
         native:
-          search-locations: classpath:/config/${configfile} # 搜索src/main/resource 下的properties文件夹下的文件
+          search-locations: classpath:/config/${config} # 搜索src/main/resource 下的properties文件夹下的文件
+
   bus:
     trace:
       enabled: true # 启用日志跟踪
   boot:
     admin:
       client:
-        url: http://localhost:12001
+        url: http://${config-service}:12001
         instance:
-          service-base-url: http://localhost:8081
+          service-base-url: http://${admin-service}:8081
+
   profiles:
     active: native  # 配置使用本地储存
   rabbitmq:
@@ -29,7 +31,7 @@ server:
 eureka:
   client:
     service-url:
-      default-zone: http://localhost:8761/eureka
+      default-zone: http://${eureka-service}:8761/eureka
 
 management:
   server:
