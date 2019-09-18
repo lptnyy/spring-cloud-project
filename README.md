@@ -1,5 +1,5 @@
 # spring-cloud 升级为 Greenwich.RELEASE spring boot 2.1.4
-架构图<br/>
+### 架构图   
 ![Image text](image/jg.png)   
 ### 框架预览
 (1) Eureka  
