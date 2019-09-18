@@ -1,0 +1,12 @@
+server:
+  port: 8082
+management:
+  server:
+    port: 15001
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+feign:
+  hystrix:
+    enabled: true

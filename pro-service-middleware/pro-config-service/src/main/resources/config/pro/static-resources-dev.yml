@@ -1,0 +1,12 @@
+server:
+  port: 81
+feign:
+  hystrix:
+    enabled: true
+management:
+  server:
+    port: 15008
+  endpoints:
+    web:
+      exposure:
+        include: "*"
