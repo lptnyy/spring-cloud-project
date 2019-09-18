@@ -1,9 +1,8 @@
 # spring-cloud 升级为 Greenwich.RELEASE spring boot 2.1.4
 架构图<br/>
-![Image text](image/jg.png)
-<br/>
-(1) Eureka
-<br/>
+![Image text](image/jg.png)   
+### 框架预览
+(1) Eureka  
 ![Image text](https://freenetfile.oss-ap-southeast-1.aliyuncs.com/WeChat%20Screenshot_20181206145421.png)
 <br/> 
 (2) Actuator
@@ -42,3 +41,5 @@
 ![Image text](image/tr.png)<br/>
 (15) 增加SSO 单点登录（正在整）
 http://localhost:8083/oauth/token?client_id=android&client_secret=android&grant_type=password&username=admin&password=123456
+
+###
