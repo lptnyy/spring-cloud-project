@@ -19,14 +19,21 @@
         <module name="pro-product-service-api" />
         <module name="pro-redis-service" />
         <module name="pro-redis-service-api" />
+        <module name="pro-role-service" />
+        <module name="pro-role-service-api" />
+        <module name="pro-role-web" />
         <module name="pro-sso-service" />
+        <module name="pro-statc-resources" />
         <module name="pro-stream-user-service" />
         <module name="pro-user-service" />
         <module name="pro-user-service-api" />
-        <module name="pro-user-service-web" />
+        <module name="pro-user-web" />
         <module name="pro-zipkin-service" />
         <module name="pro-zuul-service" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="pro-user-service-web" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

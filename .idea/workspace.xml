@@ -1,18 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="81243783-342c-41b5-919f-b7abcbc84446" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.txlcn/TransactionManager-8084.mv.db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.txlcn/order-service-8086.mv.db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.txlcn/order-service-null.mv.db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.txlcn/user-service-8084.mv.db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.txlcn/user-service-web-8085.mv.db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pro-config-service/src/main/resources/config/userstream-service-dev.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pro-stream-user-service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pro-stream-user-service/pro-stream-user-service.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pro-stream-user-service/src/main/java/com/wzy/user/stream/UserStreamServiceStart.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pro-stream-user-service/src/main/resources/bootstrap.yml" afterDir="false" />
+    <list default="true" id="6f3c0149-046e-46dc-a73c-592b74ec523b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/dev/zipkin-service-dev.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pro-service-monitor/pro-admin-service-ui/src/main/resources/bootstrap.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pro-service-monitor/pro-zipkin-service/src/main/resources/bootstrap.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__antlr_antlr_2_7_7.xml" beforeDir="false" />
@@ -220,38 +212,100 @@
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__xmlpull_xmlpull_1_1_3_1.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__xpp3_xpp3_min_1_1_4c.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/java/com/wzy/adapter/SecurityConfigurerAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso-service/src/main/java/com/wzy/adapter/SecurityConfigurerAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/java/com/wzy/adapter/SsoConifg.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso-service/src/main/java/com/wzy/adapter/SsoConifg.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso-service/src/main/resources/bootstrap.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-zuul-service/src/main/java/com/wzy/zuul/ZuulServiceStart.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-zuul-service/src/main/java/com/wzy/zuul/ZuulServiceStart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-zuul-service/src/main/java/com/wzy/zuul/config/ResourceServerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-zuul-service/src/main/java/com/wzy/zuul/config/ResourceServerConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-zuul-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-zuul-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spring-cloud.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-gateway/pro-zuul-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-gateway/pro-zuul-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/java/com/wzy/config/ConfigStart.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/java/com/wzy/config/ConfigServiceStart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/bootstrap.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/dev/admin-middleware-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/dev/admin-middleware-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/dev/eureka-middleware-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/dev/eureka-middleware-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/dev/rabbitmq-middleware-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/dev/rabbitmq-middleware-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/dev/redis-nosql-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/dev/redis-nosql-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/dev/redis-service-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/dev/redis-service-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/dev/zipkin-middleware-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/dev/zipkin-middleware-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/pro/admin-middleware-dev.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/pro/eureka-middleware-dev.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/pro/gateway-service-dev.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/pro/mysql-ordersqldata-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/dev/mysql-zipkinsqldata-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/pro/mysql-rolesqldata-dev.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/pro/mysql-sqldata-dev.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/pro/mysql-usersqldata-dev.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/pro/oauth2-res-dev.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/pro/order-service-dev.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/pro/product-service-dev.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/pro/rabbitmq-middleware-dev.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/pro/redis-nosql-dev.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/pro/redis-service-dev.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/pro/role-service-dev.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/pro/role-serviceweb-dev.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/pro/sso-service-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/dev/admin-service-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/pro/static-resources-dev.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/pro/user-service-dev.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/pro/user-serviceweb-dev.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/pro/userstream-service-dev.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/pro/zipkin-middleware-dev.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-middleware/pro-eureka-service/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-register/pro-eureka-service/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-middleware/pro-eureka-service/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-register/pro-eureka-service/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-middleware/pro-eureka-service/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-register/pro-eureka-service/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-middleware/pro-eureka-service/mvnw" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-register/pro-eureka-service/mvnw" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-middleware/pro-eureka-service/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-register/pro-eureka-service/mvnw.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-middleware/pro-eureka-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-register/pro-eureka-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-middleware/pro-eureka-service/src/main/java/com/wzy/eureka/ProEurekaServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-register/pro-eureka-service/src/main/java/com/wzy/eureka/EurekaServiceStart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-middleware/pro-eureka-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-register/pro-eureka-service/src/main/resources/bootstrap.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-middleware/pro-eureka-service/src/test/java/com/wzy/eureka/ProEurekaServiceApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-register/pro-eureka-service/src/test/java/com/wzy/eureka/ProEurekaServiceApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-middleware/pro-redis-service/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-middleware/pro-redis-service/src/main/resources/bootstrap.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-monitor/pro-admin-service-ui/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-monitor/pro-admin-service-ui/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-monitor/pro-admin-service-ui/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-monitor/pro-zipkin-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-monitor/pro-zipkin-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-monitor/pro-zipkin-service/src/main/resources/application.yml" beforeDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/pro-admin-service-ui/target/" />
-    <ignored path="$PROJECT_DIR$/pro-sso-service/target/" />
-    <ignored path="$PROJECT_DIR$/pro-redis-service/target/" />
-    <ignored path="$PROJECT_DIR$/pro-user-service-api/target/" />
-    <ignored path="$PROJECT_DIR$/pro-order-service/target/" />
-    <ignored path="$PROJECT_DIR$/pro-gateway-service/target/" />
-    <ignored path="$PROJECT_DIR$/pro-product-service/target/" />
-    <ignored path="$PROJECT_DIR$/pro-zipkin-service/target/" />
+    <ignored path="$PROJECT_DIR$/pro-stream-user-service/target/" />
+    <ignored path="$PROJECT_DIR$/pro-common-pojo/target/" />
     <ignored path="$PROJECT_DIR$/pro-user-service/target/" />
-    <ignored path="$PROJECT_DIR$/pro-order-service-api/target/" />
-    <ignored path="$PROJECT_DIR$/pro-user-service-web/target/" />
-    <ignored path="$PROJECT_DIR$/pro-common/target/" />
-    <ignored path="$PROJECT_DIR$/pro-config-service/target/" />
-    <ignored path="$PROJECT_DIR$/pro-eureka-service/target/" />
-    <ignored path="$PROJECT_DIR$/pro-common-mapper/target/" />
-    <ignored path="$PROJECT_DIR$/pro-redis-service-api/target/" />
     <ignored path="$PROJECT_DIR$/pro-zuul-service/target/" />
     <ignored path="$PROJECT_DIR$/pro-product-service-api/target/" />
+    <ignored path="$PROJECT_DIR$/pro-common-mapper/target/" />
+    <ignored path="$PROJECT_DIR$/pro-product-service/target/" />
+    <ignored path="$PROJECT_DIR$/pro-sso-service/target/" />
+    <ignored path="$PROJECT_DIR$/pro-config-service/target/" />
+    <ignored path="$PROJECT_DIR$/pro-order-service-api/target/" />
     <ignored path="$PROJECT_DIR$/target/" />
-    <ignored path="$PROJECT_DIR$/pro-common-pojo/target/" />
-    <ignored path="$PROJECT_DIR$/pro-stream-user-service/target/" />
+    <ignored path="$PROJECT_DIR$/pro-gateway-service/target/" />
+    <ignored path="$PROJECT_DIR$/pro-zipkin-service/target/" />
+    <ignored path="$PROJECT_DIR$/pro-order-service/target/" />
+    <ignored path="$PROJECT_DIR$/pro-redis-service-api/target/" />
+    <ignored path="$PROJECT_DIR$/pro-eureka-service/target/" />
+    <ignored path="$PROJECT_DIR$/pro-user-service-web/target/" />
+    <ignored path="$PROJECT_DIR$/pro-admin-service-ui/target/" />
+    <ignored path="$PROJECT_DIR$/pro-common/target/" />
+    <ignored path="$PROJECT_DIR$/pro-redis-service/target/" />
+    <ignored path="$PROJECT_DIR$/pro-user-service-api/target/" />
+    <ignored path="$PROJECT_DIR$/pro-service-middleware/pro-eureka-service/target/" />
+    <ignored path="$PROJECT_DIR$/pro-service-role/pro-role-web/target/" />
+    <ignored path="$PROJECT_DIR$/pro-service-middleware/pro-redis-service-api/target/" />
+    <ignored path="$PROJECT_DIR$/pro-service-auth/pro-sso-service/target/" />
+    <ignored path="$PROJECT_DIR$/pro-service-monitor/pro-zipkin-service/target/" />
+    <ignored path="$PROJECT_DIR$/pro-service-order/pro-order-service/target/" />
+    <ignored path="$PROJECT_DIR$/pro-service-product/pro-product-service/target/" />
+    <ignored path="$PROJECT_DIR$/pro-service-gateway/pro-zuul-service/target/" />
+    <ignored path="$PROJECT_DIR$/pro-service-order/pro-order-service-api/target/" />
+    <ignored path="$PROJECT_DIR$/pro-service-middleware/pro-config-service/target/" />
+    <ignored path="$PROJECT_DIR$/pro-service-common/pro-common-pojo/target/" />
+    <ignored path="$PROJECT_DIR$/pro-service-user/pro-user-service-api/target/" />
+    <ignored path="$PROJECT_DIR$/pro-service-monitor/pro-admin-service-ui/target/" />
+    <ignored path="$PROJECT_DIR$/pro-service-stream/pro-stream-user-service/target/" />
+    <ignored path="$PROJECT_DIR$/pro-service-role/pro-role-service/target/" />
+    <ignored path="$PROJECT_DIR$/pro-service-static/pro-statc-resources/target/" />
+    <ignored path="$PROJECT_DIR$/pro-service-common/pro-common-mapper/target/" />
+    <ignored path="$PROJECT_DIR$/pro-service-role/pro-role-service-api/target/" />
+    <ignored path="$PROJECT_DIR$/pro-service-gateway/pro-gateway-service/target/" />
+    <ignored path="$PROJECT_DIR$/pro-service-middleware/pro-redis-service/target/" />
+    <ignored path="$PROJECT_DIR$/pro-service-user/pro-user-web/target/" />
+    <ignored path="$PROJECT_DIR$/pro-service-product/pro-product-service-api/target/" />
+    <ignored path="$PROJECT_DIR$/pro-service-user/pro-user-service/target/" />
+    <ignored path="$PROJECT_DIR$/pro-service-common/pro-common/target/" />
+    <ignored path="$PROJECT_DIR$/pro-service-register/pro-eureka-service/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -259,94 +313,73 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FUSProjectUsageTrigger">
-    <session id="995138299">
+    <session id="-1274453508">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="9" />
-          <entry key="project.open.time.1" value="4" />
-          <entry key="project.open.time.14" value="1" />
-          <entry key="project.open.time.2" value="1" />
-          <entry key="project.open.time.3" value="1" />
-          <entry key="project.open.time.4" value="2" />
+          <entry key="project.closed" value="4" />
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.10" value="1" />
+          <entry key="project.open.time.11" value="1" />
+          <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.6" value="1" />
-          <entry key="project.opened" value="10" />
+          <entry key="project.opened" value="5" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="class" value="49" />
-          <entry key="html" value="14" />
-          <entry key="java" value="244" />
-          <entry key="log" value="1" />
-          <entry key="md" value="1" />
-          <entry key="xml" value="39" />
-          <entry key="yml" value="150" />
+          <entry key="Dockerfile" value="2" />
+          <entry key="java" value="31" />
+          <entry key="md" value="7" />
+          <entry key="properties" value="2" />
+          <entry key="sql" value="2" />
+          <entry key="xml" value="12" />
+          <entry key="yml" value="139" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CLASS" value="49" />
-          <entry key="HTML" value="14" />
-          <entry key="JAVA" value="244" />
-          <entry key="Markdown" value="1" />
-          <entry key="PLAIN_TEXT" value="1" />
-          <entry key="XML" value="39" />
-          <entry key="YAML" value="150" />
+          <entry key="Dockerfile" value="2" />
+          <entry key="JAVA" value="31" />
+          <entry key="Markdown" value="7" />
+          <entry key="Properties" value="2" />
+          <entry key="SQL" value="2" />
+          <entry key="XML" value="12" />
+          <entry key="YAML" value="139" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="461" />
-          <entry key="md" value="33" />
-          <entry key="txt" value="57" />
-          <entry key="xml" value="31" />
-          <entry key="yml" value="370" />
+          <entry key="Dockerfile" value="70" />
+          <entry key="dummy" value="12" />
+          <entry key="md" value="238" />
+          <entry key="txt" value="103" />
+          <entry key="xml" value="24" />
+          <entry key="yml" value="628" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="461" />
-          <entry key="Markdown" value="33" />
-          <entry key="PLAIN_TEXT" value="57" />
-          <entry key="XML" value="31" />
-          <entry key="YAML" value="370" />
+          <entry key="Dockerfile" value="70" />
+          <entry key="Markdown" value="238" />
+          <entry key="PLAIN_TEXT" value="115" />
+          <entry key="XML" value="24" />
+          <entry key="YAML" value="628" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pro-user-service-web/src/main/java/com/wzy/user/web/swagger/Swagger2.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pro-user-service-web/src/main/java/com/wzy/user/web/UserWebStart.java">
+        <entry file="file://$PROJECT_DIR$/pro-service-register/pro-eureka-service/src/main/docker/Dockerfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="29" column="8" lean-forward="true" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="56" />
+            <state relative-caret-position="90">
+              <caret line="6" column="60" selection-start-line="6" selection-start-column="60" selection-end-line="6" selection-end-column="60" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>DelegatingFilterProxy</find>
-    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -354,48 +387,37 @@
   <component name="GradleLocalSettings">
     <option name="projectSyncType">
       <map>
-        <entry key="$PROJECT_DIR$/../spring-cloud-gateway-oauth2-sso-sample-application-master" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../开源项目/spring-framework" value="PREVIEW" />
       </map>
     </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pro-sso-service/pom.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/pro-zuul-service/pom.xml" />
+        <option value="$PROJECT_DIR$/pro-service-register/pro-eureka-service/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/pro-service-register/pro-eureka-service/src/main/resources/bootstrap.yml" />
+        <option value="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/bootstrap.yml" />
+        <option value="$PROJECT_DIR$/pro-service-monitor/pro-admin-service-ui/pom.xml" />
+        <option value="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/dev/admin-service-dev.yml" />
+        <option value="$PROJECT_DIR$/pro-service-monitor/pro-admin-service-ui/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/pro-service-monitor/pro-admin-service-ui/src/main/resources/bootstrap.yml" />
+        <option value="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/dev/mysql-zipkinsqldata-dev.yml" />
+        <option value="$PROJECT_DIR$/pro-service-monitor/pro-zipkin-service/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/dev/zipkin-service-dev.yml" />
+        <option value="$PROJECT_DIR$/pro-service-monitor/pro-zipkin-service/pom.xml" />
+        <option value="$PROJECT_DIR$/pro-service-monitor/pro-zipkin-service/src/main/resources/bootstrap.yml" />
+        <option value="$PROJECT_DIR$/pro-service-gateway/pro-zuul-service/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/dev/redis-nosql-dev.yml" />
+        <option value="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/dev/redis-service-dev.yml" />
+        <option value="$PROJECT_DIR$/pro-service-middleware/pro-redis-service/src/main/resources/bootstrap.yml" />
+        <option value="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/dev/zipkin-middleware-dev.yml" />
+        <option value="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/dev/rabbitmq-middleware-dev.yml" />
+        <option value="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/dev/admin-middleware-dev.yml" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/pro-zuul-service/src/main/java/com/wzy/zuul/config/OAuth2ResourceServerConfig.java" />
-        <option value="$PROJECT_DIR$/pro-config-service/src/main/resources/config/sso-service-dev.yml" />
-        <option value="$PROJECT_DIR$/pro-config-service/src/main/resources/config/oauth2-res-dev.yml" />
-        <option value="$PROJECT_DIR$/pro-user-service/src/main/java/com/wzy/user/config/ResourceServerConfig.java" />
-        <option value="$PROJECT_DIR$/pro-user-service-web/src/main/java/com/wzy/user/web/config/FeignOauth2RequestInterceptor.java" />
-        <option value="$PROJECT_DIR$/pro-user-service/src/main/java/com/wzy/user/config/FeignOauth2RequestInterceptor.java" />
-        <option value="$PROJECT_DIR$/pro-user-service-api/src/main/java/com/wzy/user/config/FeignOauth2RequestInterceptor.java" />
-        <option value="$PROJECT_DIR$/pro-user-service/src/main/resources/bootstrap.yml" />
-        <option value="$PROJECT_DIR$/pro-user-service-api/src/main/java/com/wzy/user/UserService.java" />
-        <option value="$PROJECT_DIR$/pro-zuul-service/src/main/java/com/wzy/zuul/GateWayCorsConfig.java" />
-        <option value="$PROJECT_DIR$/pro-user-service-web/src/main/java/com/wzy/user/web/config/ResourceServerConfig.java" />
-        <option value="$PROJECT_DIR$/pro-user-service-web/src/main/resources/bootstrap.yml" />
-        <option value="$PROJECT_DIR$/pro-user-service-web/pom.xml" />
-        <option value="$PROJECT_DIR$/pro-user-service-api/pom.xml" />
-        <option value="$PROJECT_DIR$/pro-sso-service/src/main/java/com/wzy/service/SSOUserService.java" />
-        <option value="$PROJECT_DIR$/pro-sso-service/src/main/java/com/wzy/entity/Role.java" />
-        <option value="$PROJECT_DIR$/pro-user-service-web/src/main/java/com/wzy/user/web/service/WebService.java" />
-        <option value="$PROJECT_DIR$/pro-config-service/src/main/resources/config/mysql-sqldata-dev.yml" />
-        <option value="$PROJECT_DIR$/pro-sso-service/src/main/resources/templates/login.html" />
-        <option value="$PROJECT_DIR$/pro-zuul-service/src/main/java/com/wzy/zuul/config/SecurityConfigurerAdapter.java" />
-        <option value="$PROJECT_DIR$/pro-sso-service/src/main/java/com/wzy/adapter/SecurityConfigurerAdapter.java" />
-        <option value="$PROJECT_DIR$/pro-sso-service/src/main/java/com/wzy/adapter/SsoConifg.java" />
-        <option value="$PROJECT_DIR$/pro-zuul-service/src/main/java/com/wzy/zuul/config/ResourceServerConfig.java" />
-        <option value="$PROJECT_DIR$/pro-zuul-service/src/main/java/com/wzy/zuul/ZuulServiceStart.java" />
-        <option value="$PROJECT_DIR$/pro-sso-service/src/main/resources/bootstrap.yml" />
-        <option value="$PROJECT_DIR$/pro-zuul-service/src/main/resources/application.yml" />
-        <option value="$PROJECT_DIR$/pro-stream-user-service/src/main/resources/bootstrap.yml" />
-        <option value="$PROJECT_DIR$/pro-user-service/pom.xml" />
-        <option value="$PROJECT_DIR$/pro-stream-user-service/pom.xml" />
-        <option value="$PROJECT_DIR$/pro-config-service/src/main/resources/config/userstream-service-dev.yml" />
-        <option value="$PROJECT_DIR$/pro-stream-user-service/src/main/java/com/wzy/user/stream/UserStreamServiceStart.java" />
+        <option value="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/dev/eureka-middleware-dev.yml" />
+        <option value="$PROJECT_DIR$/pro-service-register/pro-eureka-service/src/main/docker/Dockerfile" />
       </list>
     </option>
   </component>
@@ -410,25 +432,32 @@
       <expand>
         <path>
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="pro-zuul-service" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="pro-eureka-service" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="pro-eureka-service" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="pro-eureka-service" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
         </path>
       </expand>
       <select />
     </treeState>
-  </component>
-  <component name="NodeModulesDirectoryManager">
-    <handled-path value="$PROJECT_DIR$/pro-vue-web/node_modules" />
   </component>
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths>
       <path value="$PROJECT_DIR$/pro-vue-web/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="130" />
-    <option name="y" value="109" />
-    <option name="width" value="1553" />
-    <option name="height" value="966" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="7" />
+    <option name="y" value="23" />
+    <option name="width" value="1433" />
+    <option name="height" value="752" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -436,7 +465,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -444,150 +473,31 @@
               <item name="spring-cloud" type="b2602c69:ProjectViewProjectNode" />
               <item name="spring-cloud-project" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="spring-cloud" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spring-cloud-project" type="462c0819:PsiDirectoryNode" />
-              <item name="pro-config-service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="spring-cloud" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spring-cloud-project" type="462c0819:PsiDirectoryNode" />
-              <item name="pro-config-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="spring-cloud" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spring-cloud-project" type="462c0819:PsiDirectoryNode" />
-              <item name="pro-config-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="spring-cloud" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spring-cloud-project" type="462c0819:PsiDirectoryNode" />
-              <item name="pro-config-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="spring-cloud" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spring-cloud-project" type="462c0819:PsiDirectoryNode" />
-              <item name="pro-config-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="spring-cloud" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spring-cloud-project" type="462c0819:PsiDirectoryNode" />
-              <item name="pro-user-service-web" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="spring-cloud" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spring-cloud-project" type="462c0819:PsiDirectoryNode" />
-              <item name="pro-user-service-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="spring-cloud" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spring-cloud-project" type="462c0819:PsiDirectoryNode" />
-              <item name="pro-user-service-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="spring-cloud" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spring-cloud-project" type="462c0819:PsiDirectoryNode" />
-              <item name="pro-user-service-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="spring-cloud" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spring-cloud-project" type="462c0819:PsiDirectoryNode" />
-              <item name="pro-user-service-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="spring-cloud" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spring-cloud-project" type="462c0819:PsiDirectoryNode" />
-              <item name="pro-user-service-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="spring-cloud" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spring-cloud-project" type="462c0819:PsiDirectoryNode" />
-              <item name="pro-user-service-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="spring-cloud" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spring-cloud-project" type="462c0819:PsiDirectoryNode" />
-              <item name="pro-user-service-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="swagger" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="spring-cloud" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spring-cloud-project" type="462c0819:PsiDirectoryNode" />
-              <item name="pro-user-service-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
-      <pane id="CatdeaLogs" />
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="GO_FMT" value="true" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1563790128771" />
-    <property name="go.gopath.indexing.explicitly.defined" value="true" />
-    <property name="go.vendoring.notification.had.been.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../spring-framework-master/spring-framework-master" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1569594487408" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Problems" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.wzy.zuul.config" />
-      <recent name="com.wzy.user.config" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\PROJECT\spring-cloud-project\pro-config-service\src\main\resources\config" />
-      <recent name="D:\PROJECT\spring-cloud-project\pro-stream-user-service\src\main\resources" />
-      <recent name="D:\PROJECT\spring-cloud-project\pro-user-service-api\src\main\java\com\wzy\user" />
+      <recent name="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/dev" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/pro-service-register" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -602,191 +512,124 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.UserStreamServiceStart">
-    <configuration name="ZuulServiceStart" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.wzy.zuul.ZuulServiceStart" />
-      <module name="pro-zuul-service" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.wzy.zuul.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Spring Boot.EurekaServiceStart">
     <configuration name="AdminApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="pro-admin-service-ui" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.admin.ui.AdminApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <additionalParameters>
+        <param>
+          <option name="enabled" value="true" />
+          <option name="name" value="config-service" />
+          <option name="value" value="localhost" />
+        </param>
+      </additionalParameters>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ConfigStart" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+    <configuration name="ConfigServiceStart" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="pro-config-service" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.wzy.config.ConfigStart" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ProEurekaServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="pro-eureka-service" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.wzy.eureka.ProEurekaServiceApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="RedisServiceStart" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="pro-redis-service" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.wzy.redis.RedisServiceStart" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="StartOrderService" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="pro-order-service" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.wzy.order.StartOrderService" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="StartPdtService" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="pro-product-service" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.wzy.pdt.StartPdtService" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="StartSSOService" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="pro-sso-service" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.wzy.StartSSOService" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserServiceStart" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="pro-user-service" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.wzy.user.UserServiceStart" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserStreamServiceStart" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <module name="pro-stream-user-service" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.wzy.user.stream.*" />
+          <option name="PATTERN" value="com.wzy.config.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.wzy.user.stream.UserStreamServiceStart" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.wzy.config.ConfigServiceStart" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <additionalParameters>
+        <param>
+          <option name="enabled" value="true" />
+          <option name="name" value="eureka-service" />
+          <option name="value" value="localhost" />
+        </param>
+        <param>
+          <option name="enabled" value="true" />
+          <option name="name" value="config-service" />
+          <option name="value" value="localhost" />
+        </param>
+      </additionalParameters>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserWebStart" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="pro-user-service-web" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.wzy.user.web.UserWebStart" />
+    <configuration name="EurekaServiceStart" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="pro-eureka-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.wzy.eureka.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.wzy.eureka.EurekaServiceStart" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <additionalParameters>
+        <param>
+          <option name="enabled" value="true" />
+          <option name="name" value="eureka-service" />
+          <option name="value" value="localhost" />
+        </param>
+      </additionalParameters>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ZipKinServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+    <configuration name="RedisServiceStart" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="pro-redis-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.wzy.redis.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.wzy.redis.RedisServiceStart" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <additionalParameters>
+        <param>
+          <option name="enabled" value="true" />
+          <option name="name" value="config-service" />
+          <option name="value" value="localhost" />
+        </param>
+      </additionalParameters>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ZipKinServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="pro-zipkin-service" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.wzy.zipkin.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.wzy.zipkin.ZipKinServerApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <additionalParameters>
+        <param>
+          <option name="enabled" value="true" />
+          <option name="name" value="config-service" />
+          <option name="value" value="localhost" />
+        </param>
+      </additionalParameters>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
-    </configuration>
-    <configuration name="ZuulServiceStart" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="pro-zuul-service" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.wzy.zuul.ZuulServiceStart" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="tests" factoryName="Nosetests">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="_new_regexPattern" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="tests" factoryName="Twisted Trial">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="tests" factoryName="Unittests">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="tests" factoryName="py.test">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="_new_keywords" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
-      <method v="2" />
     </configuration>
     <list>
       <item itemvalue="Spring Boot.AdminApplication" />
-      <item itemvalue="Spring Boot.StartSSOService" />
-      <item itemvalue="Spring Boot.RedisServiceStart" />
-      <item itemvalue="Spring Boot.StartOrderService" />
-      <item itemvalue="Spring Boot.StartPdtService" />
+      <item itemvalue="Spring Boot.EurekaServiceStart" />
+      <item itemvalue="Spring Boot.ConfigServiceStart" />
       <item itemvalue="Spring Boot.ZipKinServerApplication" />
-      <item itemvalue="Spring Boot.UserServiceStart" />
-      <item itemvalue="Spring Boot.UserWebStart" />
-      <item itemvalue="Spring Boot.ConfigStart" />
-      <item itemvalue="Spring Boot.ProEurekaServiceApplication" />
-      <item itemvalue="Spring Boot.ZuulServiceStart" />
-      <item itemvalue="Application.ZuulServiceStart" />
-      <item itemvalue="Spring Boot.UserStreamServiceStart" />
+      <item itemvalue="Spring Boot.RedisServiceStart" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.UserStreamServiceStart" />
-        <item itemvalue="Application.ZuulServiceStart" />
+        <item itemvalue="Spring Boot.RedisServiceStart" />
+        <item itemvalue="Spring Boot.ConfigServiceStart" />
+        <item itemvalue="Spring Boot.ZipKinServerApplication" />
+        <item itemvalue="Spring Boot.EurekaServiceStart" />
       </list>
     </recent_temporary>
   </component>
@@ -795,70 +638,26 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="81243783-342c-41b5-919f-b7abcbc84446" name="Default Changelist" comment="" />
-      <created>1562736901520</created>
+      <changelist id="6f3c0149-046e-46dc-a73c-592b74ec523b" name="Default Changelist" comment="" />
+      <created>1569250294760</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1562736901520</updated>
-      <workItem from="1562736905889" duration="41390000" />
-      <workItem from="1562919994897" duration="4778000" />
-      <workItem from="1563264278277" duration="3418000" />
-      <workItem from="1563328746361" duration="406000" />
-      <workItem from="1563334105384" duration="8524000" />
-      <workItem from="1563370221377" duration="26124000" />
-      <workItem from="1563519879512" duration="2731000" />
-      <workItem from="1563767534660" duration="3613000" />
-      <workItem from="1563783282946" duration="1390000" />
-      <workItem from="1563784742231" duration="2930000" />
+      <updated>1569250294760</updated>
+      <workItem from="1569250296078" duration="758000" />
+      <workItem from="1569317710018" duration="526000" />
+      <workItem from="1569335431877" duration="13191000" />
+      <workItem from="1569509540887" duration="973000" />
+      <workItem from="1569590927140" duration="2273000" />
     </task>
-    <task id="LOCAL-00001" summary="单点登录">
-      <created>1562749505212</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1562749505212</updated>
-    </task>
-    <task id="LOCAL-00002" summary="zuul 接口验证">
-      <created>1562835562939</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1562835562939</updated>
-    </task>
-    <task id="LOCAL-00003" summary="zuul 接口验证">
-      <created>1563335717955</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1563335717955</updated>
-    </task>
-    <task id="LOCAL-00004" summary="zuul 接口验证">
-      <created>1563335852935</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1563335852935</updated>
-    </task>
-    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="95304000" />
-  </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
+    <option name="totallyTimeSpent" value="17721000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <frame x="7" y="23" width="1433" height="752" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17094018" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2178289" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -866,29 +665,28 @@
       <window_info id="UI Designer" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info id="Web" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Spring" order="0" weight="0.31200898" />
-      <window_info anchor="bottom" id="Terminal" order="1" weight="0.32996634" />
-      <window_info anchor="bottom" id="Tool Output" order="2" weight="0.32996634" />
-      <window_info anchor="bottom" id="Event Log" order="3" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="4" weight="0.32996634" />
-      <window_info anchor="bottom" id="Java Enterprise" order="5" weight="0.32996634" />
-      <window_info anchor="bottom" id="Database Changes" order="6" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.29405162" />
-      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="ANTLR Preview" order="9" weight="0.32996634" />
-      <window_info anchor="bottom" id="Message" order="10" />
-      <window_info anchor="bottom" id="Find" order="11" weight="0.1593715" />
-      <window_info anchor="bottom" id="Run" order="12" visible="true" weight="0.26262626" />
-      <window_info anchor="bottom" id="Cvs" order="13" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="14" weight="0.4" />
-      <window_info anchor="bottom" id="Debug" order="15" weight="0.48035914" />
-      <window_info anchor="bottom" id="TODO" order="16" weight="0.32996634" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.20454545" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="GraphQL" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="12" weight="0.3292517" />
+      <window_info anchor="bottom" id="Spring" order="13" />
+      <window_info anchor="bottom" id="Java Enterprise" order="14" />
+      <window_info anchor="bottom" id="Messages" order="15" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="right" id="Maven Projects" order="5" visible="true" weight="0.18215811" />
+      <window_info anchor="right" id="Maven Projects" order="5" visible="true" weight="0.24299066" />
       <window_info anchor="right" id="SciView" order="6" />
       <window_info anchor="right" id="Database" order="7" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
@@ -902,248 +700,274 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="单点登录" />
-    <MESSAGE value="zuul 接口验证" />
-    <option name="LAST_COMMIT_MESSAGE" value="zuul 接口验证" />
-  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pro-config-service/src/main/resources/config/redis-service-dev.yml">
+    <entry file="file://$PROJECT_DIR$/pro-service-common/pro-common-pojo/src/main/java/com/wzy/pojo/Functions.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
+        <state relative-caret-position="60">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pro-config-service/src/main/resources/config/sso-service-dev.yml">
+    <entry file="file://$PROJECT_DIR$/pro-service-product/pro-product-service/src/main/resources/bootstrap.yml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-service-product/pro-product-service/src/main/java/com/wzy/pdt/swagger/Swagger2.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="17" column="20" lean-forward="true" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
+        <state relative-caret-position="75">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pro-config-service/src/main/resources/config/user-service-dev.yml">
+    <entry file="file://$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/dev/mysql-ordersqldata-dev.yml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/dev/mysql-rolesqldata-dev.yml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/dev/mysql-sqldata-dev.yml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/dev/mysql-usersqldata-dev.yml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/dev/oauth2-res-dev.yml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/dev/order-service-dev.yml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sql/zipkin.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="14" selection-end-column="17" />
+        <state relative-caret-position="195">
+          <caret line="13" column="32" selection-end-line="48" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pro-config-service/src/main/resources/config/user-serviceweb-dev.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+    <entry file="file://$PROJECT_DIR$/sql/projcet.sql">
+      <provider selected="true" editor-type-id="LargeFileEditor">
+        <state relative-caret-position="-10928">
+          <caret line="166" column="36" selection-start-line="166" selection-start-column="36" selection-end-line="166" selection-end-column="36" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pro-config-service/src/main/resources/config/zipkin-middleware-dev.yml">
+    <entry file="file://$PROJECT_DIR$/pro-service-static/pro-statc-resources/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="7" selection-end-column="18" />
+        <state relative-caret-position="450">
+          <caret line="30" column="21" selection-start-line="27" selection-start-column="8" selection-end-line="30" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-config/5.1.5.RELEASE/spring-security-config-5.1.5.RELEASE.jar!/org/springframework/security/config/annotation/web/configurers/ExceptionHandlingConfigurer.class">
+    <entry file="file://$PROJECT_DIR$/pro-service-user/pro-user-service/src/main/java/com/wzy/user/UserServiceStart.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="45" column="42" selection-start-line="45" selection-start-column="42" selection-end-line="45" selection-end-column="42" />
+        <state relative-caret-position="240">
+          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/9.0.17/tomcat-embed-core-9.0.17.jar!/javax/servlet/http/HttpServletResponse.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="27" column="8" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="8" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/bootstrap.yml">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-config/5.1.5.RELEASE/spring-security-config-5.1.5.RELEASE.jar!/org/springframework/security/config/annotation/web/configurers/ExpressionUrlAuthorizationConfigurer.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="177" column="86" selection-start-line="177" selection-start-column="86" selection-end-line="177" selection-end-column="86" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-zuul-service/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="668">
-          <caret line="42" column="20" selection-start-line="42" selection-start-column="20" selection-end-line="42" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-zuul-service/src/main/java/com/wzy/zuul/config/SecurityConfigurerAdapter.java" />
-    <entry file="file://$PROJECT_DIR$/logs/spring.log">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1010">
-          <caret line="142" column="5" selection-start-line="142" selection-start-column="5" selection-end-line="142" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-config/5.1.5.RELEASE/spring-security-config-5.1.5.RELEASE.jar!/org/springframework/security/config/annotation/web/builders/HttpSecurity.class">
+    <entry file="file://$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/java/com/wzy/config/ConfigServiceStart.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
-          <caret line="58" column="31" selection-start-line="58" selection-start-column="19" selection-end-line="58" selection-end-column="31" />
+          <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/5.1.5.RELEASE/spring-security-core-5.1.5.RELEASE.jar!/org/springframework/security/access/vote/AffirmativeBased.class">
+    <entry file="file://$PROJECT_DIR$/pro-service-user/pro-user-service/src/main/resources/bootstrap.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="71">
-          <caret line="41" selection-start-line="41" selection-end-line="41" />
+        <state>
+          <caret selection-end-line="10" selection-end-column="33" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/oauth/spring-security-oauth2/2.3.5.RELEASE/spring-security-oauth2-2.3.5.RELEASE.jar!/org/springframework/security/oauth2/client/filter/OAuth2ClientAuthenticationProcessingFilter.class">
+    <entry file="file://$PROJECT_DIR$/pro-service-monitor/pro-admin-service-ui/src/main/java/com/admin/ui/AdminApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="68" selection-start-line="68" selection-end-line="68" />
+        <state relative-caret-position="135">
+          <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/5.1.6.RELEASE/spring-context-5.1.6.RELEASE.jar!/org/springframework/context/MessageSourceAware.class">
+    <entry file="file://$PROJECT_DIR$/pro-service-role/pro-role-service/src/main/resources/bootstrap.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="10" column="46" lean-forward="true" selection-start-line="10" selection-start-column="46" selection-end-line="10" selection-end-column="46" />
+        <state relative-caret-position="90">
+          <caret line="6" column="30" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="42" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-beans/5.1.6.RELEASE/spring-beans-5.1.6.RELEASE.jar!/org/springframework/beans/factory/InitializingBean.class">
+    <entry file="file://$PROJECT_DIR$/pro-service-monitor/pro-zipkin-service/src/main/resources/log4j.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/bootstrap.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="8" column="47" lean-forward="true" selection-start-line="8" selection-start-column="47" selection-end-line="8" selection-end-column="47" />
+        <state relative-caret-position="510">
+          <caret line="34" column="15" selection-start-line="34" selection-start-column="15" selection-end-line="34" selection-end-column="15" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-config/5.1.5.RELEASE/spring-security-config-5.1.5.RELEASE.jar!/org/springframework/security/config/annotation/authentication/builders/AuthenticationManagerBuilder.class">
+    <entry file="file://$PROJECT_DIR$/pro-service-monitor/pro-admin-service-ui/src/main/resources/bootstrap.yml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/dev/admin-service-dev.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-900">
-          <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
+        <state relative-caret-position="15">
+          <caret line="1" column="12" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/5.1.5.RELEASE/spring-security-core-5.1.5.RELEASE.jar!/org/springframework/security/authentication/ProviderManager.class">
+    <entry file="file://$PROJECT_DIR$/pro-service-monitor/pro-zipkin-service/src/main/java/com/wzy/zipkin/ZipKinServerApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="49" column="31" lean-forward="true" selection-start-line="49" selection-start-column="31" selection-end-line="49" selection-end-column="31" />
+        <state relative-caret-position="135">
+          <caret line="12" column="37" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/5.1.5.RELEASE/spring-security-core-5.1.5.RELEASE.jar!/org/springframework/security/authentication/AuthenticationProvider.class">
+    <entry file="file://$PROJECT_DIR$/pro-service-middleware/pro-config-service/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-        </state>
+        <state relative-caret-position="-239" />
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_31/src.zip!/java/security/Principal.java">
+    <entry file="file://$PROJECT_DIR$/pro-service-monitor/pro-admin-service-ui/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-224">
-          <caret line="55" column="54" selection-start-line="55" selection-start-column="54" selection-end-line="55" selection-end-column="54" />
+        <state relative-caret-position="130">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/5.1.5.RELEASE/spring-security-core-5.1.5.RELEASE.jar!/org/springframework/security/core/Authentication.class">
+    <entry file="file://$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/dev/mysql-zipkinsqldata-dev.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="30" lean-forward="true" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
+        <state relative-caret-position="45">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/5.1.5.RELEASE/spring-security-core-5.1.5.RELEASE.jar!/org/springframework/security/core/context/SecurityContextHolder.class">
+    <entry file="file://$PROJECT_DIR$/pro-service-gateway/pro-zuul-service/src/main/resources/application.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-414">
-          <caret line="27" column="17" selection-start-line="27" selection-start-column="11" selection-end-line="27" selection-end-column="17" />
+        <state relative-caret-position="-514">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/5.1.5.RELEASE/spring-security-web-5.1.5.RELEASE.jar!/org/springframework/security/web/servletapi/SecurityContextHolderAwareRequestFilter.class">
+    <entry file="file://$PROJECT_DIR$/pro-service-gateway/pro-zuul-service/src/main/java/com/wzy/zuul/ZuulServiceStart.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+        <state relative-caret-position="56">
+          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/5.1.5.RELEASE/spring-security-web-5.1.5.RELEASE.jar!/org/springframework/security/web/server/WebFilterChainProxy.class">
+    <entry file="file://$PROJECT_DIR$/pro-service-gateway/pro-zuul-service/src/main/java/com/wzy/zuul/config/ResourceServerConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="35" column="29" lean-forward="true" selection-start-line="35" selection-start-column="29" selection-end-line="35" selection-end-column="29" />
+        <state relative-caret-position="90">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/5.1.5.RELEASE/spring-security-web-5.1.5.RELEASE.jar!/org/springframework/security/web/FilterChainProxy.class">
+    <entry file="file://$PROJECT_DIR$/pro-service-middleware/pro-redis-service/src/main/java/com/wzy/redis/RedisServiceStart.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="20">
-          <caret line="35" column="31" selection-start-line="35" selection-start-column="31" selection-end-line="35" selection-end-column="31" />
+        <state relative-caret-position="135">
+          <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.1.6.RELEASE/spring-web-5.1.6.RELEASE.jar!/org/springframework/web/filter/DelegatingFilterProxy.class">
+    <entry file="file://$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/dev/gateway-service-dev.yml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/dev/redis-nosql-dev.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="394">
-          <caret line="161" column="38" selection-start-line="161" selection-start-column="38" selection-end-line="161" selection-end-column="38" />
+        <state relative-caret-position="105">
+          <caret line="7" column="11" lean-forward="true" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot/2.1.4.RELEASE/spring-boot-2.1.4.RELEASE.jar!/org/springframework/boot/web/servlet/DelegatingFilterProxyRegistrationBean.class">
+    <entry file="file://$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/dev/zipkin-middleware-dev.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="35" column="36" selection-start-line="35" selection-start-column="36" selection-end-line="35" selection-end-column="36" />
+        <state relative-caret-position="105">
+          <caret line="7" column="18" lean-forward="true" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-autoconfigure/2.1.4.RELEASE/spring-boot-autoconfigure-2.1.4.RELEASE.jar!/org/springframework/boot/autoconfigure/security/SecurityProperties.class">
+    <entry file="file://$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/dev/rabbitmq-middleware-dev.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+        <state relative-caret-position="75">
+          <caret line="5" column="19" lean-forward="true" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pro-sso-service/src/main/resources/templates/login.html">
+    <entry file="file://$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/dev/zipkin-service-dev.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="18" column="22" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
+        <state relative-caret-position="255">
+          <caret line="17" column="10" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/5.1.5.RELEASE/spring-security-core-5.1.5.RELEASE.jar!/org/springframework/security/authentication/AuthenticationManager.class">
+    <entry file="file://$PROJECT_DIR$/pro-service-role/pro-role-web/src/main/resources/bootstrap.yml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-service-monitor/pro-zipkin-service/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+        <state relative-caret-position="-62">
+          <caret line="45" column="21" selection-start-line="45" selection-start-column="21" selection-end-line="45" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pro-sso-service/src/main/java/com/wzy/controller/LoginController.java">
+    <entry file="file://$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/dev/role-service-dev.yml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/dev/redis-service-dev.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="13" column="23" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="23" />
+        <state relative-caret-position="165">
+          <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pro-sso-service/src/main/java/com/wzy/service/SSOUserService.java">
+    <entry file="file://$PROJECT_DIR$/pro-service-monitor/pro-zipkin-service/src/main/resources/bootstrap.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pro-sso-service/src/main/java/com/wzy/StartSSOService.java">
+    <entry file="file://$PROJECT_DIR$/pro-service-middleware/pro-redis-service/src/main/resources/logback-spring.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-service-middleware/pro-redis-service/src/main/resources/bootstrap.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        <state relative-caret-position="90">
+          <caret line="6" column="98" selection-start-line="6" selection-start-column="98" selection-end-line="6" selection-end-column="98" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pro-zuul-service/src/main/java/com/wzy/zuul/ZuulServiceStart.java">
+    <entry file="file://$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/dev/admin-middleware-dev.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="60">
+          <caret line="4" column="34" selection-start-line="4" selection-start-column="34" selection-end-line="4" selection-end-column="34" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pro-zuul-service/src/main/java/com/wzy/zuul/config/ResourceServerConfig.java">
+    <entry file="file://$PROJECT_DIR$/pro-service-order/pro-order-service/src/main/resources/bootstrap.yml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="600">
+            <caret line="40" column="32" lean-forward="true" selection-start-line="40" selection-start-column="32" selection-end-line="40" selection-end-column="32" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-service-user/pro-user-web/src/main/resources/logback-spring.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/dev/eureka-middleware-dev.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="10" lean-forward="true" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-service-register/pro-eureka-service/src/main/java/com/wzy/eureka/EurekaServiceStart.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
@@ -1153,199 +977,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pro-sso-service/src/main/java/com/wzy/adapter/SecurityConfigurerAdapter.java">
+    <entry file="file://$PROJECT_DIR$/pro-service-register/pro-eureka-service/src/main/resources/bootstrap.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="33" column="47" selection-start-line="33" selection-start-column="47" selection-end-line="33" selection-end-column="47" />
+        <state relative-caret-position="165">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pro-order-service/src/main/java/com/wzy/order/StartOrderService.java">
+    <entry file="file://$PROJECT_DIR$/pro-service-register/pro-eureka-service/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="24" column="29" selection-start-line="24" selection-start-column="29" selection-end-line="24" selection-end-column="29" />
+        <state relative-caret-position="90">
+          <caret line="6" column="33" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pro-sso-service/src/main/java/com/wzy/adapter/SsoConifg.java">
+    <entry file="file://$PROJECT_DIR$/pro-service-register/pro-eureka-service/src/main/docker/Dockerfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="35" column="19" selection-start-line="35" selection-start-column="19" selection-end-line="35" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-sso-service/src/main/resources/bootstrap.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-sso-service/src/main/java/com/wzy/adapter/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="12" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-zuul-service/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="18" column="10" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-sso-service/src/main/java/com/wzy/adapter/SSoPassWord.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-user-service/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="647">
-          <caret line="78" column="21" selection-start-line="19" selection-start-column="7" selection-end-line="78" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-config-service/src/main/resources/config/userstream-service-dev.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-user-service-web/src/main/resources/logback-spring.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-stream-user-service/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="44" column="38" lean-forward="true" selection-start-line="44" selection-start-column="38" selection-end-line="44" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-stream-user-service/src/main/java/com/wzy/user/stream/UserStreamServiceStart.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-stream-user-service/src/main/resources/bootstrap.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-user-service-web/src/main/java/com/wzy/user/web/service/WebService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-user-service-web/src/main/java/com/wzy/user/web/swagger/Swagger2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-user-service-web/src/main/java/com/wzy/user/web/UserWebStart.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="29" column="8" lean-forward="true" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="56" />
+        <state relative-caret-position="90">
+          <caret line="6" column="60" selection-start-line="6" selection-start-column="60" selection-end-line="6" selection-end-column="60" />
         </state>
       </provider>
     </entry>
   </component>
   <component name="masterDetails">
     <states>
-      <state key="ArtifactsStructureConfigurable.UI">
-        <settings>
-          <artifact-editor />
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="FacetStructureConfigurable.UI">
-        <settings>
-          <last-edited>Spring</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="GlobalLibrariesConfigurable.UI">
-        <settings>
-          <last-edited>Python 3.7 interpreter library</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="JdkListConfigurable.UI">
-        <settings>
-          <last-edited>1.7</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ModuleStructureConfigurable.UI">
-        <settings>
-          <last-edited>pro-zuul-service</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-                <option value="0.6" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
       <state key="ProjectJDKs.UI">
         <settings>
-          <last-edited>1.7</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectLibrariesConfigurable.UI">
-        <settings>
-          <last-edited>Maven: antlr:antlr:2.7.7</last-edited>
+          <last-edited>1.8</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

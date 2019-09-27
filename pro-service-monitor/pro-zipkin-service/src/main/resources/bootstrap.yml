@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: zipkin-service
+  cloud:
+    config:
+      profile: dev
+      name: eureka-middleware,zipkin-service,mysql-zipkinsqldata
+      discovery:
+        enabled: false
+      override-none: true
+      uri: http://${config-service}:8002
+

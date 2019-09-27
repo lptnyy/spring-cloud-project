@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: admin-service-ui
+  cloud:
+    config:
+      profile: dev
+      name: eureka-middleware,admin-service
+      discovery:
+        enabled: false
+      override-none: true
+      uri: http://${config-service}:8002
+
+

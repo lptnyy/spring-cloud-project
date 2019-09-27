@@ -1,0 +1,41 @@
+spring:
+  application:
+    name: config-service
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: classpath:/config/dev # 搜索src/main/resource 下的properties文件夹下的文件
+  bus:
+    trace:
+      enabled: true # 启用日志跟踪
+  boot:
+    admin:
+      client:
+        url: http://${config-service}:10001
+        instance:
+          service-base-url: http://${admin-service}:8003
+  profiles:
+    active: native  # 配置使用本地储存
+  rabbitmq:
+    host: 192.168.0.106
+    port: 30001
+    username: admin
+    password: admin
+server:
+  port: 8002
+  tomcat:
+    max-http-post-size: 0
+eureka:
+  client:
+    service-url:
+      defaultZone: http://${eureka-service}:8001/eureka
+management:
+  server:
+    port: 10001
+  endpoints:
+    web:
+      exposure:
+        include: "*" # 暴露端点
+
+

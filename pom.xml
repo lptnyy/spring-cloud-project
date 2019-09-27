@@ -10,7 +10,7 @@
 	<description>Demo project for Spring Boot</description>
 
 	<modules>
-		<module>pro-service-middleware/pro-eureka-service</module>
+		<module>pro-service-register/pro-eureka-service</module>
 		<module>pro-service-user/pro-user-service</module>
 		<module>pro-service-user/pro-user-service-api</module>
 		<module>pro-service-common/pro-common</module>

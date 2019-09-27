@@ -4,14 +4,12 @@ server:
     session:
       cookie:
         name: zuulcookie
-
 eureka:
   instance:
     status-page-url: http://localhost:${server.port}/swagger-ui.html
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
-
 spring:
   redis:
     database: 0

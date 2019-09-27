@@ -1,8 +1,8 @@
 server:
-  port: 8082
+  port: 8005
 management:
   server:
-    port: 15001
+    port: 10003
   endpoints:
     web:
       exposure:

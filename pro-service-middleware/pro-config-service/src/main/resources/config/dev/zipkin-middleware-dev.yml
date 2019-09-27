@@ -1,6 +1,6 @@
 spring:
   zipkin:
-    base-url: http://localhost:10001
+    base-url: http://localhost:8004
     sleuth:
       sampler:
       percentage: 1.0
