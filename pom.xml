@@ -32,8 +32,8 @@
 		<module>pro-service-business/pro-service-role/pro-role-service</module>
 		<module>pro-service-business/pro-service-role/pro-role-web</module>
 		<module>pro-service-business/pro-service-user/pro-user-web</module>
-		<module>pro-service-ttp/pro-service-wx</module>
 		<module>pro-service-ttp/pro-service-wx-api</module>
+		<module>pro-service-ttp/pro-service-wx</module>
 	</modules>
 
 	<parent>
