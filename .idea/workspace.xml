@@ -2,263 +2,244 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6f3c0149-046e-46dc-a73c-592b74ec523b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/dev/zipkin-service-dev.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pro-service-monitor/pro-admin-service-ui/src/main/resources/bootstrap.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pro-service-monitor/pro-zipkin-service/src/main/resources/bootstrap.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pro-service-common/pro-common/src/main/java/com/wzy/common/cache/Token.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pro-service-common/pro-common/src/main/java/com/wzy/common/cache/TokenCache.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pro-service-common/pro-common/src/main/java/com/wzy/common/okhttp/Okhttp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pro-service-common/pro-common/src/main/java/com/wzy/common/respones/MessageBody.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pro-service-ttp/pro-service-wx-api/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pro-service-ttp/pro-service-wx-api/src/main/java/com/wzy/wx/WxService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pro-service-ttp/pro-service-wx-api/src/main/java/com/wzy/wx/entity/MpTemplateMsg.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pro-service-ttp/pro-service-wx-api/src/main/java/com/wzy/wx/entity/SendMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pro-service-ttp/pro-service-wx-api/src/main/java/com/wzy/wx/entity/WeappTemplateMsg.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pro-service-ttp/pro-service-wx-api/src/main/java/com/wzy/wx/entity/WeixinRespones.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pro-service-ttp/pro-service-wx-api/src/main/java/com/wzy/wx/hystrix/WxServiceHystrix.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pro-service-ttp/pro-service-wx/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pro-service-ttp/pro-service-wx/pro-service-wx.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pro-service-ttp/pro-service-wx/src/main/java/com/wzy/ttp/wx/WxServiceStart.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pro-service-ttp/pro-service-wx/src/main/java/com/wzy/ttp/wx/cache/CacheConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pro-service-ttp/pro-service-wx/src/main/java/com/wzy/ttp/wx/cache/MapTokenCache.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pro-service-ttp/pro-service-wx/src/main/java/com/wzy/ttp/wx/properties/WxProperties.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pro-service-ttp/pro-service-wx/src/main/java/com/wzy/ttp/wx/service/WxServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pro-service-ttp/pro-service-wx/src/main/java/com/wzy/ttp/wx/swagger/Swagger2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pro-service-ttp/pro-service-wx/src/main/resources/bootstrap.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__antlr_antlr_2_7_7.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__aopalliance_aopalliance_1_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_classic_1_2_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__ch_qos_logback_logback_core_1_2_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_druid_1_1_10.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_druid_spring_boot_starter_1_1_10.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_fastjson_1_2_6.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_classmate_1_3_4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_9_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_9_6.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_9_6.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_dataformat_jackson_dataformat_xml_2_9_6.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jdk8_2_9_6.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jsr310_2_9_6.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_afterburner_2_9_6.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_jaxb_annotations_2_9_6.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_parameter_names_2_9_6.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_woodstox_woodstox_core_5_0_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_andrewoma_dexx_dexx_collections_0_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_vlsi_compactmap_compactmap_1_2_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_findbugs_jsr305_3_0_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_8_5.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_15_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_16_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_18_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_inject_guice_4_1_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_jayway_jsonpath_json_path_2_4_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_archaius_archaius_core_0_7_6.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_eureka_eureka_client_1_9_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_eureka_eureka_core_1_9_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_hystrix_hystrix_core_1_5_12.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_hystrix_hystrix_javanica_1_5_12.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_hystrix_hystrix_metrics_event_stream_1_5_12.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_hystrix_hystrix_serialization_1_5_12.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_netflix_commons_netflix_commons_util_0_3_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_netflix_commons_netflix_eventbus_0_3_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_netflix_commons_netflix_infix_0_3_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_netflix_commons_netflix_statistics_0_1_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_ribbon_ribbon_2_2_5.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_ribbon_ribbon_core_2_2_5.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_ribbon_ribbon_eureka_2_2_5.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_ribbon_ribbon_httpclient_2_2_5.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_ribbon_ribbon_loadbalancer_2_2_5.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_ribbon_ribbon_transport_2_2_5.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_servo_servo_core_0_12_21.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_netflix_zuul_zuul_core_1_3_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_jersey_contribs_jersey_apache_client4_1_19_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_jersey_jersey_client_1_19_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_jersey_jersey_core_1_19_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_jersey_jersey_server_1_19_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_jersey_jersey_servlet_1_19_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_thoughtworks_xstream_xstream_1_4_10.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_vaadin_external_google_android_json_0_0_20131108_vaadin1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_zaxxer_HikariCP_2_7_9.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_beanutils_commons_beanutils_1_9_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_11.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_collections_commons_collections_3_2_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_configuration_commons_configuration_1_8.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_jxpath_commons_jxpath_1_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_lang_commons_lang_2_6.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_github_openfeign_feign_core_9_5_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_github_openfeign_feign_hystrix_9_5_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_github_openfeign_feign_java8_9_5_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_github_openfeign_feign_slf4j_9_5_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_lettuce_lettuce_core_5_0_4_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_micrometer_micrometer_core_1_0_6.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_buffer_4_1_27_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_4_1_27_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_http_4_1_27_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_common_4_1_27_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_handler_4_1_27_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_resolver_4_1_27_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_4_1_27_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_native_epoll_4_1_27_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_native_unix_common_4_1_27_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_projectreactor_reactor_core_3_1_8_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_reactivex_rxjava_1_3_8.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_reactivex_rxjava_reactive_streams_1_2_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_reactivex_rxnetty_0_4_9.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_reactivex_rxnetty_contexts_0_4_9.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_reactivex_rxnetty_servo_0_4_9.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_core_2_6_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_schema_2_6_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_spi_2_6_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_spring_web_2_6_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_swagger2_2_6_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_swagger_common_2_6_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_springfox_springfox_swagger_ui_2_6_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_swagger_swagger_annotations_1_5_10.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_swagger_swagger_models_1_5_10.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_annotation_javax_annotation_api_1_3_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_inject_javax_inject_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_validation_validation_api_2_0_1_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_ws_rs_jsr311_api_1_1_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_xml_stream_stax_api_1_0_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__joda_time_joda_time_2_9_9.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_42.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_46.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_7_11.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_agent_1_7_11.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_accessors_smart_1_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_minidev_json_smart_2_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_antlr_antlr_runtime_3_4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_antlr_stringtemplate_3_2_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_7.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_math_2_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_5_6.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_4_10.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_api_2_10_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_logging_log4j_log4j_to_slf4j_2_10_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_8_5_32.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_el_8_5_32.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_8_5_32.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_8_13.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_assertj_assertj_core_3_9_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bouncycastle_bcpkix_jdk15on_1_56.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_bouncycastle_bcprov_jdk15on_1_56.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jettison_jettison_1_3_7.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_woodstox_stax2_api_3_1_4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_woodstox_woodstox_core_asl_4_4_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_freemarker_freemarker_2_3_28.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_library_1_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hdrhistogram_HdrHistogram_2_1_10.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hdrhistogram_HdrHistogram_2_1_9.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_validator_hibernate_validator_6_0_11_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_3_2_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_latencyutils_LatencyUtils_2_0_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mapstruct_mapstruct_1_0_0_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_core_2_15_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_generator_mybatis_generator_core_1_3_5.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_4_6.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_spring_1_3_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_spring_boot_mybatis_spring_boot_autoconfigure_1_3_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_spring_boot_mybatis_spring_boot_starter_1_3_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_objenesis_objenesis_2_6.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_5_0_4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_reactivestreams_reactive_streams_1_0_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_skyscreamer_jsonassert_1_5_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jul_to_slf4j_1_7_25.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_25.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_2_0_4_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_actuator_2_0_4_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_actuator_autoconfigure_2_0_4_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_2_0_4_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_2_0_4_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_actuator_2_0_4_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_aop_2_0_4_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_cache_2_0_4_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_redis_2_0_4_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_freemarker_2_0_4_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jdbc_2_0_4_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_json_2_0_4_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_2_0_4_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_2_0_4_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_2_0_4_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_2_0_4_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_2_0_4_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_autoconfigure_2_0_4_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_commons_2_0_1_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_context_2_0_1_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_netflix_archaius_2_0_1_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_netflix_core_2_0_1_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_netflix_eureka_client_2_0_1_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_netflix_eureka_server_2_0_1_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_netflix_ribbon_2_0_1_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_netflix_zuul_2_0_1_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_openfeign_core_2_0_1_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_2_0_1_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_netflix_archaius_2_0_1_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_netflix_eureka_client_2_0_1_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_netflix_eureka_server_2_0_1_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_netflix_hystrix_2_0_1_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_netflix_ribbon_2_0_1_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_netflix_zuul_2_0_1_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_openfeign_2_0_1_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_commons_2_0_9_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_keyvalue_2_0_9_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_redis_2_0_9_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_plugin_spring_plugin_core_1_2_0_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_plugin_spring_plugin_metadata_1_2_0_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_crypto_5_0_7_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_rsa_1_0_5_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_0_8_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_0_8_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_0_8_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_support_5_0_8_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_0_8_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_0_8_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_0_8_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_5_0_8_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_oxm_5_0_8_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_5_0_8_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_0_8_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_5_0_8_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_5_0_8_RELEASE.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_xmlunit_xmlunit_core_2_5_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_19.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__stax_stax_api_1_0_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__xmlpull_xmlpull_1_1_3_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__xpp3_xpp3_min_1_1_4c.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-gateway/pro-zuul-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-gateway/pro-zuul-service/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/java/com/wzy/config/ConfigStart.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/java/com/wzy/config/ConfigServiceStart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/bootstrap.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/dev/admin-middleware-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/dev/admin-middleware-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/dev/eureka-middleware-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/dev/eureka-middleware-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/dev/rabbitmq-middleware-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/dev/rabbitmq-middleware-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/dev/redis-nosql-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/dev/redis-nosql-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/dev/redis-service-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/dev/redis-service-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/dev/zipkin-middleware-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/dev/zipkin-middleware-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/pro/admin-middleware-dev.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/pro/eureka-middleware-dev.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/pro/gateway-service-dev.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/pro/mysql-ordersqldata-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/dev/mysql-zipkinsqldata-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/pro/mysql-rolesqldata-dev.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/pro/mysql-sqldata-dev.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/pro/mysql-usersqldata-dev.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/pro/oauth2-res-dev.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/pro/order-service-dev.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/pro/product-service-dev.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/pro/rabbitmq-middleware-dev.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/pro/redis-nosql-dev.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/pro/redis-service-dev.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/pro/role-service-dev.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/pro/role-serviceweb-dev.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/pro/sso-service-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/dev/admin-service-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/pro/static-resources-dev.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/pro/user-service-dev.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/pro/user-serviceweb-dev.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/pro/userstream-service-dev.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/pro/zipkin-middleware-dev.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-middleware/pro-eureka-service/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-register/pro-eureka-service/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-middleware/pro-eureka-service/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-register/pro-eureka-service/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-middleware/pro-eureka-service/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-register/pro-eureka-service/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-middleware/pro-eureka-service/mvnw" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-register/pro-eureka-service/mvnw" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-middleware/pro-eureka-service/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-register/pro-eureka-service/mvnw.cmd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-middleware/pro-eureka-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-register/pro-eureka-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-middleware/pro-eureka-service/src/main/java/com/wzy/eureka/ProEurekaServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-register/pro-eureka-service/src/main/java/com/wzy/eureka/EurekaServiceStart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-middleware/pro-eureka-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-register/pro-eureka-service/src/main/resources/bootstrap.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-middleware/pro-eureka-service/src/test/java/com/wzy/eureka/ProEurekaServiceApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-register/pro-eureka-service/src/test/java/com/wzy/eureka/ProEurekaServiceApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-middleware/pro-redis-service/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-middleware/pro-redis-service/src/main/resources/bootstrap.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-monitor/pro-admin-service-ui/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-monitor/pro-admin-service-ui/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-monitor/pro-admin-service-ui/src/main/resources/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-monitor/pro-zipkin-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-monitor/pro-zipkin-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-monitor/pro-zipkin-service/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-common/pro-common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-common/pro-common/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-middleware/pro-config-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-config/pro-config-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/java/com/wzy/config/ConfigServiceStart.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-config/pro-config-service/src/main/java/com/wzy/config/ConfigServiceStart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-config/pro-config-service/src/main/resources/bootstrap.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/dev/admin-middleware-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-config/pro-config-service/src/main/resources/config/dev/admin-middleware-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/dev/admin-service-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-config/pro-config-service/src/main/resources/config/dev/admin-service-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/dev/eureka-middleware-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-config/pro-config-service/src/main/resources/config/dev/eureka-middleware-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/dev/gateway-service-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-config/pro-config-service/src/main/resources/config/dev/gateway-service-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/dev/mysql-ordersqldata-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-config/pro-config-service/src/main/resources/config/dev/mysql-ordersqldata-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/dev/mysql-rolesqldata-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-config/pro-config-service/src/main/resources/config/dev/mysql-rolesqldata-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/dev/mysql-sqldata-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-config/pro-config-service/src/main/resources/config/dev/mysql-sqldata-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/dev/mysql-usersqldata-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-config/pro-config-service/src/main/resources/config/dev/mysql-usersqldata-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/dev/mysql-zipkinsqldata-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-config/pro-config-service/src/main/resources/config/dev/mysql-zipkinsqldata-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/dev/oauth2-res-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-config/pro-config-service/src/main/resources/config/dev/oauth2-res-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/dev/order-service-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-config/pro-config-service/src/main/resources/config/dev/order-service-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/dev/product-service-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-config/pro-config-service/src/main/resources/config/dev/product-service-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/dev/rabbitmq-middleware-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-config/pro-config-service/src/main/resources/config/dev/rabbitmq-middleware-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/dev/redis-nosql-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-config/pro-config-service/src/main/resources/config/dev/redis-nosql-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/dev/redis-service-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-config/pro-config-service/src/main/resources/config/dev/redis-service-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/dev/role-service-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-config/pro-config-service/src/main/resources/config/dev/role-service-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/dev/role-serviceweb-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-config/pro-config-service/src/main/resources/config/dev/role-serviceweb-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/dev/sso-service-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-config/pro-config-service/src/main/resources/config/dev/sso-service-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/dev/static-resources-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-config/pro-config-service/src/main/resources/config/dev/static-resources-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/dev/user-service-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-config/pro-config-service/src/main/resources/config/dev/user-service-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/dev/user-serviceweb-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-config/pro-config-service/src/main/resources/config/dev/user-serviceweb-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/dev/userstream-service-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-config/pro-config-service/src/main/resources/config/dev/userstream-service-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/dev/zipkin-middleware-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-config/pro-config-service/src/main/resources/config/dev/zipkin-middleware-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/dev/zipkin-service-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-config/pro-config-service/src/main/resources/config/dev/zipkin-service-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-order/pro-order-service-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-business/pro-service-order/pro-order-service-api/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-order/pro-order-service-api/src/main/java/com/wzy/order/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-business/pro-service-order/pro-order-service-api/src/main/java/com/wzy/order/OrderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-order/pro-order-service-api/src/main/java/com/wzy/order/hystrix/OrderServiceHystrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-business/pro-service-order/pro-order-service-api/src/main/java/com/wzy/order/hystrix/OrderServiceHystrix.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-order/pro-order-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-business/pro-service-order/pro-order-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-order/pro-order-service/src/main/java/com/wzy/order/StartOrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-business/pro-service-order/pro-order-service/src/main/java/com/wzy/order/StartOrderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-order/pro-order-service/src/main/java/com/wzy/order/service/OrderServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-business/pro-service-order/pro-order-service/src/main/java/com/wzy/order/service/OrderServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-order/pro-order-service/src/main/java/com/wzy/order/swagger/Swagger2.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-business/pro-service-order/pro-order-service/src/main/java/com/wzy/order/swagger/Swagger2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-order/pro-order-service/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-business/pro-service-order/pro-order-service/src/main/resources/bootstrap.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-product/pro-product-service-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-business/pro-service-product/pro-product-service-api/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-product/pro-product-service-api/src/main/java/com/wzy/pdt/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-business/pro-service-product/pro-product-service-api/src/main/java/com/wzy/pdt/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-product/pro-product-service-api/src/main/java/com/wzy/pdt/hystrix/ProductServiceHystrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-business/pro-service-product/pro-product-service-api/src/main/java/com/wzy/pdt/hystrix/ProductServiceHystrix.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-product/pro-product-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-business/pro-service-product/pro-product-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-product/pro-product-service/src/main/java/com/wzy/pdt/StartPdtService.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-business/pro-service-product/pro-product-service/src/main/java/com/wzy/pdt/StartPdtService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-product/pro-product-service/src/main/java/com/wzy/pdt/service/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-business/pro-service-product/pro-product-service/src/main/java/com/wzy/pdt/service/ProductServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-product/pro-product-service/src/main/java/com/wzy/pdt/swagger/Swagger2.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-business/pro-service-product/pro-product-service/src/main/java/com/wzy/pdt/swagger/Swagger2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-product/pro-product-service/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-business/pro-service-product/pro-product-service/src/main/resources/bootstrap.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-role/pro-role-service-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-business/pro-service-role/pro-role-service-api/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-role/pro-role-service-api/src/main/java/com/wzy/role/RoleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-business/pro-service-role/pro-role-service-api/src/main/java/com/wzy/role/RoleService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-role/pro-role-service-api/src/main/java/com/wzy/role/hystrix/RoleServiceHystrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-business/pro-service-role/pro-role-service-api/src/main/java/com/wzy/role/hystrix/RoleServiceHystrix.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-role/pro-role-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-business/pro-service-role/pro-role-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-role/pro-role-service/src/main/java/com/wzy/role/RoleServiceStart.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-business/pro-service-role/pro-role-service/src/main/java/com/wzy/role/RoleServiceStart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-role/pro-role-service/src/main/java/com/wzy/role/service/RoleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-business/pro-service-role/pro-role-service/src/main/java/com/wzy/role/service/RoleServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-role/pro-role-service/src/main/java/com/wzy/role/swagger/Swagger2.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-business/pro-service-role/pro-role-service/src/main/java/com/wzy/role/swagger/Swagger2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-role/pro-role-service/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-business/pro-service-role/pro-role-service/src/main/resources/bootstrap.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-role/pro-role-service/src/main/resources/logback-spring.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-business/pro-service-role/pro-role-service/src/main/resources/logback-spring.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-role/pro-role-web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-business/pro-service-role/pro-role-web/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-role/pro-role-web/src/main/java/com/wzy/role/web/RoleWebServiceStart.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-business/pro-service-role/pro-role-web/src/main/java/com/wzy/role/web/RoleWebServiceStart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-role/pro-role-web/src/main/java/com/wzy/role/web/config/ResourceServerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-business/pro-service-role/pro-role-web/src/main/java/com/wzy/role/web/config/ResourceServerConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-role/pro-role-web/src/main/java/com/wzy/role/web/controller/RoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-business/pro-service-role/pro-role-web/src/main/java/com/wzy/role/web/controller/RoleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-role/pro-role-web/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-business/pro-service-role/pro-role-web/src/main/resources/bootstrap.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-role/pro-role-web/src/main/resources/logback-spring.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-business/pro-service-role/pro-role-web/src/main/resources/logback-spring.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-role/pro-role-web/src/main/resources/templates/assembly/left.html" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-business/pro-service-role/pro-role-web/src/main/resources/templates/assembly/left.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-role/pro-role-web/src/main/resources/templates/assembly/message.html" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-business/pro-service-role/pro-role-web/src/main/resources/templates/assembly/message.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-role/pro-role-web/src/main/resources/templates/assembly/page.html" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-business/pro-service-role/pro-role-web/src/main/resources/templates/assembly/page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-role/pro-role-web/src/main/resources/templates/error/4xx.html" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-business/pro-service-role/pro-role-web/src/main/resources/templates/error/4xx.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-role/pro-role-web/src/main/resources/templates/error/5xx.html" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-business/pro-service-role/pro-role-web/src/main/resources/templates/error/5xx.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-role/pro-role-web/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-business/pro-service-role/pro-role-web/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-role/pro-role-web/src/main/resources/templates/user/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-business/pro-service-role/pro-role-web/src/main/resources/templates/user/edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-role/pro-role-web/src/main/resources/templates/user/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-business/pro-service-role/pro-role-web/src/main/resources/templates/user/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/java/com/wzy/resources/StaticResourcesServiceStart.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/bootstrap.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/logback-spring.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/css/admin.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/css/layui.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/css/layui.mobile.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/css/login.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/css/modules/code.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/css/modules/laydate/default/laydate.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/css/modules/layer/default/icon-ext.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/css/modules/layer/default/icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/css/modules/layer/default/layer.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/css/modules/layer/default/loading-0.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/css/modules/layer/default/loading-1.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/css/modules/layer/default/loading-2.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/css/view.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/font/ai.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/font/ai.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/font/ai.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/font/ai.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/font/iconfont.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/font/iconfont.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/font/iconfont.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/font/iconfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/images/face/0.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/images/face/1.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/images/face/10.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/images/face/11.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/images/face/12.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/images/face/13.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/images/face/14.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/images/face/15.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/images/face/16.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/images/face/17.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/images/face/18.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/images/face/19.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/images/face/2.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/images/face/20.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/images/face/21.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/images/face/22.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/images/face/23.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/images/face/24.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/images/face/25.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/images/face/26.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/images/face/27.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/images/face/28.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/images/face/29.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/images/face/3.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/images/face/30.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/images/face/31.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/images/face/32.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/images/face/33.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/images/face/34.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/images/face/35.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/images/face/36.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/images/face/37.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/images/face/38.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/images/face/39.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/images/face/4.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/images/face/40.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/images/face/41.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/images/face/42.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/images/face/43.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/images/face/44.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/images/face/45.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/images/face/46.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/images/face/47.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/images/face/48.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/images/face/49.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/images/face/5.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/images/face/50.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/images/face/51.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/images/face/52.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/images/face/53.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/images/face/54.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/images/face/55.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/images/face/56.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/images/face/57.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/images/face/58.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/images/face/59.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/images/face/6.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/images/face/60.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/images/face/61.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/images/face/62.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/images/face/63.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/images/face/64.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/images/face/65.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/images/face/66.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/images/face/67.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/images/face/68.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/images/face/69.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/images/face/7.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/images/face/70.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/images/face/71.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/images/face/8.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/images/face/9.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/images/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/lay/modules/ajaxpagertable.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/lay/modules/carousel.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/lay/modules/code.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/lay/modules/colorpicker.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/lay/modules/commonAjax.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/lay/modules/element.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/lay/modules/flow.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/lay/modules/form.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/lay/modules/jquery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/lay/modules/laydate.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/lay/modules/layedit.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/lay/modules/layer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/lay/modules/laypage.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/lay/modules/laytpl.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/lay/modules/mobile.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/lay/modules/rate.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/lay/modules/slider.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/lay/modules/table.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/lay/modules/tree.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/lay/modules/upload.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/lay/modules/uploadops.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/lay/modules/util.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/layui.all.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/assets/layui.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/home.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/jquery.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/static/public/util.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-stream/pro-stream-user-service/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-stream/pro-stream-user-service/src/main/java/com/wzy/user/stream/UserStreamServiceStart.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-stream/pro-stream-user-service/src/main/resources/bootstrap.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-user/pro-user-service-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-business/pro-service-user/pro-user-service-api/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-user/pro-user-service-api/src/main/java/com/wzy/user/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-business/pro-service-user/pro-user-service-api/src/main/java/com/wzy/user/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-user/pro-user-service-api/src/main/java/com/wzy/user/hystrix/UserServiceHystrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-business/pro-service-user/pro-user-service-api/src/main/java/com/wzy/user/hystrix/UserServiceHystrix.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-user/pro-user-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-business/pro-service-user/pro-user-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-user/pro-user-service/src/main/java/com/wzy/user/UserServiceStart.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-business/pro-service-user/pro-user-service/src/main/java/com/wzy/user/UserServiceStart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-user/pro-user-service/src/main/java/com/wzy/user/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-business/pro-service-user/pro-user-service/src/main/java/com/wzy/user/service/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-user/pro-user-service/src/main/java/com/wzy/user/swagger/Swagger2.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-business/pro-service-user/pro-user-service/src/main/java/com/wzy/user/swagger/Swagger2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-user/pro-user-service/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-business/pro-service-user/pro-user-service/src/main/resources/bootstrap.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-user/pro-user-service/src/main/resources/logback-spring.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-business/pro-service-user/pro-user-service/src/main/resources/logback-spring.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-user/pro-user-web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-business/pro-service-user/pro-user-web/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-user/pro-user-web/src/main/java/com/wzy/user/web/UserWebStart.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-business/pro-service-user/pro-user-web/src/main/java/com/wzy/user/web/UserWebStart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-user/pro-user-web/src/main/java/com/wzy/user/web/controller/UserWebController.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-business/pro-service-user/pro-user-web/src/main/java/com/wzy/user/web/controller/UserWebController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-user/pro-user-web/src/main/java/com/wzy/user/web/service/WebService.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-business/pro-service-user/pro-user-web/src/main/java/com/wzy/user/web/service/WebService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-user/pro-user-web/src/main/java/com/wzy/user/web/swagger/Swagger2.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-business/pro-service-user/pro-user-web/src/main/java/com/wzy/user/web/swagger/Swagger2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-user/pro-user-web/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-business/pro-service-user/pro-user-web/src/main/resources/bootstrap.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-service-user/pro-user-web/src/main/resources/logback-spring.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-service-business/pro-service-user/pro-user-web/src/main/resources/logback-spring.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/pro-stream-user-service/target/" />
     <ignored path="$PROJECT_DIR$/pro-common-pojo/target/" />
@@ -306,6 +287,20 @@
     <ignored path="$PROJECT_DIR$/pro-service-user/pro-user-service/target/" />
     <ignored path="$PROJECT_DIR$/pro-service-common/pro-common/target/" />
     <ignored path="$PROJECT_DIR$/pro-service-register/pro-eureka-service/target/" />
+    <ignored path="$PROJECT_DIR$/pro-service-ttp/target/" />
+    <ignored path="$PROJECT_DIR$/pro-service-business/pro-service-order/pro-order-service-api/target/" />
+    <ignored path="$PROJECT_DIR$/pro-service-business/pro-service-user/pro-user-service-api/target/" />
+    <ignored path="$PROJECT_DIR$/pro-service-business/pro-service-role/pro-role-service/target/" />
+    <ignored path="$PROJECT_DIR$/pro-service-business/pro-service-user/pro-user-service/target/" />
+    <ignored path="$PROJECT_DIR$/pro-service-business/pro-service-product/pro-product-service-api/target/" />
+    <ignored path="$PROJECT_DIR$/pro-service-business/pro-service-role/pro-role-service-api/target/" />
+    <ignored path="$PROJECT_DIR$/pro-service-business/pro-service-role/pro-role-web/target/" />
+    <ignored path="$PROJECT_DIR$/pro-service-business/pro-service-order/pro-order-service/target/" />
+    <ignored path="$PROJECT_DIR$/pro-service-business/pro-service-user/pro-user-web/target/" />
+    <ignored path="$PROJECT_DIR$/pro-service-business/pro-service-product/pro-product-service/target/" />
+    <ignored path="$PROJECT_DIR$/pro-service-config/pro-config-service/target/" />
+    <ignored path="$PROJECT_DIR$/pro-service-ttp/pro-service-wx/target/" />
+    <ignored path="$PROJECT_DIR$/pro-service-ttp/pro-service-wx-api/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -316,54 +311,63 @@
     <session id="-1274453508">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="4" />
+          <entry key="project.closed" value="9" />
           <entry key="project.open.time.1" value="1" />
-          <entry key="project.open.time.10" value="1" />
+          <entry key="project.open.time.10" value="2" />
           <entry key="project.open.time.11" value="1" />
+          <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.6" value="1" />
-          <entry key="project.opened" value="5" />
+          <entry key="project.open.time.7" value="1" />
+          <entry key="project.open.time.8" value="2" />
+          <entry key="project.opened" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="Dockerfile" value="2" />
-          <entry key="java" value="31" />
-          <entry key="md" value="7" />
+          <entry key="class" value="6" />
+          <entry key="java" value="235" />
+          <entry key="md" value="10" />
           <entry key="properties" value="2" />
           <entry key="sql" value="2" />
-          <entry key="xml" value="12" />
-          <entry key="yml" value="139" />
+          <entry key="xml" value="42" />
+          <entry key="yml" value="164" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
+          <entry key="CLASS" value="6" />
           <entry key="Dockerfile" value="2" />
-          <entry key="JAVA" value="31" />
-          <entry key="Markdown" value="7" />
+          <entry key="JAVA" value="235" />
+          <entry key="Markdown" value="10" />
           <entry key="Properties" value="2" />
           <entry key="SQL" value="2" />
-          <entry key="XML" value="12" />
-          <entry key="YAML" value="139" />
+          <entry key="XML" value="42" />
+          <entry key="YAML" value="164" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Dockerfile" value="70" />
-          <entry key="dummy" value="12" />
-          <entry key="md" value="238" />
-          <entry key="txt" value="103" />
-          <entry key="xml" value="24" />
-          <entry key="yml" value="628" />
+          <entry key="dummy" value="29" />
+          <entry key="java" value="4653" />
+          <entry key="json" value="2" />
+          <entry key="md" value="247" />
+          <entry key="txt" value="118" />
+          <entry key="xml" value="250" />
+          <entry key="yml" value="923" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Dockerfile" value="70" />
-          <entry key="Markdown" value="238" />
-          <entry key="PLAIN_TEXT" value="115" />
-          <entry key="XML" value="24" />
-          <entry key="YAML" value="628" />
+          <entry key="JAVA" value="4653" />
+          <entry key="JSON" value="2" />
+          <entry key="Markdown" value="247" />
+          <entry key="PLAIN_TEXT" value="147" />
+          <entry key="XML" value="250" />
+          <entry key="YAML" value="923" />
         </counts>
       </usages-collector>
     </session>
@@ -371,15 +375,76 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pro-service-register/pro-eureka-service/src/main/docker/Dockerfile">
+        <entry file="file://$PROJECT_DIR$/pro-service-ttp/pro-service-wx-api/src/main/java/com/wzy/wx/WxService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="60" selection-start-line="6" selection-start-column="60" selection-end-line="6" selection-end-column="60" />
+            <state relative-caret-position="281">
+              <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pro-service-ttp/pro-service-wx/src/main/java/com/wzy/ttp/wx/service/WxServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="312">
+              <caret line="122" column="27" selection-start-line="122" selection-start-column="27" selection-end-line="122" selection-end-column="27" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pro-service-ttp/pro-service-wx-api/src/main/java/com/wzy/wx/hystrix/WxServiceHystrix.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pro-service-common/pro-common/src/main/java/com/wzy/common/okhttp/Okhttp.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="156">
+              <caret line="54" column="18" selection-start-line="54" selection-start-column="18" selection-end-line="54" selection-end-column="18" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pro-service-ttp/pro-service-wx/src/main/resources/bootstrap.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pro-service-business/pro-service-user/pro-user-service/src/main/resources/bootstrap.yml">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -394,10 +459,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/pro-service-register/pro-eureka-service/src/main/resources/application.yml" />
-        <option value="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/application.yml" />
-        <option value="$PROJECT_DIR$/pro-service-register/pro-eureka-service/src/main/resources/bootstrap.yml" />
         <option value="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/bootstrap.yml" />
         <option value="$PROJECT_DIR$/pro-service-monitor/pro-admin-service-ui/pom.xml" />
         <option value="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/dev/admin-service-dev.yml" />
@@ -415,9 +476,40 @@
         <option value="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/dev/zipkin-middleware-dev.yml" />
         <option value="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/dev/rabbitmq-middleware-dev.yml" />
         <option value="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/dev/admin-middleware-dev.yml" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/dev/eureka-middleware-dev.yml" />
         <option value="$PROJECT_DIR$/pro-service-register/pro-eureka-service/src/main/docker/Dockerfile" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/pro-service-ttp/pom.xml" />
+        <option value="$PROJECT_DIR$/pro-service-ttp/pro-service-wx-api/src/main/java/com/wzy/wx/hystrix/RedisServiceHystrix.java" />
+        <option value="$PROJECT_DIR$/pro-service-ttp/pro-service-wx-api/src/main/java/com/wzy/wx/properties/WxProperties.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/pro-service-common/pro-common/pom.xml" />
+        <option value="$PROJECT_DIR$/pro-service-ttp/pro-service-wx/src/main/java/com/wzy/ttp/wx/service/WxService.java" />
+        <option value="$PROJECT_DIR$/pro-service-ttp/pro-service-wx/src/main/java/com/wzy/ttp/wx/swagger/Swagger2.java" />
+        <option value="$PROJECT_DIR$/pro-service-common/pro-common/src/main/java/com/wzy/common/weixin/MessageBody.java" />
+        <option value="$PROJECT_DIR$/pro-service-ttp/pro-service-wx-api/src/main/resources/bootstrap.yml" />
+        <option value="$PROJECT_DIR$/pro-service-ttp/pro-service-wx/pom.xml" />
+        <option value="$PROJECT_DIR$/pro-service-common/pro-common/src/main/java/com/wzy/common/respones/MessageBody.java" />
+        <option value="$PROJECT_DIR$/pro-service-common/pro-common/src/main/java/com/wzy/common/okhttp/Okhttp.java" />
+        <option value="$PROJECT_DIR$/pro-service-ttp/pro-service-wx/src/main/java/com/wzy/ttp/wx/entity/Weixin.java" />
+        <option value="$PROJECT_DIR$/pro-service-common/pro-common/src/main/java/com/wzy/common/Cache/TokenCache.java" />
+        <option value="$PROJECT_DIR$/pro-service-common/pro-common/src/main/java/com/wzy/common/Cache/Token.java" />
+        <option value="$PROJECT_DIR$/pro-service-ttp/pro-service-wx/src/main/java/com/wzy/ttp/wx/WxServiceStart.java" />
+        <option value="$PROJECT_DIR$/pro-service-common/pro-common/src/main/java/com/wzy/common/cache/TokenCache.java" />
+        <option value="$PROJECT_DIR$/pro-service-ttp/pro-service-wx/src/main/java/com/wzy/ttp/wx/cache/CacheConfiguration.java" />
+        <option value="$PROJECT_DIR$/pro-service-ttp/pro-service-wx/src/main/java/com/wzy/ttp/wx/cache/MapTokenCache.java" />
+        <option value="$PROJECT_DIR$/pro-service-ttp/pro-service-wx/src/main/java/com/wzy/ttp/wx/entity/WeixinRespones.java" />
+        <option value="$PROJECT_DIR$/pro-service-ttp/pro-service-wx/src/main/java/com/wzy/ttp/wx/entity/SendMessage.java" />
+        <option value="$PROJECT_DIR$/pro-service-ttp/pro-service-wx/src/main/java/com/wzy/ttp/wx/entity/MessageValue.java" />
+        <option value="$PROJECT_DIR$/pro-service-ttp/pro-service-wx/src/main/java/com/wzy/ttp/wx/entity/MpTemplateMsg.java" />
+        <option value="$PROJECT_DIR$/pro-service-ttp/pro-service-wx/src/main/java/com/wzy/ttp/wx/entity/WeappTemplateMsg.java" />
+        <option value="$PROJECT_DIR$/pro-service-ttp/pro-service-wx/src/main/java/com/wzy/ttp/wx/properties/WxProperties.java" />
+        <option value="$PROJECT_DIR$/pro-service-ttp/pro-service-wx/src/main/resources/bootstrap.yml" />
+        <option value="$PROJECT_DIR$/pro-service-ttp/pro-service-wx-api/src/main/java/com/wzy/wx/entity/WeappTemplateMsg.java" />
+        <option value="$PROJECT_DIR$/pro-service-ttp/pro-service-wx-api/pom.xml" />
+        <option value="$PROJECT_DIR$/pro-service-ttp/pro-service-wx/src/main/java/com/wzy/ttp/wx/service/WxServiceImpl.java" />
+        <option value="$PROJECT_DIR$/pro-service-ttp/pro-service-wx-api/src/main/java/com/wzy/wx/hystrix/WxServiceHystrix.java" />
+        <option value="$PROJECT_DIR$/pro-service-ttp/pro-service-wx-api/src/main/java/com/wzy/wx/WxService.java" />
       </list>
     </option>
   </component>
@@ -429,22 +521,7 @@
   </component>
   <component name="MavenProjectNavigator">
     <treeState>
-      <expand>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="pro-eureka-service" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="pro-eureka-service" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
-        </path>
-        <path>
-          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="pro-eureka-service" type="9519ce18:MavenProjectsStructure$ProjectNode" />
-          <item name="Dependencies" type="f4be9f2a:MavenProjectsStructure$DependenciesNode" />
-        </path>
-      </expand>
+      <expand />
       <select />
     </treeState>
   </component>
@@ -453,11 +530,10 @@
       <path value="$PROJECT_DIR$/pro-vue-web/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="7" />
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="23" />
-    <option name="width" value="1433" />
-    <option name="height" value="752" />
+    <option name="width" value="1440" />
+    <option name="height" value="827" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -465,7 +541,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -473,10 +548,16 @@
               <item name="spring-cloud" type="b2602c69:ProjectViewProjectNode" />
               <item name="spring-cloud-project" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="spring-cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spring-cloud-project" type="462c0819:PsiDirectoryNode" />
+              <item name="sql" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -487,17 +568,26 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1569594487408" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1569855499905" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="spring.boot" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/dev" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/pro-service-ttp/pro-service-wx/src/main/resources" />
+      <recent name="$PROJECT_DIR$/pro-service-ttp" />
+      <recent name="$PROJECT_DIR$/pro-service-config" />
+      <recent name="$PROJECT_DIR$/pro-service-business" />
       <recent name="$PROJECT_DIR$/pro-service-register" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.wzy.ttp.wx.swagger" />
+      <recent name="com.wzy.wx.hystrix" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/pro-service-ttp/pro-service-wx-api/src/main/resources" />
+      <recent name="$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/dev" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -512,7 +602,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.EurekaServiceStart">
+  <component name="RunManager" selected="Spring Boot.WxServiceStart">
     <configuration name="AdminApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="pro-admin-service-ui" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.admin.ui.AdminApplication" />
@@ -575,6 +665,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="GateWayServiceStart" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="pro-gateway-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.wzy.gateway.GateWayServiceStart" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="RedisServiceStart" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="pro-redis-service" />
       <extension name="coverage">
@@ -592,6 +689,82 @@
           <option name="value" value="localhost" />
         </param>
       </additionalParameters>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RoleServiceStart" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="pro-role-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.wzy.role.RoleServiceStart" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RoleWebServiceStart" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="pro-role-web" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.wzy.role.web.RoleWebServiceStart" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StartOrderService" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="pro-order-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.wzy.order.StartOrderService" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StartPdtService" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="pro-product-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.wzy.pdt.StartPdtService" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StartSSOService" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="pro-sso-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.wzy.StartSSOService" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StaticResourcesServiceStart" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="pro-statc-resources" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.wzy.resources.StaticResourcesServiceStart" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceStart" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="pro-user-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.wzy.user.UserServiceStart" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserStreamServiceStart" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="pro-stream-user-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.wzy.user.stream.UserStreamServiceStart" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserWebStart" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="pro-user-web" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.wzy.user.web.UserWebStart" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WxServiceStart" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="pro-service-wx" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.wzy.ttp.wx.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.wzy.ttp.wx.WxServiceStart" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -617,21 +790,44 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ZuulServiceStart" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="pro-zuul-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.wzy.zuul.ZuulServiceStart" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Spring Boot.AdminApplication" />
+      <item itemvalue="Spring Boot.StartSSOService" />
+      <item itemvalue="Spring Boot.ZuulServiceStart" />
+      <item itemvalue="Spring Boot.StartOrderService" />
+      <item itemvalue="Spring Boot.StaticResourcesServiceStart" />
+      <item itemvalue="Spring Boot.RoleWebServiceStart" />
+      <item itemvalue="Spring Boot.UserWebStart" />
+      <item itemvalue="Spring Boot.UserServiceStart" />
+      <item itemvalue="Spring Boot.GateWayServiceStart" />
+      <item itemvalue="Spring Boot.StartPdtService" />
+      <item itemvalue="Spring Boot.RoleServiceStart" />
+      <item itemvalue="Spring Boot.UserStreamServiceStart" />
       <item itemvalue="Spring Boot.EurekaServiceStart" />
       <item itemvalue="Spring Boot.ConfigServiceStart" />
       <item itemvalue="Spring Boot.ZipKinServerApplication" />
       <item itemvalue="Spring Boot.RedisServiceStart" />
+      <item itemvalue="Spring Boot.WxServiceStart" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.WxServiceStart" />
+        <item itemvalue="Spring Boot.EurekaServiceStart" />
         <item itemvalue="Spring Boot.RedisServiceStart" />
         <item itemvalue="Spring Boot.ConfigServiceStart" />
         <item itemvalue="Spring Boot.ZipKinServerApplication" />
-        <item itemvalue="Spring Boot.EurekaServiceStart" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SpringBootOptions">
+    <option name="showAdditionalConfigNotification" value="false" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -647,17 +843,39 @@
       <workItem from="1569317710018" duration="526000" />
       <workItem from="1569335431877" duration="13191000" />
       <workItem from="1569509540887" duration="973000" />
-      <workItem from="1569590927140" duration="2273000" />
+      <workItem from="1569590927140" duration="4619000" />
+      <workItem from="1569681318738" duration="905000" />
+      <workItem from="1569683485158" duration="1773000" />
+      <workItem from="1569808601840" duration="8704000" />
+      <workItem from="1569821607898" duration="10920000" />
+      <workItem from="1569853793873" duration="2025000" />
     </task>
+    <task id="LOCAL-00001" summary="规划结构">
+      <created>1569594536849</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1569594536849</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17721000" />
+    <option name="totallyTimeSpent" value="44394000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="7" y="23" width="1433" height="752" extended-state="0" />
+    <frame x="0" y="23" width="1440" height="827" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2178289" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22460657" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -667,26 +885,26 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.20454545" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.8505007" visible="true" weight="0.4517007" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4985694" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="GraphQL" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32838285" />
+      <window_info anchor="bottom" id="GraphQL" order="7" weight="0.32838285" />
+      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.49928468" weight="0.32789117" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.14949928" side_tool="true" visible="true" weight="0.4517007" />
       <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="12" weight="0.3292517" />
+      <window_info anchor="bottom" id="Version Control" order="12" sideWeight="0.49928468" weight="0.32838285" />
       <window_info anchor="bottom" id="Spring" order="13" />
-      <window_info anchor="bottom" id="Java Enterprise" order="14" />
-      <window_info anchor="bottom" id="Messages" order="15" />
+      <window_info anchor="bottom" id="Java Enterprise" order="14" sideWeight="0.49872988" weight="0.48844886" />
+      <window_info anchor="bottom" id="Messages" order="15" sideWeight="0.49356222" weight="0.3292517" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="right" id="Maven Projects" order="5" visible="true" weight="0.24299066" />
+      <window_info anchor="right" id="Maven Projects" order="5" visible="true" weight="0.16595136" />
       <window_info anchor="right" id="SciView" order="6" />
       <window_info anchor="right" id="Database" order="7" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
@@ -700,283 +918,11 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="规划结构" />
+    <option name="LAST_COMMIT_MESSAGE" value="规划结构" />
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pro-service-common/pro-common-pojo/src/main/java/com/wzy/pojo/Functions.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-service-product/pro-product-service/src/main/resources/bootstrap.yml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-service-product/pro-product-service/src/main/java/com/wzy/pdt/swagger/Swagger2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/dev/mysql-ordersqldata-dev.yml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/dev/mysql-rolesqldata-dev.yml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/dev/mysql-sqldata-dev.yml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/dev/mysql-usersqldata-dev.yml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/dev/oauth2-res-dev.yml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/dev/order-service-dev.yml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sql/zipkin.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="32" selection-end-line="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sql/projcet.sql">
-      <provider selected="true" editor-type-id="LargeFileEditor">
-        <state relative-caret-position="-10928">
-          <caret line="166" column="36" selection-start-line="166" selection-start-column="36" selection-end-line="166" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-service-static/pro-statc-resources/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="21" selection-start-line="27" selection-start-column="8" selection-end-line="30" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-service-user/pro-user-service/src/main/java/com/wzy/user/UserServiceStart.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-service-static/pro-statc-resources/src/main/resources/bootstrap.yml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/java/com/wzy/config/ConfigServiceStart.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-service-user/pro-user-service/src/main/resources/bootstrap.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="10" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-service-monitor/pro-admin-service-ui/src/main/java/com/admin/ui/AdminApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="12" column="23" selection-start-line="12" selection-start-column="23" selection-end-line="12" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-service-role/pro-role-service/src/main/resources/bootstrap.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="30" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-service-monitor/pro-zipkin-service/src/main/resources/log4j.properties">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/bootstrap.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="34" column="15" selection-start-line="34" selection-start-column="15" selection-end-line="34" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-service-monitor/pro-admin-service-ui/src/main/resources/bootstrap.yml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/dev/admin-service-dev.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="12" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-service-monitor/pro-zipkin-service/src/main/java/com/wzy/zipkin/ZipKinServerApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="12" column="37" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-service-middleware/pro-config-service/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-239" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-service-monitor/pro-admin-service-ui/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/dev/mysql-zipkinsqldata-dev.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-service-gateway/pro-zuul-service/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-514">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-service-gateway/pro-zuul-service/src/main/java/com/wzy/zuul/ZuulServiceStart.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="56">
-          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-service-gateway/pro-zuul-service/src/main/java/com/wzy/zuul/config/ResourceServerConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-service-middleware/pro-redis-service/src/main/java/com/wzy/redis/RedisServiceStart.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/dev/gateway-service-dev.yml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/dev/redis-nosql-dev.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="11" lean-forward="true" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/dev/zipkin-middleware-dev.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="18" lean-forward="true" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/dev/rabbitmq-middleware-dev.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="19" lean-forward="true" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/dev/zipkin-service-dev.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="10" selection-start-line="17" selection-start-column="10" selection-end-line="17" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-service-role/pro-role-web/src/main/resources/bootstrap.yml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-service-monitor/pro-zipkin-service/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-62">
-          <caret line="45" column="21" selection-start-line="45" selection-start-column="21" selection-end-line="45" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/dev/role-service-dev.yml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/dev/redis-service-dev.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-service-monitor/pro-zipkin-service/src/main/resources/bootstrap.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-service-middleware/pro-redis-service/src/main/resources/logback-spring.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-service-middleware/pro-redis-service/src/main/resources/bootstrap.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="98" selection-start-line="6" selection-start-column="98" selection-end-line="6" selection-end-column="98" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/dev/admin-middleware-dev.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="34" selection-start-line="4" selection-start-column="34" selection-end-line="4" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-service-order/pro-order-service/src/main/resources/bootstrap.yml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="600">
-            <caret line="40" column="32" lean-forward="true" selection-start-line="40" selection-start-column="32" selection-end-line="40" selection-end-column="32" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-service-user/pro-user-web/src/main/resources/logback-spring.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-service-middleware/pro-config-service/src/main/resources/config/dev/eureka-middleware-dev.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="10" lean-forward="true" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-service-register/pro-eureka-service/src/main/java/com/wzy/eureka/EurekaServiceStart.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pro-service-register/pro-eureka-service/src/main/resources/bootstrap.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -994,7 +940,353 @@
     <entry file="file://$PROJECT_DIR$/pro-service-register/pro-eureka-service/src/main/docker/Dockerfile">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
-          <caret line="6" column="60" selection-start-line="6" selection-start-column="60" selection-end-line="6" selection-end-column="60" />
+          <caret line="6" column="110" selection-start-line="6" selection-start-column="110" selection-end-line="6" selection-end-column="110" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-service-business/pro-service-role/pro-role-service/src/main/java/com/wzy/role/service/RoleServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-service-config/pro-config-service/src/main/resources/bootstrap.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="36" column="7" selection-start-line="36" selection-start-column="7" selection-end-line="36" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-service-config/pro-config-service/src/main/resources/config/dev/admin-middleware-dev.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="34" selection-start-line="4" selection-start-column="34" selection-end-line="4" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-service-config/pro-config-service/src/main/resources/config/dev/eureka-middleware-dev.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="10" lean-forward="true" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-service-monitor/pro-admin-service-ui/src/main/resources/bootstrap.yml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-service-business/pro-service-user/pro-user-web/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="70" column="21" selection-start-line="20" selection-start-column="7" selection-end-line="70" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-service-ttp/pom.xml" />
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="690">
+            <caret line="46" column="38" selection-start-line="46" selection-start-column="34" selection-end-line="46" selection-end-column="39" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-service-common/pro-common/src/main/java/com/wzy/common/constant/Const.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/squareup/okhttp3/okhttp/4.2.0/okhttp-4.2.0.jar!/okhttp3/Headers.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="97">
+          <caret line="56" column="29" selection-start-line="56" selection-start-column="29" selection-end-line="56" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-service-middleware/pro-redis-service-api/src/main/java/com/wzy/redis/hystrix/RedisServiceHystrix.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-service-ttp/pro-service-wx-api/src/main/java/com/wzy/wx/hystrix/WxService.java" />
+    <entry file="file://$PROJECT_DIR$/pro-service-middleware/pro-redis-service-api/src/main/java/com/wzy/redis/RedisService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot/2.1.6.RELEASE/spring-boot-2.1.6.RELEASE.jar!/org/springframework/boot/context/properties/ConfigurationProperties.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="37" selection-start-line="37" selection-end-line="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-service-business/pro-service-order/pro-order-service-api/pom.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-service-business/pro-service-order/pro-order-service/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="14">
+          <caret line="20" column="44" selection-start-line="20" selection-start-column="44" selection-end-line="20" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-service-business/pro-service-order/pro-order-service-api/src/main/java/com/wzy/order/OrderService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-service-business/pro-service-order/pro-order-service/src/main/java/com/wzy/order/StartOrderService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-service-business/pro-service-order/pro-order-service/src/main/java/com/wzy/order/swagger/Swagger2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-service-business/pro-service-order/pro-order-service/src/main/resources/bootstrap.yml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-service-business/pro-service-order/pro-order-service/src/main/java/com/wzy/order/service/OrderServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-84">
+          <caret line="18" column="6" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-service-common/pro-common/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="46" selection-start-line="46" selection-end-line="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/netflix/eureka/eureka-client/1.9.8/eureka-client-1.9.8.jar!/com/netflix/discovery/DiscoveryClient.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="562" selection-start-line="562" selection-end-line="562" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-service-common/pro-common/src/main/java/com/wzy/common/respones/MessageBody.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/5.1.8.RELEASE/spring-context-5.1.8.RELEASE.jar!/org/springframework/context/annotation/Configuration.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_151.jdk/Contents/Home/src.zip!/java/util/concurrent/ConcurrentHashMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-156">
+          <caret line="1004" column="13" selection-start-line="1004" selection-start-column="13" selection-end-line="1004" selection-end-column="13" />
+          <folding>
+            <element signature="e#44347#44348#0" expanded="true" />
+            <element signature="e#44395#44396#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-service-common/pro-common/src/main/java/com/wzy/common/cache/TokenCache.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-service-common/pro-common/src/main/java/com/wzy/common/cache/Token.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="10" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-service-ttp/pro-service-wx/src/main/java/com/wzy/ttp/wx/entity/MessageValue.java" />
+    <entry file="file://$PROJECT_DIR$/pro-service-ttp/pro-service-wx-api/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="21" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-service-ttp/pro-service-wx/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="343">
+          <caret line="28" column="21" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-service-ttp/pro-service-wx-api/src/main/java/com/wzy/wx/entity/MpTemplateMsg.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-service-ttp/pro-service-wx/src/main/java/com/wzy/ttp/wx/cache/MapTokenCache.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#465#466#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-service-ttp/pro-service-wx/src/main/java/com/wzy/ttp/wx/cache/CacheConfiguration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-service-ttp/pro-service-wx-api/src/main/java/com/wzy/wx/entity/SendMessage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-service-ttp/pro-service-wx-api/src/main/java/com/wzy/wx/entity/WeappTemplateMsg.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-service-ttp/pro-service-wx-api/src/main/java/com/wzy/wx/entity/WeixinRespones.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-service-ttp/pro-service-wx/src/main/java/com/wzy/ttp/wx/WxServiceStart.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-service-ttp/pro-service-wx/src/main/java/com/wzy/ttp/wx/swagger/Swagger2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-service-ttp/pro-service-wx/src/main/java/com/wzy/ttp/wx/properties/WxProperties.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="24" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-service-business/pro-service-user/pro-user-service/src/main/java/com/wzy/user/service/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="62">
+          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-service-business/pro-service-user/pro-user-service/src/main/resources/bootstrap.yml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-service-ttp/pro-service-wx/src/main/resources/bootstrap.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-service-common/pro-common/src/main/java/com/wzy/common/okhttp/Okhttp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="54" column="18" selection-start-line="54" selection-start-column="18" selection-end-line="54" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-service-ttp/pro-service-wx/src/main/java/com/wzy/ttp/wx/service/WxServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="122" column="27" selection-start-line="122" selection-start-column="27" selection-end-line="122" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-service-ttp/pro-service-wx-api/src/main/java/com/wzy/wx/hystrix/WxServiceHystrix.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-service-ttp/pro-service-wx-api/src/main/java/com/wzy/wx/WxService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

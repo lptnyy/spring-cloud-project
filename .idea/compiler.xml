@@ -22,9 +22,9 @@
         <module name="pro-role-service" />
         <module name="pro-role-service-api" />
         <module name="pro-role-web" />
+        <module name="pro-service-wx" />
+        <module name="pro-service-wx-api" />
         <module name="pro-sso-service" />
-        <module name="pro-statc-resources" />
-        <module name="pro-stream-user-service" />
         <module name="pro-user-service" />
         <module name="pro-user-service-api" />
         <module name="pro-user-web" />
@@ -33,6 +33,9 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="pro-service-ttp" target="1.8" />
+      <module name="pro-statc-resources" target="1.8" />
+      <module name="pro-stream-user-service" target="1.8" />
       <module name="pro-user-service-web" target="1.8" />
     </bytecodeTargetLevel>
   </component>

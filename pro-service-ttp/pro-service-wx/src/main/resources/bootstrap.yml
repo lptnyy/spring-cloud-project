@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: weixin-service
+  ttp:
+    wx:
+      openIdUrl: https://api.weixin.qq.com/sns/jscode2session
+      secret: 02658073ed730caf118579e513d3a7e7
+      appid: wxb9e1709b88ca46a9
+      access-token-url: https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential
+      access-token-cache-type: map # map or redis
+      access-token-out-time: 7100 # Second 不能低于 7100
+      sendMessageUrl: https://api.weixin.qq.com/cgi-bin/message/wxopen/template/uniform_send
+server:
+  port: 8080
