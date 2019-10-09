@@ -34,6 +34,7 @@
 		<module>pro-service-business/pro-service-user/pro-user-web</module>
 		<module>pro-service-ttp/pro-service-wx-api</module>
 		<module>pro-service-ttp/pro-service-wx</module>
+		<module>pro-service-transaction/tx-lcn-service</module>
 	</modules>
 
 	<parent>
