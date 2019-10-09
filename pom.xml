@@ -10,7 +10,7 @@
 	<description>Demo project for Spring Boot</description>
 
 	<modules>
-		<module>pro-service-register/pro-eureka-service</module>
+		<module>pro-eureka-service</module>
 		<module>pro-service-business/pro-service-user/pro-user-service</module>
 		<module>pro-service-business/pro-service-user/pro-user-service-api</module>
 		<module>pro-service-common/pro-common</module>
@@ -21,9 +21,9 @@
 		<module>pro-service-gateway/pro-zuul-service</module>
 		<module>pro-service-monitor/pro-zipkin-service</module>
 		<module>pro-service-monitor/pro-admin-service-ui</module>
-		<module>pro-service-config/pro-config-service</module>
+		<module>pro-config-service</module>
 		<module>pro-service-gateway/pro-gateway-service</module>
-		<module>pro-service-auth/pro-sso-service</module>
+		<module>pro-sso-service</module>
 		<module>pro-service-business/pro-service-order/pro-order-service-api</module>
 		<module>pro-service-business/pro-service-order/pro-order-service</module>
 		<module>pro-service-business/pro-service-product/pro-product-service-api</module>
@@ -34,7 +34,7 @@
 		<module>pro-service-business/pro-service-user/pro-user-web</module>
 		<module>pro-service-ttp/pro-service-wx-api</module>
 		<module>pro-service-ttp/pro-service-wx</module>
-		<module>pro-service-transaction/tx-lcn-service</module>
+		<module>tx-lcn-service</module>
 	</modules>
 
 	<parent>
