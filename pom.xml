@@ -30,8 +30,6 @@
 		<module>pro-service-business/pro-service-product/pro-product-service</module>
 		<module>pro-service-business/pro-service-role/pro-role-service-api</module>
 		<module>pro-service-business/pro-service-role/pro-role-service</module>
-		<module>pro-service-business/pro-service-role/pro-role-web</module>
-		<module>pro-service-business/pro-service-user/pro-user-web</module>
 		<module>pro-service-ttp/pro-service-wx-api</module>
 		<module>pro-service-ttp/pro-service-wx</module>
 		<module>tx-lcn-service</module>

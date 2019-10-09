@@ -48,3 +48,4 @@ http://localhost:8083/oauth/token?client_id=android&client_secret=android&grant_
 Admin管理 端口 8003 变量变量：config-service  
 Zipkin 端口 8004 启动变量: config-service  
 RedisService 端口 8005 启动变量：config-service
+SSOService 端口 8006 启动变量：config-service

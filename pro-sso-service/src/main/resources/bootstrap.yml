@@ -8,14 +8,11 @@ spring:
       discovery:
         enabled: false
       override-none: true
-      uri: http://localhost:13001
+      uri: http://${config-service}:8002
 
 server:
   servlet:
     session:
       cookie:
-        name: ssocookie
+        name: sso_cookie
 
-logging:
-  level:
-    root: debug

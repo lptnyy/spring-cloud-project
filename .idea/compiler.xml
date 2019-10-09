@@ -20,13 +20,11 @@
         <module name="pro-redis-service-api" />
         <module name="pro-role-service" />
         <module name="pro-role-service-api" />
-        <module name="pro-role-web" />
         <module name="pro-service-wx" />
         <module name="pro-service-wx-api" />
         <module name="pro-sso-service" />
         <module name="pro-user-service" />
         <module name="pro-user-service-api" />
-        <module name="pro-user-web" />
         <module name="pro-zipkin-service" />
         <module name="pro-zuul-service" />
         <module name="txlcn-common" />
@@ -44,6 +42,10 @@
         <module name="pro-eureka-service" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="pro-role-web" target="1.8" />
+      <module name="pro-user-web" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
