@@ -11,21 +11,21 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @FeignClient(value = "user-service", fallback = UserServiceHystrix.class)
 public interface UserService {
 
-    @RequestMapping(path = "/hi", method = RequestMethod.POST)
-    public ServiceResponse hi();
+    @RequestMapping(path = "/hi", method = RequestMethod.GET)
+    ServiceResponse hi();
 
     /**
      * 修改用户信息
      * @return
      */
-    @RequestMapping(path = "/updateUser", method = RequestMethod.POST)
-    public ServiceResponse updateUser();
+    @RequestMapping(path = "/updateUser", method = RequestMethod.GET)
+    ServiceResponse updateUser();
 
     /**
      * 获得用户信息
      * @param user
      * @return
      */
-    @RequestMapping(path = "/getuser", method = RequestMethod.POST)
-    public ServiceResponse userNameGetUser(@RequestBody User user);
+    @RequestMapping(path = "/getUser", method = RequestMethod.POST)
+    ServiceResponse userNameGetUser(@RequestBody User user);
 }

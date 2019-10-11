@@ -1,4 +1,4 @@
-package com.wzy.adapter;
+package com.wzy.configuration;
 
 import org.springframework.security.crypto.password.PasswordEncoder;
 

@@ -8,5 +8,5 @@ spring:
       discovery:
         enabled: false
       override-none: true
-      uri: http://localhost:13001
+      uri: http://${config-service}:8002
 

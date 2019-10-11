@@ -1,0 +1,31 @@
+server:
+  port: 8101
+  servlet:
+    session:
+      cookie:
+        name: zuul_cookie
+
+management:
+  server:
+    port: 10008
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+zuul:
+  host:
+    connect-timeout-millis: 15000
+    socket-timeout-millis: 60000
+  routes:
+    user:
+      path: /user/**
+      serviceId: user-service
+    auth:
+      path: /auth/**
+      serviceId: SSO-SERVICE
+  sensitive-headers:
+  - Cookie,Set-Cookie,Authorization
+
+feign:
+  httpclient:
+    enabled: true

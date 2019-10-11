@@ -33,7 +33,8 @@
 		<module>pro-service-ttp/pro-service-wx-api</module>
 		<module>pro-service-ttp/pro-service-wx</module>
 		<module>tx-lcn-service</module>
-	</modules>
+        <module>pro-tasks-service</module>
+    </modules>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>

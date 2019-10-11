@@ -1,6 +1,8 @@
 package com.wzy.pojo.sso;
 
-public class VaRole {
+import java.io.Serializable;
+
+public class VaRole implements Serializable {
     private Integer id;
     private String name;
 

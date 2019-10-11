@@ -10,10 +10,8 @@
     <file url="file://$PROJECT_DIR$/pro-service-business/pro-service-product/pro-product-service-api" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/pro-service-business/pro-service-role/pro-role-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/pro-service-business/pro-service-role/pro-role-service-api" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/pro-service-business/pro-service-role/pro-role-web" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/pro-service-business/pro-service-user/pro-user-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/pro-service-business/pro-service-user/pro-user-service-api" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/pro-service-business/pro-service-user/pro-user-web" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/pro-service-common/pro-common" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/pro-service-common/pro-common-mapper" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/pro-service-common/pro-common-pojo" charset="UTF-8" />
@@ -26,6 +24,7 @@
     <file url="file://$PROJECT_DIR$/pro-service-ttp/pro-service-wx" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/pro-service-ttp/pro-service-wx-api" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/pro-sso-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-tasks-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/tx-lcn-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/tx-lcn-service/txlcn-common" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/tx-lcn-service/txlcn-logger" charset="UTF-8" />

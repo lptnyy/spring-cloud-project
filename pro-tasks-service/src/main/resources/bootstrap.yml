@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: tasks-service
+  cloud:
+    config:
+      profile: dev
+      name: eureka-middleware,tasks-service,redis-nosql,rabbitmq-middleware,zipkin-middleware,admin-middleware,mysql-quartzdata
+      discovery:
+        enabled: false
+      override-none: true
+      uri: http://${config-service}:8002

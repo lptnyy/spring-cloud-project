@@ -1,7 +1,5 @@
 package com.wzy.user.service;
-
 import com.codingapi.txlcn.tc.annotation.DTXPropagation;
-import com.codingapi.txlcn.tc.annotation.LcnTransaction;
 import com.codingapi.txlcn.tc.annotation.TxcTransaction;
 import com.wzy.common.util.ServiceResponse;
 import com.wzy.common.util.Srfactory;
@@ -12,7 +10,6 @@ import com.wzy.user.UserService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.RestController;
 import javax.annotation.Resource;
@@ -31,8 +28,6 @@ public class UserServiceImpl implements UserService {
     @Override
     @ApiOperation(value = "测试订单信息", notes = "就是测试接口")
     public ServiceResponse hi() {
-        redisService.set("hhha1", "haha");
-        redisService.get("hhha1");
         return ServiceResponse.getSUCCESS();
     }
 
@@ -54,7 +49,6 @@ public class UserServiceImpl implements UserService {
     public ServiceResponse userNameGetUser(User user) {
         return Srfactory.sr()
                 .run(()->{
-                    System.out.println("users");
                     return userMapper.getUser(user.getUsername());
                 })
                 .build();

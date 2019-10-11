@@ -23,6 +23,7 @@
         <module name="pro-service-wx" />
         <module name="pro-service-wx-api" />
         <module name="pro-sso-service" />
+        <module name="pro-tasks-service" />
         <module name="pro-user-service" />
         <module name="pro-user-service-api" />
         <module name="pro-zipkin-service" />
