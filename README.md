@@ -46,10 +46,10 @@ http://localhost:8083/oauth/token?client_id=android&client_secret=android&grant_
 注册中心 端口 8001  环境变量：eureka-service  
 配置中心 端口 8002  环境变量：config-service admin-service eureka-service  
 Admin管理 端口 8003 变量变量：config-service  
-Zipkin 端口 8004 启动变量: config-service  
-RedisService 端口 8005 启动变量：config-service
-SSOService 端口 8006 启动变量：config-service
-OrderService 端口 8007 启动变量：config-service  
-UserService 端口 8008 启动变量：config-service  
-ZuulService 端口 8101 启动变量：config-service    
+Zipkin 端口 8004 启动变量: config-service   
+RedisService 端口 8005 启动变量：config-service  
+SSOService 端口 8006 启动变量：config-service  
+OrderService 端口 8007 启动变量：config-service   
+UserService 端口 8008 启动变量：config-service    
+ZuulService 端口 8101 启动变量：config-service     
 TasksService 端口 8201 启动变量 config-service  
