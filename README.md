@@ -49,6 +49,7 @@ Admin管理 端口 8003 变量变量：config-service
 Zipkin 端口 8004 启动变量: config-service  
 RedisService 端口 8005 启动变量：config-service
 SSOService 端口 8006 启动变量：config-service
-OrderService 端口 8007 启动变量：config-service
-UserService 端口 8008 动变量：config-service
-ZuulService 端口 
+OrderService 端口 8007 启动变量：config-service  
+UserService 端口 8008 启动变量：config-service  
+ZuulService 端口 8101 启动变量：config-service    
+TasksService 端口 8201 启动变量 config-service  
