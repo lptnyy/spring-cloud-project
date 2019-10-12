@@ -11,8 +11,8 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.E
         {"com.wzy.role"
                 ,"com.wzy.user"
                 ,"com.wzy.redis"})
-public class StartSSOService {
+public class ProStartAuth {
     public static void main(String[] args) {
-        SpringApplication.run(StartSSOService.class, args);
+        SpringApplication.run(ProStartAuth.class, args);
     }
 }

@@ -1,6 +1,6 @@
 spring:
   application:
-    name: admin-service-ui
+    name: admin-service
   cloud:
     config:
       profile: dev
@@ -8,6 +8,6 @@ spring:
       discovery:
         enabled: false
       override-none: true
-      uri: http://${config-service}:8002
+      uri: http://${CONFIG-SERVICE}:8002
 
 

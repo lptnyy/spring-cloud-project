@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>pro-service-wx</artifactId>
+    <artifactId>pro-weixin</artifactId>
 
     <dependencies>
         <dependency>
@@ -18,7 +18,7 @@
         </dependency>
         <dependency>
             <groupId>com.wzy</groupId>
-            <artifactId>pro-service-wx-api</artifactId>
+            <artifactId>pro-weixin-api</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
         <dependency>

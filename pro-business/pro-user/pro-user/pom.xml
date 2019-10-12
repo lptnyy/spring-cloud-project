@@ -10,7 +10,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>pro-user-service</artifactId>
+    <artifactId>pro-user</artifactId>
 
     <properties>
         <codingapi.txlcn.version>5.0.2.RELEASE</codingapi.txlcn.version>
@@ -50,12 +50,12 @@
         </dependency>
         <dependency>
             <groupId>com.wzy</groupId>
-            <artifactId>pro-user-service-api</artifactId>
+            <artifactId>pro-user-api</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>com.wzy</groupId>
-            <artifactId>pro-redis-service-api</artifactId>
+            <artifactId>pro-redis-api</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
         <dependency>

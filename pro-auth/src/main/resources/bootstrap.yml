@@ -8,8 +8,7 @@ spring:
       discovery:
         enabled: false
       override-none: true
-      uri: http://${config-service}:8002
-
+      uri: http://${CONFIG-SERVICE}:8002
 server:
   servlet:
     session:

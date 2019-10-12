@@ -12,13 +12,13 @@ spring:
   boot:
     admin:
       client:
-        url: http://${config-service}:10001
+        url: http://${CONFIG-SERVICE}:10001
         instance:
-          service-base-url: http://${admin-service}:8003
+          service-base-url: http://${ADMIN-SERVICE}:8003
   profiles:
     active: native  # 配置使用本地储存
   rabbitmq:
-    host: 192.168.0.106
+    host: ${RABBIT_URL}
     port: 30001
     username: admin
     password: admin
@@ -29,7 +29,8 @@ server:
 eureka:
   client:
     service-url:
-      defaultZone: http://${eureka-service}:8001/eureka
+      defaultZone: http://${EUREKA-SERVICE}:8001/eureka
+
 management:
   server:
     port: 10001

@@ -1,386 +1,204 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5f4fdeea-95b4-4d86-ae50-681b0496b0e2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/spring-cloud-project.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.txlcn/order-service-8007.mv.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.txlcn/order-service-null.mv.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.txlcn/user-service-8008.mv.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.txlcn/user-service-null.mv.db" beforeDir="false" />
+    <list default="true" id="7f6a7c62-4f3b-4b73-a2af-5308f06a9595" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-config-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-config/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-config-service/src/main/java/com/wzy/config/ConfigServiceStart.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-config/src/main/java/com/wzy/config/ConfigServiceStart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-config-service/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-config/src/main/resources/bootstrap.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-config-service/src/main/resources/config/admin-middleware-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-config/src/main/resources/config/admin-middleware-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-config-service/src/main/resources/config/admin-service-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-config/src/main/resources/config/admin-service-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-config-service/src/main/resources/config/eureka-middleware-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-config/src/main/resources/config/eureka-middleware-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-config-service/src/main/resources/config/gateway-service-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-config/src/main/resources/config/gateway-service-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-config-service/src/main/resources/config/mysql-ordersqldata-dev.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-config-service/src/main/resources/config/mysql-quartzdata-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-config/src/main/resources/config/mysql-quartzdata-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-config-service/src/main/resources/config/mysql-rolesqldata-dev.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-config-service/src/main/resources/config/mysql-sqldata-dev.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-config-service/src/main/resources/config/mysql-usersqldata-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-config/src/main/resources/config/mysql-usersqldata-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-config-service/src/main/resources/config/mysql-zipkinsqldata-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-config/src/main/resources/config/mysql-zipkinsqldata-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-config-service/src/main/resources/config/oauth2-res-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-config/src/main/resources/config/oauth2-res-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-config-service/src/main/resources/config/order-service-dev.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-config-service/src/main/resources/config/product-service-dev.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-config-service/src/main/resources/config/rabbitmq-middleware-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-config/src/main/resources/config/rabbitmq-middleware-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-config-service/src/main/resources/config/redis-nosql-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-config/src/main/resources/config/redis-nosql-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-config-service/src/main/resources/config/redis-service-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-config/src/main/resources/config/redis-service-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-config-service/src/main/resources/config/role-service-dev.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-config-service/src/main/resources/config/sso-service-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-config/src/main/resources/config/sso-service-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-config-service/src/main/resources/config/static-resources-dev.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-config-service/src/main/resources/config/tasks-service-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-config/src/main/resources/config/tasks-service-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-config-service/src/main/resources/config/user-service-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-config/src/main/resources/config/user-service-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-config-service/src/main/resources/config/userstream-service-dev.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-config-service/src/main/resources/config/zipkin-middleware-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-config/src/main/resources/config/zipkin-middleware-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-config-service/src/main/resources/config/zipkin-service-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-config/src/main/resources/config/zipkin-service-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-config-service/src/main/resources/config/zuul-service-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-config/src/main/resources/config/zuul-service-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-eureka-service/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/pro-eureka/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-eureka-service/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" afterPath="$PROJECT_DIR$/pro-eureka/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-eureka-service/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/pro-eureka/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-eureka-service/mvnw" beforeDir="false" afterPath="$PROJECT_DIR$/pro-eureka/mvnw" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-eureka-service/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/pro-eureka/mvnw.cmd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-eureka-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-eureka/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-eureka-service/src/main/docker/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/pro-eureka/src/main/docker/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-eureka-service/src/main/java/com/wzy/eureka/EurekaServiceStart.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-eureka/src/main/java/com/wzy/eureka/EurekaServiceStart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-eureka-service/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-eureka/src/main/resources/bootstrap.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-eureka-service/src/test/java/com/wzy/eureka/ProEurekaServiceApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-eureka/src/test/java/com/wzy/eureka/ProEurekaServiceApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-business/pro-service-order/pro-order-service-api/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-business/pro-service-order/pro-order-service-api/src/main/java/com/wzy/order/OrderService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-business/pro-service-order/pro-order-service-api/src/main/java/com/wzy/order/hystrix/OrderServiceHystrix.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-business/pro-service-order/pro-order-service/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-business/pro-service-order/pro-order-service/src/main/java/com/wzy/order/StartOrderService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-business/pro-service-order/pro-order-service/src/main/java/com/wzy/order/service/OrderServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-business/pro-service-order/pro-order-service/src/main/java/com/wzy/order/swagger/Swagger2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-business/pro-service-order/pro-order-service/src/main/resources/bootstrap.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-business/pro-service-product/pro-product-service-api/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-business/pro-service-product/pro-product-service-api/src/main/java/com/wzy/pdt/ProductService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-business/pro-service-product/pro-product-service-api/src/main/java/com/wzy/pdt/hystrix/ProductServiceHystrix.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-business/pro-service-product/pro-product-service/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-business/pro-service-product/pro-product-service/src/main/java/com/wzy/pdt/StartPdtService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-business/pro-service-product/pro-product-service/src/main/java/com/wzy/pdt/service/ProductServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-business/pro-service-product/pro-product-service/src/main/java/com/wzy/pdt/swagger/Swagger2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-business/pro-service-product/pro-product-service/src/main/resources/bootstrap.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-business/pro-service-role/pro-role-service-api/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-business/pro-service-role/pro-role-service-api/src/main/java/com/wzy/role/RoleService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-business/pro-service-role/pro-role-service-api/src/main/java/com/wzy/role/hystrix/RoleServiceHystrix.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-business/pro-service-role/pro-role-service/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-business/pro-service-role/pro-role-service/src/main/java/com/wzy/role/RoleServiceStart.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-business/pro-service-role/pro-role-service/src/main/java/com/wzy/role/service/RoleServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-business/pro-service-role/pro-role-service/src/main/java/com/wzy/role/swagger/Swagger2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-business/pro-service-role/pro-role-service/src/main/resources/bootstrap.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-business/pro-service-role/pro-role-service/src/main/resources/logback-spring.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-business/pro-service-user/pro-user-service/src/main/resources/logback-spring.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-business/pro-service-user/pro-user-service-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-business/pro-service-user/pro-user-service-api/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-business/pro-service-user/pro-user-service-api/src/main/java/com/wzy/user/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-business/pro-service-user/pro-user-service-api/src/main/java/com/wzy/user/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-business/pro-service-user/pro-user-service-api/src/main/java/com/wzy/user/hystrix/UserServiceHystrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-business/pro-service-user/pro-user-service-api/src/main/java/com/wzy/user/hystrix/UserServiceHystrix.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-business/pro-service-user/pro-user-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-business/pro-service-user/pro-user-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-business/pro-service-user/pro-user-service/src/main/java/com/wzy/user/UserServiceStart.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-business/pro-service-user/pro-user-service/src/main/java/com/wzy/user/UserServiceStart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-business/pro-service-user/pro-user-service/src/main/java/com/wzy/user/configuration/ResourceServerConfigurer.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-business/pro-service-user/pro-user-service/src/main/java/com/wzy/user/configuration/ResourceServerConfigurer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-business/pro-service-user/pro-user-service/src/main/java/com/wzy/user/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-business/pro-service-user/pro-user-service/src/main/java/com/wzy/user/service/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-business/pro-service-user/pro-user-service/src/main/java/com/wzy/user/swagger/Swagger2.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-business/pro-service-user/pro-user-service/src/main/java/com/wzy/user/swagger/Swagger2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-business/pro-service-user/pro-user-service/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-business/pro-service-user/pro-user-service/src/main/resources/bootstrap.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-business/pro-service-user/pro-user-service/src/main/resources/logback-spring.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-common/pro-common-mapper/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-common/pro-common-mapper/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-common/pro-common-mapper/src/main/java/com/wzy/mapper/FunctionsMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-common/pro-common-mapper/src/main/java/com/wzy/mapper/FunctionsMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-common/pro-common-mapper/src/main/java/com/wzy/mapper/OrderMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-common/pro-common-mapper/src/main/java/com/wzy/mapper/OrderMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-common/pro-common-mapper/src/main/java/com/wzy/mapper/PdtMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-common/pro-common-mapper/src/main/java/com/wzy/mapper/PdtMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-common/pro-common-mapper/src/main/java/com/wzy/mapper/RoleFunctionsMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-common/pro-common-mapper/src/main/java/com/wzy/mapper/RoleFunctionsMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-common/pro-common-mapper/src/main/java/com/wzy/mapper/RoleMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-common/pro-common-mapper/src/main/java/com/wzy/mapper/RoleMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-common/pro-common-mapper/src/main/java/com/wzy/mapper/ScheduleJobMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-common/pro-common-mapper/src/main/java/com/wzy/mapper/ScheduleJobMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-common/pro-common-mapper/src/main/java/com/wzy/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-common/pro-common-mapper/src/main/java/com/wzy/mapper/UserMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-common/pro-common-mapper/src/main/java/com/wzy/mapper/UserRoleMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-common/pro-common-mapper/src/main/java/com/wzy/mapper/UserRoleMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-common/pro-common-mapper/src/main/resources/generator/generatorConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-common/pro-common-mapper/src/main/resources/generator/generatorConfig.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-common/pro-common-mapper/src/main/resources/mapper/FunctionsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-common/pro-common-mapper/src/main/resources/mapper/FunctionsMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-common/pro-common-mapper/src/main/resources/mapper/OrderMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-common/pro-common-mapper/src/main/resources/mapper/OrderMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-common/pro-common-mapper/src/main/resources/mapper/PdtMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-common/pro-common-mapper/src/main/resources/mapper/PdtMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-common/pro-common-mapper/src/main/resources/mapper/RoleFunctionsMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-common/pro-common-mapper/src/main/resources/mapper/RoleFunctionsMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-common/pro-common-mapper/src/main/resources/mapper/RoleMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-common/pro-common-mapper/src/main/resources/mapper/RoleMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-common/pro-common-mapper/src/main/resources/mapper/ScheduleJobMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-common/pro-common-mapper/src/main/resources/mapper/ScheduleJobMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-common/pro-common-mapper/src/main/resources/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-common/pro-common-mapper/src/main/resources/mapper/UserMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-common/pro-common-mapper/src/main/resources/mapper/UserRoleMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-common/pro-common-mapper/src/main/resources/mapper/UserRoleMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-common/pro-common-pojo/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-common/pro-common-pojo/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-common/pro-common-pojo/src/main/java/com/wzy/pojo/Functions.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-common/pro-common-pojo/src/main/java/com/wzy/pojo/Functions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-common/pro-common-pojo/src/main/java/com/wzy/pojo/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-common/pro-common-pojo/src/main/java/com/wzy/pojo/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-common/pro-common-pojo/src/main/java/com/wzy/pojo/Pdt.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-common/pro-common-pojo/src/main/java/com/wzy/pojo/Pdt.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-common/pro-common-pojo/src/main/java/com/wzy/pojo/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-common/pro-common-pojo/src/main/java/com/wzy/pojo/Role.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-common/pro-common-pojo/src/main/java/com/wzy/pojo/RoleFunctions.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-common/pro-common-pojo/src/main/java/com/wzy/pojo/RoleFunctions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-common/pro-common-pojo/src/main/java/com/wzy/pojo/ScheduleJob.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-common/pro-common-pojo/src/main/java/com/wzy/pojo/ScheduleJob.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-common/pro-common-pojo/src/main/java/com/wzy/pojo/ScheduleJobExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-common/pro-common-pojo/src/main/java/com/wzy/pojo/ScheduleJobExample.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-common/pro-common-pojo/src/main/java/com/wzy/pojo/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-common/pro-common-pojo/src/main/java/com/wzy/pojo/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-common/pro-common-pojo/src/main/java/com/wzy/pojo/UserRole.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-common/pro-common-pojo/src/main/java/com/wzy/pojo/UserRole.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-common/pro-common-pojo/src/main/java/com/wzy/pojo/sso/VaRole.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-common/pro-common-pojo/src/main/java/com/wzy/pojo/sso/VaRole.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-common/pro-common-pojo/src/main/java/com/wzy/pojo/sso/VaUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-common/pro-common-pojo/src/main/java/com/wzy/pojo/sso/VaUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-common/pro-common/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-common/pro-common/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-common/pro-common/src/main/java/com/wzy/common/cache/Token.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-common/pro-common/src/main/java/com/wzy/common/cache/Token.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-common/pro-common/src/main/java/com/wzy/common/cache/TokenCache.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-common/pro-common/src/main/java/com/wzy/common/cache/TokenCache.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-common/pro-common/src/main/java/com/wzy/common/constant/Const.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-common/pro-common/src/main/java/com/wzy/common/constant/Const.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-common/pro-common/src/main/java/com/wzy/common/okhttp/Okhttp.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-common/pro-common/src/main/java/com/wzy/common/okhttp/Okhttp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-common/pro-common/src/main/java/com/wzy/common/respones/MessageBody.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-common/pro-common/src/main/java/com/wzy/common/respones/MessageBody.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-common/pro-common/src/main/java/com/wzy/common/util/AESOperator.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-common/pro-common/src/main/java/com/wzy/common/util/AESOperator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-common/pro-common/src/main/java/com/wzy/common/util/Constent.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-common/pro-common/src/main/java/com/wzy/common/util/Constent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-common/pro-common/src/main/java/com/wzy/common/util/DateUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-common/pro-common/src/main/java/com/wzy/common/util/DateUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-common/pro-common/src/main/java/com/wzy/common/util/MapUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-common/pro-common/src/main/java/com/wzy/common/util/MapUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-common/pro-common/src/main/java/com/wzy/common/util/Md5Util.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-common/pro-common/src/main/java/com/wzy/common/util/Md5Util.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-common/pro-common/src/main/java/com/wzy/common/util/PageUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-common/pro-common/src/main/java/com/wzy/common/util/PageUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-common/pro-common/src/main/java/com/wzy/common/util/RandomUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-common/pro-common/src/main/java/com/wzy/common/util/RandomUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-common/pro-common/src/main/java/com/wzy/common/util/RegexUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-common/pro-common/src/main/java/com/wzy/common/util/RegexUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-common/pro-common/src/main/java/com/wzy/common/util/SerializableUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-common/pro-common/src/main/java/com/wzy/common/util/SerializableUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-common/pro-common/src/main/java/com/wzy/common/util/ServiceCallBack.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-common/pro-common/src/main/java/com/wzy/common/util/ServiceCallBack.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-common/pro-common/src/main/java/com/wzy/common/util/ServiceResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-common/pro-common/src/main/java/com/wzy/common/util/ServiceResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-common/pro-common/src/main/java/com/wzy/common/util/ServiceResponseEnum.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-common/pro-common/src/main/java/com/wzy/common/util/ServiceResponseEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-common/pro-common/src/main/java/com/wzy/common/util/ServiceRun.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-common/pro-common/src/main/java/com/wzy/common/util/ServiceRun.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-common/pro-common/src/main/java/com/wzy/common/util/Srfactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-common/pro-common/src/main/java/com/wzy/common/util/Srfactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-common/pro-common/src/main/java/com/wzy/common/util/annotation/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-common/pro-common/src/main/java/com/wzy/common/util/annotation/Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-common/pro-common/src/main/java/com/wzy/common/util/annotation/check/IsContrastString.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-common/pro-common/src/main/java/com/wzy/common/util/annotation/check/IsContrastString.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-common/pro-common/src/main/java/com/wzy/common/util/annotation/check/IsNotEmail.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-common/pro-common/src/main/java/com/wzy/common/util/annotation/check/IsNotEmail.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-common/pro-common/src/main/java/com/wzy/common/util/annotation/check/IsNotInteger.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-common/pro-common/src/main/java/com/wzy/common/util/annotation/check/IsNotInteger.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-common/pro-common/src/main/java/com/wzy/common/util/annotation/check/IsNotLong.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-common/pro-common/src/main/java/com/wzy/common/util/annotation/check/IsNotLong.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-common/pro-common/src/main/java/com/wzy/common/util/annotation/check/IsNotNull.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-common/pro-common/src/main/java/com/wzy/common/util/annotation/check/IsNotNull.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-common/pro-common/src/main/java/com/wzy/common/util/annotation/factory/Verification.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-common/pro-common/src/main/java/com/wzy/common/util/annotation/factory/Verification.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-common/pro-common/src/main/java/com/wzy/common/util/annotation/set/SetStringMd5.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-common/pro-common/src/main/java/com/wzy/common/util/annotation/set/SetStringMd5.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-common/pro-common/src/main/java/com/wzy/common/util/jsonvo/JsonVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-common/pro-common/src/main/java/com/wzy/common/util/jsonvo/JsonVo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-common/pro-common/src/main/java/com/wzy/common/util/jsonvo/JsonVoInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-common/pro-common/src/main/java/com/wzy/common/util/jsonvo/JsonVoInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-gateway/pro-gateway-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-gateway/pro-gateway/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-gateway/pro-gateway-service/src/main/java/com/wzy/gateway/GateWayServiceStart.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-gateway/pro-gateway/src/main/java/com/wzy/gateway/GateWayServiceStart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-gateway/pro-gateway-service/src/main/java/com/wzy/gateway/currentlimiting/RateLimiterConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-gateway/pro-gateway/src/main/java/com/wzy/gateway/currentlimiting/RateLimiterConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-gateway/pro-gateway-service/src/main/java/com/wzy/gateway/hystrix/DefaultHystrixController.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-gateway/pro-gateway/src/main/java/com/wzy/gateway/hystrix/DefaultHystrixController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-gateway/pro-gateway-service/src/main/java/com/wzy/gateway/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-gateway/pro-gateway/src/main/java/com/wzy/gateway/security/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-gateway/pro-gateway-service/src/main/java/com/wzy/gateway/security/WebClientConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-gateway/pro-gateway/src/main/java/com/wzy/gateway/security/WebClientConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-gateway/pro-gateway-service/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-gateway/pro-gateway/src/main/resources/bootstrap.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-gateway/pro-gateway-service/src/main/resources/logback-spring.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-gateway/pro-gateway/src/main/resources/logback-spring.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-gateway/pro-zuul-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-gateway/pro-zuul/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-gateway/pro-zuul-service/src/main/java/com/wzy/zuul/ZuulServiceStart.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-gateway/pro-zuul/src/main/java/com/wzy/zuul/ZuulServiceStart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-gateway/pro-zuul-service/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-gateway/pro-zuul/src/main/resources/bootstrap.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-middleware/pro-redis-service-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-middleware/pro-redis-api/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-middleware/pro-redis-service-api/src/main/java/com/wzy/redis/RedisService.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-middleware/pro-redis-api/src/main/java/com/wzy/redis/RedisService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-middleware/pro-redis-service-api/src/main/java/com/wzy/redis/hystrix/RedisServiceHystrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-middleware/pro-redis-api/src/main/java/com/wzy/redis/hystrix/RedisServiceHystrix.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-middleware/pro-redis-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-middleware/pro-redis/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-middleware/pro-redis-service/src/main/java/com/wzy/redis/RedisServiceStart.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-middleware/pro-redis/src/main/java/com/wzy/redis/RedisServiceStart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-middleware/pro-redis-service/src/main/java/com/wzy/redis/config/RedisConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-middleware/pro-redis/src/main/java/com/wzy/redis/config/RedisConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-middleware/pro-redis-service/src/main/java/com/wzy/redis/service/RedisServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-middleware/pro-redis/src/main/java/com/wzy/redis/service/RedisServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-middleware/pro-redis-service/src/main/java/com/wzy/redis/swagger/Swagger2.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-middleware/pro-redis/src/main/java/com/wzy/redis/swagger/Swagger2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-middleware/pro-redis-service/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-middleware/pro-redis/src/main/resources/bootstrap.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-middleware/pro-redis-service/src/main/resources/logback-spring.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-middleware/pro-redis/src/main/resources/logback-spring.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-monitor/pro-admin-service-ui/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-monitor/pro-admin/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-monitor/pro-admin-service-ui/src/main/java/com/admin/ui/AdminApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-monitor/pro-admin/src/main/java/com/admin/ui/AdminApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-monitor/pro-admin-service-ui/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-monitor/pro-admin/src/main/resources/bootstrap.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-monitor/pro-zipkin-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-monitor/pro-zipkin/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-monitor/pro-zipkin-service/src/main/java/com/wzy/zipkin/ZipKinServerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-monitor/pro-zipkin/src/main/java/com/wzy/zipkin/ZipKinServerApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-monitor/pro-zipkin-service/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-monitor/pro-zipkin/src/main/resources/bootstrap.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-monitor/pro-zipkin-service/src/main/resources/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/pro-monitor/pro-zipkin/src/main/resources/log4j.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-ttp/pro-service-wx-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-third-party/pro-weixin-api/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-ttp/pro-service-wx-api/src/main/java/com/wzy/wx/WxService.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-third-party/pro-weixin-api/src/main/java/com/wzy/wx/WxService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-ttp/pro-service-wx-api/src/main/java/com/wzy/wx/entity/MpTemplateMsg.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-third-party/pro-weixin-api/src/main/java/com/wzy/wx/entity/MpTemplateMsg.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-ttp/pro-service-wx-api/src/main/java/com/wzy/wx/entity/SendMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-third-party/pro-weixin-api/src/main/java/com/wzy/wx/entity/SendMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-ttp/pro-service-wx-api/src/main/java/com/wzy/wx/entity/WeappTemplateMsg.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-third-party/pro-weixin-api/src/main/java/com/wzy/wx/entity/WeappTemplateMsg.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-ttp/pro-service-wx-api/src/main/java/com/wzy/wx/entity/WeixinRespones.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-third-party/pro-weixin-api/src/main/java/com/wzy/wx/entity/WeixinRespones.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-ttp/pro-service-wx-api/src/main/java/com/wzy/wx/hystrix/WxServiceHystrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-third-party/pro-weixin-api/src/main/java/com/wzy/wx/hystrix/WxServiceHystrix.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-ttp/pro-service-wx/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-third-party/pro-weixin/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-ttp/pro-service-wx/src/main/java/com/wzy/ttp/wx/WxServiceStart.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-third-party/pro-weixin/src/main/java/com/wzy/ttp/wx/WxServiceStart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-ttp/pro-service-wx/src/main/java/com/wzy/ttp/wx/cache/CacheConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-third-party/pro-weixin/src/main/java/com/wzy/ttp/wx/cache/CacheConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-ttp/pro-service-wx/src/main/java/com/wzy/ttp/wx/cache/MapTokenCache.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-third-party/pro-weixin/src/main/java/com/wzy/ttp/wx/cache/MapTokenCache.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-ttp/pro-service-wx/src/main/java/com/wzy/ttp/wx/properties/WxProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-third-party/pro-weixin/src/main/java/com/wzy/ttp/wx/properties/WxProperties.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-ttp/pro-service-wx/src/main/java/com/wzy/ttp/wx/service/WxServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-third-party/pro-weixin/src/main/java/com/wzy/ttp/wx/service/WxServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-ttp/pro-service-wx/src/main/java/com/wzy/ttp/wx/swagger/Swagger2.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-third-party/pro-weixin/src/main/java/com/wzy/ttp/wx/swagger/Swagger2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-service-ttp/pro-service-wx/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-third-party/pro-weixin/src/main/resources/bootstrap.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/java/com/wzy/StartSSOService.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/java/com/wzy/StartSSOService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/java/com/wzy/configuration/SSoPassWord.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/java/com/wzy/configuration/SSoPassWord.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/java/com/wzy/configuration/SecurityConfigurerAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/java/com/wzy/configuration/SecurityConfigurerAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/java/com/wzy/configuration/SsoConifg.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/java/com/wzy/configuration/SsoConifg.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/java/com/wzy/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/java/com/wzy/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/java/com/wzy/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/java/com/wzy/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/java/com/wzy/service/SSOUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/java/com/wzy/service/SSOUserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/bootstrap.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/css/admin.css" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/css/admin.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/css/layui.css" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/css/layui.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/css/layui.mobile.css" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/css/layui.mobile.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/css/login.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/css/modules/code.css" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/css/modules/code.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/css/modules/laydate/default/laydate.css" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/css/modules/laydate/default/laydate.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/css/modules/layer/default/icon-ext.png" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/css/modules/layer/default/icon-ext.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/css/modules/layer/default/icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/css/modules/layer/default/icon.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/css/modules/layer/default/layer.css" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/css/modules/layer/default/layer.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/css/modules/layer/default/loading-0.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/css/modules/layer/default/loading-0.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/css/modules/layer/default/loading-1.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/css/modules/layer/default/loading-1.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/css/modules/layer/default/loading-2.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/css/modules/layer/default/loading-2.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/css/view.css" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/css/view.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/font/ai.eot" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/font/ai.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/font/ai.svg" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/font/ai.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/font/ai.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/font/ai.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/font/ai.woff" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/font/ai.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/font/iconfont.eot" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/font/iconfont.eot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/font/iconfont.svg" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/font/iconfont.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/font/iconfont.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/font/iconfont.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/font/iconfont.woff" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/font/iconfont.woff" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/images/face/0.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/0.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/images/face/1.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/1.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/images/face/10.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/10.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/images/face/11.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/11.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/images/face/12.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/12.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/images/face/13.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/13.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/images/face/14.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/14.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/images/face/15.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/15.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/images/face/16.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/16.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/images/face/17.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/17.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/images/face/18.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/18.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/images/face/19.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/19.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/images/face/2.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/2.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/images/face/20.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/20.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/images/face/21.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/21.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/images/face/22.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/22.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/images/face/23.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/23.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/images/face/24.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/24.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/images/face/25.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/25.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/images/face/26.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/26.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/images/face/27.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/27.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/images/face/28.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/28.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/images/face/29.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/29.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/images/face/3.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/3.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/images/face/30.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/30.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/images/face/31.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/31.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/images/face/32.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/32.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/images/face/33.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/33.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/images/face/34.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/34.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/images/face/35.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/35.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/images/face/36.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/36.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/images/face/37.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/37.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/images/face/38.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/38.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/images/face/39.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/39.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/images/face/4.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/4.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/images/face/40.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/40.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/images/face/41.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/41.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/images/face/42.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/42.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/images/face/43.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/43.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/images/face/44.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/44.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/images/face/45.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/45.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/images/face/46.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/46.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/images/face/47.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/47.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/images/face/48.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/48.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/images/face/49.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/49.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/images/face/5.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/5.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/images/face/50.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/50.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/images/face/51.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/51.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/images/face/52.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/52.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/images/face/53.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/53.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/images/face/54.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/54.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/images/face/55.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/55.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/images/face/56.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/56.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/images/face/57.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/57.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/images/face/58.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/58.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/images/face/59.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/59.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/images/face/6.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/6.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/images/face/60.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/60.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/images/face/61.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/61.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/images/face/62.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/62.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/images/face/63.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/63.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/images/face/64.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/64.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/images/face/65.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/65.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/images/face/66.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/66.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/images/face/67.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/67.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/images/face/68.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/68.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/images/face/69.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/69.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/images/face/7.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/7.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/images/face/70.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/70.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/images/face/71.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/71.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/images/face/8.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/8.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/images/face/9.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/9.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/images/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/lay/modules/ajaxpagertable.js" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/lay/modules/ajaxpagertable.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/lay/modules/carousel.js" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/lay/modules/carousel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/lay/modules/code.js" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/lay/modules/code.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/lay/modules/colorpicker.js" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/lay/modules/colorpicker.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/lay/modules/commonAjax.js" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/lay/modules/commonAjax.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/lay/modules/element.js" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/lay/modules/element.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/lay/modules/flow.js" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/lay/modules/flow.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/lay/modules/form.js" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/lay/modules/form.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/lay/modules/jquery.js" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/lay/modules/jquery.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/lay/modules/laydate.js" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/lay/modules/laydate.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/lay/modules/layedit.js" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/lay/modules/layedit.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/lay/modules/layer.js" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/lay/modules/layer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/lay/modules/laypage.js" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/lay/modules/laypage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/lay/modules/laytpl.js" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/lay/modules/laytpl.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/lay/modules/mobile.js" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/lay/modules/mobile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/lay/modules/rate.js" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/lay/modules/rate.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/lay/modules/slider.js" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/lay/modules/slider.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/lay/modules/table.js" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/lay/modules/table.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/lay/modules/tree.js" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/lay/modules/tree.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/lay/modules/upload.js" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/lay/modules/upload.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/lay/modules/uploadops.js" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/lay/modules/uploadops.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/lay/modules/util.js" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/lay/modules/util.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/layui.all.js" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/layui.all.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/assets/layui.js" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/layui.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/jquery.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/jquery.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/static/util.js" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/static/util.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-sso-service/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/pro-sso/src/main/resources/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-tasks-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-tasks/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-tasks-service/quartz.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql/quartz.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-tasks-service/src/main/java/com/wzy/tasks/QuartzSpringbootApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-tasks/src/main/java/com/wzy/tasks/QuartzSpringbootApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-tasks-service/src/main/java/com/wzy/tasks/controller/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-tasks/src/main/java/com/wzy/tasks/controller/IndexController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-tasks-service/src/main/java/com/wzy/tasks/controller/JobController.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-tasks/src/main/java/com/wzy/tasks/controller/JobController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-tasks-service/src/main/java/com/wzy/tasks/jobs/HelloCronJob.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-tasks/src/main/java/com/wzy/tasks/jobs/HelloCronJob.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-tasks-service/src/main/java/com/wzy/tasks/jobs/QuartzJobFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-tasks/src/main/java/com/wzy/tasks/jobs/QuartzJobFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-tasks-service/src/main/java/com/wzy/tasks/jobs/TestCronJob.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-tasks/src/main/java/com/wzy/tasks/jobs/TestCronJob.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-tasks-service/src/main/java/com/wzy/tasks/jobs/TestJob.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-tasks/src/main/java/com/wzy/tasks/jobs/TestJob.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-tasks-service/src/main/java/com/wzy/tasks/run/QuartzCommandLineRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-tasks/src/main/java/com/wzy/tasks/run/QuartzCommandLineRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-tasks-service/src/main/java/com/wzy/tasks/service/QuartzService.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-tasks/src/main/java/com/wzy/tasks/service/QuartzService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-tasks-service/src/main/java/com/wzy/tasks/service/ScheduleJobInService.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-tasks/src/main/java/com/wzy/tasks/service/ScheduleJobInService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-tasks-service/src/main/java/com/wzy/tasks/service/SchedulerJobService.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-tasks/src/main/java/com/wzy/tasks/service/SchedulerJobService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-tasks-service/src/main/java/com/wzy/tasks/service/impl/QuartzServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-tasks/src/main/java/com/wzy/tasks/service/impl/QuartzServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-tasks-service/src/main/java/com/wzy/tasks/service/impl/ScheduleJobInServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-tasks/src/main/java/com/wzy/tasks/service/impl/ScheduleJobInServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-tasks-service/src/main/java/com/wzy/tasks/service/impl/SchedulerJobServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-tasks/src/main/java/com/wzy/tasks/service/impl/SchedulerJobServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-tasks-service/src/main/java/com/wzy/tasks/service/impl/TestQuartzService.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-tasks/src/main/java/com/wzy/tasks/service/impl/TestQuartzService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-tasks-service/src/main/java/com/wzy/tasks/util/ApplicationContextUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-tasks/src/main/java/com/wzy/tasks/util/ApplicationContextUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-tasks-service/src/main/java/com/wzy/tasks/util/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-tasks/src/main/java/com/wzy/tasks/util/Message.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-tasks-service/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-tasks/src/main/resources/bootstrap.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-tasks-service/src/main/resources/static/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/pro-tasks/src/main/resources/static/css/bootstrap.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-tasks-service/src/main/resources/static/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/pro-tasks/src/main/resources/static/favicon.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-tasks-service/src/main/resources/static/js/bootstrap-select.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/pro-tasks/src/main/resources/static/js/bootstrap-select.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-tasks-service/src/main/resources/static/js/bootstrap.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/pro-tasks/src/main/resources/static/js/bootstrap.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-tasks-service/src/main/resources/static/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pro-tasks/src/main/resources/static/js/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-tasks-service/src/main/resources/static/js/jquery.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/pro-tasks/src/main/resources/static/js/jquery.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-tasks-service/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/pro-tasks/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-business/pro-service-user/pro-user-service-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-business/pro-user/pro-user-api/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-business/pro-service-user/pro-user-service-api/src/main/java/com/wzy/user/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-business/pro-user/pro-user-api/src/main/java/com/wzy/user/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-business/pro-service-user/pro-user-service-api/src/main/java/com/wzy/user/hystrix/UserServiceHystrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-business/pro-user/pro-user-api/src/main/java/com/wzy/user/hystrix/UserServiceHystrix.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-business/pro-service-user/pro-user-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-business/pro-user/pro-user/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-business/pro-service-user/pro-user-service/src/main/java/com/wzy/user/UserServiceStart.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-business/pro-user/pro-user/src/main/java/com/wzy/user/UserServiceStart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-business/pro-service-user/pro-user-service/src/main/java/com/wzy/user/configuration/ResourceServerConfigurer.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-business/pro-user/pro-user/src/main/java/com/wzy/user/configuration/ResourceServerConfigurer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-business/pro-service-user/pro-user-service/src/main/java/com/wzy/user/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-business/pro-user/pro-user/src/main/java/com/wzy/user/service/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-business/pro-service-user/pro-user-service/src/main/java/com/wzy/user/swagger/Swagger2.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-business/pro-user/pro-user/src/main/java/com/wzy/user/swagger/Swagger2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-business/pro-service-user/pro-user-service/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-business/pro-user/pro-user/src/main/resources/bootstrap.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-business/pro-service-user/pro-user-service/src/main/resources/logback-spring.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-business/pro-user/pro-user/src/main/resources/logback-spring.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-config/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-config/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-config/src/main/java/com/wzy/config/ConfigServiceStart.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-config/src/main/java/com/wzy/config/ProConfigStart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-config/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-config/src/main/resources/bootstrap.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-config/src/main/resources/config/sso-service-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-config/src/main/resources/config/auth-service-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-eureka/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-eureka/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-eureka/src/main/java/com/wzy/eureka/EurekaServiceStart.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-eureka/src/main/java/com/wzy/eureka/ProEurekaStart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-eureka/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-eureka/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-gateway/pro-gateway/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-gateway/pro-gateway/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-gateway/pro-zuul/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-gateway/pro-zuul/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-middleware/pro-redis-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-middleware/pro-redis-api/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-middleware/pro-redis/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-middleware/pro-redis/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-middleware/pro-redis/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-middleware/pro-redis/src/main/resources/bootstrap.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-monitor/pro-admin/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-monitor/pro-admin/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-monitor/pro-admin/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-monitor/pro-admin/src/main/resources/bootstrap.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-monitor/pro-zipkin/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-monitor/pro-zipkin/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/java/com/wzy/StartSSOService.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/java/com/wzy/ProStartAuth.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/java/com/wzy/configuration/SSoPassWord.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/java/com/wzy/configuration/SSoPassWord.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/java/com/wzy/configuration/SecurityConfigurerAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/java/com/wzy/configuration/SecurityConfigurerAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/java/com/wzy/configuration/SsoConifg.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/java/com/wzy/configuration/SsoConifg.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/java/com/wzy/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/java/com/wzy/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/java/com/wzy/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/java/com/wzy/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/java/com/wzy/service/SSOUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/java/com/wzy/service/SSOUserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/bootstrap.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/css/admin.css" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/css/admin.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/css/layui.css" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/css/layui.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/css/layui.mobile.css" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/css/layui.mobile.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/css/login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/css/modules/code.css" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/css/modules/code.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/css/modules/laydate/default/laydate.css" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/css/modules/laydate/default/laydate.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/css/modules/layer/default/icon-ext.png" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/css/modules/layer/default/icon-ext.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/css/modules/layer/default/icon.png" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/css/modules/layer/default/icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/css/modules/layer/default/layer.css" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/css/modules/layer/default/layer.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/css/modules/layer/default/loading-0.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/css/modules/layer/default/loading-0.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/css/modules/layer/default/loading-1.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/css/modules/layer/default/loading-1.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/css/modules/layer/default/loading-2.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/css/modules/layer/default/loading-2.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/css/view.css" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/css/view.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/font/ai.eot" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/font/ai.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/font/ai.svg" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/font/ai.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/font/ai.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/font/ai.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/font/ai.woff" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/font/ai.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/font/iconfont.eot" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/font/iconfont.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/font/iconfont.svg" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/font/iconfont.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/font/iconfont.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/font/iconfont.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/font/iconfont.woff" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/font/iconfont.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/0.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/images/face/0.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/1.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/images/face/1.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/10.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/images/face/10.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/11.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/images/face/11.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/12.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/images/face/12.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/13.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/images/face/13.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/14.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/images/face/14.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/15.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/images/face/15.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/16.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/images/face/16.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/17.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/images/face/17.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/18.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/images/face/18.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/19.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/images/face/19.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/2.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/images/face/2.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/20.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/images/face/20.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/21.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/images/face/21.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/22.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/images/face/22.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/23.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/images/face/23.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/24.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/images/face/24.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/25.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/images/face/25.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/26.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/images/face/26.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/27.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/images/face/27.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/28.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/images/face/28.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/29.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/images/face/29.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/3.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/images/face/3.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/30.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/images/face/30.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/31.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/images/face/31.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/32.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/images/face/32.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/33.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/images/face/33.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/34.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/images/face/34.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/35.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/images/face/35.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/36.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/images/face/36.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/37.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/images/face/37.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/38.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/images/face/38.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/39.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/images/face/39.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/4.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/images/face/4.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/40.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/images/face/40.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/41.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/images/face/41.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/42.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/images/face/42.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/43.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/images/face/43.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/44.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/images/face/44.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/45.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/images/face/45.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/46.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/images/face/46.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/47.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/images/face/47.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/48.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/images/face/48.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/49.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/images/face/49.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/5.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/images/face/5.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/50.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/images/face/50.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/51.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/images/face/51.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/52.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/images/face/52.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/53.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/images/face/53.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/54.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/images/face/54.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/55.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/images/face/55.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/56.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/images/face/56.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/57.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/images/face/57.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/58.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/images/face/58.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/59.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/images/face/59.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/6.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/images/face/6.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/60.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/images/face/60.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/61.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/images/face/61.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/62.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/images/face/62.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/63.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/images/face/63.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/64.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/images/face/64.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/65.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/images/face/65.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/66.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/images/face/66.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/67.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/images/face/67.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/68.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/images/face/68.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/69.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/images/face/69.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/7.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/images/face/7.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/70.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/images/face/70.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/71.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/images/face/71.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/8.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/images/face/8.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/face/9.gif" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/images/face/9.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/images/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/images/logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/lay/modules/ajaxpagertable.js" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/lay/modules/ajaxpagertable.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/lay/modules/carousel.js" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/lay/modules/carousel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/lay/modules/code.js" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/lay/modules/code.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/lay/modules/colorpicker.js" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/lay/modules/colorpicker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/lay/modules/commonAjax.js" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/lay/modules/commonAjax.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/lay/modules/element.js" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/lay/modules/element.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/lay/modules/flow.js" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/lay/modules/flow.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/lay/modules/form.js" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/lay/modules/form.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/lay/modules/jquery.js" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/lay/modules/jquery.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/lay/modules/laydate.js" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/lay/modules/laydate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/lay/modules/layedit.js" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/lay/modules/layedit.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/lay/modules/layer.js" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/lay/modules/layer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/lay/modules/laypage.js" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/lay/modules/laypage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/lay/modules/laytpl.js" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/lay/modules/laytpl.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/lay/modules/mobile.js" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/lay/modules/mobile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/lay/modules/rate.js" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/lay/modules/rate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/lay/modules/slider.js" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/lay/modules/slider.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/lay/modules/table.js" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/lay/modules/table.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/lay/modules/tree.js" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/lay/modules/tree.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/lay/modules/upload.js" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/lay/modules/upload.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/lay/modules/uploadops.js" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/lay/modules/uploadops.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/lay/modules/util.js" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/lay/modules/util.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/layui.all.js" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/layui.all.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/assets/layui.js" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/assets/layui.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/jquery.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/jquery.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/static/util.js" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/static/util.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-sso/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-tasks/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-tasks/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-third-party/pro-weixin-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-third-party/pro-weixin-api/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-third-party/pro-weixin/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-third-party/pro-weixin/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tx-lcn-service/txlcn-tc/.txlcn/application-0.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/tx-lcn-service/txlcn-tc/.txlcn/application-0.mv.db" afterDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/pro-sso-service/target/" />
-    <ignored path="$PROJECT_DIR$/tx-lcn-service/target/" />
-    <ignored path="$PROJECT_DIR$/tx-lcn-service/txlcn-tm/target/" />
-    <ignored path="$PROJECT_DIR$/pro-business/pro-service-user/pro-user-service-api/target/" />
-    <ignored path="$PROJECT_DIR$/pro-eureka-service/target/" />
-    <ignored path="$PROJECT_DIR$/pro-common/pro-common-pojo/target/" />
-    <ignored path="$PROJECT_DIR$/pro-common/pro-common-mapper/target/" />
-    <ignored path="$PROJECT_DIR$/tx-lcn-service/txlcn-tracing/target/" />
-    <ignored path="$PROJECT_DIR$/pro-tasks-service/target/" />
-    <ignored path="$PROJECT_DIR$/pro-third-party/pro-service-wx/target/" />
-    <ignored path="$PROJECT_DIR$/pro-middleware/pro-redis-service/target/" />
-    <ignored path="$PROJECT_DIR$/tx-lcn-service/txlcn-txmsg/target/" />
-    <ignored path="$PROJECT_DIR$/tx-lcn-service/txlcn-txmsg-netty/target/" />
-    <ignored path="$PROJECT_DIR$/pro-config-service/target/" />
-    <ignored path="$PROJECT_DIR$/tx-lcn-service/txlcn-common/target/" />
-    <ignored path="$PROJECT_DIR$/tx-lcn-service/txlcn-logger/target/" />
-    <ignored path="$PROJECT_DIR$/pro-third-party/pro-service-wx-api/target/" />
-    <ignored path="$PROJECT_DIR$/pro-business/pro-service-user/pro-user-service/target/" />
-    <ignored path="$PROJECT_DIR$/pro-common/pro-common/target/" />
-    <ignored path="$PROJECT_DIR$/pro-middleware/pro-redis-service-api/target/" />
-    <ignored path="$PROJECT_DIR$/target/" />
-    <ignored path="$PROJECT_DIR$/pro-gateway/pro-gateway-service/target/" />
-    <ignored path="$PROJECT_DIR$/pro-monitor/pro-zipkin-service/target/" />
-    <ignored path="$PROJECT_DIR$/pro-monitor/pro-admin-service-ui/target/" />
-    <ignored path="$PROJECT_DIR$/pro-gateway/pro-zuul-service/target/" />
-    <ignored path="$PROJECT_DIR$/tx-lcn-service/txlcn-tc/target/" />
-    <ignored path="$PROJECT_DIR$/pro-sso/target/" />
     <ignored path="$PROJECT_DIR$/pro-tasks/target/" />
+    <ignored path="$PROJECT_DIR$/pro-gateway/pro-gateway/target/" />
+    <ignored path="$PROJECT_DIR$/pro-third-party/pro-weixin-api/target/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <ignored path="$PROJECT_DIR$/pro-common/pro-common-pojo/target/" />
+    <ignored path="$PROJECT_DIR$/tx-lcn-service/txlcn-tm/target/" />
+    <ignored path="$PROJECT_DIR$/pro-business/pro-service-user/pro-user/target/" />
     <ignored path="$PROJECT_DIR$/pro-config/target/" />
+    <ignored path="$PROJECT_DIR$/pro-common/pro-common-mapper/target/" />
+    <ignored path="$PROJECT_DIR$/pro-business/pro-service-user/pro-user-api/target/" />
+    <ignored path="$PROJECT_DIR$/pro-middleware/pro-redis/target/" />
+    <ignored path="$PROJECT_DIR$/tx-lcn-service/txlcn-tracing/target/" />
+    <ignored path="$PROJECT_DIR$/pro-third-party/pro-weixin/target/" />
+    <ignored path="$PROJECT_DIR$/tx-lcn-service/target/" />
+    <ignored path="$PROJECT_DIR$/tx-lcn-service/txlcn-tc/target/" />
+    <ignored path="$PROJECT_DIR$/tx-lcn-service/txlcn-logger/target/" />
+    <ignored path="$PROJECT_DIR$/pro-common/pro-common/target/" />
+    <ignored path="$PROJECT_DIR$/tx-lcn-service/txlcn-txmsg-netty/target/" />
+    <ignored path="$PROJECT_DIR$/pro-monitor/pro-zipkin/target/" />
+    <ignored path="$PROJECT_DIR$/tx-lcn-service/txlcn-txmsg/target/" />
+    <ignored path="$PROJECT_DIR$/pro-gateway/pro-zuul/target/" />
+    <ignored path="$PROJECT_DIR$/pro-eureka/target/" />
+    <ignored path="$PROJECT_DIR$/pro-monitor/pro-admin/target/" />
+    <ignored path="$PROJECT_DIR$/pro-sso/target/" />
+    <ignored path="$PROJECT_DIR$/tx-lcn-service/txlcn-common/target/" />
+    <ignored path="$PROJECT_DIR$/pro-business/pro-user/pro-user/target/" />
+    <ignored path="$PROJECT_DIR$/pro-middleware/pro-redis-api/target/" />
+    <ignored path="$PROJECT_DIR$/pro-auth/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -391,39 +209,133 @@
     <session id="-1274453508">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.open.time.2" value="1" />
+          <entry key="project.open.time.1" value="1" />
           <entry key="project.opened" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="xml" value="1" />
+          <entry key="Dockerfile" value="1" />
+          <entry key="java" value="9" />
+          <entry key="md" value="3" />
+          <entry key="xml" value="20" />
+          <entry key="yml" value="21" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="XML" value="1" />
+          <entry key="Dockerfile" value="1" />
+          <entry key="JAVA" value="9" />
+          <entry key="Markdown" value="3" />
+          <entry key="XML" value="20" />
+          <entry key="YAML" value="21" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="xml" value="32" />
+          <entry key="dummy" value="17" />
+          <entry key="md" value="21" />
+          <entry key="txt" value="129" />
+          <entry key="xml" value="175" />
+          <entry key="yml" value="78" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="XML" value="32" />
+          <entry key="Markdown" value="21" />
+          <entry key="PLAIN_TEXT" value="146" />
+          <entry key="XML" value="175" />
+          <entry key="YAML" value="78" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pro-middleware/pro-redis/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="278">
+              <caret line="45" column="20" selection-start-line="45" selection-start-column="20" selection-end-line="45" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pro-middleware/pro-redis-api/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pro-monitor/pro-zipkin/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pro-third-party/pro-weixin/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="139">
+              <caret line="22" column="21" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pro-third-party/pro-weixin-api/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-159">
-              <caret line="18" column="47" selection-start-line="18" selection-start-column="47" selection-end-line="18" selection-end-column="47" />
+            <state relative-caret-position="350">
+              <caret line="31" column="12" lean-forward="true" selection-start-line="31" selection-start-column="12" selection-end-line="31" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pro-business/pro-user/pro-user/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="885">
+              <caret line="59" column="21" selection-start-line="59" selection-start-column="21" selection-end-line="59" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pro-business/pro-user/pro-user-api/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-37" />
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pro-gateway/pro-gateway/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="160">
+              <caret line="12" column="27" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pro-monitor/pro-admin/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="156">
+              <caret line="13" selection-start-line="13" selection-end-line="13" />
             </state>
           </provider>
         </entry>
@@ -443,6 +355,24 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
+        <option value="$PROJECT_DIR$/pro-eureka/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/pro-sso/src/main/resources/bootstrap.yml" />
+        <option value="$PROJECT_DIR$/pro-auth/pom.xml" />
+        <option value="$PROJECT_DIR$/pro-config/src/main/resources/config/auth-service-dev.yml" />
+        <option value="$PROJECT_DIR$/pro-monitor/pro-admin/src/main/resources/bootstrap.yml" />
+        <option value="$PROJECT_DIR$/pro-config/src/main/resources/config/admin-middleware-dev.yml" />
+        <option value="$PROJECT_DIR$/pro-config/src/main/resources/bootstrap.yml" />
+        <option value="$PROJECT_DIR$/pro-middleware/pro-redis/src/main/resources/bootstrap.yml" />
+        <option value="$PROJECT_DIR$/pro-gateway/pro-gateway/pom.xml" />
+        <option value="$PROJECT_DIR$/pro-gateway/pro-zuul/pom.xml" />
+        <option value="$PROJECT_DIR$/pro-middleware/pro-redis-api/pom.xml" />
+        <option value="$PROJECT_DIR$/pro-monitor/pro-zipkin/pom.xml" />
+        <option value="$PROJECT_DIR$/pro-monitor/pro-admin/pom.xml" />
+        <option value="$PROJECT_DIR$/pro-third-party/pro-weixin-api/pom.xml" />
+        <option value="$PROJECT_DIR$/pro-business/pro-user/pro-user/pom.xml" />
+        <option value="$PROJECT_DIR$/pro-middleware/pro-redis/pom.xml" />
+        <option value="$PROJECT_DIR$/pro-third-party/pro-weixin/pom.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
@@ -453,11 +383,27 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="spring-cloud" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="spring-cloud" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds">
     <option name="x" value="11" />
     <option name="y" value="23" />
     <option name="width" value="1393" />
-    <option name="height" value="831" />
+    <option name="height" value="829" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -465,6 +411,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -476,17 +424,25 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1570902443181" />
     <property name="go.gopath.indexing.explicitly.defined" value="true" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/pro-eureka/src/main/resources" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -500,159 +456,81 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.EurekaServiceStart">
-    <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
-      <module name="pro-sso" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="TARGET" value="" />
-      <option name="SETTINGS_FILE" value="" />
-      <option name="CUSTOM_SETTINGS" value="false" />
-      <option name="USE_OPTIONS" value="false" />
-      <option name="OPTIONS" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
-      <module name="pro-sso" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
-      <module name="pro-sso" />
-      <option name="filePath" />
-      <option name="vmParameters" />
-      <option name="alternativeJrePath" />
-      <option name="programParameters" />
-      <option name="passParentEnvs" value="true" />
-      <option name="workingDirectory" />
-      <option name="isAlternativeJrePathEnabled" value="false" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="filePath" />
-      <option name="vmParameters" />
-      <option name="alternativeJrePath" />
-      <option name="programParameters" />
-      <option name="passParentEnvs" value="true" />
-      <option name="workingDirectory" />
-      <option name="isAlternativeJrePathEnabled" value="false" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="PyBehaveRunConfigurationType" factoryName="Behave">
-      <module name="pro-sso" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="ADDITIONAL_ARGS" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="PyLettuceRunConfigurationType" factoryName="Lettuce">
-      <module name="pro-sso" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="ADDITIONAL_ARGS" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
-      <module name="pro-sso" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="Python.FlaskServer" factoryName="Flask server">
-      <module name="pro-sso" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="launchJavascriptDebuger" value="false" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Spring Boot.RedisServiceStart">
     <configuration name="AdminApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="pro-admin" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.admin.ui.AdminApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <additionalParameters>
+        <param>
+          <option name="enabled" value="true" />
+          <option name="name" value="ADMIN-SERVICE" />
+          <option name="value" value="localhost" />
+        </param>
+        <param>
+          <option name="enabled" value="true" />
+          <option name="name" value="CONFIG-SERVICE" />
+          <option name="value" value="localhost" />
+        </param>
+      </additionalParameters>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="ConfigServiceStart" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="pro-config" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.wzy.config.ConfigServiceStart" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="EurekaServiceStart" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="pro-eureka" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.wzy.eureka.EurekaServiceStart" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.wzy.config.ProConfigStart" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <additionalParameters>
+        <param>
+          <option name="enabled" value="true" />
+          <option name="name" value="RABBIT_URL" />
+          <option name="value" value="192.168.0.107" />
+        </param>
+        <param>
+          <option name="enabled" value="true" />
+          <option name="name" value="CONFIG-SERVICE" />
+          <option name="value" value="localhost" />
+        </param>
+        <param>
+          <option name="enabled" value="true" />
+          <option name="name" value="ADMIN-SERVICE" />
+          <option name="value" value="localhost" />
+        </param>
+        <param>
+          <option name="enabled" value="true" />
+          <option name="name" value="EUREKA-SERVICE" />
+          <option name="value" value="localhost" />
+        </param>
+      </additionalParameters>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="GateWayServiceStart" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="pro-gateway" />
+      <module name="pro-gateway-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.wzy.gateway.GateWayServiceStart" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProEurekaStart" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="pro-eureka" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.wzy.eureka.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.wzy.eureka.ProEurekaStart" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <additionalParameters>
+        <param>
+          <option name="enabled" value="true" />
+          <option name="name" value="EUREKA-SERVICE" />
+          <option name="value" value="localhost" />
+        </param>
+      </additionalParameters>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -660,6 +538,14 @@
     <configuration name="QuartzSpringbootApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="pro-tasks" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.wzy.tasks.QuartzSpringbootApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <additionalParameters>
+        <param>
+          <option name="enabled" value="true" />
+          <option name="name" value="eureka-service" />
+          <option name="value" value="localhost" />
+        </param>
+      </additionalParameters>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -667,19 +553,48 @@
     <configuration name="RedisServiceStart" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="pro-redis" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.wzy.redis.RedisServiceStart" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <additionalParameters>
+        <param>
+          <option name="enabled" value="true" />
+          <option name="name" value="CONFIG-SERVICE" />
+          <option name="value" value="localhost" />
+        </param>
+      </additionalParameters>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="StartSSOService" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="pro-sso" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.wzy.StartSSOService" />
+      <module name="pro-auth" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.wzy.ProStartAuth" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <additionalParameters>
+        <param>
+          <option name="enabled" value="true" />
+          <option name="name" value="CONFIG-SERVICE" />
+          <option name="value" value="localhost" />
+        </param>
+      </additionalParameters>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TMApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="txlcn-tm" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.codingapi.txlcn.tm.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.codingapi.txlcn.tm.TMApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="UserServiceStart" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="pro-user-service" />
+      <module name="pro-user" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.wzy.user.UserServiceStart" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -700,14 +615,13 @@
       </method>
     </configuration>
     <configuration name="ZuulServiceStart" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="pro-zuul" />
+      <module name="pro-zuul-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.wzy.zuul.ZuulServiceStart" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="Tox" factoryName="Tox">
-      <module name="pro-sso" />
+    <configuration default="true" type="tests" factoryName="Nosetests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
@@ -715,11 +629,15 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_regexPattern" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
-    <configuration default="true" type="tests" factoryName="Doctests">
-      <module name="pro-sso" />
+    <configuration default="true" type="tests" factoryName="Twisted Trial">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
@@ -727,49 +645,85 @@
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="py.test">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Spring Boot.StartSSOService" />
-      <item itemvalue="Spring Boot.EurekaServiceStart" />
       <item itemvalue="Spring Boot.QuartzSpringbootApplication" />
-      <item itemvalue="Spring Boot.WxServiceStart" />
-      <item itemvalue="Spring Boot.RedisServiceStart" />
-      <item itemvalue="Spring Boot.ConfigServiceStart" />
-      <item itemvalue="Spring Boot.UserServiceStart" />
       <item itemvalue="Spring Boot.GateWayServiceStart" />
+      <item itemvalue="Spring Boot.UserServiceStart" />
+      <item itemvalue="Spring Boot.ConfigServiceStart" />
+      <item itemvalue="Spring Boot.RedisServiceStart" />
+      <item itemvalue="Spring Boot.WxServiceStart" />
       <item itemvalue="Spring Boot.ZipKinServerApplication" />
-      <item itemvalue="Spring Boot.AdminApplication" />
       <item itemvalue="Spring Boot.ZuulServiceStart" />
+      <item itemvalue="Spring Boot.AdminApplication" />
+      <item itemvalue="Spring Boot.StartSSOService" />
+      <item itemvalue="Spring Boot.ProEurekaStart" />
+      <item itemvalue="Spring Boot.TMApplication" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.ProEurekaStart" />
+        <item itemvalue="Spring Boot.TMApplication" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="5f4fdeea-95b4-4d86-ae50-681b0496b0e2" name="Default Changelist" comment="" />
-      <created>1570884508041</created>
+      <changelist id="7f6a7c62-4f3b-4b73-a2af-5308f06a9595" name="Default Changelist" comment="" />
+      <created>1570890470625</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1570884508041</updated>
-      <workItem from="1570884510591" duration="1376000" />
+      <updated>1570890470625</updated>
+      <workItem from="1570890473130" duration="7247000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1376000" />
+    <option name="totallyTimeSpent" value="7247000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="831" extended-state="6" />
+    <frame x="11" y="23" width="1393" height="829" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Designer" />
       <window_info id="Image Layers" />
@@ -777,27 +731,27 @@
       <window_info id="UI Designer" />
       <window_info id="Favorites" side_tool="true" />
       <window_info id="Web" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22961374" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19170985" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Spring" />
       <window_info anchor="bottom" id="GraphQL" />
       <window_info anchor="bottom" id="Terminal" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" />
+      <window_info anchor="bottom" id="Messages" weight="0.32971507" />
       <window_info anchor="bottom" id="Java Enterprise" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.4113667" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3541384" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="right" id="Palette" />
       <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="Maven Projects" />
+      <window_info anchor="right" id="Maven Projects" visible="true" weight="0.26720947" />
       <window_info anchor="right" id="SciView" />
       <window_info anchor="right" id="Database" />
       <window_info anchor="right" id="Palette&#9;" />
@@ -815,10 +769,209 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/pro-eureka/src/main/resources/application-pro.yml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-config/src/main/java/com/wzy/config/ProConfigStart.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-eureka/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="31" lean-forward="true" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-eureka/src/main/docker/Dockerfile">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-eureka/src/main/java/com/wzy/eureka/ProEurekaStart.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tx-lcn-service/txlcn-tm/src/main/java/com/codingapi/txlcn/tm/TMApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="37" lean-forward="true" selection-start-line="37" selection-end-line="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-auth/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-auth/src/main/resources/bootstrap.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="12" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-config/src/main/resources/config/auth-service-dev.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="17" lean-forward="true" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="190">
+            <caret line="46" column="45" selection-start-line="46" selection-start-column="45" selection-end-line="46" selection-end-column="45" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-monitor/pro-admin/src/main/resources/bootstrap.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-monitor/pro-admin/src/main/java/com/admin/ui/AdminApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-config/src/main/resources/config/gateway-service-dev.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1022" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-config/src/main/resources/config/admin-service-dev.yml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-config/src/main/resources/config/zuul-service-dev.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-195" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-middleware/pro-redis/src/main/java/com/wzy/redis/RedisServiceStart.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-config/src/main/resources/bootstrap.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-middleware/pro-redis/src/main/resources/bootstrap.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-config/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-187" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-config/src/main/resources/config/redis-service-dev.yml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-config/src/main/resources/config/admin-middleware-dev.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="21" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-gateway/pro-zuul/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-middleware/pro-redis-api/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-monitor/pro-admin/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-monitor/pro-zipkin/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-third-party/pro-weixin-api/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-business/pro-user/pro-user/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="885">
+          <caret line="59" column="21" selection-start-line="59" selection-start-column="21" selection-end-line="59" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-business/pro-user/pro-user-api/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-37" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-gateway/pro-gateway/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="12" column="27" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-middleware/pro-redis/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="278">
+          <caret line="45" column="20" selection-start-line="45" selection-start-column="20" selection-end-line="45" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-third-party/pro-weixin/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="139">
+          <caret line="22" column="21" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-159">
-          <caret line="18" column="47" selection-start-line="18" selection-start-column="47" selection-end-line="18" selection-end-column="47" />
+        <state relative-caret-position="350">
+          <caret line="31" column="12" lean-forward="true" selection-start-line="31" selection-start-column="12" selection-end-line="31" selection-end-column="12" />
         </state>
       </provider>
     </entry>

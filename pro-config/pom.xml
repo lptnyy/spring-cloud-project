@@ -8,8 +8,8 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-
-    <artifactId>pro-config-service</artifactId>
+    <name>pro-config</name>
+    <artifactId>pro-config</artifactId>
 
     <dependencies>
         <dependency>

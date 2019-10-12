@@ -10,7 +10,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>pro-redis-service</artifactId>
+    <artifactId>pro-redis</artifactId>
 
     <dependencies>
         <dependency>
@@ -40,7 +40,7 @@
         </dependency>
         <dependency>
             <groupId>com.wzy</groupId>
-            <artifactId>pro-redis-service-api</artifactId>
+            <artifactId>pro-redis-api</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
         <dependency>
