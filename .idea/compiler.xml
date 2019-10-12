@@ -6,28 +6,22 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="pro-admin-service-ui" />
+        <module name="pro-admin" />
         <module name="pro-common" />
         <module name="pro-common-mapper" />
         <module name="pro-common-pojo" />
-        <module name="pro-config-service" />
-        <module name="pro-gateway-service" />
-        <module name="pro-order-service" />
-        <module name="pro-order-service-api" />
-        <module name="pro-product-service" />
-        <module name="pro-product-service-api" />
-        <module name="pro-redis-service" />
-        <module name="pro-redis-service-api" />
-        <module name="pro-role-service" />
-        <module name="pro-role-service-api" />
-        <module name="pro-service-wx" />
-        <module name="pro-service-wx-api" />
-        <module name="pro-sso-service" />
-        <module name="pro-tasks-service" />
+        <module name="pro-config" />
+        <module name="pro-gateway" />
+        <module name="pro-redis" />
+        <module name="pro-redis-api" />
+        <module name="pro-sso" />
+        <module name="pro-tasks" />
         <module name="pro-user-service" />
         <module name="pro-user-service-api" />
-        <module name="pro-zipkin-service" />
-        <module name="pro-zuul-service" />
+        <module name="pro-weixin" />
+        <module name="pro-weixin-api" />
+        <module name="pro-zipkin" />
+        <module name="pro-zuul" />
         <module name="txlcn-common" />
         <module name="txlcn-logger" />
         <module name="txlcn-tc" />
@@ -37,16 +31,12 @@
         <module name="txlcn-txmsg-netty" />
       </profile>
       <profile name="Annotation profile for spring-cloud" enabled="true">
-        <sourceOutputDir name="../pro-service-register/pro-eureka-service/target/generated-sources/annotations" />
-        <sourceTestOutputDir name="../pro-service-register/pro-eureka-service/target/generated-test-sources/test-annotations" />
+        <sourceOutputDir name="../pro-eureka-service/target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../pro-eureka-service/target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="pro-eureka-service" />
+        <module name="pro-eureka" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="pro-role-web" target="1.8" />
-      <module name="pro-user-web" target="1.8" />
-    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">

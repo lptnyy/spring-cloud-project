@@ -10,30 +10,24 @@
 	<description>Demo project for Spring Boot</description>
 
 	<modules>
-		<module>pro-eureka-service</module>
-		<module>pro-service-business/pro-service-user/pro-user-service</module>
-		<module>pro-service-business/pro-service-user/pro-user-service-api</module>
-		<module>pro-service-common/pro-common</module>
-		<module>pro-service-common/pro-common-mapper</module>
-		<module>pro-service-common/pro-common-pojo</module>
-		<module>pro-service-middleware/pro-redis-service-api</module>
-		<module>pro-service-middleware/pro-redis-service</module>
-		<module>pro-service-gateway/pro-zuul-service</module>
-		<module>pro-service-monitor/pro-zipkin-service</module>
-		<module>pro-service-monitor/pro-admin-service-ui</module>
-		<module>pro-config-service</module>
-		<module>pro-service-gateway/pro-gateway-service</module>
-		<module>pro-sso-service</module>
-		<module>pro-service-business/pro-service-order/pro-order-service-api</module>
-		<module>pro-service-business/pro-service-order/pro-order-service</module>
-		<module>pro-service-business/pro-service-product/pro-product-service-api</module>
-		<module>pro-service-business/pro-service-product/pro-product-service</module>
-		<module>pro-service-business/pro-service-role/pro-role-service-api</module>
-		<module>pro-service-business/pro-service-role/pro-role-service</module>
-		<module>pro-service-ttp/pro-service-wx-api</module>
-		<module>pro-service-ttp/pro-service-wx</module>
+		<module>pro-eureka</module>
+		<module>pro-business/pro-service-user/pro-user-service</module>
+		<module>pro-business/pro-service-user/pro-user-service-api</module>
+		<module>pro-common/pro-common</module>
+		<module>pro-common/pro-common-mapper</module>
+		<module>pro-common/pro-common-pojo</module>
+		<module>pro-middleware/pro-redis-service-api</module>
+		<module>pro-middleware/pro-redis-service</module>
+		<module>pro-gateway/pro-zuul-service</module>
+		<module>pro-monitor/pro-zipkin-service</module>
+		<module>pro-monitor/pro-admin-service-ui</module>
+		<module>pro-config</module>
+		<module>pro-gateway/pro-gateway-service</module>
+		<module>pro-sso</module>
+		<module>pro-third-party/pro-service-wx-api</module>
+		<module>pro-third-party/pro-service-wx</module>
 		<module>tx-lcn-service</module>
-        <module>pro-tasks-service</module>
+        <module>pro-tasks</module>
     </modules>
 
 	<parent>
