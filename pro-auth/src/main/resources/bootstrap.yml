@@ -3,15 +3,10 @@ spring:
     name: sso-service
   cloud:
     config:
-      profile: dev
-      name: eureka-middleware,sso-service,redis-nosql,rabbitmq-middleware,zipkin-middleware,admin-middleware
+      profile: ${spring.profiles.active}
+      name: eureka-middleware,auth-service,redis-nosql,rabbitmq-middleware,zipkin-middleware,admin-middleware
       discovery:
         enabled: false
       override-none: true
-      uri: http://${CONFIG-SERVICE}:8002
-server:
-  servlet:
-    session:
-      cookie:
-        name: sso_cookie
+      uri: http://${ZUUL-SERVICE}:8101/config
 

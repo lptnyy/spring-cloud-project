@@ -7,7 +7,7 @@ public class ServiceRun {
     public ServiceRun run(ServiceCallBack callback){
         try{
             ServiceResponse response = callback.run();
-            if (response.getCode() != ServiceResponseEnum.SUCCESS.value){
+            if (response.getCode() != MessageType.SUCCESS.value){
                 throw new IllegalStateException("service error");
             }
         } catch (Exception e){

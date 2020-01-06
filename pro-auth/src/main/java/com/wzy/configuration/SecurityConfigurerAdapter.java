@@ -1,6 +1,6 @@
 package com.wzy.configuration;
 
-import com.wzy.service.SSOUserService;
+import com.wzy.service.OAuth2UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -15,7 +15,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 public class SecurityConfigurerAdapter extends WebSecurityConfigurerAdapter {
 
     @Autowired
-    private SSOUserService userInfoService;
+    private OAuth2UserService userInfoService;
 
     @Bean
     public PasswordEncoder passwordEncoder() {
@@ -31,7 +31,9 @@ public class SecurityConfigurerAdapter extends WebSecurityConfigurerAdapter {
                 .antMatchers("/require",//设置取消安全验证路径
                         "/authentication/form",
                         "/oauth/authorize",
+                        "/instances",
                         "/user",
+                        "/userInfo",
                         "/oauth/token",
                         "/oauth/exit",
                         "/assets/**",
@@ -45,7 +47,7 @@ public class SecurityConfigurerAdapter extends WebSecurityConfigurerAdapter {
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
-        auth.userDetailsService(userInfoService).passwordEncoder(new SSoPassWord());
+        auth.userDetailsService(userInfoService).passwordEncoder(new PassWord());
     }
 
     // 不定义 没有passwod

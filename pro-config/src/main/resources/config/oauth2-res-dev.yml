@@ -10,4 +10,4 @@ security:
       user-info-uri: http://localhost:8006/user
       prefer-token-info: false
       jwt:
-        key-value: secret
+        key-value: wangyang119

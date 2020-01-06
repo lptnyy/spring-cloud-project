@@ -12,20 +12,17 @@ management:
     web:
       exposure:
         include: "*"
+
 zuul:
-  host:
-    connect-timeout-millis: 15000
-    socket-timeout-millis: 60000
   routes:
     user:
       path: /user/**
-      serviceId: user-service
+      serviceId: USER-SERVICE-RESTFULL
     auth:
       path: /auth/**
       serviceId: SSO-SERVICE
+    config:
+      path: /config/**
+      serviceId: CONFIG-SERVICE
   sensitive-headers:
   - Cookie,Set-Cookie,Authorization
-
-feign:
-  httpclient:
-    enabled: true

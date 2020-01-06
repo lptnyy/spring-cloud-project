@@ -27,7 +27,9 @@
 		<module>pro-third-party/pro-weixin-api</module>
 		<module>pro-third-party/pro-weixin</module>
         <module>pro-tasks</module>
-    </modules>
+		<module>tx-lcn</module>
+		<module>pro-business/pro-user/pro-user-restfull</module>
+	</modules>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>

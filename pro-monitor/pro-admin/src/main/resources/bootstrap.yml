@@ -3,11 +3,11 @@ spring:
     name: admin-service
   cloud:
     config:
-      profile: dev
+      profile: ${spring.profiles.active}
       name: eureka-middleware,admin-service
       discovery:
         enabled: false
       override-none: true
-      uri: http://${CONFIG-SERVICE}:8002
+      uri: http://${ZUUL-SERVICE}:8101/config
 
 

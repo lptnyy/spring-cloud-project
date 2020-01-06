@@ -1,7 +1,8 @@
 package com.wzy.common.util;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import lombok.Data;
+
 import java.io.Serializable;
-import java.util.List;
 
 /**
  * 服务之间数据响应载体
@@ -9,54 +10,50 @@ import java.util.List;
  */
 public class ServiceResponse<T> implements Serializable {
     T obj;
-    List<T> lsObj;
     int code;
-    String msg;
-    int dataCount;
+    String msg = "ok";
+    long dataCount;
+    int pageSize;
+    int pageNo;
+    long pages;
     public T getObj() {
         return obj;
     }
-    boolean noData = true;
     ObjectMapper mapper = new ObjectMapper();
+
+    public ServiceResponse builder(){
+        return new ServiceResponse<T>();
+    }
 
     public static ServiceResponse SUCCESSServiceResponse = new ServiceResponse();
     public static ServiceResponse FAILServiceResponse = new ServiceResponse();
 
     public static ServiceResponse getSUCCESS(){
-        SUCCESSServiceResponse.setCode(ServiceResponseEnum.SUCCESS.getValue());
+        SUCCESSServiceResponse.setCode(MessageType.SUCCESS.getValue());
         return SUCCESSServiceResponse;
     }
 
     public static ServiceResponse getFAIL(){
-        FAILServiceResponse.setCode(ServiceResponseEnum.FAIL.getValue());
+        FAILServiceResponse.setCode(MessageType.FAIL.getValue());
         return FAILServiceResponse;
     }
 
-    public ServiceResponse run(Exceutor exceutor) {
+    public ServiceResponse run(Exceutor<T> exceutor) {
         this.exceutor = exceutor;
         return this;
     }
 
-    public int getDataCount() {
+    public long getDataCount() {
         return dataCount;
     }
 
-    public ServiceResponse setDataCount(int dataCount) {
+    public ServiceResponse setDataCount(long dataCount) {
         this.dataCount = dataCount;
         return this;
     }
 
     public ServiceResponse setObj(T obj) {
         this.obj = obj;
-        return this;
-    }
-
-    public List<T> getLsObj() {
-        return lsObj;
-    }
-
-    public ServiceResponse setLsObj(List<T> lsObj) {
-        this.lsObj = lsObj;
         return this;
     }
 
@@ -69,14 +66,6 @@ public class ServiceResponse<T> implements Serializable {
         return this;
     }
 
-    public boolean isNoData() {
-        return noData;
-    }
-
-    public void setNoData(boolean noData) {
-        this.noData = noData;
-    }
-
     public String getMsg() {
         return msg;
     }
@@ -86,23 +75,47 @@ public class ServiceResponse<T> implements Serializable {
         return this;
     }
 
-    Exceutor exceutor;
-    public ServiceResponse build(){
+    Exceutor<T> exceutor;
+    public ServiceResponse exec(){
         try{
-            this.obj = (T) exceutor.run();
-            if (this.obj == null) {
-                this.noData = false;
-            }
-            this.setCode(ServiceResponseEnum.SUCCESS.getValue());
+            this.obj = exceutor.run(this);
+            this.setCode(MessageType.SUCCESS.getValue());
         } catch (Exception e){
-            this.setCode(ServiceResponseEnum.FAIL.getValue());
+            this.setCode(MessageType.FAIL.getValue());
             throw e;
         }
         return this;
     }
 
-    public interface Exceutor{
-        public Object run();
+    public interface Exceutor<T>{
+        public T run(ServiceResponse<T> serviceResponse);
+    }
+
+    public int getPageSize() {
+        return pageSize;
+    }
+
+    public ServiceResponse setPageSize(int pageSize) {
+        this.pageSize = pageSize;
+        return this;
+    }
+
+    public int getPageNo() {
+        return pageNo;
+    }
+
+    public ServiceResponse setPageNo(int pageNo) {
+        this.pageNo = pageNo;
+        return this;
+    }
+
+    public long getPages() {
+        return pages;
+    }
+
+    public ServiceResponse setPages(long pages) {
+        this.pages = pages;
+        return this;
     }
 
     public T toObjClass(Class srClass){

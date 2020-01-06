@@ -1,18 +1,15 @@
-webClient: lptnyy
-webSecret: wangyang119
-phoneClient: phoneClient
-phoneSecret: wangyang119
-redirectUris: 'http://www.baidu.com,http://localhost:7071/login,http://localhost:8085/update,http://localhost/login'
+client: lptnyy
+secret: wangyang119
+jwtSecret: wangyang119
 server:
   port: 8006
-mybatis:
-  type-aliases-package: com.wzy.pojo
-  mapper-locations: classpath:mapper/*.xml
 management:
   endpoints:
     web:
       exposure:
         include: "*"
+
+# 解决首次调用服务失败的问题
 feign:
   hystrix:
     enabled: true

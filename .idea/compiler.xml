@@ -13,33 +13,26 @@
         <module name="pro-common-pojo" />
         <module name="pro-config" />
         <module name="pro-eureka" />
-        <module name="pro-gateway-service" />
+        <module name="pro-gateway" />
         <module name="pro-redis" />
         <module name="pro-redis-api" />
         <module name="pro-tasks" />
         <module name="pro-user" />
+        <module name="pro-user-api" />
+        <module name="pro-user-restfull" />
         <module name="pro-weixin" />
         <module name="pro-weixin-api" />
         <module name="pro-zipkin" />
-        <module name="pro-zuul-service" />
-      </profile>
-      <profile name="Annotation profile for spring-cloud" enabled="true">
-        <sourceOutputDir name="../../pro-service-user/pro-user-api/target/generated-sources/annotations" />
-        <sourceTestOutputDir name="../../pro-service-user/pro-user-api/target/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <module name="pro-user-api" />
+        <module name="pro-zuul" />
+        <module name="txlcn-common" />
+        <module name="txlcn-logger" />
+        <module name="txlcn-tc" />
+        <module name="txlcn-tm" />
+        <module name="txlcn-tracing" />
+        <module name="txlcn-txmsg" />
+        <module name="txlcn-txmsg-netty" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="tx-lcn" target="1.8" />
-      <module name="txlcn-common" target="1.8" />
-      <module name="txlcn-logger" target="1.8" />
-      <module name="txlcn-tc" target="1.8" />
-      <module name="txlcn-tm" target="1.8" />
-      <module name="txlcn-tracing" target="1.8" />
-      <module name="txlcn-txmsg" target="1.8" />
-      <module name="txlcn-txmsg-netty" target="1.8" />
-    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">

@@ -19,9 +19,9 @@ spring:
     active: native  # 配置使用本地储存
   rabbitmq:
     host: ${RABBIT_URL}
-    port: 30001
-    username: admin
-    password: admin
+    port: 5672
+    username: guest
+    password: guest
 server:
   port: 8002
   tomcat:

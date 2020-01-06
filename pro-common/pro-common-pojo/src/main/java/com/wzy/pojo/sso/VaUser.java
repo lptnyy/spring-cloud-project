@@ -1,6 +1,7 @@
 package com.wzy.pojo.sso;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import lombok.Data;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -8,7 +9,13 @@ import java.security.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
 
+@Data
 public class VaUser implements UserDetails {
+
+    public VaUser(String username) {
+        this.username = username;
+    }
+
     private Long id;
     private String username;
     private String password;

@@ -3,9 +3,9 @@ spring:
     name: zuul-service
   cloud:
     config:
-      profile: dev
+      profile: ${spring.profiles.active}
       name: eureka-middleware,zuul-service,redis-nosql,rabbitmq-middleware,zipkin-middleware,admin-middleware,oauth2-res
       discovery:
         enabled: false
       override-none: true
-      uri: http://${config-service}:8002
+      uri: http://${CONFIG-SERVICE}:8002
