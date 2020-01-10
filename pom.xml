@@ -11,8 +11,9 @@
 
 	<modules>
 		<module>pro-eureka</module>
-		<module>pro-business/pro-user/pro-user</module>
-		<module>pro-business/pro-user/pro-user-api</module>
+		<module>pro-business/pro-user-service/pro-user</module>
+		<module>pro-business/pro-user-service/pro-user-api</module>
+		<module>pro-business/pro-user-service/pro-user-restfull</module>
 		<module>pro-common/pro-common</module>
 		<module>pro-common/pro-common-mapper</module>
 		<module>pro-common/pro-common-pojo</module>
@@ -28,7 +29,7 @@
 		<module>pro-third-party/pro-weixin</module>
         <module>pro-tasks</module>
 		<module>tx-lcn</module>
-		<module>pro-business/pro-user/pro-user-restfull</module>
+		<module>pro-generator</module>
 	</modules>
 
 	<parent>

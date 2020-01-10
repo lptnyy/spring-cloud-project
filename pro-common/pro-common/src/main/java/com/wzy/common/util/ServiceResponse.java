@@ -1,7 +1,5 @@
 package com.wzy.common.util;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import lombok.Data;
-
 import java.io.Serializable;
 
 /**
@@ -12,7 +10,7 @@ public class ServiceResponse<T> implements Serializable {
     T obj;
     int code;
     String msg = "ok";
-    long dataCount;
+    long count;
     int pageSize;
     int pageNo;
     long pages;
@@ -43,12 +41,12 @@ public class ServiceResponse<T> implements Serializable {
         return this;
     }
 
-    public long getDataCount() {
-        return dataCount;
+    public long getCount() {
+        return count;
     }
 
-    public ServiceResponse setDataCount(long dataCount) {
-        this.dataCount = dataCount;
+    public ServiceResponse setCount(long count) {
+        this.count = count;
         return this;
     }
 

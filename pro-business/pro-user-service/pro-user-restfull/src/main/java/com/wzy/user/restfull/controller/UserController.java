@@ -23,8 +23,6 @@ public class UserController {
     @PostMapping(value = "/userPageList")
     public ServiceResponse<List<ProUser>> getUsers(RequestPage requestPage){
         User user = new User();
-        redisService.set("hahaahah","hahha");
-        System.out.println(redisService.get("hahaahah"));
         return userService.getPageList(new ProParameter<User>()
                 .setObj(user)
                 .setRequestPage(requestPage));

@@ -76,6 +76,11 @@ feign:
   hystrix:
     enabled: true
 
+ribbon:
+  eager-load:
+    enabled: true
+    clients: USER-SERVICE-RESTFULL,SSO-SERVICE,CONFIG-SERVICE
+
 hystrix:
   command:
     default:

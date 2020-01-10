@@ -30,7 +30,6 @@ public class UserServiceImpl implements UserService {
     @ApiOperation(value = "获取用户信息", notes = "通过属性查询相对应的数据")
     public ServiceResponse<ProUser> userNameGetUser(ProParameter<User> proParameter) {
        return new ServiceResponse<ProUser>()
-               .builder()
                 .run((serviceResponse) -> {
                     return proUserMapper.selectOne(
                             new LambdaQueryWrapper<ProUser>()
@@ -52,13 +51,11 @@ public class UserServiceImpl implements UserService {
     public ServiceResponse<List<ProUser>> getPageList(ProParameter<User> proParameter) {
         return new ServiceResponse<List<ProUser>>()
                 .run((serviceResponse -> {
-                    redisService.set("hahha","hahah");
-                    System.out.println(redisService.get("hahha"));
                    Page<ProUser> page = new Page<>(proParameter.getRequestPage().getPageNum(),proParameter.getRequestPage().getPageSize());
                    IPage<ProUser> pageResult = proUserMapper.selectPage(page, new LambdaQueryWrapper<>());
                    serviceResponse.setPageNo(proParameter.getRequestPage().getPageNum())
                            .setPageSize(proParameter.getRequestPage().getPageSize())
-                           .setDataCount(pageResult.getTotal())
+                           .setCount(pageResult.getTotal())
                            .setPages(pageResult.getPages());
                    return pageResult.getRecords();
                 })).exec();
