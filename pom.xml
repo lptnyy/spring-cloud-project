@@ -11,9 +11,9 @@
 
 	<modules>
 		<module>pro-eureka</module>
-		<module>pro-business/pro-user-service/pro-user</module>
-		<module>pro-business/pro-user-service/pro-user-api</module>
-		<module>pro-business/pro-user-service/pro-user-restfull</module>
+		<module>pro-business/pro-system/pro-user</module>
+		<module>pro-business/pro-system/pro-user-api</module>
+		<module>pro-business/pro-system/pro-user-restfull</module>
 		<module>pro-common/pro-common</module>
 		<module>pro-common/pro-common-mapper</module>
 		<module>pro-common/pro-common-pojo</module>
@@ -25,11 +25,11 @@
 		<module>pro-config</module>
 		<module>pro-gateway/pro-gateway</module>
 		<module>pro-auth</module>
-		<module>pro-third-party/pro-weixin-api</module>
-		<module>pro-third-party/pro-weixin</module>
+		<module>pro-business/pro-weixin/pro-weixin-api</module>
+		<module>pro-business/pro-weixin/pro-weixin</module>
         <module>pro-tasks</module>
 		<module>tx-lcn</module>
-		<module>pro-generator</module>
+		<module>pro-business/pro-generator</module>
 	</modules>
 
 	<parent>

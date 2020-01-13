@@ -1,0 +1,13 @@
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  application:
+    name: generator-service
+  cloud:
+    config:
+      profile: ${spring.profiles.active}
+      name: eureka-middleware,generator-service,rabbitmq-middleware,zipkin-middleware,admin-middleware,oauth2-res
+      discovery:
+        enabled: false
+      override-none: true
+      uri: http://${ZUUL-SERVICE}:8101/config

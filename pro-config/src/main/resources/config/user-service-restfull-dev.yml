@@ -10,3 +10,8 @@ management:
 feign:
   hystrix:
     enabled: true
+
+ribbon:
+  eager-load:
+    enabled: true
+    clients: USER-SERVICE,REDIS-SERVICE

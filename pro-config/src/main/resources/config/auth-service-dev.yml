@@ -8,8 +8,11 @@ management:
     web:
       exposure:
         include: "*"
-
-# 解决首次调用服务失败的问题
 feign:
   hystrix:
     enabled: true
+
+ribbon:
+  eager-load:
+    enabled: true
+    clients: USER-SERVICE

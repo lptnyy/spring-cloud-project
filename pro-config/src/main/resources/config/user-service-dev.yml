@@ -14,3 +14,7 @@ feign:
   hystrix:
     enabled: true
 
+ribbon:
+  eager-load:
+    enabled: true
+    clients: REDIS-SERVICE

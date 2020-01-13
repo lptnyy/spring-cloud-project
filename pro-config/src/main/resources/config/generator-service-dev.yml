@@ -1,8 +1,9 @@
 server:
-  port: 8005
+  port: 8009
+
 management:
   server:
-    port: 10003
+    port: 10007
   endpoints:
     web:
       exposure:
@@ -10,3 +11,4 @@ management:
 feign:
   hystrix:
     enabled: true
+
