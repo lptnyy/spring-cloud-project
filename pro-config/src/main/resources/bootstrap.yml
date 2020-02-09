@@ -20,8 +20,8 @@ spring:
   rabbitmq:
     host: ${RABBIT_URL}
     port: 5672
-    username: guest
-    password: guest
+    username: lptnyy
+    password: wangyang119
 server:
   port: 8002
   tomcat:

@@ -2,18 +2,19 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-app/pro-system-app" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/pro-auth" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/pro-business/pro-user/pro-user" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/pro-business/pro-user/pro-user-restfull" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-business/pro-system/pro-system-server" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-business/pro-weixin/pro-weixin-server" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/pro-config" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/pro-eureka" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/pro-gateway/pro-gateway" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/pro-gateway/pro-zuul" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-generator" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/pro-middleware/pro-redis" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/pro-monitor/pro-admin" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/pro-monitor/pro-zipkin" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/pro-tasks" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/pro-third-party/pro-weixin" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/tx-lcn" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/tx-lcn/txlcn-common" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/tx-lcn/txlcn-logger" charset="UTF-8" />

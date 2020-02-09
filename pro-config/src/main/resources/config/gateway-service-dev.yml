@@ -9,10 +9,10 @@ spring:
         locator:      #路由访问方式：http://Gateway_HOST:Gateway_PORT/大写的serviceId/**，其中微服务应用名默认大写访问。
           enabled: true
       routes:
-      - id: USER-SERVICE-RESTFULL                  #从注册中心获取服务
-        uri: lb://USER-SERVICE-RESTFULL
+      - id: SYSTEM-SERVICE-APP                #从注册中心获取服务
+        uri: lb://SYSTEM-SERVICE-APP
         predicates:
-        - Path=/user/**
+        - Path=/system/**
         filters:
         - StripPrefix=1
         # 熔断降级配置
@@ -28,8 +28,8 @@ spring:
             redis-rate-limiter.replenishRate: 20
             # 令牌桶最大容量
             redis-rate-limiter.burstCapacity: 20
-      - id: SSO-SERVICE                #从注册中心获取服务
-        uri: lb://SSO-SERVICE
+      - id: AUTH-SERVICE                #从注册中心获取服务
+        uri: lb://AUTH-SERVICE
         predicates:
         - Path=/auth/**
         filters:
@@ -79,7 +79,7 @@ feign:
 ribbon:
   eager-load:
     enabled: true
-    clients: USER-SERVICE-RESTFULL,SSO-SERVICE,CONFIG-SERVICE
+    clients: SYSTEM-SERVICE,AUTH-SERVICE,CONFIG-SERVICE
 
 hystrix:
   command:
