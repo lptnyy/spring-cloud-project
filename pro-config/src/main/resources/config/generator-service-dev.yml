@@ -1,13 +1,17 @@
 server:
-  port: 8009
+  port: 8010
 
 management:
   server:
-    port: 10007
+    port: 10009
   endpoints:
     web:
       exposure:
-        include: "*"
+        include: '*'
+  endpoint:
+    health:
+      show-details: ALWAYS
+
 feign:
   hystrix:
     enabled: true

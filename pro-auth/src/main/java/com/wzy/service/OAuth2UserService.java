@@ -1,13 +1,13 @@
 package com.wzy.service;
 
 import com.wzy.common.method.ProParameter;
+import com.wzy.common.oauth.VaRole;
+import com.wzy.common.oauth.VaUser;
 import com.wzy.common.util.MessageType;
 import com.wzy.common.util.ServiceResponse;
-import com.wzy.pojo.sso.VaRole;
-import com.wzy.pojo.sso.VaUser;
-import com.wzy.pojo.user.ProUser;
 import com.wzy.system.UserService;
-import com.wzy.system.parameter.User;
+import com.wzy.system.dto.ProUser;
+import com.wzy.system.request.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

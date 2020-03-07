@@ -4,13 +4,15 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.wzy.common.method.ProParameter;
 import com.wzy.common.util.ServiceResponse;
-import com.wzy.mapper.user.ProUserMapper;
-import com.wzy.pojo.user.ProUser;
 import com.wzy.redis.RedisService;
 import com.wzy.system.UserService;
-import com.wzy.system.parameter.User;
+import com.wzy.system.dto.ProUser;
+import com.wzy.system.mapper.user.ProUserMapper;
+import com.wzy.system.request.User;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import org.apache.commons.lang3.StringUtils;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RestController;
 import javax.annotation.Resource;
@@ -51,9 +53,13 @@ public class UserServiceImpl implements UserService {
     public ServiceResponse<List<ProUser>> getPageList(ProParameter<User> proParameter) {
         return new ServiceResponse<List<ProUser>>()
                 .run((serviceResponse -> {
-                   Page<ProUser> page = new Page<>(proParameter.getRequestPage().getPageNum(),proParameter.getRequestPage().getPageSize());
-                   IPage<ProUser> pageResult = proUserMapper.selectPage(page, new LambdaQueryWrapper<>());
-                   serviceResponse.setPageNo(proParameter.getRequestPage().getPageNum())
+                    LambdaQueryWrapper<ProUser> queryWrapper = new LambdaQueryWrapper<>();
+                    if(StringUtils.isNotEmpty(proParameter.getObj().getUserName())){
+                        queryWrapper.eq(ProUser::getUserName,proParameter.getObj().getUserName());
+                    }
+                    Page<ProUser> page = new Page<>(proParameter.getRequestPage().getPageNum(),proParameter.getRequestPage().getPageSize());
+                    IPage<ProUser> pageResult = proUserMapper.selectPage(page, queryWrapper);
+                    serviceResponse.setPageNo(proParameter.getRequestPage().getPageNum())
                            .setPageSize(proParameter.getRequestPage().getPageSize())
                            .setCount(pageResult.getTotal())
                            .setPages(pageResult.getPages());
@@ -62,7 +68,44 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public ServiceResponse<List<ProUser>> findIdsList(ProParameter<Integer> proParameter) {
-        return null;
+    public ServiceResponse<List<ProUser>> findIdsList(ProParameter<User> proParameter) {
+        return new ServiceResponse<List<ProUser>>()
+                .run(serviceResponse -> {
+                    LambdaQueryWrapper<ProUser> queryWrapper = new LambdaQueryWrapper<>();
+                    queryWrapper.in(ProUser::getUserId, proParameter.getObj().getIds());
+                    return proUserMapper.selectList(queryWrapper);
+                }).exec();
+    }
+
+    @Override
+    public ServiceResponse<Integer> update(ProParameter<User> proParameter) {
+        return new ServiceResponse<Integer>()
+                .run(serviceResponse -> {
+                    ProUser proUser = new ProUser();
+                    BeanUtils.copyProperties(proParameter.getObj(),proUser);
+                    LambdaQueryWrapper<ProUser> queryWrapper = new LambdaQueryWrapper<>();
+                    queryWrapper.eq(ProUser::getUserId,proParameter.getObj().getUserId());
+                    return proUserMapper.update(proUser,queryWrapper);
+                }).exec();
+    }
+
+    @Override
+    public ServiceResponse<Integer> save(ProParameter<User> proParameter) {
+        return new ServiceResponse<Integer>()
+                .run(serviceResponse -> {
+                    ProUser proUser = new ProUser();
+                    BeanUtils.copyProperties(proParameter.getObj(),proUser);
+                    return proUserMapper.insert(proUser);
+                }).exec();
+    }
+
+    @Override
+    public ServiceResponse<Integer> delete(ProParameter<User> proParameter) {
+        return new ServiceResponse<Integer>()
+                .run(serviceResponse -> {
+                    LambdaQueryWrapper<ProUser> queryWrapper = new LambdaQueryWrapper<>();
+                    queryWrapper.eq(ProUser::getUserId,proParameter.getObj().getUserId());
+                    return proUserMapper.delete(queryWrapper);
+                }).exec();
     }
 }

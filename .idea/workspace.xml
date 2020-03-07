@@ -2,73 +2,154 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0ee107bb-625c-4628-9f80-3201fbae8965" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/pro-app/pro-system-app/src/main/java/com/wzy/system/SystemAppServiceStart.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pro-app/pro-system-app/src/main/java/com/wzy/system/configuration/ResourceServerConfigurer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pro-app/pro-system-app/src/main/java/com/wzy/system/controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pro-app/pro-system-app/src/main/java/com/wzy/system/swagger/Swagger2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pro-business/pro-system/pro-system-server-api/src/main/java/com/wzy/system/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pro-business/pro-system/pro-system-server-api/src/main/java/com/wzy/system/hystrix/UserServiceHystrix.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pro-business/pro-system/pro-system-server-api/src/main/java/com/wzy/system/parameter/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pro-business/pro-system/pro-system-server/src/main/java/com/wzy/system/SystemServiceStart.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pro-business/pro-system/pro-system-server/src/main/java/com/wzy/system/configuration/ResourceServerConfigurer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pro-business/pro-system/pro-system-server/src/main/java/com/wzy/system/service/UserServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pro-business/pro-system/pro-system-server/src/main/java/com/wzy/system/swagger/Swagger2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pro-business/pro-system/pro-system-server-api/src/main/java/com/wzy/system/IProEnumService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pro-business/pro-system/pro-system-server-api/src/main/java/com/wzy/system/dto/ProEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pro-business/pro-system/pro-system-server-api/src/main/java/com/wzy/system/dto/ProRole.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pro-business/pro-system/pro-system-server-api/src/main/java/com/wzy/system/dto/ProUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pro-business/pro-system/pro-system-server-api/src/main/java/com/wzy/system/dto/ProUserRole.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pro-business/pro-system/pro-system-server-api/src/main/java/com/wzy/system/hystrix/ProEnumServiceHystrix.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pro-business/pro-system/pro-system-server-api/src/main/java/com/wzy/system/request/ProEnumRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pro-business/pro-system/pro-system-server/src/main/java/com/wzy/system/configuration/mybitsplus/MybatisPlusConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pro-business/pro-system/pro-system-server/src/main/java/com/wzy/system/configuration/mybitsplus/ShardingDataSourceConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pro-business/pro-system/pro-system-server/src/main/java/com/wzy/system/configuration/mybitsplus/ShardingMastSlaveConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pro-business/pro-system/pro-system-server/src/main/java/com/wzy/system/mapper/proenum/ProEnumMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pro-business/pro-system/pro-system-server/src/main/java/com/wzy/system/mapper/user/ProRoleMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pro-business/pro-system/pro-system-server/src/main/java/com/wzy/system/mapper/user/ProUserMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pro-business/pro-system/pro-system-server/src/main/java/com/wzy/system/mapper/user/ProUserRoleMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pro-business/pro-system/pro-system-server/src/main/java/com/wzy/system/service/EnumServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pro-business/pro-system/pro-system-server/src/main/resources/mapper.proenum/ProEnumMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pro-business/pro-system/pro-system-server/src/main/resources/mapper/user/ProRoleMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pro-business/pro-system/pro-system-server/src/main/resources/mapper/user/ProUserMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pro-business/pro-system/pro-system-server/src/main/resources/mapper/user/ProUserRoleMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pro-common/src/main/java/com/wzy/common/oauth/VaRole.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pro-common/src/main/java/com/wzy/common/oauth/VaUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pro-generator/src/main/java/com/wzy/generator/controller/GeneratorController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pro-generator/src/main/java/com/wzy/generator/controller/request/TableInfo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pro-generator/src/main/java/com/wzy/generator/service/GeneratorService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pro-generator/src/main/java/com/wzy/generator/util/DtoUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pro-generator/src/main/java/com/wzy/generator/util/Freemarker.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pro-generator/src/main/java/com/wzy/generator/util/SqlUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pro-generator/src/main/java/com/wzy/generator/util/StringUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pro-generator/src/main/java/com/wzy/generator/util/entity/GenDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pro-generator/src/main/resources/templates/entity.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pro-generator/src/main/resources/templates/mapper.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pro-generator/src/main/resources/templates/mapperxml.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pro-generator/src/main/resources/templates/request.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pro-generator/src/main/resources/templates/service.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pro-generator/src/main/resources/templates/servicehystrix.ftl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pro-generator/src/main/resources/templates/serviceimpl.ftl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/spring-cloud-project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/spring-cloud-project.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-app/pro-system-app/src/main/java/com/wzy/system/configuration/ResourceServerConfigurer.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-app/pro-system-app/src/main/java/com/wzy/system/configuration/oauth/ResourceServerConfigurer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-app/pro-system-app/src/main/java/com/wzy/system/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-app/pro-system-app/src/main/java/com/wzy/system/controller/user/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-app/pro-system-app/src/main/java/com/wzy/system/swagger/Swagger2.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-app/pro-system-app/src/main/java/com/wzy/system/configuration/swagger/Swagger2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-app/pro-system-app/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-app/pro-system-app/src/main/resources/bootstrap.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pro-auth/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-auth/src/main/java/com/wzy/ProStartAuth.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/java/com/wzy/AuthServiceStart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-auth/src/main/java/com/wzy/configuration/ProcessPrincipalHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/java/com/wzy/configuration/ProcessPrincipalHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-auth/src/main/java/com/wzy/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/java/com/wzy/controller/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pro-auth/src/main/java/com/wzy/service/OAuth2UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/java/com/wzy/service/OAuth2UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pro-auth/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-auth/src/main/resources/bootstrap.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-business/pro-generator/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-generator/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-business/pro-generator/src/main/java/com/wzy/generator/ProStartGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-generator/src/main/java/com/wzy/generator/GeneratorServiceStart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-business/pro-generator/src/main/java/com/wzy/generator/configuration/ResourceServerConfigurer.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-generator/src/main/java/com/wzy/generator/configuration/ResourceServerConfigurer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-business/pro-generator/src/main/java/com/wzy/generator/swagger/Swagger2.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-generator/src/main/java/com/wzy/generator/swagger/Swagger2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-business/pro-generator/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-generator/src/main/resources/bootstrap.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-business/pro-system/pro-system-app/src/main/java/com/wzy/user/restfull/SystemAppServiceStart.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-business/pro-system/pro-system-app/src/main/java/com/wzy/user/restfull/configuration/ResourceServerConfigurer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-business/pro-system/pro-system-app/src/main/java/com/wzy/user/restfull/controller/UserController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-business/pro-system/pro-system-app/src/main/java/com/wzy/user/restfull/swagger/Swagger2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-business/pro-system/pro-system-server-api/src/main/java/com/wzy/user/UserService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-business/pro-system/pro-system-server-api/src/main/java/com/wzy/user/hystrix/UserServiceHystrix.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-business/pro-system/pro-system-server-api/src/main/java/com/wzy/user/parameter/User.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-business/pro-system/pro-system-server/src/main/java/com/wzy/user/SystemServiceStart.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-business/pro-system/pro-system-server/src/main/java/com/wzy/user/configuration/ResourceServerConfigurer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-business/pro-system/pro-system-server/src/main/java/com/wzy/user/service/UserServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-business/pro-system/pro-system-server/src/main/java/com/wzy/user/swagger/Swagger2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-business/pro-system/pro-user-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-business/pro-system/pro-system-server-api/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-business/pro-system/pro-user-restfull/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-app/pro-system-app/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-business/pro-system/pro-user-restfull/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-app/pro-system-app/src/main/resources/bootstrap.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-business/pro-system/pro-user-restfull/src/main/resources/logback-spring.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-app/pro-system-app/src/main/resources/logback-spring.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-business/pro-system/pro-user/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-business/pro-system/pro-system-server/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-business/pro-system/pro-user/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-business/pro-system/pro-system-server/src/main/resources/bootstrap.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-business/pro-system/pro-user/src/main/resources/logback-spring.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-business/pro-system/pro-system-server/src/main/resources/logback-spring.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-business/pro-weixin/pro-weixin-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-business/pro-weixin/pro-weixin-server-api/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-business/pro-weixin/pro-weixin-api/src/main/java/com/wzy/wx/WxService.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-business/pro-weixin/pro-weixin-server-api/src/main/java/com/wzy/wx/WxService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-business/pro-weixin/pro-weixin-api/src/main/java/com/wzy/wx/entity/MpTemplateMsg.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-business/pro-weixin/pro-weixin-server-api/src/main/java/com/wzy/wx/entity/MpTemplateMsg.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-business/pro-weixin/pro-weixin-api/src/main/java/com/wzy/wx/entity/SendMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-business/pro-weixin/pro-weixin-server-api/src/main/java/com/wzy/wx/entity/SendMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-business/pro-weixin/pro-weixin-api/src/main/java/com/wzy/wx/entity/WeappTemplateMsg.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-business/pro-weixin/pro-weixin-server-api/src/main/java/com/wzy/wx/entity/WeappTemplateMsg.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-business/pro-weixin/pro-weixin-api/src/main/java/com/wzy/wx/entity/WeixinRespones.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-business/pro-weixin/pro-weixin-server-api/src/main/java/com/wzy/wx/entity/WeixinRespones.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-business/pro-weixin/pro-weixin-api/src/main/java/com/wzy/wx/hystrix/WxServiceHystrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-business/pro-weixin/pro-weixin-server-api/src/main/java/com/wzy/wx/hystrix/WxServiceHystrix.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-business/pro-weixin/pro-weixin/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-business/pro-weixin/pro-weixin-server/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-business/pro-weixin/pro-weixin/src/main/java/com/wzy/ttp/wx/WxServiceStart.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-business/pro-weixin/pro-weixin-server/src/main/java/com/wzy/ttp/wx/WxServiceStart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-business/pro-weixin/pro-weixin/src/main/java/com/wzy/ttp/wx/cache/CacheConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-business/pro-weixin/pro-weixin-server/src/main/java/com/wzy/ttp/wx/cache/CacheConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-business/pro-weixin/pro-weixin/src/main/java/com/wzy/ttp/wx/cache/MapTokenCache.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-business/pro-weixin/pro-weixin-server/src/main/java/com/wzy/ttp/wx/cache/MapTokenCache.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-business/pro-weixin/pro-weixin/src/main/java/com/wzy/ttp/wx/properties/WxProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-business/pro-weixin/pro-weixin-server/src/main/java/com/wzy/ttp/wx/properties/WxProperties.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-business/pro-weixin/pro-weixin/src/main/java/com/wzy/ttp/wx/service/WxServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-business/pro-weixin/pro-weixin-server/src/main/java/com/wzy/ttp/wx/service/WxServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-business/pro-weixin/pro-weixin/src/main/java/com/wzy/ttp/wx/swagger/Swagger2.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-business/pro-weixin/pro-weixin-server/src/main/java/com/wzy/ttp/wx/swagger/Swagger2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-business/pro-weixin/pro-weixin/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-business/pro-weixin/pro-weixin-server/src/main/resources/bootstrap.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-common/pro-common-mapper/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-common/pro-common-mapper/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-config/src/main/java/com/wzy/config/ProConfigStart.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-config/src/main/java/com/wzy/config/ConfigServiceStart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-config/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-config/src/main/resources/bootstrap.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-business/pro-system/pro-system-server-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-business/pro-system/pro-system-server-api/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-business/pro-system/pro-system-server-api/src/main/java/com/wzy/system/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-business/pro-system/pro-system-server-api/src/main/java/com/wzy/system/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-business/pro-system/pro-system-server-api/src/main/java/com/wzy/system/hystrix/UserServiceHystrix.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-business/pro-system/pro-system-server-api/src/main/java/com/wzy/system/hystrix/UserServiceHystrix.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-business/pro-system/pro-system-server-api/src/main/java/com/wzy/system/parameter/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-business/pro-system/pro-system-server-api/src/main/java/com/wzy/system/request/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-business/pro-system/pro-system-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-business/pro-system/pro-system-server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-business/pro-system/pro-system-server/src/main/java/com/wzy/system/SystemServiceStart.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-business/pro-system/pro-system-server/src/main/java/com/wzy/system/SystemServiceStart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-business/pro-system/pro-system-server/src/main/java/com/wzy/system/configuration/ResourceServerConfigurer.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-business/pro-system/pro-system-server/src/main/java/com/wzy/system/configuration/oauth/ResourceServerConfigurer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-business/pro-system/pro-system-server/src/main/java/com/wzy/system/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-business/pro-system/pro-system-server/src/main/java/com/wzy/system/service/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-business/pro-system/pro-system-server/src/main/java/com/wzy/system/swagger/Swagger2.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-business/pro-system/pro-system-server/src/main/java/com/wzy/system/configuration/swagger/Swagger2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-business/pro-system/pro-system-server/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-business/pro-system/pro-system-server/src/main/resources/bootstrap.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-business/pro-system/pro-user-api/src/main/java/com/wzy/user/UserService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-business/pro-system/pro-user-api/src/main/java/com/wzy/user/hystrix/UserServiceHystrix.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-business/pro-system/pro-user-api/src/main/java/com/wzy/user/parameter/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-app/pro-system-app/src/main/java/com/wzy/system/vo/UserVo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-business/pro-system/pro-user-restfull/src/main/java/com/wzy/user/restfull/ProStartUsersRestFull.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-business/pro-system/pro-user-restfull/src/main/java/com/wzy/user/restfull/configuration/ResourceServerConfigurer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-business/pro-system/pro-user-restfull/src/main/java/com/wzy/user/restfull/controller/UserController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-business/pro-system/pro-user-restfull/src/main/java/com/wzy/user/restfull/swagger/Swagger2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-business/pro-system/pro-user/src/main/java/com/wzy/user/ProStartUsers.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-business/pro-system/pro-user/src/main/java/com/wzy/user/configuration/ResourceServerConfigurer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-business/pro-system/pro-user/src/main/java/com/wzy/user/service/UserServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-business/pro-system/pro-user/src/main/java/com/wzy/user/swagger/Swagger2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-common/pro-common-mapper/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-common/pro-common-mapper/src/main/java/com/wzy/configuration/MybatisPlusConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-common/pro-common-mapper/src/main/java/com/wzy/configuration/ShardingDataSourceConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-common/pro-common-mapper/src/main/java/com/wzy/configuration/ShardingMastSlaveConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-common/pro-common-mapper/src/main/java/com/wzy/generator/GeneratorCode.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-common/pro-common-mapper/src/main/java/com/wzy/mapper/user/ProRoleMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-common/pro-common-mapper/src/main/java/com/wzy/mapper/user/ProUserMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-common/pro-common-mapper/src/main/java/com/wzy/mapper/user/ProUserRoleMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-common/pro-common-mapper/src/main/resources/mapper/user/ProRoleMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-common/pro-common-mapper/src/main/resources/mapper/user/ProUserMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-common/pro-common-mapper/src/main/resources/mapper/user/ProUserRoleMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-common/pro-common-pojo/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-common/pro-common-pojo/src/main/java/com/wzy/pojo/ScheduleJob.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-common/pro-common-pojo/src/main/java/com/wzy/pojo/ScheduleJobExample.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-common/pro-common-pojo/src/main/java/com/wzy/pojo/sso/VaRole.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-common/pro-common-pojo/src/main/java/com/wzy/pojo/sso/VaUser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-common/pro-common-pojo/src/main/java/com/wzy/pojo/user/ProRole.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-common/pro-common-pojo/src/main/java/com/wzy/pojo/user/ProUser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-common/pro-common-pojo/src/main/java/com/wzy/pojo/user/ProUserRole.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-common/pro-common/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-common/pro-common/src/main/java/com/wzy/common/annotation/Log.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-common/pro-common/src/main/java/com/wzy/common/cache/Token.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-common/pro-common/src/main/java/com/wzy/common/cache/TokenCache.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-common/pro-common/src/main/java/com/wzy/common/constant/Const.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-common/pro-common/src/main/java/com/wzy/common/feign/FeignRequestInterceptor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-common/pro-common/src/main/java/com/wzy/common/feign/RequestAttributeHystrixConcurrencyStrategy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-common/pro-common/src/main/java/com/wzy/common/method/ProParameter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-common/pro-common/src/main/java/com/wzy/common/okhttp/Okhttp.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-common/pro-common/src/main/java/com/wzy/common/page/RequestPage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-common/pro-common/src/main/java/com/wzy/common/respones/MessageBody.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-common/pro-common/src/main/java/com/wzy/common/util/AESOperator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-common/pro-common/src/main/java/com/wzy/common/util/Constent.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-common/pro-common/src/main/java/com/wzy/common/util/DateUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-common/pro-common/src/main/java/com/wzy/common/util/MapUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-common/pro-common/src/main/java/com/wzy/common/util/Md5Util.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-common/pro-common/src/main/java/com/wzy/common/util/MessageType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-common/pro-common/src/main/java/com/wzy/common/util/PageUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-common/pro-common/src/main/java/com/wzy/common/util/RandomUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-common/pro-common/src/main/java/com/wzy/common/util/RegexUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-common/pro-common/src/main/java/com/wzy/common/util/SerializableUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-common/pro-common/src/main/java/com/wzy/common/util/ServiceCallBack.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-common/pro-common/src/main/java/com/wzy/common/util/ServiceResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-common/pro-common/src/main/java/com/wzy/common/util/ServiceRun.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-common/pro-common/src/main/java/com/wzy/common/util/Srfactory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-common/pro-common/src/main/java/com/wzy/common/util/annotation/Test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-common/pro-common/src/main/java/com/wzy/common/util/annotation/check/IsContrastString.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-common/pro-common/src/main/java/com/wzy/common/util/annotation/check/IsNotEmail.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-common/pro-common/src/main/java/com/wzy/common/util/annotation/check/IsNotInteger.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-common/pro-common/src/main/java/com/wzy/common/util/annotation/check/IsNotLong.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-common/pro-common/src/main/java/com/wzy/common/util/annotation/check/IsNotNull.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-common/pro-common/src/main/java/com/wzy/common/util/annotation/factory/Verification.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-common/pro-common/src/main/java/com/wzy/common/util/annotation/set/SetStringMd5.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-common/pro-common/src/main/java/com/wzy/common/util/jsonvo/JsonVo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-common/pro-common/src/main/java/com/wzy/common/util/jsonvo/JsonVoInterface.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-config/src/main/resources/config/auth-service-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-config/src/main/resources/config/auth-service-dev.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pro-config/src/main/resources/config/gateway-service-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-config/src/main/resources/config/gateway-service-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-config/src/main/resources/config/rabbitmq-middleware-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-config/src/main/resources/config/rabbitmq-middleware-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-config/src/main/resources/config/user-service-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-config/src/main/resources/config/system-service-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-config/src/main/resources/config/user-service-restfull-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-config/src/main/resources/config/system-service-app-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-eureka/src/main/java/com/wzy/eureka/ProEurekaStart.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-eureka/src/main/java/com/wzy/eureka/EurekaServiceStart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pro-middleware/pro-redis/src/main/java/com/wzy/redis/ProStartRedis.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-middleware/pro-redis/src/main/java/com/wzy/redis/RedisServiceStart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-config/src/main/resources/config/generator-service-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-config/src/main/resources/config/generator-service-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-config/src/main/resources/config/mysql-usersqldata-dev.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-config/src/main/resources/config/redis-service-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-config/src/main/resources/config/redis-service-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-config/src/main/resources/config/system-service-app-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-config/src/main/resources/config/system-service-app-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-config/src/main/resources/config/system-service-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-config/src/main/resources/config/system-service-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-config/src/main/resources/config/tasks-service-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-config/src/main/resources/config/tasks-service-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-config/src/main/resources/config/zuul-service-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-config/src/main/resources/config/zuul-service-dev.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-gateway/pro-gateway/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-gateway/pro-gateway/src/main/java/com/wzy/gateway/GateWayServiceStart.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-gateway/pro-gateway/src/main/java/com/wzy/gateway/cors/CorsConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-gateway/pro-gateway/src/main/java/com/wzy/gateway/currentlimiting/RateLimiterConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-gateway/pro-gateway/src/main/java/com/wzy/gateway/hystrix/DefaultHystrixController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-gateway/pro-gateway/src/main/resources/bootstrap.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-gateway/pro-gateway/src/main/resources/logback-spring.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-gateway/pro-zuul/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-gateway/pro-zuul/src/main/java/com/wzy/zuul/ProStartZuul.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-gateway/pro-zuul/src/main/java/com/wzy/zuul/configuration/CorsConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-gateway/pro-zuul/src/main/resources/bootstrap.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-generator/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pro-generator/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-generator/src/main/java/com/wzy/generator/GeneratorServiceStart.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-generator/src/main/java/com/wzy/generator/GeneratorServiceStart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-generator/src/main/java/com/wzy/generator/configuration/ResourceServerConfigurer.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-generator/src/main/java/com/wzy/generator/configuration/ResourceServerConfigurer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pro-middleware/pro-redis/src/main/java/com/wzy/redis/configuration/ResourceServerConfigurer.java" beforeDir="false" afterPath="$PROJECT_DIR$/pro-middleware/pro-redis/src/main/java/com/wzy/redis/configuration/ResourceServerConfigurer.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/pro-common/pro-common/target/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -106,6 +187,8 @@
     <ignored path="$PROJECT_DIR$/pro-business/pro-weixin/pro-weixin-server-api/target/" />
     <ignored path="$PROJECT_DIR$/pro-generator/target/" />
     <ignored path="$PROJECT_DIR$/pro-app/pro-system-app/target/" />
+    <ignored path="$PROJECT_DIR$/pro-gateway/target/" />
+    <ignored path="$PROJECT_DIR$/pro-common/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,49 +213,77 @@
     <session id="-1274453508">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="6" />
+          <entry key="project.closed" value="15" />
+          <entry key="project.open.time.1" value="3" />
+          <entry key="project.open.time.10" value="2" />
           <entry key="project.open.time.4" value="2" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.open.time.9" value="4" />
-          <entry key="project.opened" value="7" />
+          <entry key="project.open.time.8" value="1" />
+          <entry key="project.open.time.9" value="7" />
+          <entry key="project.opened" value="16" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="103" />
+          <entry key="class" value="30" />
+          <entry key="ftl" value="53" />
+          <entry key="html" value="1" />
+          <entry key="java" value="825" />
           <entry key="pom" value="1" />
-          <entry key="xml" value="59" />
-          <entry key="yml" value="71" />
+          <entry key="xml" value="126" />
+          <entry key="yml" value="139" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="103" />
-          <entry key="XML" value="60" />
-          <entry key="YAML" value="71" />
+          <entry key="CLASS" value="30" />
+          <entry key="FTL" value="53" />
+          <entry key="HTML" value="1" />
+          <entry key="JAVA" value="825" />
+          <entry key="XML" value="127" />
+          <entry key="YAML" value="139" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="dummy" value="108" />
-          <entry key="java" value="211" />
-          <entry key="txt" value="146" />
-          <entry key="xml" value="348" />
-          <entry key="yml" value="129" />
+          <entry key="dummy" value="110" />
+          <entry key="ftl" value="518" />
+          <entry key="java" value="5992" />
+          <entry key="txt" value="160" />
+          <entry key="xml" value="629" />
+          <entry key="yml" value="214" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="211" />
-          <entry key="PLAIN_TEXT" value="254" />
-          <entry key="XML" value="348" />
-          <entry key="YAML" value="129" />
+          <entry key="FTL" value="518" />
+          <entry key="JAVA" value="5992" />
+          <entry key="PLAIN_TEXT" value="270" />
+          <entry key="XML" value="629" />
+          <entry key="YAML" value="214" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pro-business/pro-system/pro-system-server-api/src/main/java/com/wzy/system/request/ProEnumRequest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="74">
+              <caret line="5" column="25" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -187,44 +298,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pro-config/src/main/resources/config/redis-service-dev.yml" />
-        <option value="$PROJECT_DIR$/pro-config/src/main/resources/config/user-service-dev.yml" />
-        <option value="$PROJECT_DIR$/pro-config/src/main/resources/config/user-service-restfull-dev.yml" />
-        <option value="$PROJECT_DIR$/pro-business/pro-system/pro-system-server-api/pom.xml" />
+        <option value="$PROJECT_DIR$/pro-app/pro-system-app/src/main/java/com/wzy/system/vo/User.java" />
+        <option value="$PROJECT_DIR$/pro-business/pro-system/pro-system-server-api/src/main/java/com/wzy/system/dto/ProUser.java" />
+        <option value="$PROJECT_DIR$/pro-business/pro-system/pro-system-server-api/src/main/java/com/wzy/system/request/User.java" />
+        <option value="$PROJECT_DIR$/pro-common/src/main/java/com/wzy/common/method/ProParameter.java" />
+        <option value="$PROJECT_DIR$/pro-app/pro-system-app/src/main/java/com/wzy/system/controller/user/UserController.java" />
         <option value="$PROJECT_DIR$/pro-config/src/main/resources/config/auth-service-dev.yml" />
-        <option value="$PROJECT_DIR$/pro-config/src/main/resources/config/rabbitmq-middleware-dev.yml" />
-        <option value="$PROJECT_DIR$/pro-config/src/main/resources/bootstrap.yml" />
-        <option value="$PROJECT_DIR$/pro-auth/pom.xml" />
-        <option value="$PROJECT_DIR$/pro-business/pro-generator/pom.xml" />
-        <option value="$PROJECT_DIR$/pro-business/pro-weixin/pro-weixin/pom.xml" />
-        <option value="$PROJECT_DIR$/pro-business/pro-system/pro-system-server/pom.xml" />
-        <option value="$PROJECT_DIR$/pro-common/pro-common-mapper/pom.xml" />
-        <option value="$PROJECT_DIR$/pro-business/pro-system/pro-system-restfull/pom.xml" />
-        <option value="$PROJECT_DIR$/pro-business/pro-system/pro-system-app/pom.xml" />
-        <option value="$PROJECT_DIR$/pro-business/pro-weixin/pro-weixin-server-api/pom.xml" />
-        <option value="$PROJECT_DIR$/pro-business/pro-weixin/pro-weixin-server/pom.xml" />
-        <option value="$PROJECT_DIR$/pro-business/pro-system/pro-system-app/src/main/java/com/wzy/user/restfull/SystemAppServiceStart.java" />
-        <option value="$PROJECT_DIR$/pro-business/pro-system/pro-system-app/src/main/java/com/wzy/system/swagger/Swagger2.java" />
-        <option value="$PROJECT_DIR$/pro-business/pro-system/pro-system-app/src/main/java/com/wzy/system/configuration/ResourceServerConfigurer.java" />
-        <option value="$PROJECT_DIR$/pro-business/pro-system/pro-system-server/src/main/java/com/wzy/system/SystemServiceStart.java" />
-        <option value="$PROJECT_DIR$/pro-business/pro-system/pro-system-server/src/main/java/com/wzy/system/swagger/Swagger2.java" />
-        <option value="$PROJECT_DIR$/pro-business/pro-system/pro-system-server/src/main/java/com/wzy/system/configuration/ResourceServerConfigurer.java" />
-        <option value="$PROJECT_DIR$/pro-business/pro-system/pro-system-app/src/main/java/com/wzy/system/SystemAppServiceStart.java" />
-        <option value="$PROJECT_DIR$/pro-business/pro-system/pro-system-server-api/src/main/java/com/wzy/system/parameter/User.java" />
-        <option value="$PROJECT_DIR$/pro-business/pro-system/pro-system-server-api/src/main/java/com/wzy/system/hystrix/UserServiceHystrix.java" />
-        <option value="$PROJECT_DIR$/pro-business/pro-system/pro-system-app/src/main/java/com/wzy/system/controller/UserController.java" />
-        <option value="$PROJECT_DIR$/pro-auth/src/main/java/com/wzy/service/OAuth2UserService.java" />
-        <option value="$PROJECT_DIR$/pro-auth/src/main/java/com/wzy/AuthServiceStart.java" />
-        <option value="$PROJECT_DIR$/pro-business/pro-system/pro-system-server/src/main/java/com/wzy/system/service/UserServiceImpl.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/pro-business/pro-system/pro-system-server/src/main/resources/bootstrap.yml" />
-        <option value="$PROJECT_DIR$/pro-app/pro-system-app/src/main/resources/bootstrap.yml" />
-        <option value="$PROJECT_DIR$/pro-app/pro-system-app/pom.xml" />
-        <option value="$PROJECT_DIR$/pro-config/src/main/resources/config/system-service-app-dev.yml" />
+        <option value="$PROJECT_DIR$/pro-config/src/main/resources/config/redis-service-dev.yml" />
+        <option value="$PROJECT_DIR$/pro-config/src/main/resources/config/tasks-service-dev.yml" />
+        <option value="$PROJECT_DIR$/pro-config/src/main/resources/config/zuul-service-dev.yml" />
+        <option value="$PROJECT_DIR$/pro-config/src/main/resources/config/generator-service-dev.yml" />
+        <option value="$PROJECT_DIR$/pro-generator/src/main/java/com/wzy/generator/configuration/ResourceServerConfigurer.java" />
+        <option value="$PROJECT_DIR$/pro-generator/src/main/java/com/wzy/generator/GeneratorServiceStart.java" />
         <option value="$PROJECT_DIR$/pro-config/src/main/resources/config/gateway-service-dev.yml" />
+        <option value="$PROJECT_DIR$/pro-gateway/src/main/java/com/wzy/gateway/hystrix/DefaultHystrixController.java" />
+        <option value="$PROJECT_DIR$/pro-gateway/pom.xml" />
+        <option value="$PROJECT_DIR$/pro-generator/src/main/java/com/wzy/generator/util/MyBaitsPlus.java" />
+        <option value="$PROJECT_DIR$/pro-generator/pom.xml" />
+        <option value="$PROJECT_DIR$/pro-generator/src/main/java/com/wzy/generator/util/FileUtil.java" />
+        <option value="$PROJECT_DIR$/pro-generator/src/main/java/com/wzy/generator/util/SqlUtil.java" />
+        <option value="$PROJECT_DIR$/pro-generator/src/main/java/com/wzy/generator/service/GeneratorService.java" />
+        <option value="$PROJECT_DIR$/pro-generator/src/main/java/com/wzy/generator/util/entity/GenDto.java" />
+        <option value="$PROJECT_DIR$/pro-generator/src/main/java/com/wzy/generator/util/DtoUtil.java" />
+        <option value="$PROJECT_DIR$/pro-generator/src/main/java/com/wzy/generator/util/StringUtil.java" />
+        <option value="$PROJECT_DIR$/pro-generator/src/main/java/com/wzy/generator/ProEnum.java" />
+        <option value="$PROJECT_DIR$/pro-generator/src/main/java/com/wzy/generator/vo/ProMenu.java" />
+        <option value="$PROJECT_DIR$/pro-business/pro-system/pro-system-server-api/src/main/java/com/wzy/system/dto/ProRole.java" />
+        <option value="$PROJECT_DIR$/pro-business/pro-system/pro-system-server/src/main/java/com/wzy/system/service/UserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/pro-business/pro-system/pro-system-server/src/main/java/com/wzy/system/mapper/user/ProRoleMapper.java" />
+        <option value="$PROJECT_DIR$/pro-generator/src/main/resources/templates/mapper.ftl" />
+        <option value="$PROJECT_DIR$/pro-generator/src/main/resources/templates/xml.ftl" />
+        <option value="$PROJECT_DIR$/pro-generator/src/main/resources/templates/mapperxml.ftl" />
+        <option value="$PROJECT_DIR$/pro-generator/src/main/resources/templates/serviceimpl.ftl" />
+        <option value="$PROJECT_DIR$/generator/src/main/java/com/wzy/service/IProEnumService.java" />
+        <option value="$PROJECT_DIR$/pro-generator/src/main/resources/templates/service.ftl" />
+        <option value="$PROJECT_DIR$/pro-generator/src/main/java/com/wzy/generator/controller/GeneratorController.java" />
+        <option value="$PROJECT_DIR$/pro-business/pro-system/pro-system-server-api/src/main/java/com/wzy/system/dto/ProEnum.java" />
+        <option value="$PROJECT_DIR$/pro-generator/src/main/resources/templates/entity.ftl" />
+        <option value="$PROJECT_DIR$/pro-generator/src/main/resources/templates/request.ftl" />
+        <option value="$PROJECT_DIR$/pro-business/pro-system/pro-system-server-api/src/main/java/com/wzy/system/IProEnumService.java" />
+        <option value="$PROJECT_DIR$/pro-business/pro-system/pro-system-server-api/src/main/java/com/wzy/system/hystrix/ProEnumServiceHystrix.java" />
+        <option value="$PROJECT_DIR$/pro-generator/src/main/resources/templates/servicehystrix.ftl" />
+        <option value="$PROJECT_DIR$/pro-business/pro-system/pro-system-server/src/main/java/com/wzy/system/mapper/enum/ProEnumMapper.java" />
+        <option value="$PROJECT_DIR$/pro-app/pro-system-app/src/main/java/com/wzy/system/vo/UserVo.java" />
+        <option value="$PROJECT_DIR$/pro-config/src/main/resources/config/system-service-app-dev.yml" />
+        <option value="$PROJECT_DIR$/pro-app/pro-system-app/src/main/resources/bootstrap.yml" />
         <option value="$PROJECT_DIR$/pro-auth/src/main/resources/bootstrap.yml" />
-        <option value="$PROJECT_DIR$/pro-business/pro-system/pro-system-server-api/src/main/java/com/wzy/system/UserService.java" />
-        <option value="$PROJECT_DIR$/pro-app/pro-system-app/src/main/java/com/wzy/system/swagger/Swagger2.java" />
+        <option value="$PROJECT_DIR$/pro-generator/src/main/java/com/wzy/generator/controller/request/TableInfo.java" />
+        <option value="$PROJECT_DIR$/pro-generator/src/main/java/com/wzy/generator/util/Freemarker.java" />
+        <option value="$PROJECT_DIR$/pro-business/pro-system/pro-system-server/src/main/java/com/wzy/system/service/EnumServiceImpl.java" />
+        <option value="$PROJECT_DIR$/pro-common/src/main/java/com/wzy/common/util/ServiceResponse.java" />
+        <option value="$PROJECT_DIR$/pro-business/pro-system/pro-system-server-api/src/main/java/com/wzy/system/request/ProEnumRequest.java" />
       </list>
     </option>
   </component>
@@ -239,21 +363,21 @@
       <expand>
         <path>
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="spring-cloud" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="pro-generator" type="9519ce18:MavenProjectsStructure$ProjectNode" />
         </path>
         <path>
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="spring-cloud" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="pro-generator" type="9519ce18:MavenProjectsStructure$ProjectNode" />
           <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
         </path>
       </expand>
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="23" />
     <option name="width" value="1440" />
-    <option name="height" value="829" />
+    <option name="height" value="837" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -261,7 +385,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -269,11 +393,160 @@
               <item name="spring-cloud" type="b2602c69:ProjectViewProjectNode" />
               <item name="spring-cloud-project" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="spring-cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spring-cloud-project" type="462c0819:PsiDirectoryNode" />
+              <item name="pro-business" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spring-cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spring-cloud-project" type="462c0819:PsiDirectoryNode" />
+              <item name="pro-business" type="462c0819:PsiDirectoryNode" />
+              <item name="pro-system" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spring-cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spring-cloud-project" type="462c0819:PsiDirectoryNode" />
+              <item name="pro-business" type="462c0819:PsiDirectoryNode" />
+              <item name="pro-system" type="462c0819:PsiDirectoryNode" />
+              <item name="pro-system-server" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spring-cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spring-cloud-project" type="462c0819:PsiDirectoryNode" />
+              <item name="pro-business" type="462c0819:PsiDirectoryNode" />
+              <item name="pro-system" type="462c0819:PsiDirectoryNode" />
+              <item name="pro-system-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spring-cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spring-cloud-project" type="462c0819:PsiDirectoryNode" />
+              <item name="pro-business" type="462c0819:PsiDirectoryNode" />
+              <item name="pro-system" type="462c0819:PsiDirectoryNode" />
+              <item name="pro-system-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spring-cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spring-cloud-project" type="462c0819:PsiDirectoryNode" />
+              <item name="pro-business" type="462c0819:PsiDirectoryNode" />
+              <item name="pro-system" type="462c0819:PsiDirectoryNode" />
+              <item name="pro-system-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spring-cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spring-cloud-project" type="462c0819:PsiDirectoryNode" />
+              <item name="pro-business" type="462c0819:PsiDirectoryNode" />
+              <item name="pro-system" type="462c0819:PsiDirectoryNode" />
+              <item name="pro-system-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="system" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spring-cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spring-cloud-project" type="462c0819:PsiDirectoryNode" />
+              <item name="pro-business" type="462c0819:PsiDirectoryNode" />
+              <item name="pro-system" type="462c0819:PsiDirectoryNode" />
+              <item name="pro-system-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="system" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spring-cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spring-cloud-project" type="462c0819:PsiDirectoryNode" />
+              <item name="pro-business" type="462c0819:PsiDirectoryNode" />
+              <item name="pro-system" type="462c0819:PsiDirectoryNode" />
+              <item name="pro-system-server-api" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spring-cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spring-cloud-project" type="462c0819:PsiDirectoryNode" />
+              <item name="pro-business" type="462c0819:PsiDirectoryNode" />
+              <item name="pro-system" type="462c0819:PsiDirectoryNode" />
+              <item name="pro-system-server-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spring-cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spring-cloud-project" type="462c0819:PsiDirectoryNode" />
+              <item name="pro-business" type="462c0819:PsiDirectoryNode" />
+              <item name="pro-system" type="462c0819:PsiDirectoryNode" />
+              <item name="pro-system-server-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spring-cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spring-cloud-project" type="462c0819:PsiDirectoryNode" />
+              <item name="pro-business" type="462c0819:PsiDirectoryNode" />
+              <item name="pro-system" type="462c0819:PsiDirectoryNode" />
+              <item name="pro-system-server-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spring-cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spring-cloud-project" type="462c0819:PsiDirectoryNode" />
+              <item name="pro-business" type="462c0819:PsiDirectoryNode" />
+              <item name="pro-system" type="462c0819:PsiDirectoryNode" />
+              <item name="pro-system-server-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="system" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spring-cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spring-cloud-project" type="462c0819:PsiDirectoryNode" />
+              <item name="pro-business" type="462c0819:PsiDirectoryNode" />
+              <item name="pro-system" type="462c0819:PsiDirectoryNode" />
+              <item name="pro-system-server-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="system" type="462c0819:PsiDirectoryNode" />
+              <item name="dto" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spring-cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spring-cloud-project" type="462c0819:PsiDirectoryNode" />
+              <item name="pro-business" type="462c0819:PsiDirectoryNode" />
+              <item name="pro-system" type="462c0819:PsiDirectoryNode" />
+              <item name="pro-system-server-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="system" type="462c0819:PsiDirectoryNode" />
+              <item name="hystrix" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spring-cloud" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spring-cloud-project" type="462c0819:PsiDirectoryNode" />
+              <item name="pro-business" type="462c0819:PsiDirectoryNode" />
+              <item name="pro-system" type="462c0819:PsiDirectoryNode" />
+              <item name="pro-system-server-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="system" type="462c0819:PsiDirectoryNode" />
+              <item name="request" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -284,13 +557,20 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1581181674548" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1583561460328" />
     <property name="go.gopath.indexing.explicitly.defined" value="true" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/pro-business/pro-system/pro-system-server/src/main/resources/mapper.proenum" />
+      <recent name="$PROJECT_DIR$/pro-business/pro-system/pro-system-server/src/main/java/com/wzy/system" />
+      <recent name="$PROJECT_DIR$/pro-business/pro-system/pro-system-server/src/main/java/com/wzy/system/mapper/enum" />
+      <recent name="$PROJECT_DIR$/pro-business/pro-system/pro-system-server/src/main/java/com/wzy/system/mapper/user" />
+      <recent name="$PROJECT_DIR$/pro-business/pro-system/pro-system-server-api/src/main/java/com/wzy/system/hystrix" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/pro-app" />
@@ -308,7 +588,33 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.ProStartUsers">
+  <component name="RunManager" selected="Application.MyBaitsPlus">
+    <configuration name="GeneratorService" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.wzy.generator.service.GeneratorService" />
+      <module name="pro-generator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.wzy.generator.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MyBaitsPlus" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.wzy.generator.util.MyBaitsPlus" />
+      <module name="pro-generator" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.wzy.generator.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="AdminApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="pro-admin" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.admin.ui.AdminApplication" />
@@ -443,13 +749,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProStartZuul" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="pro-zuul" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.wzy.zuul.ProStartZuul" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="SystemAppServiceStart" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="pro-system-app" />
       <extension name="coverage">
@@ -495,7 +794,6 @@
       <item itemvalue="Spring Boot.ProStartGenerator" />
       <item itemvalue="Spring Boot.ProStartRedis" />
       <item itemvalue="Spring Boot.ProStartAuth" />
-      <item itemvalue="Spring Boot.ProStartZuul" />
       <item itemvalue="Spring Boot.ProConfigStart" />
       <item itemvalue="Spring Boot.AdminApplication" />
       <item itemvalue="Spring Boot.ProEurekaStart" />
@@ -503,7 +801,15 @@
       <item itemvalue="Spring Boot.GateWayServiceStart" />
       <item itemvalue="Spring Boot.ProStartUsers" />
       <item itemvalue="Spring Boot.SystemAppServiceStart" />
+      <item itemvalue="Application.GeneratorService" />
+      <item itemvalue="Application.MyBaitsPlus" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.MyBaitsPlus" />
+        <item itemvalue="Application.GeneratorService" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -521,7 +827,16 @@
       <workItem from="1580993453732" duration="1788000" />
       <workItem from="1581026515178" duration="1756000" />
       <workItem from="1581028305328" duration="8179000" />
-      <workItem from="1581178378656" duration="3077000" />
+      <workItem from="1581178378656" duration="12046000" />
+      <workItem from="1581425864462" duration="3628000" />
+      <workItem from="1581429678648" duration="236000" />
+      <workItem from="1581429944367" duration="2563000" />
+      <workItem from="1581432588849" duration="8354000" />
+      <workItem from="1581514026940" duration="449000" />
+      <workItem from="1581514482118" duration="7629000" />
+      <workItem from="1582646054824" duration="4056000" />
+      <workItem from="1582813130707" duration="893000" />
+      <workItem from="1583159772897" duration="43900000" />
     </task>
     <task id="LOCAL-00001" summary="更新目录">
       <created>1578933674230</created>
@@ -530,16 +845,33 @@
       <option name="project" value="LOCAL" />
       <updated>1578933674230</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="命名修改">
+      <created>1581254110429</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1581254110429</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17903000" />
+    <option name="totallyTimeSpent" value="98580000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="829" extended-state="0" />
+    <frame x="0" y="23" width="1440" height="834" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2553648" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24678111" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -548,27 +880,28 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32971507" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.34735414" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.5183175" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32928476" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.86981404" visible="true" weight="0.0" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4985694" weight="0.60107815" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32884097" />
       <window_info anchor="bottom" id="Spring" order="7" />
-      <window_info anchor="bottom" id="GraphQL" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="GraphQL" order="8" weight="0.32884097" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.45956874" />
       <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.32880434" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50143063" side_tool="true" weight="0.43607" />
+      <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.48783976" weight="0.38761777" />
       <window_info anchor="bottom" id="Java Enterprise" order="13" />
       <window_info anchor="bottom" id="Database Changes" order="14" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="15" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Thumbnails" order="16" weight="0.32928476" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="right" id="Maven Projects" order="5" visible="true" weight="0.1595136" />
+      <window_info anchor="right" id="Maven Projects" order="5" visible="true" weight="0.0" />
       <window_info anchor="right" id="SciView" order="6" weight="0.3297568" />
       <window_info anchor="right" id="Database" order="7" weight="0.3297568" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
@@ -584,275 +917,323 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="更新目录" />
-    <option name="LAST_COMMIT_MESSAGE" value="更新目录" />
+    <MESSAGE value="命名修改" />
+    <option name="LAST_COMMIT_MESSAGE" value="命名修改" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pro-business/pro-system/pro-system-server-api/src/main/java/com/wzy/user/hystrix/UserServiceHystrix.java" />
-    <entry file="file://$MAVEN_REPOSITORY$/com/yunding/yd-service-app-api/1.0-SNAPSHOT/yd-service-app-api-1.0-SNAPSHOT.pom">
+    <entry file="file://$PROJECT_DIR$/generator/src/main/java/com/wzy/dto/ProEnum.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/generator/src/main/java/com/wzy/mapper/ProEnumMapper.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/generator/src/main/java/com/wzy/request/ProEnumRequest.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/generator/src/main/java/com/wzy/service/hystrix/ProEnumServiceHystrix.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-41" />
+        <state relative-caret-position="-500">
+          <caret line="28" column="14" lean-forward="true" selection-start-line="28" selection-start-column="14" selection-end-line="28" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pro-business/pro-system/pro-system-app/src/main/java/com/wzy/user/restfull/controller/UserController.java" />
-    <entry file="file://$PROJECT_DIR$/pro-common/pro-common-mapper/src/main/java/com/wzy/mapper/user/ProUserMapper.java">
+    <entry file="file://$PROJECT_DIR$/generator/src/main/java/com/wzy/service/IProEnumService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="38" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-generator/src/main/resources/templates/mapperxml.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-generator/src/main/resources/templates/service.ftl">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
+          <caret line="13" column="117" selection-start-line="13" selection-start-column="117" selection-end-line="13" selection-end-column="124" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-generator/src/main/resources/templates/serviceimpl.ftl">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-generator/src/main/resources/templates/mapper.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-generator/src/main/resources/templates/entity.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-generator/src/main/resources/templates/request.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="25" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-business/pro-system/pro-system-server-api/src/main/java/com/wzy/system/dto/ProEnum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="14" column="6" lean-forward="true" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/generator/src/main/java/com/wzy/system/request/ProEnumRequest.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-generator/src/main/resources/templates/servicehystrix.ftl">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="71" selection-start-line="71" selection-end-line="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/generator/src/main/java/com/wzy/system/hystrix/ProEnumServiceHystrix.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-97">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#540#541#0" expanded="true" />
+            <element signature="e#588#589#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-business/pro-system/pro-system-server/src/main/java/com/wzy/system/mapper/enum/ProEnumMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="29" selection-start-column="29" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-business/pro-system/pro-system-server/src/main/java/com/wzy/system/mapper/proenum/ProEnumMapper.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-business/pro-system/pro-system-server/src/main/resources/mapper.proenum/ProEnumMapper.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-business/pro-system/pro-system-server/src/main/java/com/wzy/system/mapper/proenum/ProEnumMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="1" lean-forward="true" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-business/pro-system/pro-system-server/src/main/java/com/wzy/system/mapper/user/ProRoleMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-business/pro-system/pro-system-server/src/main/java/com/wzy/system/mapper/user/ProUserMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
           <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pro-common/pro-common-pojo/pom.xml">
+    <entry file="file://$PROJECT_DIR$/pro-business/pro-system/pro-system-server/src/main/java/com/wzy/system/mapper/user/ProUserRoleMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="13" column="17" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/generator/src/main/java/com/wzy/system/mapper/proenum/ProEnumMapper.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/pro-common/pro-common-mapper/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="61" selection-start-line="61" selection-end-line="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-generator/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-business/pro-weixin/pro-weixin-server-api/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-business/pro-weixin/pro-weixin-server/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="29" column="21" lean-forward="true" selection-start-line="29" selection-start-column="21" selection-end-line="29" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-business/pro-system/pro-system-server/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="47" column="36" selection-start-line="47" selection-start-column="36" selection-end-line="47" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-business/pro-system/pro-system-server-api/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-90">
-          <caret line="16" column="32" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-generator/src/main/java/com/wzy/generator/GeneratorServiceStart.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-business/pro-system/pro-system-app/src/main/java/com/wzy/user/restfull/SystemAppServiceStart.java" />
-    <entry file="file://$PROJECT_DIR$/pro-business/pro-system/pro-system-server/src/main/java/com/wzy/user/SystemServiceStart.java" />
-    <entry file="file://$PROJECT_DIR$/pro-config/src/main/java/com/wzy/config/ConfigServiceStart.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-middleware/pro-redis/src/main/java/com/wzy/redis/RedisServiceStart.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-business/pro-system/pro-system-app/src/main/java/com/wzy/user/restfull/configuration/ResourceServerConfigurer.java" />
-    <entry file="file://$PROJECT_DIR$/pro-business/pro-system/pro-system-server/src/main/java/com/wzy/user/configuration/ResourceServerConfigurer.java" />
-    <entry file="file://$PROJECT_DIR$/pro-business/pro-system/pro-system-server/src/main/java/com/wzy/user/service/UserServiceImpl.java" />
-    <entry file="file://$PROJECT_DIR$/pro-business/pro-system/pro-system-server/src/main/java/com/wzy/system/swagger/Swagger2.java">
+    <entry file="file://$PROJECT_DIR$/pro-business/pro-system/pro-system-server-api/src/main/java/com/wzy/system/request/User.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
-          <caret line="13" column="9" lean-forward="true" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pro-business/pro-system/pro-system-server/src/main/java/com/wzy/system/SystemServiceStart.java">
+    <entry file="file://$PROJECT_DIR$/pro-business/pro-system/pro-system-server-api/src/main/java/com/wzy/system/UserService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="12" column="15" lean-forward="true" selection-start-line="12" selection-start-column="15" selection-end-line="12" selection-end-column="15" />
+        <state relative-caret-position="195">
+          <caret line="13" column="22" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pro-business/pro-system/pro-system-server-api/src/main/java/com/wzy/system/hystrix/UserServiceHystrix.java">
+    <entry file="file://$PROJECT_DIR$/pro-business/pro-system/pro-system-server-api/src/main/java/com/wzy/system/IProEnumService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        <state relative-caret-position="780">
+          <caret line="52" column="92" lean-forward="true" selection-start-line="52" selection-start-column="92" selection-end-line="52" selection-end-column="92" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pro-auth/src/main/java/com/wzy/controller/LoginController.java">
+    <entry file="file://$PROJECT_DIR$/pro-app/pro-system-app/src/main/java/com/wzy/system/vo/UserVo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-auth/src/main/java/com/wzy/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-config/src/main/resources/config/system-service-dev.yml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="31" selection-start-line="31" selection-end-line="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-app/pro-system-app/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="38" lean-forward="true" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-app/pro-system-app/src/main/resources/bootstrap.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        <state>
+          <caret column="26" selection-start-column="26" selection-end-column="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pro-config/src/main/resources/config/system-service-app-dev.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="26" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-config/src/main/resources/config/gateway-service-dev.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1290">
-          <caret line="86" column="16" lean-forward="true" selection-start-line="86" selection-start-column="16" selection-end-line="86" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-auth/src/main/java/com/wzy/AuthServiceStart.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-business/pro-system/pro-system-server/src/main/resources/bootstrap.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-business/pro-system/pro-system-server/src/main/java/com/wzy/system/configuration/ResourceServerConfigurer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="149">
+          <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pro-auth/src/main/resources/bootstrap.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+          <caret line="12" column="41" selection-start-line="12" selection-start-column="41" selection-end-line="12" selection-end-column="41" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pro-auth/src/main/java/com/wzy/configuration/SecurityConfigurerAdapter.java">
+    <entry file="file://$PROJECT_DIR$/pro-app/pro-system-app/src/main/resources/bootstrap.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-283">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        <state relative-caret-position="195">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pro-auth/src/main/java/com/wzy/configuration/ProcessPrincipalHelper.java">
+    <entry file="file://$PROJECT_DIR$/pro-generator/src/main/java/com/wzy/generator/controller/request/TableInfo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        <state relative-caret-position="225">
+          <caret line="15" column="21" lean-forward="true" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pro-auth/src/main/java/com/wzy/configuration/PassWord.java">
+    <entry file="file://$PROJECT_DIR$/pro-generator/src/main/java/com/wzy/generator/util/entity/GenDto.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        <state relative-caret-position="165">
+          <caret line="11" column="14" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pro-auth/src/main/java/com/wzy/configuration/JwtTokenConfig.java">
+    <entry file="file://$PROJECT_DIR$/generator/src/main/java/com/wzy/system/hystrix/ProUserServiceHystrix.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-auth/src/main/java/com/wzy/configuration/AuthorizationServerConifg.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-783">
-          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-auth/src/main/java/com/wzy/configuration/AllowedMethodConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-auth/src/main/java/com/wzy/configuration/AdditonalUserAuthenticationConverter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-auth/src/main/java/com/wzy/configuration/AdditionalJwtAccessTokenConverter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-auth/src/main/java/com/wzy/configuration/exception/ProOAuth2Exception.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-business/pro-system/pro-system-server-api/src/main/java/com/wzy/system/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="18" column="13" lean-forward="true" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        <state relative-caret-position="-769">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pro-auth/src/main/java/com/wzy/service/OAuth2UserService.java">
+    <entry file="file://$PROJECT_DIR$/generator/src/main/java/com/wzy/system/IProUserService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="11" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="11" />
+        <state relative-caret-position="-496" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-generator/src/main/java/com/wzy/generator/util/Freemarker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-3087">
+          <caret line="155" column="35" selection-start-line="155" selection-start-column="23" selection-end-line="155" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-generator/src/main/java/com/wzy/generator/controller/GeneratorController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="371">
+          <caret line="56" column="5" selection-start-line="56" selection-start-column="5" selection-end-line="56" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-business/pro-system/pro-system-server/src/main/java/com/wzy/system/configuration/mybitsplus/ShardingMastSlaveConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-business/pro-system/pro-system-server/src/main/java/com/wzy/system/configuration/mybitsplus/ShardingDataSourceConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-124">
+          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-business/pro-system/pro-system-server/src/main/java/com/wzy/system/configuration/mybitsplus/MybatisPlusConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-business/pro-system/pro-system-server/src/main/resources/bootstrap.yml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-app/pro-system-app/src/main/java/com/wzy/system/controller/user/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="780">
+          <caret line="52" column="24" lean-forward="true" selection-start-line="52" selection-start-column="24" selection-end-line="52" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-app/pro-system-app/src/main/java/com/wzy/system/configuration/oauth/ResourceServerConfigurer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-app/pro-system-app/src/main/java/com/wzy/system/configuration/swagger/Swagger2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-common/src/main/java/com/wzy/common/method/ProParameter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-business/pro-system/pro-system-server/src/main/java/com/wzy/system/SystemServiceStart.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -861,58 +1242,56 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pro-business/pro-system/pro-system-server/src/main/java/com/wzy/system/service/UserServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="628">
-          <caret line="50" column="50" selection-start-line="50" selection-start-column="50" selection-end-line="50" selection-end-column="50" />
+        <state relative-caret-position="1470">
+          <caret line="98" column="26" lean-forward="true" selection-start-line="98" selection-start-column="26" selection-end-line="98" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pro-business/pro-system/pro-system-server-api/src/main/java/com/wzy/system/parameter/User.java">
+    <entry file="file://$PROJECT_DIR$/pro-business/pro-system/pro-system-server/src/main/java/com/wzy/system/service/EnumServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pro-app/pro-system-app/src/main/java/com/wzy/system/configuration/ResourceServerConfigurer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        <state relative-caret-position="285">
+          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pro-app/pro-system-app/src/main/java/com/wzy/system/controller/UserController.java">
+    <entry file="file://$PROJECT_DIR$/pro-common/src/main/java/com/wzy/common/util/ServiceResponse.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="16" column="14" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
+        <state relative-caret-position="220">
+          <caret line="30" column="53" selection-start-line="30" selection-start-column="34" selection-end-line="30" selection-end-column="53" />
+          <folding>
+            <element signature="e#3054#3055#0" expanded="true" />
+            <element signature="e#3089#3090#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pro-business/pro-system/pro-system-server-api/src/main/java/com/wzy/system/hystrix/ProEnumServiceHystrix.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="34" column="37" selection-start-line="34" selection-start-column="37" selection-end-line="34" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pro-app/pro-system-app/src/main/java/com/wzy/system/swagger/Swagger2.java">
+    <entry file="file://$PROJECT_DIR$/pro-business/pro-system/pro-system-server-api/src/main/java/com/wzy/system/hystrix/UserServiceHystrix.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="231">
-          <caret line="24" column="20" lean-forward="true" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="150">
+          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pro-app/pro-system-app/src/main/java/com/wzy/system/SystemAppServiceStart.java">
+    <entry file="file://$PROJECT_DIR$/pro-business/pro-system/pro-system-server-api/src/main/java/com/wzy/system/request/ProEnumRequest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="23" column="29" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="74">
+          <caret line="5" column="25" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
         </state>
       </provider>
     </entry>

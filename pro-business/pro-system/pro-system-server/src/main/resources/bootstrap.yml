@@ -6,7 +6,7 @@ spring:
   cloud:
     config:
       profile: ${spring.profiles.active}
-      name: eureka-middleware,system-service,redis-nosql,rabbitmq-middleware,zipkin-middleware,admin-middleware,mysql-usersqldata,oauth2-res
+      name: eureka-middleware,system-service,rabbitmq-middleware,zipkin-middleware,admin-middleware,oauth2-res
       discovery:
         enabled: false
       override-none: true

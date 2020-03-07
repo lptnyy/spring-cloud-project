@@ -1,10 +1,10 @@
 package com.wzy.configuration;
 
-import com.wzy.pojo.sso.VaUser;
-
 import java.lang.reflect.InvocationTargetException;
 import java.util.HashMap;
 import java.util.Map;
+
+import com.wzy.common.oauth.VaUser;
 import org.apache.commons.beanutils.BeanUtils;
 public class ProcessPrincipalHelper {
 

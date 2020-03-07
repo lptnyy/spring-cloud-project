@@ -1,9 +1,9 @@
 package com.wzy.system.hystrix;
 import com.wzy.common.method.ProParameter;
 import com.wzy.common.util.ServiceResponse;
-import com.wzy.pojo.user.ProUser;
 import com.wzy.system.UserService;
-import com.wzy.system.parameter.User;
+import com.wzy.system.dto.ProUser;
+import com.wzy.system.request.User;
 import org.springframework.stereotype.Component;
 import java.util.List;
 
@@ -26,7 +26,22 @@ public class UserServiceHystrix implements UserService {
     }
 
     @Override
-    public ServiceResponse<List<ProUser>> findIdsList(ProParameter<Integer> proParameter) {
+    public ServiceResponse<List<ProUser>> findIdsList(ProParameter<User> proParameter) {
+        return ServiceResponse.getFAIL();
+    }
+
+    @Override
+    public ServiceResponse<Integer> update(ProParameter<User> proParameter) {
+        return ServiceResponse.getFAIL();
+    }
+
+    @Override
+    public ServiceResponse<Integer> save(ProParameter<User> proParameter) {
+        return ServiceResponse.getFAIL();
+    }
+
+    @Override
+    public ServiceResponse<Integer> delete(ProParameter<User> proParameter) {
         return ServiceResponse.getFAIL();
     }
 }

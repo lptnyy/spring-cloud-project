@@ -9,4 +9,5 @@ spring:
         enabled: false
       override-none: true
       uri: http://${ZUUL-SERVICE}:8101/config
-
+  main:
+    allow-bean-definition-overriding: true

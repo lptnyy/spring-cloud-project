@@ -9,8 +9,6 @@
         <module name="pro-admin" />
         <module name="pro-auth" />
         <module name="pro-common" />
-        <module name="pro-common-mapper" />
-        <module name="pro-common-pojo" />
         <module name="pro-config" />
         <module name="pro-eureka" />
         <module name="pro-gateway" />
@@ -23,11 +21,13 @@
         <module name="pro-weixin-server" />
         <module name="pro-weixin-server-api" />
         <module name="pro-zipkin" />
-        <module name="pro-zuul" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="pro-common-mapper" target="1.8" />
+      <module name="pro-common-pojo" target="1.8" />
       <module name="pro-tasks" target="1.8" />
+      <module name="pro-zuul" target="1.8" />
       <module name="tx-lcn" target="1.8" />
       <module name="txlcn-common" target="1.8" />
       <module name="txlcn-logger" target="1.8" />

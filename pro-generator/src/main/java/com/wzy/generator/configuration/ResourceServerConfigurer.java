@@ -11,6 +11,7 @@ public class ResourceServerConfigurer extends ResourceServerConfigurerAdapter {
 
     @Override
     public void configure(HttpSecurity http) throws Exception {
+
         //将web登录和oauth登录的manager共享，不然只能有一方生效
         http.authorizeRequests().antMatchers("/getUser","/instances","/actuator/**").permitAll()
                 .anyRequest().authenticated()

@@ -8,8 +8,7 @@
     <file url="file://$PROJECT_DIR$/pro-business/pro-weixin/pro-weixin-server" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/pro-config" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/pro-eureka" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/pro-gateway/pro-gateway" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/pro-gateway/pro-zuul" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-gateway" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/pro-generator" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/pro-middleware/pro-redis" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/pro-monitor/pro-admin" charset="UTF-8" />

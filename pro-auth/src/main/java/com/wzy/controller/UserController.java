@@ -1,7 +1,7 @@
 package com.wzy.controller;
 
 import com.alibaba.fastjson.JSON;
-import com.wzy.pojo.sso.VaUser;
+import com.wzy.common.oauth.VaUser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerEndpointsConfigurer;
