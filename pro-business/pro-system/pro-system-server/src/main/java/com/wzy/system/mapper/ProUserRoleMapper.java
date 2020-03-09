@@ -1,4 +1,4 @@
-package com.wzy.system.mapper.user;
+package com.wzy.system.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.wzy.system.dto.ProUserRole;

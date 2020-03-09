@@ -1,8 +1,9 @@
 package ${genpkg};
 import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.experimental.Accessors;
 import java.util.List;
 import java.lang.Integer;
-import com.wzy.common.page.RequestPage;
 <#list importPkg as pkg>
 import ${pkg};
 </#list>
@@ -16,7 +17,9 @@ import ${pkg};
  * @since ${generatorDate}
  */
 @Data
-public class ${className}Request extends RequestPage {
+@EqualsAndHashCode(callSuper = false)
+@Accessors(chain = true)
+public class ${className}Vo {
 
 <#list fields as field>
    /**

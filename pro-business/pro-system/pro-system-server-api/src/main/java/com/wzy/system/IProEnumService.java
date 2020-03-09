@@ -58,7 +58,7 @@ public interface IProEnumService {
      * @return
      */
     @RequestMapping(path = "/ProEnum/save", method = RequestMethod.POST)
-    ServiceResponse<Integer> save(@RequestBody ProParameter<ProEnumRequest> proParameter);
+    ServiceResponse<ProEnum> save(@RequestBody ProParameter<ProEnumRequest> proParameter);
 
     /**
      * 删除数据

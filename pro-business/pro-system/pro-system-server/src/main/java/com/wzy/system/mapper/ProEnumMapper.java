@@ -1,4 +1,4 @@
-package com.wzy.system.mapper.proenum;
+package com.wzy.system.mapper;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.wzy.system.dto.ProEnum;
 

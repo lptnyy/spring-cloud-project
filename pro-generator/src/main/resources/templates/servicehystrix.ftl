@@ -9,7 +9,7 @@ import ${requestClassPath};
 import ${serviceClassPath};
 
 @Component
-public class ${className}ServiceHystrix implements I${className}Service{
+public class ${className}ServiceHystrix implements I${className}Service {
 
     /*
      * 获得单个信息
@@ -57,7 +57,7 @@ public class ${className}ServiceHystrix implements I${className}Service{
      * @param proParameter
      * @return
      */
-    public ServiceResponse<Integer> save(ProParameter<${className}Request> proParameter) {
+    public ServiceResponse<${className}> save(ProParameter<${className}Request> proParameter) {
         return ServiceResponse.getFAIL();
     }
 

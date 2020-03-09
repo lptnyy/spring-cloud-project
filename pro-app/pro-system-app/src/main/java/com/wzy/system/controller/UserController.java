@@ -1,4 +1,4 @@
-package com.wzy.system.controller.user;
+package com.wzy.system.controller;
 import com.wzy.common.method.ProParameter;
 import com.wzy.common.util.DateUtil;
 import com.wzy.common.util.ServiceResponse;

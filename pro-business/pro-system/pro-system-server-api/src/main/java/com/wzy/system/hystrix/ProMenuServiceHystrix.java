@@ -4,18 +4,18 @@ import com.wzy.common.util.ServiceResponse;
 import java.util.List;
 import java.lang.Integer;
 import org.springframework.stereotype.Component;
-import com.wzy.system.dto.ProEnum;
-import com.wzy.system.request.ProEnumRequest;
-import com.wzy.system.IProEnumService;
+import com.wzy.system.dto.ProMenu;
+import com.wzy.system.request.ProMenuRequest;
+import com.wzy.system.IProMenuService;
 
 @Component
-public class ProEnumServiceHystrix implements IProEnumService {
+public class ProMenuServiceHystrix implements IProMenuService {
 
     /*
      * 获得单个信息
      * @return
      */
-    public ServiceResponse<ProEnum> get(ProParameter<ProEnumRequest> proParameter) {
+    public ServiceResponse<ProMenu> get(ProParameter<ProMenuRequest> proParameter) {
         return ServiceResponse.getFAIL();
     }
 
@@ -23,7 +23,7 @@ public class ProEnumServiceHystrix implements IProEnumService {
      * 根据查询条件获取所有数据
      * @return
      */
-    public ServiceResponse<List<ProEnum>> getList(ProParameter<ProEnumRequest> proParameter) {
+    public ServiceResponse<List<ProMenu>> getList(ProParameter<ProMenuRequest> proParameter) {
         return ServiceResponse.getFAIL();
     }
 
@@ -31,7 +31,7 @@ public class ProEnumServiceHystrix implements IProEnumService {
      * 分页查询所有数据
      * @return
      */
-    public ServiceResponse<List<ProEnum>> getPageList(ProParameter<ProEnumRequest> proParameter) {
+    public ServiceResponse<List<ProMenu>> getPageList(ProParameter<ProMenuRequest> proParameter) {
         return ServiceResponse.getFAIL();
     }
 
@@ -39,7 +39,7 @@ public class ProEnumServiceHystrix implements IProEnumService {
      * ids数组In查询数据
      * @return
      */
-    public ServiceResponse<List<ProEnum>> findIdsList(ProParameter<ProEnumRequest> proParameter) {
+    public ServiceResponse<List<ProMenu>> findIdsList(ProParameter<ProMenuRequest> proParameter) {
         return ServiceResponse.getFAIL();
     }
 
@@ -48,7 +48,7 @@ public class ProEnumServiceHystrix implements IProEnumService {
      * @param proParameter
      * @return
      */
-    public ServiceResponse<Integer> update(ProParameter<ProEnumRequest> proParameter) {
+    public ServiceResponse<Integer> update(ProParameter<ProMenuRequest> proParameter) {
         return ServiceResponse.getFAIL();
     }
 
@@ -57,7 +57,7 @@ public class ProEnumServiceHystrix implements IProEnumService {
      * @param proParameter
      * @return
      */
-    public ServiceResponse<ProEnum> save(ProParameter<ProEnumRequest> proParameter) {
+    public ServiceResponse<ProMenu> save(ProParameter<ProMenuRequest> proParameter) {
         return ServiceResponse.getFAIL();
     }
 
@@ -66,7 +66,7 @@ public class ProEnumServiceHystrix implements IProEnumService {
      * @param proParameter
      * @return
      */
-    public ServiceResponse<Integer> delete(ProParameter<ProEnumRequest> proParameter) {
+    public ServiceResponse<Integer> delete(ProParameter<ProMenuRequest> proParameter) {
         return ServiceResponse.getFAIL();
     }
 
@@ -75,7 +75,7 @@ public class ProEnumServiceHystrix implements IProEnumService {
      * @param proParameter
      * @return
      */
-    public ServiceResponse<Integer> idsDelete(ProParameter<ProEnumRequest> proParameter) {
+    public ServiceResponse<Integer> idsDelete(ProParameter<ProMenuRequest> proParameter) {
         return ServiceResponse.getFAIL();
     }
 }

@@ -57,7 +57,7 @@ public interface I${className}Service {
      * @return
      */
     @RequestMapping(path = "/${className}/save", method = RequestMethod.POST)
-    ServiceResponse<Integer> save(@RequestBody ProParameter<${className}Request> proParameter);
+    ServiceResponse<${className}> save(@RequestBody ProParameter<${className}Request> proParameter);
 
     /**
      * 删除数据

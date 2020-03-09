@@ -9,37 +9,52 @@ import java.util.Date;
 
 /**
  * <p>
-    * 枚举表 
+    * 菜单表 
     * </p>
  *
  * @author 王振宇
  * @since 2020-03-07
  */
 @Data
-public class ProEnumRequest extends RequestPage {
+public class ProMenuRequest extends RequestPage {
 
    /**
-    * 枚举id
+    * 标示id
     */
-    private Integer enumId;
+    private Integer menuId;
 
    /**
-    * key
+    * 名称
     */
-    private String keystr;
+    private String name;
 
    /**
-    * value
+    * 访问地址
     */
-    private String valuestr;
+    private String url;
 
    /**
-    * type
+    * 图标
+    */
+    private String icon;
+
+   /**
+    * 物理地址
+    */
+    private String path;
+
+   /**
+    * 父级id
+    */
+    private Integer parentId;
+
+   /**
+    * 类型
     */
     private String type;
 
    /**
-    * create_time
+    * 创建事件
     */
     private String createTime;
 

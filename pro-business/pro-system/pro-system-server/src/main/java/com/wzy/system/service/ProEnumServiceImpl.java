@@ -4,23 +4,22 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.wzy.common.method.ProParameter;
 import com.wzy.common.util.ServiceResponse;
-import com.wzy.system.IProEnumService;
-import com.wzy.system.dto.ProEnum;
-import com.wzy.system.mapper.proenum.ProEnumMapper;
-import com.wzy.system.request.ProEnumRequest;
 import io.swagger.annotations.Api;
-import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.web.bind.annotation.RestController;
 import javax.annotation.Resource;
 import java.util.List;
+import com.wzy.system.dto.ProEnum;
+import com.wzy.system.request.ProEnumRequest;
+import com.wzy.system.IProEnumService;
+import com.wzy.system.mapper.ProEnumMapper;
 
 @RestController
-@Api(value = "枚举操作接口")
-public class EnumServiceImpl implements IProEnumService {
+@Api(value = "枚举表 ")
+public class ProEnumServiceImpl implements IProEnumService {
 
     @Resource
-    ProEnumMapper proEnumMapper;
+    ProEnumMapper mapper;
 
     @Override
     public ServiceResponse<ProEnum> get(ProParameter<ProEnumRequest> proParameter) {
@@ -28,10 +27,7 @@ public class EnumServiceImpl implements IProEnumService {
                 .run((serviceResponse) -> {
                     LambdaQueryWrapper<ProEnum> lambdaQueryWrapper = new LambdaQueryWrapper<>();
                     ProEnumRequest request = proParameter.getObj();
-                    if (StringUtils.isEmpty(request.getKeystr())){
-                        lambdaQueryWrapper.eq(ProEnum::getKeystr, request.getKeystr());
-                    }
-                    return proEnumMapper.selectOne(lambdaQueryWrapper);
+                    return mapper.selectOne(lambdaQueryWrapper);
                 }).exec();
     }
 
@@ -41,10 +37,7 @@ public class EnumServiceImpl implements IProEnumService {
                 .run((serviceResponse) -> {
                     LambdaQueryWrapper<ProEnum> lambdaQueryWrapper = new LambdaQueryWrapper<>();
                     ProEnumRequest request = proParameter.getObj();
-                    if (StringUtils.isEmpty(request.getKeystr())){
-                        lambdaQueryWrapper.eq(ProEnum::getKeystr, request.getKeystr());
-                    }
-                    return proEnumMapper.selectList(lambdaQueryWrapper);
+                    return mapper.selectList(lambdaQueryWrapper);
                 }).exec();
     }
 
@@ -54,11 +47,8 @@ public class EnumServiceImpl implements IProEnumService {
                 .run((serviceResponse -> {
                     LambdaQueryWrapper<ProEnum> lambdaQueryWrapper = new LambdaQueryWrapper<>();
                     ProEnumRequest request = proParameter.getObj();
-                    if (StringUtils.isEmpty(request.getKeystr())){
-                        lambdaQueryWrapper.eq(ProEnum::getKeystr, request.getKeystr());
-                    }
                     Page<ProEnum> page = new Page<>(proParameter.getRequestPage().getPageNum(),proParameter.getRequestPage().getPageSize());
-                    IPage<ProEnum> pageResult = proEnumMapper.selectPage(page, lambdaQueryWrapper);
+                    IPage<ProEnum> pageResult = mapper.selectPage(page, lambdaQueryWrapper);
                     serviceResponse.setPageNo(proParameter.getRequestPage().getPageNum())
                             .setPageSize(proParameter.getRequestPage().getPageSize())
                             .setCount(pageResult.getTotal())
@@ -72,8 +62,7 @@ public class EnumServiceImpl implements IProEnumService {
         return new ServiceResponse<List<ProEnum>>()
                 .run(serviceResponse -> {
                     LambdaQueryWrapper<ProEnum> queryWrapper = new LambdaQueryWrapper<>();
-                    queryWrapper.in(ProEnum::getEnumId, proParameter.getObj().getIds());
-                    return proEnumMapper.selectList(queryWrapper);
+                    return mapper.selectList(queryWrapper);
                 }).exec();
     }
 
@@ -81,21 +70,20 @@ public class EnumServiceImpl implements IProEnumService {
     public ServiceResponse<Integer> update(ProParameter<ProEnumRequest> proParameter) {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
-                    ProEnum proEnum = new ProEnum();
-                    BeanUtils.copyProperties(proParameter.getObj(),proEnum);
-                    return proEnumMapper.updateById(proEnum);
+                    ProEnum bean = new ProEnum();
+                    BeanUtils.copyProperties(proParameter.getObj(),bean);
+                    return mapper.updateById(bean);
                 }).exec();
     }
 
     @Override
-    public ServiceResponse<Integer> save(ProParameter<ProEnumRequest> proParameter) {
-        return new ServiceResponse<Integer>()
+    public ServiceResponse<ProEnum> save(ProParameter<ProEnumRequest> proParameter) {
+        return new ServiceResponse<ProEnum>()
                 .run(serviceResponse -> {
-                    ProEnum proEnum = new ProEnum();
-                    BeanUtils.copyProperties(proParameter.getObj(),proEnum);
-                    int resultNum = proEnumMapper.insert(proEnum);
-                    serviceResponse.setInsertLastId(proEnum.getEnumId());
-                    return resultNum;
+                    ProEnum bean = new ProEnum();
+                    BeanUtils.copyProperties(proParameter.getObj(),bean);
+                    mapper.insert(bean);
+                    return bean;
                 }).exec();
     }
 
@@ -103,9 +91,9 @@ public class EnumServiceImpl implements IProEnumService {
     public ServiceResponse<Integer> delete(ProParameter<ProEnumRequest> proParameter) {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
-                    ProEnum proEnum = new ProEnum();
-                    BeanUtils.copyProperties(proParameter.getObj(),proEnum);
-                    return proEnumMapper.deleteById(proEnum);
+                    ProEnum bean = new ProEnum();
+                    BeanUtils.copyProperties(proParameter.getObj(),bean);
+                    return mapper.deleteById(bean);
                 }).exec();
     }
 
@@ -114,7 +102,7 @@ public class EnumServiceImpl implements IProEnumService {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
                     ProEnumRequest request = proParameter.getObj();
-                    return proEnumMapper.deleteBatchIds(request.getIds());
+                    return mapper.deleteBatchIds(request.getIds());
                 }).exec();
     }
 }

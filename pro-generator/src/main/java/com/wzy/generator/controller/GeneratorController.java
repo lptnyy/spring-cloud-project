@@ -1,5 +1,4 @@
 package com.wzy.generator.controller;
-
 import com.wzy.common.util.ServiceResponse;
 import com.wzy.generator.controller.request.TableInfo;
 import com.wzy.generator.service.GeneratorService;
@@ -9,7 +8,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.List;
@@ -53,6 +51,8 @@ public class GeneratorController {
         freemarker.request(tableInfo, generatorService.getTableList(tableInfo).get(0), generatorService.getTableInfo(tableInfo));
         freemarker.service(tableInfo, generatorService.getTableList(tableInfo).get(0), generatorService.getTableInfo(tableInfo));
         freemarker.serviceHystrix(tableInfo, generatorService.getTableList(tableInfo).get(0), generatorService.getTableInfo(tableInfo));
-        return null;
+        freemarker.serviceImpl(tableInfo, generatorService.getTableList(tableInfo).get(0), generatorService.getTableInfo(tableInfo));
+        freemarker.vo(tableInfo, generatorService.getTableList(tableInfo).get(0), generatorService.getTableInfo(tableInfo));
+        return ServiceResponse.getSUCCESS();
     }
 }

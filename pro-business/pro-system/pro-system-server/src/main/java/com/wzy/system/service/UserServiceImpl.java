@@ -7,7 +7,7 @@ import com.wzy.common.util.ServiceResponse;
 import com.wzy.redis.RedisService;
 import com.wzy.system.UserService;
 import com.wzy.system.dto.ProUser;
-import com.wzy.system.mapper.user.ProUserMapper;
+import com.wzy.system.mapper.ProUserMapper;
 import com.wzy.system.request.User;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
