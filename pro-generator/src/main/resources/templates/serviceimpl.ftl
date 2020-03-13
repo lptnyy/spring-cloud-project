@@ -15,8 +15,16 @@ import ${requestClassPath};
 import ${serviceClassPath};
 import ${mapperClassPath};
 
+/**
+ * <p>
+    * ${tableComment}
+    * </p>
+ *
+ * @author 王振宇
+ * @since ${generatorDate}
+ */
 @RestController
-@Api(value = "${tableComment}")
+@Api(value = "${className}ServiceImpl", description = "${tableComment}")
 public class ${className}ServiceImpl implements I${className}Service {
 
     @Resource
@@ -28,6 +36,18 @@ public class ${className}ServiceImpl implements I${className}Service {
                 .run((serviceResponse) -> {
                     LambdaQueryWrapper<${className}> lambdaQueryWrapper = new LambdaQueryWrapper<>();
                     ${className}Request request = proParameter.getObj();
+                    <#list fields as field>
+                    <#if field.type == 'String'>
+                    if(!StringUtils.isEmpty(request.get${field.fieldName2}())){
+                        lambdaQueryWrapper.eq(${className}::get${field.fieldName2},request.get${field.fieldName2}());
+                    }
+                    <#else >
+                    if(request.get${field.fieldName2}() != null){
+                        lambdaQueryWrapper.eq(${className}::get${field.fieldName2},request.get${field.fieldName2}());
+                    }
+                    </#if>
+                    </#list>
+                    lambdaQueryWrapper.orderByDesc(${className}::getCreateTime);
                     return mapper.selectOne(lambdaQueryWrapper);
                 }).exec();
     }
@@ -38,6 +58,18 @@ public class ${className}ServiceImpl implements I${className}Service {
                 .run((serviceResponse) -> {
                     LambdaQueryWrapper<${className}> lambdaQueryWrapper = new LambdaQueryWrapper<>();
                     ${className}Request request = proParameter.getObj();
+         <#list fields as field>
+             <#if field.type == 'String'>
+                    if(!StringUtils.isEmpty(request.get${field.fieldName2}())){
+                        lambdaQueryWrapper.eq(${className}::get${field.fieldName2},request.get${field.fieldName2}());
+                    }
+             <#else >
+                    if(request.get${field.fieldName2}() != null){
+                        lambdaQueryWrapper.eq(${className}::get${field.fieldName2},request.get${field.fieldName2}());
+                    }
+             </#if>
+         </#list>
+                    lambdaQueryWrapper.orderByDesc(${className}::getCreateTime);
                     return mapper.selectList(lambdaQueryWrapper);
                 }).exec();
     }
@@ -48,6 +80,18 @@ public class ${className}ServiceImpl implements I${className}Service {
                 .run((serviceResponse -> {
                     LambdaQueryWrapper<${className}> lambdaQueryWrapper = new LambdaQueryWrapper<>();
                     ${className}Request request = proParameter.getObj();
+             <#list fields as field>
+                 <#if field.type == 'String'>
+                    if(!StringUtils.isEmpty(request.get${field.fieldName2}())){
+                        lambdaQueryWrapper.eq(${className}::get${field.fieldName2},request.get${field.fieldName2}());
+                    }
+                 <#else >
+                    if(request.get${field.fieldName2}() != null){
+                        lambdaQueryWrapper.eq(${className}::get${field.fieldName2},request.get${field.fieldName2}());
+                    }
+                 </#if>
+             </#list>
+                    lambdaQueryWrapper.orderByDesc(${className}::getCreateTime);
                     Page<${className}> page = new Page<>(proParameter.getRequestPage().getPageNum(),proParameter.getRequestPage().getPageSize());
                     IPage<${className}> pageResult = mapper.selectPage(page, lambdaQueryWrapper);
                     serviceResponse.setPageNo(proParameter.getRequestPage().getPageNum())
@@ -63,6 +107,7 @@ public class ${className}ServiceImpl implements I${className}Service {
         return new ServiceResponse<List<${className}>>()
                 .run(serviceResponse -> {
                     LambdaQueryWrapper<${className}> queryWrapper = new LambdaQueryWrapper<>();
+                    queryWrapper.orderByDesc(${className}::getCreateTime);
                     return mapper.selectList(queryWrapper);
                 }).exec();
     }

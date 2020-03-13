@@ -2,4 +2,4 @@ spring:
   boot:
     admin:
       client:
-        url: http://localhost:8003
+        url: http://${ZUUL-SERVICE}:8101/admin

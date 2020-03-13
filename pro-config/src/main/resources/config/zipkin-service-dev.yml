@@ -6,9 +6,9 @@ spring:
 zipkin:
   collector:
     rabbitmq:
-      addresses: 192.168.0.107:5672
-      password: guest
-      username: guest
+      addresses: 106.54.138.78:5672
+      password: wangyang119
+      username: lptnyy
       queue: zipkin
   storage:
     type: mysql

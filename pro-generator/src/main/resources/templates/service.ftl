@@ -11,6 +11,14 @@ import java.lang.Integer;
 import ${dtoClassPath};
 import ${requestClassPath};
 
+/**
+ * <p>
+    * ${tableComment}
+    * </p>
+ *
+ * @author 王振宇
+ * @since ${generatorDate}
+ */
 @FeignClient(value = "${fegionService}", configuration = FeignRequestInterceptor.class,fallback = ${className}ServiceHystrix.class)
 public interface I${className}Service {
 

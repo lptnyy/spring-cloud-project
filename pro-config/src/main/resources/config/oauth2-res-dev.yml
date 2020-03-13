@@ -11,3 +11,4 @@ security:
       prefer-token-info: false
       jwt:
         key-value: wangyang119
+    not-intercept-url: /user/getUser,/instances,/actuator/**,/swagger-ui.html,/swagger**,/webjars/**,/springfox-swagger-ui/**,/swagger-resources/**,/v2/** #配置免oa验证的地址

@@ -53,6 +53,11 @@ public class ProMenuRequest extends RequestPage {
     */
     private String type;
 
+    /**
+     * 权限
+     */
+    private String jurisdiction;
+
    /**
     * 创建事件
     */

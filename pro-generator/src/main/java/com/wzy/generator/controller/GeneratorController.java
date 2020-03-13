@@ -53,6 +53,7 @@ public class GeneratorController {
         freemarker.serviceHystrix(tableInfo, generatorService.getTableList(tableInfo).get(0), generatorService.getTableInfo(tableInfo));
         freemarker.serviceImpl(tableInfo, generatorService.getTableList(tableInfo).get(0), generatorService.getTableInfo(tableInfo));
         freemarker.vo(tableInfo, generatorService.getTableList(tableInfo).get(0), generatorService.getTableInfo(tableInfo));
+        freemarker.controller(tableInfo, generatorService.getTableList(tableInfo).get(0), generatorService.getTableInfo(tableInfo));
         return ServiceResponse.getSUCCESS();
     }
 }

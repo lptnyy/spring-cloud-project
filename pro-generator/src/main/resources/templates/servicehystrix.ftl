@@ -8,6 +8,14 @@ import ${dtoClassPath};
 import ${requestClassPath};
 import ${serviceClassPath};
 
+/**
+ * <p>
+    * ${tableComment}
+    * </p>
+ *
+ * @author 王振宇
+ * @since ${generatorDate}
+ */
 @Component
 public class ${className}ServiceHystrix implements I${className}Service {
 

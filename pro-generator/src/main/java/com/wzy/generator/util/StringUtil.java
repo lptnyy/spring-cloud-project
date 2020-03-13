@@ -48,4 +48,17 @@ public class StringUtil {
         }
         return resultStr;
     }
+
+    /**
+     * 首字母大写
+     * @param name
+     * @return
+     */
+    public String getInitialsCapitalization(String name) {
+        char[] chars = name.toCharArray();
+        if (chars[0] >= 'a' && chars[0] <= 'z') {
+            chars[0] = (char)(chars[0] - 32);
+        }
+        return new String(chars);
+    }
 }

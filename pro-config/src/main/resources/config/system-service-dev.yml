@@ -29,6 +29,10 @@ management:
     web:
       exposure:
         include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS
+
 feign:
   hystrix:
     enabled: true

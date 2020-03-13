@@ -29,6 +29,7 @@ public class SecurityConfigurerAdapter extends WebSecurityConfigurerAdapter {
                 .and()
                 .authorizeRequests()
                 .antMatchers("/require",//设置取消安全验证路径
+                        "/**",
                         "/authentication/form",
                         "/oauth/authorize",
                         "/instances",
@@ -37,7 +38,14 @@ public class SecurityConfigurerAdapter extends WebSecurityConfigurerAdapter {
                         "/oauth/token",
                         "/oauth/exit",
                         "/assets/**",
-                        "/actuator/**"
+                        "/actuator/**",
+                        "/getUser",
+                        "/instances",
+                        "/swagger-ui.html",
+                        "/swagger**",
+                        "/webjars/**",
+                        "/springfox-swagger-ui/**",
+                        "/swagger-resources/**,/v2/**"
                 )
                 .permitAll()
                 .anyRequest().authenticated()

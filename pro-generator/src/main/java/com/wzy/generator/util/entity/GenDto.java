@@ -10,4 +10,5 @@ public class GenDto {
     String comment;
     String columnKey;
     String pkg;
+    String fieldName2;
 }

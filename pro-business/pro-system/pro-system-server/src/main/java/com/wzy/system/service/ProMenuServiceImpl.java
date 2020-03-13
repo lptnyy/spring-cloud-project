@@ -5,6 +5,7 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.wzy.common.method.ProParameter;
 import com.wzy.common.util.ServiceResponse;
 import io.swagger.annotations.Api;
+import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.web.bind.annotation.RestController;
 import javax.annotation.Resource;
@@ -27,6 +28,31 @@ public class ProMenuServiceImpl implements IProMenuService {
                 .run((serviceResponse) -> {
                     LambdaQueryWrapper<ProMenu> lambdaQueryWrapper = new LambdaQueryWrapper<>();
                     ProMenuRequest request = proParameter.getObj();
+                    if(request.getMenuId() != null){
+                        lambdaQueryWrapper.eq(ProMenu::getMenuId,request.getMenuId());
+                    }
+                    if(!StringUtils.isEmpty(request.getName())){
+                        lambdaQueryWrapper.eq(ProMenu::getName,request.getName());
+                    }
+                    if(!StringUtils.isEmpty(request.getUrl())){
+                        lambdaQueryWrapper.eq(ProMenu::getUrl,request.getUrl());
+                    }
+                    if(!StringUtils.isEmpty(request.getIcon())){
+                        lambdaQueryWrapper.eq(ProMenu::getIcon,request.getIcon());
+                    }
+                    if(!StringUtils.isEmpty(request.getPath())){
+                        lambdaQueryWrapper.eq(ProMenu::getPath,request.getPath());
+                    }
+                    if(request.getParentId() != null){
+                        lambdaQueryWrapper.eq(ProMenu::getParentId,request.getParentId());
+                    }
+                    if(!StringUtils.isEmpty(request.getType())){
+                        lambdaQueryWrapper.eq(ProMenu::getType,request.getType());
+                    }
+                    if(request.getCreateTime() != null){
+                        lambdaQueryWrapper.eq(ProMenu::getCreateTime,request.getCreateTime());
+                    }
+                    lambdaQueryWrapper.orderByDesc(ProMenu::getCreateTime);
                     return mapper.selectOne(lambdaQueryWrapper);
                 }).exec();
     }
@@ -37,6 +63,31 @@ public class ProMenuServiceImpl implements IProMenuService {
                 .run((serviceResponse) -> {
                     LambdaQueryWrapper<ProMenu> lambdaQueryWrapper = new LambdaQueryWrapper<>();
                     ProMenuRequest request = proParameter.getObj();
+                    if(request.getMenuId() != null){
+                        lambdaQueryWrapper.eq(ProMenu::getMenuId,request.getMenuId());
+                    }
+                    if(!StringUtils.isEmpty(request.getName())){
+                        lambdaQueryWrapper.eq(ProMenu::getName,request.getName());
+                    }
+                    if(!StringUtils.isEmpty(request.getUrl())){
+                        lambdaQueryWrapper.eq(ProMenu::getUrl,request.getUrl());
+                    }
+                    if(!StringUtils.isEmpty(request.getIcon())){
+                        lambdaQueryWrapper.eq(ProMenu::getIcon,request.getIcon());
+                    }
+                    if(!StringUtils.isEmpty(request.getPath())){
+                        lambdaQueryWrapper.eq(ProMenu::getPath,request.getPath());
+                    }
+                    if(request.getParentId() != null){
+                        lambdaQueryWrapper.eq(ProMenu::getParentId,request.getParentId());
+                    }
+                    if(!StringUtils.isEmpty(request.getType())){
+                        lambdaQueryWrapper.eq(ProMenu::getType,request.getType());
+                    }
+                    if(request.getCreateTime() != null){
+                        lambdaQueryWrapper.eq(ProMenu::getCreateTime,request.getCreateTime());
+                    }
+                    lambdaQueryWrapper.orderByDesc(ProMenu::getCreateTime);
                     return mapper.selectList(lambdaQueryWrapper);
                 }).exec();
     }
@@ -47,6 +98,31 @@ public class ProMenuServiceImpl implements IProMenuService {
                 .run((serviceResponse -> {
                     LambdaQueryWrapper<ProMenu> lambdaQueryWrapper = new LambdaQueryWrapper<>();
                     ProMenuRequest request = proParameter.getObj();
+                    if(request.getMenuId() != null){
+                        lambdaQueryWrapper.eq(ProMenu::getMenuId,request.getMenuId());
+                    }
+                    if(!StringUtils.isEmpty(request.getName())){
+                        lambdaQueryWrapper.eq(ProMenu::getName,request.getName());
+                    }
+                    if(!StringUtils.isEmpty(request.getUrl())){
+                        lambdaQueryWrapper.eq(ProMenu::getUrl,request.getUrl());
+                    }
+                    if(!StringUtils.isEmpty(request.getIcon())){
+                        lambdaQueryWrapper.eq(ProMenu::getIcon,request.getIcon());
+                    }
+                    if(!StringUtils.isEmpty(request.getPath())){
+                        lambdaQueryWrapper.eq(ProMenu::getPath,request.getPath());
+                    }
+                    if(request.getParentId() != null){
+                        lambdaQueryWrapper.eq(ProMenu::getParentId,request.getParentId());
+                    }
+                    if(!StringUtils.isEmpty(request.getType())){
+                        lambdaQueryWrapper.eq(ProMenu::getType,request.getType());
+                    }
+                    if(request.getCreateTime() != null){
+                        lambdaQueryWrapper.eq(ProMenu::getCreateTime,request.getCreateTime());
+                    }
+                    lambdaQueryWrapper.orderByDesc(ProMenu::getCreateTime);
                     Page<ProMenu> page = new Page<>(proParameter.getRequestPage().getPageNum(),proParameter.getRequestPage().getPageSize());
                     IPage<ProMenu> pageResult = mapper.selectPage(page, lambdaQueryWrapper);
                     serviceResponse.setPageNo(proParameter.getRequestPage().getPageNum())
@@ -62,7 +138,7 @@ public class ProMenuServiceImpl implements IProMenuService {
         return new ServiceResponse<List<ProMenu>>()
                 .run(serviceResponse -> {
                     LambdaQueryWrapper<ProMenu> queryWrapper = new LambdaQueryWrapper<>();
-                    queryWrapper.eq(ProMenu::getMenuId,proParameter.getObj().getIds());
+                    queryWrapper.orderByDesc(ProMenu::getCreateTime);
                     return mapper.selectList(queryWrapper);
                 }).exec();
     }

@@ -67,6 +67,12 @@ public class ProMenu implements Serializable {
     @TableField(value = "type")
     private String type;
 
+    /**
+     * 权限
+     */
+    @TableField(value = "jurisdiction")
+    private String jurisdiction;
+
    /**
     * 创建事件
     */

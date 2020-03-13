@@ -1,6 +1,10 @@
 spring:
   application:
     name: eureka-service
+  boot:
+    admin:
+      client:
+        url: http://${ADMIN-SERVICE}:8003
 server:
   port: 8001
 eureka:
@@ -9,3 +13,11 @@ eureka:
       defaultZone: http://${EUREKA-SERVICE}:8001/eureka
     fetch-registry: false
     register-with-eureka: false
+
+management:
+  server:
+    port: 10000
+  endpoints:
+    web:
+      exposure:
+        include: "*" # 暴露端点
