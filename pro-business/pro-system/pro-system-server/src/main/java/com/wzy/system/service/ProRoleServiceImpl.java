@@ -11,6 +11,8 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.web.bind.annotation.RestController;
 import javax.annotation.Resource;
 import java.util.List;
+import java.util.stream.Collectors;
+
 import com.wzy.system.dto.ProRole;
 import com.wzy.system.request.ProRoleRequest;
 import com.wzy.system.IProRoleService;
@@ -125,6 +127,22 @@ public class ProRoleServiceImpl implements IProRoleService {
                     BeanUtils.copyProperties(proParameter.getObj(),bean);
                     mapper.insert(bean);
                     return bean;
+                }).exec();
+    }
+
+    @Override
+    public ServiceResponse<List<ProRole>> batchSave(ProParameter<List<ProRoleRequest>> proParameter) {
+        return new ServiceResponse<List<ProRole>>()
+                .run(serviceResponse -> {
+                    List<ProRole> roles = proParameter.getObj()
+                            .stream()
+                            .map(proRoleRequest -> {
+                                ProRole proRole = new ProRole();
+                                BeanUtils.copyProperties(proRoleRequest, proRole);
+                                mapper.insert(proRole);
+                                return proRole;
+                            }).collect(Collectors.toList());
+                    return roles;
                 }).exec();
     }
 

@@ -90,21 +90,23 @@ public class ProRoleMenuController {
 
     @PostMapping(value = "/save")
     @ApiOperation(value = "保存")
-    public ServiceResponse<ProRoleMenuVo> save(@RequestBody ProRoleMenuRequest request){
-        return new ServiceResponse<ProRoleMenuVo>()
+    public ServiceResponse<Integer> save(@RequestBody ProRoleMenuRequest request){
+        return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
 
-                    // 获取调用服务返回结果 通过返回结果 进行业务判断 以及 手动控制 分布式事务回滚
-                    ServiceResponse<ProRoleMenu> response = proRoleMenuService.get(new ProParameter<>(request));
-
-                    // 获取调用服务状态
-                    response.copyState(serviceResponse);
+                    // 删原角色权限信息
+                    proRoleMenuService.delete(new ProParameter<>(request));
 
                     // 获取返回结果 包括数据库插入id
-                    ProRoleMenu proRoleMenu = proRoleMenuService.save(new ProParameter<>(request)).getObj();
-                    ProRoleMenuVo proRoleMenuVo = new ProRoleMenuVo();
-                    BeanUtils.copyProperties(proRoleMenu,proRoleMenuVo);
-                    return proRoleMenuVo;
+                    List<ProRoleMenuRequest> roleMenuRequests = request.getIds().stream()
+                            .map(id -> {
+                                ProRoleMenuRequest proRoleMenuRequest = new ProRoleMenuRequest();
+                                proRoleMenuRequest.setRoleId(request.getRoleId());
+                                proRoleMenuRequest.setMenuId(id);
+                                return proRoleMenuRequest;
+                            }).collect(Collectors.toList());
+
+                    return proRoleMenuService.batchSave(new ProParameter<>(roleMenuRequests)).getObj().size();
                 })
                 .exec();
     }

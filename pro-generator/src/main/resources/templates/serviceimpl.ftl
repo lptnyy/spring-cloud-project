@@ -134,6 +134,22 @@ public class ${className}ServiceImpl implements I${className}Service {
     }
 
     @Override
+    public ServiceResponse<List<${className}>> batchSave(ProParameter<List<${className}Request>> proParameter) {
+       return new ServiceResponse<List<${className}>>()
+               .run(serviceResponse -> {
+                   List<${className}> roles = proParameter.getObj()
+                       .stream()
+                       .map(${smClassName}Request -> {
+                            ${className} ${smClassName} = new ${className}();
+                            BeanUtils.copyProperties(${smClassName}Request, ${smClassName});
+                            mapper.insert(${smClassName});
+                            return ${smClassName};
+                       }).collect(Collectors.toList());
+                   return roles;
+               }).exec();
+     }
+
+    @Override
     public ServiceResponse<Integer> delete(ProParameter<${className}Request> proParameter) {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {

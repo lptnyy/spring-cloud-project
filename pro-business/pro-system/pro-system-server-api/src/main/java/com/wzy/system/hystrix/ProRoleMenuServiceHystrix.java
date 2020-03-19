@@ -14,7 +14,7 @@ import com.wzy.system.IProRoleMenuService;
     * </p>
  *
  * @author 王振宇
- * @since 2020-03-12
+ * @since 2020-03-19
  */
 @Component
 public class ProRoleMenuServiceHystrix implements IProRoleMenuService {
@@ -86,4 +86,13 @@ public class ProRoleMenuServiceHystrix implements IProRoleMenuService {
     public ServiceResponse<Integer> idsDelete(ProParameter<ProRoleMenuRequest> proParameter) {
         return ServiceResponse.getFAIL();
     }
+
+    /**
+     * 批量插入
+     * @param proParameter
+     * @return
+     */
+     public ServiceResponse<List<ProRoleMenu>> batchSave(ProParameter<List<ProRoleMenuRequest>> proParameter) {
+         return ServiceResponse.getFAIL();
+     }
 }

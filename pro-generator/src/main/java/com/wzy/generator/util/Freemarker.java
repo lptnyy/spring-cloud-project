@@ -263,6 +263,7 @@ public class Freemarker {
         dataModel.put("generatorDate", new SimpleDateFormat("yyyy-MM-dd").format(new Date()));
         dataModel.put("tableName", table.get("tableName"));
         dataModel.put("className", stringUtil.getClassName(table.get("tableName")));
+        dataModel.put("smClassName", stringUtil.getFieldName(table.get("tableName")));
         dataModel.put("fegionService", tableInfo.getFeignClientService());
         dataModel.put("genpkg", tableInfo.getServicePkg());
         dataModel.put("dtoClassPath",tableInfo.getDtoPgk()+"."+dataModel.get("className"));
@@ -306,6 +307,7 @@ public class Freemarker {
 
         dataModel.put("tableComment", table.get("tableComment"));
         dataModel.put("generatorDate", new SimpleDateFormat("yyyy-MM-dd").format(new Date()));
+        dataModel.put("smClassName", stringUtil.getFieldName(table.get("tableName")));
         dataModel.put("tableName", table.get("tableName"));
         dataModel.put("className", stringUtil.getClassName(table.get("tableName")));
         dataModel.put("fegionService", tableInfo.getFeignClientService());
@@ -351,6 +353,7 @@ public class Freemarker {
         Map dataModel = new HashMap<>();
 
         dataModel.put("tableComment", table.get("tableComment"));
+        dataModel.put("smClassName", stringUtil.getFieldName(table.get("tableName")));
         dataModel.put("generatorDate", new SimpleDateFormat("yyyy-MM-dd").format(new Date()));
         dataModel.put("tableName", table.get("tableName"));
         dataModel.put("className", stringUtil.getClassName(table.get("tableName")));

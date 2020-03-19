@@ -82,4 +82,12 @@ public interface I${className}Service {
      */
     @RequestMapping(path = "/${className}/idsDelete", method = RequestMethod.POST)
     ServiceResponse<Integer> idsDelete(@RequestBody ProParameter<${className}Request> proParameter);
+
+    /**
+     * 批量保存
+     * @param proParameter
+     * @return
+    */
+    @RequestMapping(path = "/${className}/batchSave", method = RequestMethod.POST)
+    ServiceResponse<List<${className}>> batchSave(ProParameter<List<${className}Request>> proParameter);
 }

@@ -18,7 +18,7 @@ import com.wzy.system.request.ProRoleMenuRequest;
     * </p>
  *
  * @author 王振宇
- * @since 2020-03-12
+ * @since 2020-03-19
  */
 @FeignClient(value = "system-service", configuration = FeignRequestInterceptor.class,fallback = ProRoleMenuServiceHystrix.class)
 public interface IProRoleMenuService {
@@ -83,4 +83,12 @@ public interface IProRoleMenuService {
      */
     @RequestMapping(path = "/ProRoleMenu/idsDelete", method = RequestMethod.POST)
     ServiceResponse<Integer> idsDelete(@RequestBody ProParameter<ProRoleMenuRequest> proParameter);
+
+    /**
+     * 批量保存
+     * @param proParameter
+     * @return
+    */
+    @RequestMapping(path = "/ProRoleMenu/batchSave", method = RequestMethod.POST)
+    ServiceResponse<List<ProRoleMenu>> batchSave(ProParameter<List<ProRoleMenuRequest>> proParameter);
 }

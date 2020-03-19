@@ -3,9 +3,13 @@ import com.wzy.common.method.ProParameter;
 import com.wzy.common.util.DateUtil;
 import com.wzy.common.util.ServiceResponse;
 import com.wzy.redis.RedisService;
+import com.wzy.system.IProRoleMenuService;
 import com.wzy.system.IProRoleService;
 import com.wzy.system.dto.ProRole;
+import com.wzy.system.dto.ProRoleMenu;
+import com.wzy.system.request.ProRoleMenuRequest;
 import com.wzy.system.request.ProRoleRequest;
+import com.wzy.system.vo.ProRoleMenuVo;
 import com.wzy.system.vo.ProRoleVo;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -35,6 +39,12 @@ public class ProRoleController {
     IProRoleService proRoleService;
 
     @Autowired
+    IProRoleMenuService proRoleMenuService;
+
+    @Autowired
+    IProRoleMenuService iProRoleMenuService;
+
+    @Autowired
     RedisService redisService;
 
     @PostMapping(value = "/getPageList")
@@ -47,8 +57,15 @@ public class ProRoleController {
                     ServiceResponse<List<ProRole>> response = proRoleService.getPageList(new ProParameter<>(request)
                             .setRequestPage(request));
 
+                    // 查询所有角色权限关系  如果权限很多 请改写
+                    ServiceResponse<List<ProRoleMenu>> roleMenuResponse = proRoleMenuService.getList(new ProParameter<>(new ProRoleMenuRequest()));
+
+                    // 角色权限关联
+                    List<ProRoleMenu> proRoleMenus = roleMenuResponse.getObj();
+
                     // 获取调用服务状态
                     response.copyState(serviceResponse);
+
                     // 获取返回的分页信息
                     response.copyPage(serviceResponse);
 
@@ -62,6 +79,19 @@ public class ProRoleController {
                                 BeanUtils.copyProperties(proRole,proRolevo);
                                 proRolevo.setCreateTime(DateUtil.getyyMMddHHmmss(proRole.getCreateTime()));
                                 // vo.set 格式化一些特定的字段比如时间类型 自定义多种返回类型 应对视图层的需要
+
+                                // 代替mysql 过滤数据
+                                List<ProRoleMenuVo> proRoleMenuVos = proRoleMenus.stream()
+                                        .filter(proRoleMenu -> proRoleMenu.getRoleId().equals(proRole.getRoleId()))
+                                        .map(proRoleMenu -> {
+                                            ProRoleMenuVo proRoleMenuVo = new ProRoleMenuVo();
+                                            BeanUtils.copyProperties(proRoleMenu,proRoleMenuVo);
+                                            proRoleMenuVo.setCreateTime(DateUtil.getyyMMddHHmmss(proRoleMenu.getCreateTime()));
+                                            // vo.set 格式化一些特定的字段比如时间类型 自定义多种返回类型 应对视图层的需要
+                                            return proRoleMenuVo;
+                                        }).collect(Collectors.toList());
+                                // 存放数据
+                                proRolevo.setProRoleMenuVos(proRoleMenuVos);
                                 return proRolevo;
                             })
                             .collect(Collectors.toList());

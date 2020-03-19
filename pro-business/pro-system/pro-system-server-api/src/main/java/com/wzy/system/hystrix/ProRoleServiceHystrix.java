@@ -86,4 +86,13 @@ public class ProRoleServiceHystrix implements IProRoleService {
     public ServiceResponse<Integer> idsDelete(ProParameter<ProRoleRequest> proParameter) {
         return ServiceResponse.getFAIL();
     }
+
+    /**
+     * 批量插入
+     * @param proParameter
+     * @return
+     */
+    public ServiceResponse<List<ProRole>> batchSave(ProParameter<List<ProRoleRequest>> proParameter) {
+        return ServiceResponse.getFAIL();
+    }
 }

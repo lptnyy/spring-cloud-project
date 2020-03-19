@@ -54,7 +54,7 @@ public class MenuController {
                                 ProMenuVo menuVo = new ProMenuVo();
                                 BeanUtils.copyProperties(proMenu,menuVo);
                                 menuVo.setTitle(menuVo.getName());
-                                menuVo.setExpand(true);
+                                menuVo.setExpand(false);
 
                                 // 筛选出子节点
                                 List<ProMenuVo> childs = resultList.stream()
@@ -121,6 +121,7 @@ public class MenuController {
 
                     // 封装查询参数
                     ProMenuRequest proMenuRequest = new ProMenuRequest();
+
                     proMenuRequest.setName(request.getName());
 
                     // 获取调用服务返回结果 通过返回结果 进行业务判断 以及 手动控制 分布式事务回滚

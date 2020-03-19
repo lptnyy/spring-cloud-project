@@ -83,4 +83,12 @@ public interface IProRoleService {
      */
     @RequestMapping(path = "/ProRole/idsDelete", method = RequestMethod.POST)
     ServiceResponse<Integer> idsDelete(@RequestBody ProParameter<ProRoleRequest> proParameter);
+
+    /**
+     * 批量保存
+     * @param proParameter
+     * @return
+     */
+    @RequestMapping(path = "/ProRole/batchSave", method = RequestMethod.POST)
+    ServiceResponse<List<ProRole>> batchSave(ProParameter<List<ProRoleRequest>> proParameter);
 }

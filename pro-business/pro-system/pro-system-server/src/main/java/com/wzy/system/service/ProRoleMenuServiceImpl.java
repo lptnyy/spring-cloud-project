@@ -10,6 +10,8 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.web.bind.annotation.RestController;
 import javax.annotation.Resource;
 import java.util.List;
+import java.util.stream.Collectors;
+
 import com.wzy.system.dto.ProRoleMenu;
 import com.wzy.system.request.ProRoleMenuRequest;
 import com.wzy.system.IProRoleMenuService;
@@ -21,7 +23,7 @@ import com.wzy.system.mapper.ProRoleMenuMapper;
     * </p>
  *
  * @author 王振宇
- * @since 2020-03-12
+ * @since 2020-03-19
  */
 @RestController
 @Api(value = "ProRoleMenuServiceImpl", description = "角色菜单关系表")
@@ -48,6 +50,7 @@ public class ProRoleMenuServiceImpl implements IProRoleMenuService {
                     if(request.getCreateTime() != null){
                         lambdaQueryWrapper.eq(ProRoleMenu::getCreateTime,request.getCreateTime());
                     }
+                    lambdaQueryWrapper.orderByDesc(ProRoleMenu::getCreateTime);
                     return mapper.selectOne(lambdaQueryWrapper);
                 }).exec();
     }
@@ -70,6 +73,7 @@ public class ProRoleMenuServiceImpl implements IProRoleMenuService {
                     if(request.getCreateTime() != null){
                         lambdaQueryWrapper.eq(ProRoleMenu::getCreateTime,request.getCreateTime());
                     }
+                    lambdaQueryWrapper.orderByDesc(ProRoleMenu::getCreateTime);
                     return mapper.selectList(lambdaQueryWrapper);
                 }).exec();
     }
@@ -92,6 +96,7 @@ public class ProRoleMenuServiceImpl implements IProRoleMenuService {
                     if(request.getCreateTime() != null){
                         lambdaQueryWrapper.eq(ProRoleMenu::getCreateTime,request.getCreateTime());
                     }
+                    lambdaQueryWrapper.orderByDesc(ProRoleMenu::getCreateTime);
                     Page<ProRoleMenu> page = new Page<>(proParameter.getRequestPage().getPageNum(),proParameter.getRequestPage().getPageSize());
                     IPage<ProRoleMenu> pageResult = mapper.selectPage(page, lambdaQueryWrapper);
                     serviceResponse.setPageNo(proParameter.getRequestPage().getPageNum())
@@ -107,6 +112,7 @@ public class ProRoleMenuServiceImpl implements IProRoleMenuService {
         return new ServiceResponse<List<ProRoleMenu>>()
                 .run(serviceResponse -> {
                     LambdaQueryWrapper<ProRoleMenu> queryWrapper = new LambdaQueryWrapper<>();
+                    queryWrapper.orderByDesc(ProRoleMenu::getCreateTime);
                     return mapper.selectList(queryWrapper);
                 }).exec();
     }
@@ -131,6 +137,22 @@ public class ProRoleMenuServiceImpl implements IProRoleMenuService {
                     return bean;
                 }).exec();
     }
+
+    @Override
+    public ServiceResponse<List<ProRoleMenu>> batchSave(ProParameter<List<ProRoleMenuRequest>> proParameter) {
+       return new ServiceResponse<List<ProRoleMenu>>()
+               .run(serviceResponse -> {
+                   List<ProRoleMenu> roles = proParameter.getObj()
+                       .stream()
+                       .map(proRoleMenuRequest -> {
+                            ProRoleMenu proRoleMenu = new ProRoleMenu();
+                            BeanUtils.copyProperties(proRoleMenuRequest, proRoleMenu);
+                            mapper.insert(proRoleMenu);
+                            return proRoleMenu;
+                       }).collect(Collectors.toList());
+                   return roles;
+               }).exec();
+     }
 
     @Override
     public ServiceResponse<Integer> delete(ProParameter<ProRoleMenuRequest> proParameter) {

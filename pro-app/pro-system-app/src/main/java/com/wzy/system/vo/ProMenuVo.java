@@ -23,8 +23,11 @@ import java.lang.String;
 @ApiModel(value = "ProMenuVo", description = "菜单表")
 public class ProMenuVo {
 
-    @ApiModelProperty(value = "是否撑开", name = "expand")
+    @ApiModelProperty(value = "是否展开子菜单", name = "expand")
     private Boolean expand = false;
+
+    @ApiModelProperty(value = "是否默认选中", name = "checked")
+    private Boolean checked = false;
 
    /**
     * 标示id

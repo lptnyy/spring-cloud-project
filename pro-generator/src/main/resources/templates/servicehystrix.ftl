@@ -86,4 +86,13 @@ public class ${className}ServiceHystrix implements I${className}Service {
     public ServiceResponse<Integer> idsDelete(ProParameter<${className}Request> proParameter) {
         return ServiceResponse.getFAIL();
     }
+
+    /**
+     * 批量插入
+     * @param proParameter
+     * @return
+     */
+     public ServiceResponse<List<${className}>> batchSave(ProParameter<List<${className}Request>> proParameter) {
+         return ServiceResponse.getFAIL();
+     }
 }

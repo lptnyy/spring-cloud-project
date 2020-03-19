@@ -46,4 +46,7 @@ public class ProRoleVo {
     */
     @ApiModelProperty(value = "in 查询操作 批量删除", name = "ids")
     private List<Integer> ids;
+
+    @ApiModelProperty(value = "角色关联的权限id")
+    private List<ProRoleMenuVo> proRoleMenuVos;
 }
