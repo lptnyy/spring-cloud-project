@@ -106,7 +106,7 @@ public class ProRoleMenuController {
                                 return proRoleMenuRequest;
                             }).collect(Collectors.toList());
 
-                    return proRoleMenuService.batchSave(new ProParameter<>(roleMenuRequests)).getObj().size();
+                    return proRoleMenuService.batchSave(new ProParameter<List<ProRoleMenuRequest>>(roleMenuRequests)).getObj().size();
                 })
                 .exec();
     }

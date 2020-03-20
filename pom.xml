@@ -25,6 +25,8 @@
 		<module>pro-business/pro-weixin/pro-weixin-server-api</module>
 		<module>pro-business/pro-weixin/pro-weixin-server</module>
 		<module>pro-generator</module>
+		<module>pro-middleware/pro-sso</module>
+		<module>pro-oss-api</module>
 	</modules>
 
 	<parent>

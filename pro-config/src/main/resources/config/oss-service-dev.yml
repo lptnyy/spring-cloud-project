@@ -1,0 +1,15 @@
+server:
+  port: 8006
+management:
+  server:
+    port: 10004
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: ALWAYS
+feign:
+  hystrix:
+    enabled: true

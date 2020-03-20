@@ -89,5 +89,5 @@ public interface I${className}Service {
      * @return
     */
     @RequestMapping(path = "/${className}/batchSave", method = RequestMethod.POST)
-    ServiceResponse<List<${className}>> batchSave(ProParameter<List<${className}Request>> proParameter);
+    ServiceResponse<List<${className}>> batchSave(@RequestBody ProParameter<List<${className}Request>> proParameter);
 }

@@ -153,9 +153,20 @@ public class ${className}ServiceImpl implements I${className}Service {
     public ServiceResponse<Integer> delete(ProParameter<${className}Request> proParameter) {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
-                    ${className} bean = new ${className}();
-                    BeanUtils.copyProperties(proParameter.getObj(),bean);
-                    return mapper.deleteById(bean);
+                    LambdaQueryWrapper<${className}> lambdaQueryWrapper = new LambdaQueryWrapper<>();
+                    ${className}Request request = proParameter.getObj();
+             <#list fields as field>
+                 <#if field.type == 'String'>
+                    if(!StringUtils.isEmpty(request.get${field.fieldName2}())){
+                        lambdaQueryWrapper.eq(${className}::get${field.fieldName2},request.get${field.fieldName2}());
+                    }
+                 <#else >
+                    if(request.get${field.fieldName2}() != null){
+                        lambdaQueryWrapper.eq(${className}::get${field.fieldName2},request.get${field.fieldName2}());
+                    }
+                 </#if>
+             </#list>
+                    return mapper.delete(lambdaQueryWrapper);
                 }).exec();
     }
 

@@ -158,9 +158,21 @@ public class ProRoleMenuServiceImpl implements IProRoleMenuService {
     public ServiceResponse<Integer> delete(ProParameter<ProRoleMenuRequest> proParameter) {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
-                    ProRoleMenu bean = new ProRoleMenu();
-                    BeanUtils.copyProperties(proParameter.getObj(),bean);
-                    return mapper.deleteById(bean);
+                    LambdaQueryWrapper<ProRoleMenu> lambdaQueryWrapper = new LambdaQueryWrapper<>();
+                    ProRoleMenuRequest request = proParameter.getObj();
+                    if(request.getRmId() != null){
+                        lambdaQueryWrapper.eq(ProRoleMenu::getRmId,request.getRmId());
+                    }
+                    if(request.getRoleId() != null){
+                        lambdaQueryWrapper.eq(ProRoleMenu::getRoleId,request.getRoleId());
+                    }
+                    if(request.getMenuId() != null){
+                        lambdaQueryWrapper.eq(ProRoleMenu::getMenuId,request.getMenuId());
+                    }
+                    if(request.getCreateTime() != null){
+                        lambdaQueryWrapper.eq(ProRoleMenu::getCreateTime,request.getCreateTime());
+                    }
+                    return mapper.delete(lambdaQueryWrapper);
                 }).exec();
     }
 
