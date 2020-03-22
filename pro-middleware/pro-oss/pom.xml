@@ -6,9 +6,10 @@
         <artifactId>spring-cloud</artifactId>
         <groupId>com.wzy</groupId>
         <version>0.0.1-SNAPSHOT</version>
+        <relativePath>../../pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>pro-sso</artifactId>
+    <artifactId>pro-oss</artifactId>
     <dependencies>
         <dependency>
             <groupId>com.alibaba</groupId>

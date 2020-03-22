@@ -7,7 +7,6 @@ import org.springframework.stereotype.Component;
 import com.wzy.system.dto.ProMenu;
 import com.wzy.system.request.ProMenuRequest;
 import com.wzy.system.IProMenuService;
-
 @Component
 public class ProMenuServiceHystrix implements IProMenuService {
 

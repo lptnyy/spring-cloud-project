@@ -7,7 +7,6 @@ import org.springframework.stereotype.Component;
 import com.wzy.system.dto.ProEnum;
 import com.wzy.system.request.ProEnumRequest;
 import com.wzy.system.IProEnumService;
-
 @Component
 public class ProEnumServiceHystrix implements IProEnumService {
 

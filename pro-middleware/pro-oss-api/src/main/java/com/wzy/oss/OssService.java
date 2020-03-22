@@ -4,8 +4,10 @@ import com.wzy.common.util.ServiceResponse;
 import com.wzy.oss.dto.FIleVo;
 import com.wzy.oss.hystrix.OssServiceHystrix;
 import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RequestPart;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -19,4 +21,12 @@ public interface OssService {
      */
     @RequestMapping(path = "/file/uploadMultipartFile", method = RequestMethod.POST)
     ServiceResponse<FIleVo> uploadMultipartFile(@RequestPart(value = "file", required = false) MultipartFile file);
+
+    /**
+     * 下载文件
+     * @param path
+     * @return
+     */
+    @RequestMapping(path = "/file/download", method = RequestMethod.GET)
+    ResponseEntity<byte[]> download(@RequestParam(value = "path") String path);
 }

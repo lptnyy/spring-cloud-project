@@ -63,6 +63,18 @@ public class UserController {
                 .exec();
     }
 
+    @PostMapping(value = "/save")
+    @ApiOperation(value = "添加用户")
+    public ServiceResponse<Integer> save(@RequestBody User user){
+        return new ServiceResponse<Integer>()
+                .run(serviceResponse -> {
+                    ServiceResponse<Integer> response = userService.save(new ProParameter<User>(user));
+                    response.copyState(serviceResponse);
+                    return response.getObj();
+                })
+                .exec();
+    }
+
     @PostMapping(value = "/updateStats")
     @ApiOperation(value = "修改用户状态")
     public ServiceResponse<Integer> updateStats(@RequestBody User user){

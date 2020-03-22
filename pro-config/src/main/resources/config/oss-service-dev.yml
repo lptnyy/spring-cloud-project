@@ -15,8 +15,8 @@ feign:
     enabled: true
 oss:
   type: file # file参数本地储存  ali参数阿里oss
-  local-file-path: "system.ui"   # 可以自定义路径 C： 或者 /root  等等 本地储存使用参数
-  local-dns-url: "http://localhost:8101/oss/file/download?filename="  # 本地储存 or oss 使用的下载文件地址
+  local-file-path: "system.dir"   # system.dir 项目运行的根目录  可以自定义路径 C： 或者 /root  等等 本地储存使用参数
+  file-dns-url: "http://localhost:8101/oss/file/download?path="  # 本地储存 or oss 使用的下载文件地址
   endpoint: '123'  # 阿里使用参
   access-key-id: '123' # 阿里使用参
   access-key-secret: '123' # 阿里使用参

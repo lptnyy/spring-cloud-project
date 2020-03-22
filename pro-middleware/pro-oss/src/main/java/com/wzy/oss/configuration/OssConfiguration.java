@@ -1,9 +1,11 @@
 package com.wzy.oss.configuration;
+import lombok.Data;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-public class OssConfigutation {
+@Data
+public class OssConfiguration {
     @Value("${oss.type}")
     String type;
     @Value("${oss.local-file-path}")
@@ -16,4 +18,6 @@ public class OssConfigutation {
     String accessKeySecret;
     @Value("${oss.bucket-name}")
     String bucketName;
+    @Value("${oss.file-dns-url}")
+    String fileDnsUrl;
 }
