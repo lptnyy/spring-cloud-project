@@ -169,6 +169,11 @@ public class ProRoleController {
                     // 获取调用服务返回结果 通过返回结果 进行业务判断 以及 手动控制 分布式事务回滚
                     ServiceResponse<Integer> response = proRoleService.delete(new ProParameter<>(request));
 
+                    // 删除角色下面所有的权限设置
+                    ProRoleMenuRequest proRoleMenuRequest = new ProRoleMenuRequest();
+                    proRoleMenuRequest.setRoleId(request.getRoleId());
+                    response = proRoleMenuService.delete(new ProParameter<>(proRoleMenuRequest));
+
                     // 获取调用服务状态
                     response.copyState(serviceResponse);
 

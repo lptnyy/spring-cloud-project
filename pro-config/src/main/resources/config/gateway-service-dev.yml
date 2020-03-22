@@ -104,6 +104,25 @@ spring:
             redis-rate-limiter.replenishRate: 1000
             # 令牌桶最大容量
             redis-rate-limiter.burstCapacity: 30000
+      - id: OSS-SERVICE             #从注册中心获取服务
+        uri: lb://OSS-SERVICE
+        predicates:
+        - Path=/oss/**
+        filters:
+        - StripPrefix=1
+        # 熔断降级配置
+        - name: Hystrix
+          args:
+            name: default
+            fallbackUri: 'forward:/defaultfallback'
+        - name: RequestRateLimiter
+          args:
+            # 使用SpEL名称引用Bean，与上面新建的RateLimiterConfig类中的bean的name相同
+            key-resolver: '#{@remoteAddrKeyResolver}'
+            # 每秒最大访问次数
+            redis-rate-limiter.replenishRate: 1000
+            # 令牌桶最大容量
+            redis-rate-limiter.burstCapacity: 30000
 management:
   server:
     port: 10008
@@ -122,4 +141,4 @@ feign:
 ribbon:
   eager-load:
     enabled: true
-    clients: SYSTEM-SERVICE,AUTH-SERVICE,CONFIG-SERVICE,GENERATOR-SERVICE,SYSTEM-SERVICE-APP,ADMIN-SERVICE
+    clients: SYSTEM-SERVICE,AUTH-SERVICE,CONFIG-SERVICE,GENERATOR-SERVICE,SYSTEM-SERVICE-APP,ADMIN-SERVICE,OSS-SERVICE

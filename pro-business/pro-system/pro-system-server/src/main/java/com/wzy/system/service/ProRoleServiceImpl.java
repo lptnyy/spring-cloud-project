@@ -150,9 +150,18 @@ public class ProRoleServiceImpl implements IProRoleService {
     public ServiceResponse<Integer> delete(ProParameter<ProRoleRequest> proParameter) {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
-                    ProRole bean = new ProRole();
-                    BeanUtils.copyProperties(proParameter.getObj(),bean);
-                    return mapper.deleteById(bean);
+                    LambdaQueryWrapper<ProRole> lambdaQueryWrapper = new LambdaQueryWrapper<>();
+                    ProRoleRequest request = proParameter.getObj();
+                    if(request.getRoleId() != null){
+                        lambdaQueryWrapper.eq(ProRole::getRoleId,request.getRoleId());
+                    }
+                    if(!StringUtils.isEmpty(request.getName())){
+                        lambdaQueryWrapper.eq(ProRole::getName,request.getName());
+                    }
+                    if(request.getCreateTime() != null){
+                        lambdaQueryWrapper.eq(ProRole::getCreateTime,request.getCreateTime());
+                    }
+                    return mapper.delete(lambdaQueryWrapper);
                 }).exec();
     }
 

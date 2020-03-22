@@ -1,8 +1,8 @@
 server:
-  port: 8006
+  port: 8007
 management:
   server:
-    port: 10004
+    port: 10010
   endpoints:
     web:
       exposure:
@@ -13,3 +13,33 @@ management:
 feign:
   hystrix:
     enabled: true
+oss:
+  type: file # file参数本地储存  ali参数阿里oss
+  local-file-path: "system.ui"   # 可以自定义路径 C： 或者 /root  等等 本地储存使用参数
+  local-dns-url: "http://localhost:8101/oss/file/download?filename="  # 本地储存 or oss 使用的下载文件地址
+  endpoint: '123'  # 阿里使用参
+  access-key-id: '123' # 阿里使用参
+  access-key-secret: '123' # 阿里使用参
+  bucket-name: '123' # 阿里使用参
+
+sharding.jdbc:
+  data-sources:
+    ds_master:
+      driver-class-name: com.mysql.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/pro_user?useUnicode=true&characterEncoding=utf-8&useSSL=false
+      username: root
+      password: wangyang
+    ds_slave_0:
+      driver-class-name: com.mysql.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/pro_user?useUnicode=true&characterEncoding=utf-8&useSSL=false
+      username: root
+      password: wangyang
+  master-slave-rule:
+    name: ds_ms
+    master-data-source-name: ds_master
+    slave-data-source-names: ds_slave_0
+    load-balance-algorithm-type: round_robin
+
+mybatis:
+  type-aliases-package: com.wzy.oss.dto
+  mapper-locations: classpath:mapper/*.xml

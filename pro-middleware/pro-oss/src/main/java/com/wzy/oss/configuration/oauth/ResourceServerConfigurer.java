@@ -1,4 +1,4 @@
-package com.wzy.oss.configuration;
+package com.wzy.oss.configuration.oauth;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
