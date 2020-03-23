@@ -5,6 +5,9 @@ import com.wzy.oss.dto.FIleVo;
 import org.springframework.web.multipart.MultipartFile;
 import java.io.IOException;
 
+/**
+ * 本地缓存实现
+ */
 public class FileOss implements Oss {
     FIleUtil fileUtil;
     OssConfiguration ossConfiguration;

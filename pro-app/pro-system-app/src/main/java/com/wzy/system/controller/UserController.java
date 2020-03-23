@@ -68,9 +68,17 @@ public class UserController {
     public ServiceResponse<Integer> save(@RequestBody User user){
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
-                    ServiceResponse<Integer> response = userService.save(new ProParameter<User>(user));
-                    response.copyState(serviceResponse);
-                    return response.getObj();
+                    User userPro = new User();
+                    userPro.setUserName(user.getUserName());
+                    ServiceResponse<ProUser> response = userService.userNameGetUser(new ProParameter<>(userPro));
+                    if (response.getObj() != null) {
+                        serviceResponse.setCode(500);
+                        serviceResponse.setMsg("此账号已经存在");
+                        return -1;
+                    }
+                    ServiceResponse<Integer> saveResponse = userService.save(new ProParameter<User>(user));
+                    saveResponse.copyState(serviceResponse);
+                    return saveResponse.getObj();
                 })
                 .exec();
     }

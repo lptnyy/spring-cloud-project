@@ -11,7 +11,7 @@ public class OssFactory {
     OssConfiguration ossConfiguration;
 
     /**
-     * 创建对应实现
+     * 通过spring 自定装配
      * @return
      */
     @Bean

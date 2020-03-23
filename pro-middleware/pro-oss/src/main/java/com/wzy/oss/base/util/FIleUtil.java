@@ -1,5 +1,4 @@
 package com.wzy.oss.base.util;
-
 import com.wzy.common.util.Md5Util;
 import com.wzy.common.util.RandomUtil;
 import com.wzy.common.util.StringUtil;

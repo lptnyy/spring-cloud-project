@@ -122,6 +122,23 @@ public class ProRoleController {
                 .exec();
     }
 
+    @PostMapping(value = "/getList")
+    @ApiOperation(value = "获取所有角色信息")
+    public ServiceResponse<List<ProRole>> getList(@RequestBody ProRoleRequest request){
+        return new ServiceResponse<List<ProRole>>()
+                .run(serviceResponse -> {
+
+                    // 获取调用服务返回结果 通过返回结果 进行业务判断 以及 手动控制 分布式事务回滚
+                    ServiceResponse<List<ProRole>> response = proRoleService.getList(new ProParameter<>(request));
+
+                    // 获取调用服务状态
+                    response.copyState(serviceResponse);
+
+                    return response.getObj();
+                })
+                .exec();
+    }
+
     @PostMapping(value = "/save")
     @ApiOperation(value = "保存")
     public ServiceResponse<ProRoleVo> save(@RequestBody ProRoleRequest request){
