@@ -142,3 +142,11 @@ ribbon:
   eager-load:
     enabled: true
     clients: SYSTEM-SERVICE,AUTH-SERVICE,CONFIG-SERVICE,GENERATOR-SERVICE,SYSTEM-SERVICE-APP,ADMIN-SERVICE,OSS-SERVICE
+
+hystrix:
+  command:
+    test:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 5000

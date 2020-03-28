@@ -47,7 +47,7 @@ public class ${className}Controller {
                             .setRequestPage(request));
 
                     // 获取调用服务状态
-                    response.copyState(serviceResponse);
+                    response.checkState();
 
                     // 获取返回的分页信息
                     response.copyPage(serviceResponse);
@@ -80,7 +80,7 @@ public class ${className}Controller {
                     ServiceResponse<${className}> response = ${smClassName}Service.get(new ProParameter<>(request));
 
                     // 获取调用服务状态
-                    response.copyState(serviceResponse);
+                    response.checkState();
 
                     // 组装返回的vo
                     ${className} ${smClassName} = response.getObj();
@@ -101,7 +101,7 @@ public class ${className}Controller {
                     ServiceResponse<${className}> response = ${smClassName}Service.get(new ProParameter<>(request));
 
                     // 获取调用服务状态
-                    response.copyState(serviceResponse);
+                    response.checkState();
 
                     // 获取返回结果 包括数据库插入id
                     ${className} ${smClassName} = ${smClassName}Service.save(new ProParameter<>(request)).getObj();
@@ -122,7 +122,7 @@ public class ${className}Controller {
                     ServiceResponse<Integer> response = ${smClassName}Service.idsDelete(new ProParameter<>(request));
 
                     // 获取调用服务状态
-                    response.copyState(serviceResponse);
+                    response.checkState();
 
                     return response.getObj();
                 })
@@ -139,7 +139,7 @@ public class ${className}Controller {
                     ServiceResponse<Integer> response = ${smClassName}Service.delete(new ProParameter<>(request));
 
                     // 获取调用服务状态
-                    response.copyState(serviceResponse);
+                    response.checkState();
 
                     return response.getObj();
                 })
@@ -156,7 +156,7 @@ public class ${className}Controller {
                     ServiceResponse<Integer> response = ${smClassName}Service.update(new ProParameter<>(request));
 
                     // 获取调用服务状态
-                    response.copyState(serviceResponse);
+                    response.checkState();
 
                     return response.getObj();
                 })

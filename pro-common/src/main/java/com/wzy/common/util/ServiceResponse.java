@@ -144,6 +144,12 @@ public class ServiceResponse<T> implements Serializable {
         return this;
     }
 
+    public void checkState() throws Exception {
+        if (this.code != 200) {
+            throw new Exception("服务器调用异常");
+        }
+    }
+
     public T toObjClass(Class srClass){
         return (T) mapper.convertValue(getObj(), srClass);
     }

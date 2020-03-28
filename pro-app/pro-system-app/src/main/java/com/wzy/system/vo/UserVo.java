@@ -40,4 +40,9 @@ public class UserVo {
      * 创建时间
      */
     private String createTime;
+
+    /**
+     * ids 数组
+     */
+    private Integer[] ids;
 }
