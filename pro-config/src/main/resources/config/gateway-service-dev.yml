@@ -145,7 +145,7 @@ ribbon:
 
 hystrix:
   command:
-    test:
+    default:
       execution:
         isolation:
           thread:
