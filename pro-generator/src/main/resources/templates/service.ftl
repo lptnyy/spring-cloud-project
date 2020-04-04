@@ -10,6 +10,7 @@ import java.util.List;
 import java.lang.Integer;
 import ${dtoClassPath};
 import ${requestClassPath};
+import ${hustrixclassPage};
 
 /**
  * <p>

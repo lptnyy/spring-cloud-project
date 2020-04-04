@@ -10,13 +10,22 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.web.bind.annotation.RestController;
 import javax.annotation.Resource;
 import java.util.List;
+import java.util.stream.Collectors;
 import com.wzy.system.dto.ProMenu;
 import com.wzy.system.request.ProMenuRequest;
 import com.wzy.system.IProMenuService;
 import com.wzy.system.mapper.ProMenuMapper;
 
+/**
+ * <p>
+    * 菜单表 
+    * </p>
+ *
+ * @author 王振宇
+ * @since 2020-04-04
+ */
 @RestController
-@Api(value = "菜单表 ")
+@Api(value = "ProMenuServiceImpl", description = "菜单表 ")
 public class ProMenuServiceImpl implements IProMenuService {
 
     @Resource
@@ -51,6 +60,9 @@ public class ProMenuServiceImpl implements IProMenuService {
                     }
                     if(request.getCreateTime() != null){
                         lambdaQueryWrapper.eq(ProMenu::getCreateTime,request.getCreateTime());
+                    }
+                    if(!StringUtils.isEmpty(request.getJurisdiction())){
+                        lambdaQueryWrapper.eq(ProMenu::getJurisdiction,request.getJurisdiction());
                     }
                     lambdaQueryWrapper.orderByDesc(ProMenu::getCreateTime);
                     return mapper.selectOne(lambdaQueryWrapper);
@@ -87,6 +99,9 @@ public class ProMenuServiceImpl implements IProMenuService {
                     if(request.getCreateTime() != null){
                         lambdaQueryWrapper.eq(ProMenu::getCreateTime,request.getCreateTime());
                     }
+                    if(!StringUtils.isEmpty(request.getJurisdiction())){
+                        lambdaQueryWrapper.eq(ProMenu::getJurisdiction,request.getJurisdiction());
+                    }
                     lambdaQueryWrapper.orderByDesc(ProMenu::getCreateTime);
                     return mapper.selectList(lambdaQueryWrapper);
                 }).exec();
@@ -122,6 +137,9 @@ public class ProMenuServiceImpl implements IProMenuService {
                     if(request.getCreateTime() != null){
                         lambdaQueryWrapper.eq(ProMenu::getCreateTime,request.getCreateTime());
                     }
+                    if(!StringUtils.isEmpty(request.getJurisdiction())){
+                        lambdaQueryWrapper.eq(ProMenu::getJurisdiction,request.getJurisdiction());
+                    }
                     lambdaQueryWrapper.orderByDesc(ProMenu::getCreateTime);
                     Page<ProMenu> page = new Page<>(proParameter.getRequestPage().getPageNum(),proParameter.getRequestPage().getPageSize());
                     IPage<ProMenu> pageResult = mapper.selectPage(page, lambdaQueryWrapper);
@@ -138,6 +156,34 @@ public class ProMenuServiceImpl implements IProMenuService {
         return new ServiceResponse<List<ProMenu>>()
                 .run(serviceResponse -> {
                     LambdaQueryWrapper<ProMenu> queryWrapper = new LambdaQueryWrapper<>();
+                    ProMenuRequest request = proParameter.getObj();
+                    if(request.getMenuId() != null){
+                        queryWrapper.in(ProMenu::getMenuId,request.getIds());
+                    }
+                    if(!StringUtils.isEmpty(request.getName())){
+                        queryWrapper.in(ProMenu::getName,request.getIds());
+                    }
+                    if(!StringUtils.isEmpty(request.getUrl())){
+                        queryWrapper.in(ProMenu::getUrl,request.getIds());
+                    }
+                    if(!StringUtils.isEmpty(request.getIcon())){
+                        queryWrapper.in(ProMenu::getIcon,request.getIds());
+                    }
+                    if(!StringUtils.isEmpty(request.getPath())){
+                        queryWrapper.in(ProMenu::getPath,request.getIds());
+                    }
+                    if(request.getParentId() != null){
+                        queryWrapper.in(ProMenu::getParentId,request.getIds());
+                    }
+                    if(!StringUtils.isEmpty(request.getType())){
+                        queryWrapper.in(ProMenu::getType,request.getIds());
+                    }
+                    if(request.getCreateTime() != null){
+                        queryWrapper.in(ProMenu::getCreateTime,request.getIds());
+                    }
+                    if(!StringUtils.isEmpty(request.getJurisdiction())){
+                        queryWrapper.in(ProMenu::getJurisdiction,request.getIds());
+                    }
                     queryWrapper.orderByDesc(ProMenu::getCreateTime);
                     return mapper.selectList(queryWrapper);
                 }).exec();
@@ -165,12 +211,55 @@ public class ProMenuServiceImpl implements IProMenuService {
     }
 
     @Override
+    public ServiceResponse<List<ProMenu>> batchSave(ProParameter<List<ProMenuRequest>> proParameter) {
+       return new ServiceResponse<List<ProMenu>>()
+               .run(serviceResponse -> {
+                   List<ProMenu> roles = proParameter.getObj()
+                       .stream()
+                       .map(proMenuRequest -> {
+                            ProMenu proMenu = new ProMenu();
+                            BeanUtils.copyProperties(proMenuRequest, proMenu);
+                            mapper.insert(proMenu);
+                            return proMenu;
+                       }).collect(Collectors.toList());
+                   return roles;
+               }).exec();
+     }
+
+    @Override
     public ServiceResponse<Integer> delete(ProParameter<ProMenuRequest> proParameter) {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
-                    ProMenu bean = new ProMenu();
-                    BeanUtils.copyProperties(proParameter.getObj(),bean);
-                    return mapper.deleteById(bean);
+                    LambdaQueryWrapper<ProMenu> lambdaQueryWrapper = new LambdaQueryWrapper<>();
+                    ProMenuRequest request = proParameter.getObj();
+                    if(request.getMenuId() != null){
+                        lambdaQueryWrapper.eq(ProMenu::getMenuId,request.getMenuId());
+                    }
+                    if(!StringUtils.isEmpty(request.getName())){
+                        lambdaQueryWrapper.eq(ProMenu::getName,request.getName());
+                    }
+                    if(!StringUtils.isEmpty(request.getUrl())){
+                        lambdaQueryWrapper.eq(ProMenu::getUrl,request.getUrl());
+                    }
+                    if(!StringUtils.isEmpty(request.getIcon())){
+                        lambdaQueryWrapper.eq(ProMenu::getIcon,request.getIcon());
+                    }
+                    if(!StringUtils.isEmpty(request.getPath())){
+                        lambdaQueryWrapper.eq(ProMenu::getPath,request.getPath());
+                    }
+                    if(request.getParentId() != null){
+                        lambdaQueryWrapper.eq(ProMenu::getParentId,request.getParentId());
+                    }
+                    if(!StringUtils.isEmpty(request.getType())){
+                        lambdaQueryWrapper.eq(ProMenu::getType,request.getType());
+                    }
+                    if(request.getCreateTime() != null){
+                        lambdaQueryWrapper.eq(ProMenu::getCreateTime,request.getCreateTime());
+                    }
+                    if(!StringUtils.isEmpty(request.getJurisdiction())){
+                        lambdaQueryWrapper.eq(ProMenu::getJurisdiction,request.getJurisdiction());
+                    }
+                    return mapper.delete(lambdaQueryWrapper);
                 }).exec();
     }
 
@@ -178,8 +267,36 @@ public class ProMenuServiceImpl implements IProMenuService {
     public ServiceResponse<Integer> idsDelete(ProParameter<ProMenuRequest> proParameter) {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
-                    ProMenuRequest request = proParameter.getObj();
-                    return mapper.deleteBatchIds(request.getIds());
+                     LambdaQueryWrapper<ProMenu> queryWrapper = new LambdaQueryWrapper<>();
+                     ProMenuRequest request = proParameter.getObj();
+                     if(request.getMenuId() != null){
+                          queryWrapper.in(ProMenu::getMenuId,request.getIds());
+                     }
+                     if(!StringUtils.isEmpty(request.getName())){
+                          queryWrapper.in(ProMenu::getName,request.getIds());
+                     }
+                     if(!StringUtils.isEmpty(request.getUrl())){
+                          queryWrapper.in(ProMenu::getUrl,request.getIds());
+                     }
+                     if(!StringUtils.isEmpty(request.getIcon())){
+                          queryWrapper.in(ProMenu::getIcon,request.getIds());
+                     }
+                     if(!StringUtils.isEmpty(request.getPath())){
+                          queryWrapper.in(ProMenu::getPath,request.getIds());
+                     }
+                     if(request.getParentId() != null){
+                          queryWrapper.in(ProMenu::getParentId,request.getIds());
+                     }
+                     if(!StringUtils.isEmpty(request.getType())){
+                          queryWrapper.in(ProMenu::getType,request.getIds());
+                     }
+                     if(request.getCreateTime() != null){
+                          queryWrapper.in(ProMenu::getCreateTime,request.getIds());
+                     }
+                     if(!StringUtils.isEmpty(request.getJurisdiction())){
+                          queryWrapper.in(ProMenu::getJurisdiction,request.getIds());
+                     }
+                    return mapper.delete(queryWrapper);
                 }).exec();
     }
 }

@@ -10,6 +10,7 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.web.bind.annotation.RestController;
 import javax.annotation.Resource;
 import java.util.List;
+import java.util.stream.Collectors;
 import ${dtoClassPath};
 import ${requestClassPath};
 import ${serviceClassPath};
@@ -107,6 +108,18 @@ public class ${className}ServiceImpl implements I${className}Service {
         return new ServiceResponse<List<${className}>>()
                 .run(serviceResponse -> {
                     LambdaQueryWrapper<${className}> queryWrapper = new LambdaQueryWrapper<>();
+                    ${className}Request request = proParameter.getObj();
+                <#list fields as field>
+                    <#if field.type == 'String'>
+                    if(!StringUtils.isEmpty(request.get${field.fieldName2}())){
+                        queryWrapper.in(${className}::get${field.fieldName2},request.getIds());
+                    }
+                    <#else >
+                    if(request.get${field.fieldName2}() != null){
+                        queryWrapper.in(${className}::get${field.fieldName2},request.getIds());
+                    }
+                    </#if>
+                </#list>
                     queryWrapper.orderByDesc(${className}::getCreateTime);
                     return mapper.selectList(queryWrapper);
                 }).exec();
@@ -174,8 +187,20 @@ public class ${className}ServiceImpl implements I${className}Service {
     public ServiceResponse<Integer> idsDelete(ProParameter<${className}Request> proParameter) {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
-                    ${className}Request request = proParameter.getObj();
-                    return mapper.deleteBatchIds(request.getIds());
+                     LambdaQueryWrapper<${className}> queryWrapper = new LambdaQueryWrapper<>();
+                     ${className}Request request = proParameter.getObj();
+                     <#list fields as field>
+                      <#if field.type == 'String'>
+                     if(!StringUtils.isEmpty(request.get${field.fieldName2}())){
+                          queryWrapper.in(${className}::get${field.fieldName2},request.getIds());
+                     }
+                      <#else >
+                     if(request.get${field.fieldName2}() != null){
+                          queryWrapper.in(${className}::get${field.fieldName2},request.getIds());
+                     }
+                      </#if>
+                     </#list>
+                    return mapper.delete(queryWrapper);
                 }).exec();
     }
 }

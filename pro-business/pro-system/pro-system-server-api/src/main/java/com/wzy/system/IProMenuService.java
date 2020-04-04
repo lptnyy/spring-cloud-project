@@ -12,6 +12,14 @@ import java.lang.Integer;
 import com.wzy.system.dto.ProMenu;
 import com.wzy.system.request.ProMenuRequest;
 
+/**
+ * <p>
+    * 菜单表 
+    * </p>
+ *
+ * @author 王振宇
+ * @since 2020-04-04
+ */
 @FeignClient(value = "system-service", configuration = FeignRequestInterceptor.class,fallback = ProMenuServiceHystrix.class)
 public interface IProMenuService {
 
@@ -75,4 +83,12 @@ public interface IProMenuService {
      */
     @RequestMapping(path = "/ProMenu/idsDelete", method = RequestMethod.POST)
     ServiceResponse<Integer> idsDelete(@RequestBody ProParameter<ProMenuRequest> proParameter);
+
+    /**
+     * 批量保存
+     * @param proParameter
+     * @return
+    */
+    @RequestMapping(path = "/ProMenu/batchSave", method = RequestMethod.POST)
+    ServiceResponse<List<ProMenu>> batchSave(@RequestBody ProParameter<List<ProMenuRequest>> proParameter);
 }

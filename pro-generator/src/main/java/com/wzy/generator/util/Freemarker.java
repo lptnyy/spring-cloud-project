@@ -268,6 +268,7 @@ public class Freemarker {
         dataModel.put("genpkg", tableInfo.getServicePkg());
         dataModel.put("dtoClassPath",tableInfo.getDtoPgk()+"."+dataModel.get("className"));
         dataModel.put("requestClassPath",tableInfo.getApiPkg()+"."+dataModel.get("className")+"Request");
+        dataModel.put("hustrixclassPage", tableInfo.getServicePkg()+".hystrix."+dataModel.get("className")+"ServiceHystrix");
 
         String cacheFile = System.getProperty("user.dir");
         String gearfileUrl = cacheFile+"/generator/src/main/java/"+tableInfo.getServicePkg().replace(".", "/")+"/";
@@ -362,6 +363,7 @@ public class Freemarker {
         dataModel.put("requestClassPath",tableInfo.getApiPkg()+"."+dataModel.get("className")+"Request");
         dataModel.put("mapperClassPath",tableInfo.getMapperPkg()+"."+dataModel.get("className")+"Mapper");
         dataModel.put("genpkg", tableInfo.getServiceImplPkg());
+
         List<GenDto> fields = new ArrayList<>();
 
         // 遍历组装字段格式

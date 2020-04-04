@@ -1,17 +1,25 @@
 package com.wzy.generator.controller;
 import com.wzy.common.util.ServiceResponse;
+import com.wzy.common.zip.ZipFilesUtil;
 import com.wzy.generator.controller.request.TableInfo;
 import com.wzy.generator.service.GeneratorService;
 import com.wzy.generator.util.Freemarker;
 import freemarker.template.TemplateException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import java.io.IOException;
+import java.io.*;
 import java.sql.SQLException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 import java.util.Map;
+import java.util.zip.ZipOutputStream;
 
 @RestController
 @RequestMapping(path = "/db")
@@ -44,7 +52,7 @@ public class GeneratorController {
      * @return
      */
     @RequestMapping(path = "/generator")
-    public ServiceResponse<String> generator(@RequestBody TableInfo tableInfo) throws SQLException, ClassNotFoundException, IOException, TemplateException {
+    public ResponseEntity<byte[]> generator(@RequestBody TableInfo tableInfo) throws SQLException, ClassNotFoundException, IOException, TemplateException {
         freemarker.dto(tableInfo, generatorService.getTableList(tableInfo).get(0), generatorService.getTableInfo(tableInfo));
         freemarker.mapper(tableInfo, generatorService.getTableList(tableInfo).get(0), generatorService.getTableInfo(tableInfo));
         freemarker.mapperXml(tableInfo, generatorService.getTableList(tableInfo).get(0), generatorService.getTableInfo(tableInfo));
@@ -54,6 +62,64 @@ public class GeneratorController {
         freemarker.serviceImpl(tableInfo, generatorService.getTableList(tableInfo).get(0), generatorService.getTableInfo(tableInfo));
         freemarker.vo(tableInfo, generatorService.getTableList(tableInfo).get(0), generatorService.getTableInfo(tableInfo));
         freemarker.controller(tableInfo, generatorService.getTableList(tableInfo).get(0), generatorService.getTableInfo(tableInfo));
-        return ServiceResponse.getSUCCESS();
+        String url = System.getProperty("user.dir")+"/generator";
+        File sourceDir = new File(url);
+        File zipFile = new File(url+".zip");
+        ZipOutputStream zos = null;
+        try {
+            zos = new ZipOutputStream(new FileOutputStream(zipFile));
+            String baseDir = "generator/";
+            ZipFilesUtil.compress(sourceDir, baseDir, zos);
+        } catch (FileNotFoundException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        } finally{
+            if(zos!=null)
+                try {
+                    zos.close();
+                } catch (IOException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                }
+        }
+        ResponseEntity<byte[]> responseEntity = returnFile(zipFile);
+        if (zipFile.exists()) {
+            zipFile.delete();
+        }
+        return responseEntity;
+    }
+
+    /**
+     * 下载文件
+     * @param fileDatas
+     * @return
+     */
+    public ResponseEntity<byte[]> returnFile(File fileDatas) {
+        try {
+            InputStream inputStream = new FileInputStream(fileDatas);
+            byte[] filedatas = InputStreamToByte(inputStream);
+            HttpHeaders headers = new HttpHeaders();
+            headers.setContentType(MediaType.APPLICATION_OCTET_STREAM);
+            SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+            headers.setContentDispositionFormData("attachment", simpleDateFormat.format(new Date())+".zip");
+            ResponseEntity<byte[]> files = new ResponseEntity<byte[]>(filedatas,
+                    headers, HttpStatus.CREATED);
+            inputStream.close();
+            return files;
+        } catch (Exception e) {
+        }
+        return  null;
+    }
+
+    public byte[] InputStreamToByte(InputStream iStrm) throws IOException {
+        ByteArrayOutputStream bytestream = new ByteArrayOutputStream();
+        int ch;
+        while ((ch = iStrm.read()) != -1)
+        {
+            bytestream.write(ch);
+        }
+        byte imgdata[]=bytestream.toByteArray();
+        bytestream.close();
+        return imgdata;
     }
 }

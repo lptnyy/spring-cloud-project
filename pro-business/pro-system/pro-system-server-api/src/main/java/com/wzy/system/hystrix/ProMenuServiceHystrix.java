@@ -7,6 +7,15 @@ import org.springframework.stereotype.Component;
 import com.wzy.system.dto.ProMenu;
 import com.wzy.system.request.ProMenuRequest;
 import com.wzy.system.IProMenuService;
+
+/**
+ * <p>
+    * 菜单表 
+    * </p>
+ *
+ * @author 王振宇
+ * @since 2020-04-04
+ */
 @Component
 public class ProMenuServiceHystrix implements IProMenuService {
 
@@ -77,4 +86,13 @@ public class ProMenuServiceHystrix implements IProMenuService {
     public ServiceResponse<Integer> idsDelete(ProParameter<ProMenuRequest> proParameter) {
         return ServiceResponse.getFAIL();
     }
+
+    /**
+     * 批量插入
+     * @param proParameter
+     * @return
+     */
+     public ServiceResponse<List<ProMenu>> batchSave(ProParameter<List<ProMenuRequest>> proParameter) {
+         return ServiceResponse.getFAIL();
+     }
 }
