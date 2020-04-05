@@ -12,3 +12,11 @@ spring:
       sendMessageUrl: https://api.weixin.qq.com/cgi-bin/message/wxopen/template/uniform_send
 server:
   port: 8080
+
+pro:
+  swagger2:
+    pkg: com.wzy.ttp.wx
+    title: 微信对接服务
+    description: 对内接口文档
+    termsOfServiceUrl: https://github.com/lptnyy/spring-cloud-project
+    version: 1.0

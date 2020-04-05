@@ -1,4 +1,4 @@
-package com.wzy.redis.configuration;
+package com.wzy.redis.configuration.oauth;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;

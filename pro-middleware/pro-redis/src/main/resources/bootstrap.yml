@@ -9,3 +9,11 @@ spring:
         enabled: false
       override-none: true
       uri: http://${ZUUL-SERVICE}:8101/config
+
+pro:
+  swagger2:
+    pkg: com.wzy.redis
+    title: redis服务
+    description: 对内接口文档
+    termsOfServiceUrl: https://github.com/lptnyy/spring-cloud-project
+    version: 1.0

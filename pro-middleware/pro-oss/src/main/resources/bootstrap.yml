@@ -9,3 +9,11 @@ spring:
         enabled: false
       override-none: true
       uri: http://${ZUUL-SERVICE}:8101/config
+
+pro:
+  swagger2:
+    pkg: com.wzy.oss
+    title: oss文件系统服务
+    description: 对外接口文档
+    termsOfServiceUrl: https://github.com/lptnyy/spring-cloud-project
+    version: 1.0
