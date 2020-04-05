@@ -1,6 +1,6 @@
 # 团队技术能力层次不齐，搭建框架又浪费时间，为了解决这些问题，搭建此微服务开发脚手架，架欢迎大家随便用。
 # 内置代码生成器，权限系统正在开发中，文档陆续也在完善中，来个star吧。
 ### 架构图   
-![Image text](image/Framework.jpg)
+![Image](image/Framework.jpg)
 ### 框架QQ交流群
-![Image text](image/qq.png)
+![Image](image/qq.png)
