@@ -2,3 +2,5 @@
 # 内置代码生成器，权限系统正在开发中，文档陆续也在完善中，来个star吧。
 ### 架构图   
 ![Image text](image/Framework.jpg)
+### 框架QQ交流群
+![Image text](image/qq.png)
