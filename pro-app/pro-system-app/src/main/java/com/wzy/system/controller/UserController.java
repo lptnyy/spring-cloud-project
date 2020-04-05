@@ -1,4 +1,5 @@
 package com.wzy.system.controller;
+import com.wzy.common.annotation.Log;
 import com.wzy.common.method.ProParameter;
 import com.wzy.common.util.DateUtil;
 import com.wzy.common.util.ServiceResponse;
@@ -38,6 +39,7 @@ public class UserController {
 
     @PostMapping(value = "/userPageList")
     @ApiOperation(value = "分页查询管理员列表")
+    @Log(name = "分页查询管理员列表")
     public ServiceResponse<List<UserVo>> getUsers(@RequestBody User user){
         return new ServiceResponse<List<UserVo>>()
                 .run(serviceResponse -> {
@@ -89,6 +91,7 @@ public class UserController {
 
     @PostMapping(value = "/delete")
     @ApiOperation(value = "删除用户")
+    @Log(name = "删除用户")
     public ServiceResponse<Integer> delete(@RequestBody User user){
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
@@ -99,6 +102,7 @@ public class UserController {
 
     @PostMapping(value = "/save")
     @ApiOperation(value = "添加用户")
+    @Log(name = "添加用户")
     public ServiceResponse<Integer> save(@RequestBody User user){
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
@@ -119,6 +123,7 @@ public class UserController {
 
     @PostMapping(value = "/updateStats")
     @ApiOperation(value = "修改用户状态")
+    @Log(name = "修改用户状态")
     public ServiceResponse<Integer> updateStats(@RequestBody User user){
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
