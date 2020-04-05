@@ -52,7 +52,7 @@ public class GeneratorController {
      * @return
      */
     @RequestMapping(path = "/generator")
-    public ResponseEntity<byte[]> generator(@RequestBody TableInfo tableInfo) throws SQLException, ClassNotFoundException, IOException, TemplateException {
+    public ServiceResponse generator(@RequestBody TableInfo tableInfo) throws SQLException, ClassNotFoundException, IOException, TemplateException {
         freemarker.dto(tableInfo, generatorService.getTableList(tableInfo).get(0), generatorService.getTableInfo(tableInfo));
         freemarker.mapper(tableInfo, generatorService.getTableList(tableInfo).get(0), generatorService.getTableInfo(tableInfo));
         freemarker.mapperXml(tableInfo, generatorService.getTableList(tableInfo).get(0), generatorService.getTableInfo(tableInfo));
@@ -62,6 +62,15 @@ public class GeneratorController {
         freemarker.serviceImpl(tableInfo, generatorService.getTableList(tableInfo).get(0), generatorService.getTableInfo(tableInfo));
         freemarker.vo(tableInfo, generatorService.getTableList(tableInfo).get(0), generatorService.getTableInfo(tableInfo));
         freemarker.controller(tableInfo, generatorService.getTableList(tableInfo).get(0), generatorService.getTableInfo(tableInfo));
+        return new ServiceResponse().setCode(200);
+    }
+
+    /**
+     * 下载导出来的文件
+     * @return
+     */
+    @RequestMapping(path = "/downloadZip")
+    public ResponseEntity<byte[]> downloadZip() {
         String url = System.getProperty("user.dir")+"/generator";
         File sourceDir = new File(url);
         File zipFile = new File(url+".zip");

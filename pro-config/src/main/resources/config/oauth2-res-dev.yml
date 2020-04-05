@@ -11,4 +11,4 @@ security:
       prefer-token-info: false
       jwt:
         key-value: wangyang119
-    not-intercept-url: /ProUserRole/getList,/ProRoleMenu/getIdsList,/ProMenu/getIdsList,/file/download,/user/getUser,/instances,/actuator/**,/swagger-ui.html,/swagger**,/webjars/**,/springfox-swagger-ui/**,/swagger-resources/**,/v2/** #配置免oa验证的地址
+    not-intercept-url: /db/downloadZip,/ProUserRole/getList,/ProRoleMenu/getIdsList,/ProMenu/getIdsList,/file/download,/user/getUser,/instances,/actuator/**,/swagger-ui.html,/swagger**,/webjars/**,/springfox-swagger-ui/**,/swagger-resources/**,/v2/** #配置免oa验证的地址
