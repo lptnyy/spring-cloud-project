@@ -17,7 +17,7 @@ import java.util.Date;
     * </p>
  *
  * @author 王振宇
- * @since 2020-03-07
+ * @since 2020-04-12
  */
 @Data
 @EqualsAndHashCode(callSuper = false)
@@ -32,28 +32,28 @@ public class ProMenu implements Serializable {
     private Integer menuId;
 
    /**
+    * 
+    */
+    @TableField(value = "title")
+    private String title;
+
+   /**
     * 名称
     */
     @TableField(value = "name")
     private String name;
 
    /**
-    * 访问地址
+    * 物理地址
     */
-    @TableField(value = "url")
-    private String url;
+    @TableField(value = "path")
+    private String path;
 
    /**
     * 图标
     */
     @TableField(value = "icon")
     private String icon;
-
-   /**
-    * 物理地址
-    */
-    @TableField(value = "path")
-    private String path;
 
    /**
     * 父级id
@@ -67,16 +67,16 @@ public class ProMenu implements Serializable {
     @TableField(value = "type")
     private String type;
 
-    /**
-     * 权限
-     */
-    @TableField(value = "jurisdiction")
-    private String jurisdiction;
-
    /**
     * 创建事件
     */
     @TableField(value = "create_time")
     private Date createTime;
+
+   /**
+    * 
+    */
+    @TableField(value = "jurisdiction")
+    private String jurisdiction;
 
 }

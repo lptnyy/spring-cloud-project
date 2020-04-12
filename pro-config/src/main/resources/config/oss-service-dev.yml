@@ -23,6 +23,19 @@ oss:
   bucket-name: wzyfiles # 阿里使用参
 
 sharding.jdbc:
+  maxActive: 100
+  initialSize: 10
+  maxWait: 60000
+  minIdle: 5
+  testOnBorrow: false
+  testOnReturn: false
+  poolPreparedStatements: true
+  maxOpenPreparedStatements: 20
+  useGlobalDataSourceStat: true
+  timeBetweenEvictionRunsMillis: 60000
+  minEvictableIdleTimeMillis: 300000
+  validationQuery: select 'x'
+  testWhileIdle: true
   data-sources:
     ds_master:
       driver-class-name: com.mysql.jdbc.Driver
@@ -43,3 +56,7 @@ sharding.jdbc:
 mybatis:
   type-aliases-package: com.wzy.oss.dto
   mapper-locations: classpath:mapper/*.xml
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl

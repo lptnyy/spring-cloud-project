@@ -3,8 +3,16 @@ import com.wzy.common.method.ProParameter;
 import com.wzy.common.util.ServiceResponse;
 import com.wzy.redis.RedisService;
 import com.wzy.system.IProMenuService;
+import com.wzy.system.IProRoleMenuService;
+import com.wzy.system.IProUserRoleService;
 import com.wzy.system.dto.ProMenu;
+import com.wzy.system.dto.ProRoleMenu;
+import com.wzy.system.dto.ProUserRole;
 import com.wzy.system.request.ProMenuRequest;
+import com.wzy.system.request.ProRoleMenuRequest;
+import com.wzy.system.request.ProUserRoleRequest;
+import com.wzy.system.vo.Menu;
+import com.wzy.system.vo.MenuMeta;
 import com.wzy.system.vo.ProMenuVo;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -28,6 +36,12 @@ public class MenuController {
     @Autowired
     RedisService redisService;
 
+    @Autowired
+    IProUserRoleService proUserRoleService;
+
+    @Autowired
+    IProRoleMenuService proRoleMenuService;
+
     @PostMapping(value = "/getPageList")
     @ApiOperation(value = "分页查询列表")
     public ServiceResponse<List<ProMenuVo>> getPageList(@RequestBody ProMenuRequest request){
@@ -38,7 +52,7 @@ public class MenuController {
                     ServiceResponse<List<ProMenu>> response = proMenuService.getList(new ProParameter<>(request));
 
                     // 获取调用服务状态
-                    response.copyState(serviceResponse);
+                    response.checkState();
 
                     // 获取服务返回的结果
                     List<ProMenu> resultList = response.getObj();
@@ -53,8 +67,8 @@ public class MenuController {
                             .map(proMenu -> {
                                 ProMenuVo menuVo = new ProMenuVo();
                                 BeanUtils.copyProperties(proMenu,menuVo);
-                                menuVo.setTitle(menuVo.getName());
-                                menuVo.setExpand(false);
+                                menuVo.setTitle(menuVo.getTitle());
+                                menuVo.setExpand(true);
 
                                 // 筛选出子节点
                                 List<ProMenuVo> childs = resultList.stream()
@@ -62,7 +76,7 @@ public class MenuController {
                                         .map(child -> {
                                             ProMenuVo childVo = new ProMenuVo();
                                             BeanUtils.copyProperties(child,childVo);
-                                            childVo.setTitle(childVo.getName());
+                                            childVo.setTitle(childVo.getTitle());
                                             childVo.setExpand(true);
 
                                             // 获得三级 功能列表
@@ -71,7 +85,7 @@ public class MenuController {
                                                     .map(threeChild -> {
                                                         ProMenuVo threeChildVo = new ProMenuVo();
                                                         BeanUtils.copyProperties(threeChild,threeChildVo);
-                                                        threeChildVo.setTitle(threeChildVo.getName());
+                                                        threeChildVo.setTitle(threeChildVo.getTitle());
                                                         threeChildVo.setExpand(true);
                                                         return threeChildVo;
                                                     })
@@ -102,7 +116,7 @@ public class MenuController {
                     ServiceResponse<ProMenu> response = proMenuService.get(new ProParameter<>(request));
 
                     // 获取调用服务状态
-                    response.copyState(serviceResponse);
+                    response.checkState();
 
                     // 组装返回的vo
                     ProMenu proMenu = response.getObj();
@@ -128,7 +142,7 @@ public class MenuController {
                     ServiceResponse<ProMenu> response = proMenuService.get(new ProParameter<>(proMenuRequest));
 
                     // 获取调用服务状态
-                    response.copyState(serviceResponse);
+                    response.checkState();
 
                     // 判断结果
                     if(response.getObj() != null) {
@@ -136,6 +150,7 @@ public class MenuController {
                         serviceResponse.setMsg("菜单已存在");
                         return null;
                     }
+
                     ProMenu proMenu = proMenuService.save(new ProParameter<>(request)).getObj();
                     ProMenuVo proMenuVo = new ProMenuVo();
                     BeanUtils.copyProperties(proMenu,proMenuVo);
@@ -154,7 +169,7 @@ public class MenuController {
                     ServiceResponse<Integer> response = proMenuService.idsDelete(new ProParameter<>(request));
 
                     // 获取调用服务状态
-                    response.copyState(serviceResponse);
+                    response.checkState();
 
                     return response.getObj();
                 })
@@ -171,7 +186,7 @@ public class MenuController {
                     ServiceResponse<Integer> response = proMenuService.delete(new ProParameter<>(request));
 
                     // 获取调用服务状态
-                    response.copyState(serviceResponse);
+                    response.checkState();
 
                     return response.getObj();
                 })
@@ -188,9 +203,67 @@ public class MenuController {
                     ServiceResponse<Integer> response = proMenuService.update(new ProParameter<>(request));
 
                     // 获取调用服务状态
-                    response.copyState(serviceResponse);
+                    response.checkState();
 
                     return response.getObj();
+                })
+                .exec();
+    }
+
+    @PostMapping(value = "/getUserMenus")
+    @ApiOperation(value = "获取登陆用户相关的设置的menu菜单")
+    public ServiceResponse<List<Menu>> getUserMenus(@RequestBody ProUserRoleRequest request){
+        return new ServiceResponse<List<Menu>>()
+                .run(serviceResponse -> {
+
+                    // 查询此用户下的所有权限
+                    ServiceResponse<List<ProUserRole>> proRoleMenuResponse = proUserRoleService.getList(new ProParameter<>(request));
+
+                    // 查看服务调用结果
+                    proRoleMenuResponse.checkState();
+
+                    // 获取返回结果
+                    List<ProUserRole> proUserRoles = proRoleMenuResponse.getObj();
+
+                    // 获取所有角色id
+                    List<Integer> roleIds = proUserRoles.stream().map(ProUserRole::getRoleId).distinct().collect(Collectors.toList());
+
+                    // 获取所有角色下menuid
+                    ProRoleMenuRequest proRoleMenuRequest = new ProRoleMenuRequest();
+                    proRoleMenuRequest.setRoleId(1); // ids 查询 随意添写 起到标记作用 ids  in roleid
+                    proRoleMenuRequest.setIds(roleIds);
+
+                    // 查询结果
+                    ServiceResponse<List<ProRoleMenu>> response = proRoleMenuService.findIdsList(new ProParameter<>(proRoleMenuRequest));
+
+                    // 验证服务是否调用成功
+                    response.checkState();
+
+                    // 查询所有菜单
+                    List<Integer> menuIds = response.getObj().stream().map(ProRoleMenu::getMenuId).distinct().collect(Collectors.toList());
+                    ProMenuRequest proMenuRequest = new ProMenuRequest();
+                    proMenuRequest.setMenuId(1);
+                    proMenuRequest.setIds(menuIds);
+                    ServiceResponse<List<ProMenu>> proMyMeunResponse = proMenuService.findIdsList(new ProParameter<>(proMenuRequest));
+
+                    // 验证服务是否调用成功
+                    proMyMeunResponse.checkState();
+
+
+                    // 获取服务返回的结果
+                    List<ProMenu> resultList = proMyMeunResponse.getObj();
+                    List<Menu> menus = resultList.stream().map(proMenu -> {
+                        Menu menu = new Menu();
+                        MenuMeta menuMeta = new MenuMeta();
+                        menuMeta.setIcon(proMenu.getIcon());
+                        menuMeta.setTitle(proMenu.getTitle());
+                        menu.setName(proMenu.getName());
+                        menu.setType(proMenu.getType());
+                        menu.setPath(proMenu.getPath());
+                        menu.setMeta(menuMeta);
+                        return menu;
+                    }).collect(Collectors.toList());
+                    return menus;
                 })
                 .exec();
     }

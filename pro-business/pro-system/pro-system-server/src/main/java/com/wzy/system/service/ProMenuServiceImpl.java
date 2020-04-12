@@ -22,7 +22,7 @@ import com.wzy.system.mapper.ProMenuMapper;
     * </p>
  *
  * @author 王振宇
- * @since 2020-04-04
+ * @since 2020-04-12
  */
 @RestController
 @Api(value = "ProMenuServiceImpl", description = "菜单表 ")
@@ -40,17 +40,17 @@ public class ProMenuServiceImpl implements IProMenuService {
                     if(request.getMenuId() != null){
                         lambdaQueryWrapper.eq(ProMenu::getMenuId,request.getMenuId());
                     }
+                    if(!StringUtils.isEmpty(request.getTitle())){
+                        lambdaQueryWrapper.eq(ProMenu::getTitle,request.getTitle());
+                    }
                     if(!StringUtils.isEmpty(request.getName())){
                         lambdaQueryWrapper.eq(ProMenu::getName,request.getName());
                     }
-                    if(!StringUtils.isEmpty(request.getUrl())){
-                        lambdaQueryWrapper.eq(ProMenu::getUrl,request.getUrl());
+                    if(!StringUtils.isEmpty(request.getPath())){
+                        lambdaQueryWrapper.eq(ProMenu::getPath,request.getPath());
                     }
                     if(!StringUtils.isEmpty(request.getIcon())){
                         lambdaQueryWrapper.eq(ProMenu::getIcon,request.getIcon());
-                    }
-                    if(!StringUtils.isEmpty(request.getPath())){
-                        lambdaQueryWrapper.eq(ProMenu::getPath,request.getPath());
                     }
                     if(request.getParentId() != null){
                         lambdaQueryWrapper.eq(ProMenu::getParentId,request.getParentId());
@@ -78,17 +78,17 @@ public class ProMenuServiceImpl implements IProMenuService {
                     if(request.getMenuId() != null){
                         lambdaQueryWrapper.eq(ProMenu::getMenuId,request.getMenuId());
                     }
+                    if(!StringUtils.isEmpty(request.getTitle())){
+                        lambdaQueryWrapper.eq(ProMenu::getTitle,request.getTitle());
+                    }
                     if(!StringUtils.isEmpty(request.getName())){
                         lambdaQueryWrapper.eq(ProMenu::getName,request.getName());
                     }
-                    if(!StringUtils.isEmpty(request.getUrl())){
-                        lambdaQueryWrapper.eq(ProMenu::getUrl,request.getUrl());
+                    if(!StringUtils.isEmpty(request.getPath())){
+                        lambdaQueryWrapper.eq(ProMenu::getPath,request.getPath());
                     }
                     if(!StringUtils.isEmpty(request.getIcon())){
                         lambdaQueryWrapper.eq(ProMenu::getIcon,request.getIcon());
-                    }
-                    if(!StringUtils.isEmpty(request.getPath())){
-                        lambdaQueryWrapper.eq(ProMenu::getPath,request.getPath());
                     }
                     if(request.getParentId() != null){
                         lambdaQueryWrapper.eq(ProMenu::getParentId,request.getParentId());
@@ -116,17 +116,17 @@ public class ProMenuServiceImpl implements IProMenuService {
                     if(request.getMenuId() != null){
                         lambdaQueryWrapper.eq(ProMenu::getMenuId,request.getMenuId());
                     }
+                    if(!StringUtils.isEmpty(request.getTitle())){
+                        lambdaQueryWrapper.eq(ProMenu::getTitle,request.getTitle());
+                    }
                     if(!StringUtils.isEmpty(request.getName())){
                         lambdaQueryWrapper.eq(ProMenu::getName,request.getName());
                     }
-                    if(!StringUtils.isEmpty(request.getUrl())){
-                        lambdaQueryWrapper.eq(ProMenu::getUrl,request.getUrl());
+                    if(!StringUtils.isEmpty(request.getPath())){
+                        lambdaQueryWrapper.eq(ProMenu::getPath,request.getPath());
                     }
                     if(!StringUtils.isEmpty(request.getIcon())){
                         lambdaQueryWrapper.eq(ProMenu::getIcon,request.getIcon());
-                    }
-                    if(!StringUtils.isEmpty(request.getPath())){
-                        lambdaQueryWrapper.eq(ProMenu::getPath,request.getPath());
                     }
                     if(request.getParentId() != null){
                         lambdaQueryWrapper.eq(ProMenu::getParentId,request.getParentId());
@@ -160,17 +160,17 @@ public class ProMenuServiceImpl implements IProMenuService {
                     if(request.getMenuId() != null){
                         queryWrapper.in(ProMenu::getMenuId,request.getIds());
                     }
+                    if(!StringUtils.isEmpty(request.getTitle())){
+                        queryWrapper.in(ProMenu::getTitle,request.getIds());
+                    }
                     if(!StringUtils.isEmpty(request.getName())){
                         queryWrapper.in(ProMenu::getName,request.getIds());
                     }
-                    if(!StringUtils.isEmpty(request.getUrl())){
-                        queryWrapper.in(ProMenu::getUrl,request.getIds());
+                    if(!StringUtils.isEmpty(request.getPath())){
+                        queryWrapper.in(ProMenu::getPath,request.getIds());
                     }
                     if(!StringUtils.isEmpty(request.getIcon())){
                         queryWrapper.in(ProMenu::getIcon,request.getIds());
-                    }
-                    if(!StringUtils.isEmpty(request.getPath())){
-                        queryWrapper.in(ProMenu::getPath,request.getIds());
                     }
                     if(request.getParentId() != null){
                         queryWrapper.in(ProMenu::getParentId,request.getIds());
@@ -235,17 +235,17 @@ public class ProMenuServiceImpl implements IProMenuService {
                     if(request.getMenuId() != null){
                         lambdaQueryWrapper.eq(ProMenu::getMenuId,request.getMenuId());
                     }
+                    if(!StringUtils.isEmpty(request.getTitle())){
+                        lambdaQueryWrapper.eq(ProMenu::getTitle,request.getTitle());
+                    }
                     if(!StringUtils.isEmpty(request.getName())){
                         lambdaQueryWrapper.eq(ProMenu::getName,request.getName());
                     }
-                    if(!StringUtils.isEmpty(request.getUrl())){
-                        lambdaQueryWrapper.eq(ProMenu::getUrl,request.getUrl());
+                    if(!StringUtils.isEmpty(request.getPath())){
+                        lambdaQueryWrapper.eq(ProMenu::getPath,request.getPath());
                     }
                     if(!StringUtils.isEmpty(request.getIcon())){
                         lambdaQueryWrapper.eq(ProMenu::getIcon,request.getIcon());
-                    }
-                    if(!StringUtils.isEmpty(request.getPath())){
-                        lambdaQueryWrapper.eq(ProMenu::getPath,request.getPath());
                     }
                     if(request.getParentId() != null){
                         lambdaQueryWrapper.eq(ProMenu::getParentId,request.getParentId());
@@ -272,17 +272,17 @@ public class ProMenuServiceImpl implements IProMenuService {
                      if(request.getMenuId() != null){
                           queryWrapper.in(ProMenu::getMenuId,request.getIds());
                      }
+                     if(!StringUtils.isEmpty(request.getTitle())){
+                          queryWrapper.in(ProMenu::getTitle,request.getIds());
+                     }
                      if(!StringUtils.isEmpty(request.getName())){
                           queryWrapper.in(ProMenu::getName,request.getIds());
                      }
-                     if(!StringUtils.isEmpty(request.getUrl())){
-                          queryWrapper.in(ProMenu::getUrl,request.getIds());
+                     if(!StringUtils.isEmpty(request.getPath())){
+                          queryWrapper.in(ProMenu::getPath,request.getIds());
                      }
                      if(!StringUtils.isEmpty(request.getIcon())){
                           queryWrapper.in(ProMenu::getIcon,request.getIds());
-                     }
-                     if(!StringUtils.isEmpty(request.getPath())){
-                          queryWrapper.in(ProMenu::getPath,request.getIds());
                      }
                      if(request.getParentId() != null){
                           queryWrapper.in(ProMenu::getParentId,request.getIds());

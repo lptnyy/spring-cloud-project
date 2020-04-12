@@ -16,6 +16,5 @@ public class LogConfiguration implements LogAfter {
         MethodSignature signature = (MethodSignature) joinPoint.getSignature();
         Method method = signature.getMethod();
         Log action = method.getAnnotation(Log.class);
-        System.out.println("注解式拦截 "+action.name());
     }
 }

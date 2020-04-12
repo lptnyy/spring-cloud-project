@@ -34,19 +34,20 @@ public class ShardingDataSourceConfig {
     }
 
     private void configDataSource(DruidDataSource druidDataSource) {
-        druidDataSource.setMaxActive(100);
-        druidDataSource.setInitialSize(10);
-        druidDataSource.setMaxWait(60000);
-        druidDataSource.setMinIdle(5);
-        druidDataSource.setTimeBetweenEvictionRunsMillis(60000);
-        druidDataSource.setMinEvictableIdleTimeMillis(300000);
-        druidDataSource.setValidationQuery("select 'x'");
-        druidDataSource.setTestWhileIdle(true);
-        druidDataSource.setTestOnBorrow(false);
-        druidDataSource.setTestOnReturn(false);
-        druidDataSource.setPoolPreparedStatements(true);
-        druidDataSource.setMaxOpenPreparedStatements(20);
-        druidDataSource.setUseGlobalDataSourceStat(true);
+        druidDataSource.setMaxActive(shardingMastSlaveConfig.maxActive);
+        druidDataSource.setInitialSize(shardingMastSlaveConfig.initialSize);
+        druidDataSource.setMaxWait(shardingMastSlaveConfig.maxWait);
+        druidDataSource.setMinIdle(shardingMastSlaveConfig.minIdle);
+        druidDataSource.setTimeBetweenEvictionRunsMillis(shardingMastSlaveConfig.timeBetweenEvictionRunsMillis);
+        druidDataSource.setMinEvictableIdleTimeMillis(shardingMastSlaveConfig.minEvictableIdleTimeMillis);
+        druidDataSource.setValidationQuery(shardingMastSlaveConfig.validationQuery);
+        druidDataSource.setTestWhileIdle(shardingMastSlaveConfig.testWhileIdle);
+        druidDataSource.setTestOnBorrow(shardingMastSlaveConfig.testOnBorrow);
+        druidDataSource.setTestOnReturn(shardingMastSlaveConfig.testOnReturn);
+        druidDataSource.setPoolPreparedStatements(shardingMastSlaveConfig.poolPreparedStatements);
+        druidDataSource.setMaxOpenPreparedStatements(shardingMastSlaveConfig.maxOpenPreparedStatements);
+        druidDataSource.setUseGlobalDataSourceStat(shardingMastSlaveConfig.useGlobalDataSourceStat);
+
         try {
             druidDataSource.setFilters("stat,wall,slf4j");
         } catch (SQLException e) {

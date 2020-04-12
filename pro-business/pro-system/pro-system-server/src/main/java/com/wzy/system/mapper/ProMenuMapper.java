@@ -8,7 +8,7 @@ import com.wzy.system.dto.ProMenu;
     * </p>
  *
  * @author 王振宇
- * @since 2020-03-07
+ * @since 2020-04-12
  */
 public interface ProMenuMapper extends BaseMapper<ProMenu> {
 

@@ -150,7 +150,7 @@ public class ServiceResponse<T> implements Serializable {
         }
     }
 
-    public T toObjClass(Class srClass){
+    public T toObjClass(Class srClass) {
         return (T) mapper.convertValue(getObj(), srClass);
     }
 }
