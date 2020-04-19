@@ -7,5 +7,5 @@ public class MenuMeta {
     String icon;
     String title;
     Boolean hideInMenu = false;
-    Boolean hideInBread = false;
+    Boolean hideInBread = true;
 }

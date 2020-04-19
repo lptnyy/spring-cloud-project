@@ -71,6 +71,7 @@ public class UserController {
                                 .map(proUser -> {
                                     UserVo userVo = new UserVo();
                                     BeanUtils.copyProperties(proUser,userVo);
+                                    if (proUser.getLastLoginTime() != null)
                                     userVo.setLastLoginTime(DateUtil.getyyMMddHHmmss(proUser.getLastLoginTime()));
                                     userVo.setCreateTime(DateUtil.getyyMMddHHmmss(proUser.getCreateTime()));
                                     Integer[] ids = proUserRoleServiceResponse.getObj()

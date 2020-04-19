@@ -136,7 +136,7 @@ public class MenuController {
                     // 封装查询参数
                     ProMenuRequest proMenuRequest = new ProMenuRequest();
 
-                    proMenuRequest.setName(request.getName());
+                    proMenuRequest.setTitle(request.getTitle());
 
                     // 获取调用服务返回结果 通过返回结果 进行业务判断 以及 手动控制 分布式事务回滚
                     ServiceResponse<ProMenu> response = proMenuService.get(new ProParameter<>(proMenuRequest));
@@ -252,7 +252,13 @@ public class MenuController {
 
                     // 获取服务返回的结果
                     List<ProMenu> resultList = proMyMeunResponse.getObj();
-                    List<Menu> menus = resultList.stream().map(proMenu -> {
+
+                    // 筛选处根目录
+                    List<ProMenu> rootMenuList = resultList.stream().filter(proMenu -> proMenu.getParentId().equals(0))
+                            .collect(Collectors.toList());
+
+                    // 拼接菜单
+                    List<Menu> menus = rootMenuList.stream().map(proMenu -> {
                         Menu menu = new Menu();
                         MenuMeta menuMeta = new MenuMeta();
                         menuMeta.setIcon(proMenu.getIcon());
@@ -261,6 +267,21 @@ public class MenuController {
                         menu.setType(proMenu.getType());
                         menu.setPath(proMenu.getPath());
                         menu.setMeta(menuMeta);
+                        // 查找子菜单
+                        menu.setChildren(
+                                resultList.stream().filter(proMenu1 -> proMenu1.getParentId().equals(proMenu.getMenuId()))
+                                .map(proMenu1 -> {
+                                    Menu childMenu = new Menu();
+                                    MenuMeta childMenuMeta = new MenuMeta();
+                                    childMenuMeta.setIcon(proMenu1.getIcon());
+                                    childMenuMeta.setTitle(proMenu1.getTitle());
+                                    childMenu.setName(proMenu1.getName());
+                                    childMenu.setType(proMenu1.getType());
+                                    childMenu.setPath(proMenu1.getPath());
+                                    childMenu.setMeta(childMenuMeta);
+                                    return childMenu;
+                                }).collect(Collectors.toList())
+                        );
                         return menu;
                     }).collect(Collectors.toList());
                     return menus;

@@ -87,12 +87,10 @@ public class OAuth2UserService implements UserDetailsService {
                     proMenus.forEach(proMenu -> {
                         VaRole vaRole = new VaRole();
                         vaRole.setId(proMenu.getMenuId());
-                        if (StringUtils.isEmpty(proMenu.getJurisdiction())) {
-                            vaRole.setName("read");
-                        } else {
+                        if (!StringUtils.isEmpty(proMenu.getJurisdiction())) {
                             vaRole.setName(proMenu.getJurisdiction());
+                            vaRoleList.add(vaRole);
                         }
-                        vaRoleList.add(vaRole);
                     });
 
                     vaUser = new VaUser(user.getUserName(),user.getUserPass(),vaRoleList);
