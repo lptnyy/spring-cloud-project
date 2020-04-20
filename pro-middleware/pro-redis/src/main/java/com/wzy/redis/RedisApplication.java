@@ -15,8 +15,8 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 		@ComponentScan("com.wzy.common.feign") // 解决 服务调用之间传递 oauth2 头信息
 })
 @EnableHystrix
-public class RedisServiceStart {
+public class RedisApplication {
 	public static void main(String[] args) {
-		SpringApplication.run(RedisServiceStart.class, args);
+		SpringApplication.run(RedisApplication.class, args);
 	}
 }

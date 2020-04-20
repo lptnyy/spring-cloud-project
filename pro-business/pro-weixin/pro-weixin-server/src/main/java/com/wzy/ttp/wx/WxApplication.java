@@ -6,9 +6,9 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @SpringBootApplication
 @EnableSwagger2
-public class WxServiceStart {
+public class WxApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(WxServiceStart.class,args);
+        SpringApplication.run(WxApplication.class,args);
     }
 }

@@ -21,8 +21,8 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 })
 @EnableHystrix
 @MapperScan("com.wzy.system.mapper")
-public class SystemServiceStart {
+public class SystemApplication {
     public static void main(String[] args) {
-		SpringApplication.run(SystemServiceStart.class, args);
+		SpringApplication.run(SystemApplication.class, args);
 	}
 }

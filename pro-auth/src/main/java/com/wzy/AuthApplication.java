@@ -8,9 +8,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.ComponentScans;
 import org.springframework.context.annotation.FilterType;
 
-@SpringBootApplication(
-
-)
+@SpringBootApplication
 @EnableFeignClients(
         {"com.wzy.system"
                 ,"com.wzy.redis"})
@@ -20,8 +18,8 @@ import org.springframework.context.annotation.FilterType;
         @ComponentScan("com.wzy.redis"),
         @ComponentScan("com.wzy.system")
 })
-public class AuthServiceStart {
+public class AuthApplication {
     public static void main(String[] args) {
-        SpringApplication.run(AuthServiceStart.class, args);
+        SpringApplication.run(AuthApplication.class, args);
     }
 }
