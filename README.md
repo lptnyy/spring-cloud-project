@@ -16,7 +16,12 @@
 #### 数据库 MySql
 #### 缓存 Redis
 #### 文件系统 阿里OSS 以及 本地储存 
-# 服务介绍
-#### 服务启动顺序
+# 开发环境搭建
+## 安装虚拟机
+## 安装docker
+## 部署redis
+## 部署rabbitmq
+## 部署mysql环境
+
 # 框架QQ交流群  
 ![Image text](image/qq.png)  
