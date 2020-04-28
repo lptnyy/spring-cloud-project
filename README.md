@@ -22,6 +22,9 @@
 ## 部署redis
 ## 部署rabbitmq
 ## 部署mysql环境
+## 导入数据库脚本
+## Idea 导入项目
+## 启动项目
 
 # 框架QQ交流群  
 ![Image text](image/qq.png)  
