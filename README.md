@@ -7,13 +7,11 @@
 # 技术选型  
 ##### 核心框架 Sprint cloud 全家桶  
 ##### 消息队列 RabbitMq  
-##### 日志收集 LogBack  
-##### 日志分析 ELK     
+##### 日志收集 LogBack     
 ##### 连接池 Druid + Sharding 读写分离  
 ##### 持久层框架 Mybatis Plus
-##### 数据库 MySql 
-##### 缓存数据库 Redis 
-##### 定时器 Quartz集群
+##### 定时器 Quartz
+##### 前端框架 vue3.0 IView  
 
 # 框架QQ交流群  
 ![Image text](image/qq.png)  
