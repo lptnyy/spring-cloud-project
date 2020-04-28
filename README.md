@@ -5,6 +5,7 @@
 # 项目结构  
 ![Image text](image/files.png)  
 # 技术选型  
+#### 核心框架 Spring Boot  
 #### 核心框架 Sprint cloud 全家桶  
 #### 消息队列 RabbitMq  
 #### 日志收集 LogBack     
