@@ -17,14 +17,20 @@
 #### 缓存 Redis
 #### 文件系统 阿里OSS 以及 本地储存 
 # 开发环境搭建
-## 安装虚拟机
-## 安装docker
-## 部署redis
-## 部署rabbitmq
-## 部署mysql环境
-## 导入数据库脚本
-## Idea 导入项目
-## 启动项目
+#### 安装虚拟机
+https://www.cnblogs.com/double-K/p/10952233.html  博客地址  
+#### 安装docker
+https://www.cnblogs.com/straycats/p/10680502.html 博客地址  
+#### 部署redis
+https://www.runoob.com/docker/docker-install-redis.html 博客地址 
+#### 部署rabbitmq
+https://blog.csdn.net/myNameIssls/article/details/99702877 博客地址 
+#### 部署mysql环境 
+https://www.cnblogs.com/sablier/p/11605606.html 博客地址 
+#### 导入数据库脚本
+
+#### Idea 导入项目
+#### 启动项目
 
 # 框架QQ交流群  
 ![Image text](image/qq.png)  
