@@ -31,8 +31,12 @@ https://www.cnblogs.com/sablier/p/11605606.html 博客地址
 
 #### Idea 导入项目
 #### 启动项目
-    1 启动注册中心 pro-eureka工程 EurekaApplication.java idea启动环境变量配置 EUREKA-SERVICE localhost
-    2 启动配置中心 pro-config工程 ConfigApplication.java idea启动环境变量配置 EUREKA-SERVICE localhost RABBIT_URL localhost
-    3 启动网关服务 pro-gateway工程 GateWayApplication.java idea启动环境变量配置 CONFIG-SERVICE localhost spring.profiles.active dev
+    1 启动注册中心 pro-eureka工程 8001 idea启动环境变量配置 EUREKA-SERVICE=localhost
+    2 启动配置中心 pro-config工程 8002 idea启动环境变量配置 EUREKA-SERVICE=localhost RABBIT_URL=localhost
+    3 启动网关服务 pro-gateway工程 8101 idea启动环境变量配置 CONFIG-SERVICE=localhost spring.profiles.active=dev
+    4 启动业务System服务 pro-system/pro-system-server工程 8008 idea启动环境变量配置 ZUUL-SERVICE=localhost spring.profiles.active=dev
+    5 启动ApiSystem服务 pro-app/pro-system-app工程 8009  idea启动环境变量配置 ZUUL-SERVICE=localhost spring.profiles.active=dev
+    6 启动Oauth2服务 pro-auth工程 8006 idea启动环境变量配置 ZUUL-SERVICE=localhost spring.profiles.active=dev
+    7 OSS服务 pro-middleware工程 8007 idea启动环境变量配置 ZUUL-SERVICE=localhost spring.profiles.active=dev
 # 框架QQ交流群  
 ![Image text](image/qq.png)  
