@@ -37,6 +37,7 @@ https://www.cnblogs.com/sablier/p/11605606.html 博客地址
     4 启动业务System服务 pro-system/pro-system-server工程 8008 idea启动环境变量配置 ZUUL-SERVICE=localhost spring.profiles.active=dev
     5 启动ApiSystem服务 pro-app/pro-system-app工程 8009  idea启动环境变量配置 ZUUL-SERVICE=localhost spring.profiles.active=dev
     6 启动Oauth2服务 pro-auth工程 8006 idea启动环境变量配置 ZUUL-SERVICE=localhost spring.profiles.active=dev
-    7 OSS服务 pro-middleware工程 8007 idea启动环境变量配置 ZUUL-SERVICE=localhost spring.profiles.active=dev
+    7 OSS服务 pro-middleware/pro-oss工程 8007 idea启动环境变量配置 ZUUL-SERVICE=localhost spring.profiles.active=dev
+    8 Redis服务 pro-middleware/pro-redis工程 8005 idea启动环境变量配置 ZUUL-SERVICE=localhost spring.profiles.active=dev
 # 框架QQ交流群  
 ![Image text](image/qq.png)  
