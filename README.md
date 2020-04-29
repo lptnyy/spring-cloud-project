@@ -31,6 +31,8 @@ https://www.cnblogs.com/sablier/p/11605606.html 博客地址
 
 #### Idea 导入项目
 #### 启动项目
-
+    1 启动注册中心 pro-eureka工程 EurekaApplication.java idea启动环境变量配置 EUREKA-SERVICE localhost
+    2 启动配置中心 pro-config工程 ConfigApplication.java idea启动环境变量配置 EUREKA-SERVICE localhost RABBIT_URL localhost
+    3 启动网关服务 pro-gateway工程 GateWayApplication.java idea启动环境变量配置 CONFIG-SERVICE localhost spring.profiles.active dev
 # 框架QQ交流群  
 ![Image text](image/qq.png)  
