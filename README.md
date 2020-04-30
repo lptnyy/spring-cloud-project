@@ -40,5 +40,7 @@ https://www.cnblogs.com/sablier/p/11605606.html 博客地址
     6 启动Oauth2服务 pro-auth工程 8006 idea启动环境变量配置 ZUUL-SERVICE=localhost spring.profiles.active=dev
     7 OSS服务 pro-middleware/pro-oss工程 8007 idea启动环境变量配置 ZUUL-SERVICE=localhost spring.profiles.active=dev
     8 Redis服务 pro-middleware/pro-redis工程 8005 idea启动环境变量配置 ZUUL-SERVICE=localhost spring.profiles.active=dev
+    9 Admin服务 pro-monitor/pro-admin工程 idea启动环境变量配置 ZUUL-SERVICE=localhost spring.profiles.active=dev
+    10 Zipkin服务 pro-monitor/pro-zipkin工程 idea启动环境变量配置 ZUUL-SERVICE=localhost spring.profiles.active=dev
 # 框架QQ交流群  
 ![Image text](image/qq.png)  
