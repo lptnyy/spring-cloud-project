@@ -52,5 +52,9 @@
     8 Redis服务 pro-middleware/pro-redis工程 8005 idea启动环境变量配置 ZUUL-SERVICE=localhost spring.profiles.active=dev
     9 Admin服务 pro-monitor/pro-admin工程 idea启动环境变量配置 ZUUL-SERVICE=localhost spring.profiles.active=dev
     10 Zipkin服务 pro-monitor/pro-zipkin工程 idea启动环境变量配置 ZUUL-SERVICE=localhost spring.profiles.active=dev  
+
+# 有需要搭建框架，搭建正式环境，测试环境，可以扫描二维码联系我，不是免费的  
+![Image text](image/WechatIMG54.jpeg) 
+
 # 框架QQ交流群  
 ![Image text](image/qq.png)  
