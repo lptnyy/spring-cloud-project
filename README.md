@@ -1,8 +1,15 @@
 # 项目说明
 #### 搭建的微服务脚手架，欢迎大家随便用,内置代码生成器，权限系统正在开发中，文档陆续正在完善中。
 # 架构图  
-![Image text](image/Framework.jpg)  
-# 项目结构  
+![Image text](image/Framework.jpg) 
+# 前端展示
+![Image text](image/1.png)   
+![Image text](image/2.png)   
+![Image text](image/3.png)   
+![Image text](image/4.png) 
+# 前端项目
+    源码地址1 https://github.com/lptnyy/spring-cloud-project-vue 
+# 后端项目结构 本仓库代码为后端
 ![Image text](image/files.png)  
 # 技术选型  
     核心框架 Spring Boot  
@@ -41,12 +48,6 @@
     7 OSS服务 pro-middleware/pro-oss工程 8007 idea启动环境变量配置 ZUUL-SERVICE=localhost spring.profiles.active=dev
     8 Redis服务 pro-middleware/pro-redis工程 8005 idea启动环境变量配置 ZUUL-SERVICE=localhost spring.profiles.active=dev
     9 Admin服务 pro-monitor/pro-admin工程 idea启动环境变量配置 ZUUL-SERVICE=localhost spring.profiles.active=dev
-    10 Zipkin服务 pro-monitor/pro-zipkin工程 idea启动环境变量配置 ZUUL-SERVICE=localhost spring.profiles.active=dev
-#### 前端项目
-    源码地址1 https://github.com/lptnyy/spring-cloud-project-vue 
-![Image text](image/1.png)   
-![Image text](image/2.png)   
-![Image text](image/3.png)   
-![Image text](image/4.png)   
+    10 Zipkin服务 pro-monitor/pro-zipkin工程 idea启动环境变量配置 ZUUL-SERVICE=localhost spring.profiles.active=dev  
 # 框架QQ交流群  
 ![Image text](image/qq.png)  
