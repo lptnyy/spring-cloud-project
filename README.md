@@ -30,7 +30,7 @@
 #### 部署mysql环境 
     https://www.cnblogs.com/sablier/p/11605606.html 博客地址 
 #### 导入数据库脚本
-    
+    导入 sql 文件夹下的 3个 sql文件
 #### 后端项目
     1 启动注册中心 pro-eureka工程 8001 idea启动环境变量配置 EUREKA-SERVICE=localhost
     2 启动配置中心 pro-config工程 8002 idea启动环境变量配置 EUREKA-SERVICE=localhost RABBIT_URL=localhost
