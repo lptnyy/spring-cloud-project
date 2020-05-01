@@ -5,32 +5,32 @@
 # 项目结构  
 ![Image text](image/files.png)  
 # 技术选型  
-#### 核心框架 Spring Boot  
-#### 核心框架 Spring cloud 全家桶  
-#### 消息队列 RabbitMq  
-#### 日志收集 LogBack ELK
-#### 连接池 Druid + ShardingJdbc 读写分离  
-#### 持久层框架 Mybatis Plus
-#### 定时器 Quartz
-#### 前端框架 vue3.0 IView  
-#### 数据库 MySql
-#### 缓存 Redis
-#### 文件系统 阿里OSS 以及 本地储存 
-#### 容器 Docker  
+    核心框架 Spring Boot  
+    核心框架 Spring cloud 全家桶  
+    消息队列 RabbitMq  
+    日志收集 LogBack ELK
+    连接池 Druid + ShardingJdbc 读写分离  
+    持久层框架 Mybatis Plus
+    定时器 Quartz
+    前端框架 vue3.0 IView  
+    数据库 MySql
+    缓存 Redis
+    文件系统 阿里OSS 以及 本地储存 
+    容器 Docker  
+    监控 admin zipkin  
 # 开发环境搭建
 #### 安装虚拟机
-https://www.cnblogs.com/double-K/p/10952233.html  博客地址  
+    https://www.cnblogs.com/double-K/p/10952233.html  博客地址  
 #### 安装docker
-https://www.cnblogs.com/straycats/p/10680502.html 博客地址  
+    https://www.cnblogs.com/straycats/p/10680502.html 博客地址  
 #### 部署redis
-https://www.runoob.com/docker/docker-install-redis.html 博客地址 
+    https://www.runoob.com/docker/docker-install-redis.html 博客地址 
 #### 部署rabbitmq
-https://blog.csdn.net/myNameIssls/article/details/99702877 博客地址 
+    https://blog.csdn.net/myNameIssls/article/details/99702877 博客地址 
 #### 部署mysql环境 
-https://www.cnblogs.com/sablier/p/11605606.html 博客地址 
+    https://www.cnblogs.com/sablier/p/11605606.html 博客地址 
 #### 导入数据库脚本
-
-#### Idea 导入项目
+    
 #### 启动项目
     1 启动注册中心 pro-eureka工程 8001 idea启动环境变量配置 EUREKA-SERVICE=localhost
     2 启动配置中心 pro-config工程 8002 idea启动环境变量配置 EUREKA-SERVICE=localhost RABBIT_URL=localhost
