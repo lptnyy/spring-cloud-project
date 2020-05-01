@@ -31,7 +31,7 @@
     https://www.cnblogs.com/sablier/p/11605606.html 博客地址 
 #### 导入数据库脚本
     
-#### 启动项目
+#### 后端项目
     1 启动注册中心 pro-eureka工程 8001 idea启动环境变量配置 EUREKA-SERVICE=localhost
     2 启动配置中心 pro-config工程 8002 idea启动环境变量配置 EUREKA-SERVICE=localhost RABBIT_URL=localhost
     3 启动网关服务 pro-gateway工程 8101 idea启动环境变量配置 CONFIG-SERVICE=localhost spring.profiles.active=dev
@@ -42,5 +42,11 @@
     8 Redis服务 pro-middleware/pro-redis工程 8005 idea启动环境变量配置 ZUUL-SERVICE=localhost spring.profiles.active=dev
     9 Admin服务 pro-monitor/pro-admin工程 idea启动环境变量配置 ZUUL-SERVICE=localhost spring.profiles.active=dev
     10 Zipkin服务 pro-monitor/pro-zipkin工程 idea启动环境变量配置 ZUUL-SERVICE=localhost spring.profiles.active=dev
+#### 前端项目
+    源码地址1 https://github.com/lptnyy/spring-cloud-project-vue 
+![Image text](image/1.png)   
+![Image text](image/2.png)   
+![Image text](image/3.png)   
+![Image text](image/4.png)   
 # 框架QQ交流群  
 ![Image text](image/qq.png)  
