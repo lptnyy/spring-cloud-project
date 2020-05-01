@@ -132,4 +132,23 @@ public class UserController {
                 })
                 .exec();
     }
+
+    @PostMapping(value = "/update")
+    @ApiOperation(value = "修改用户")
+    @Log(name = "修改用户")
+    public ServiceResponse<Integer> update(@RequestBody User user){
+        return new ServiceResponse<Integer>()
+                .run(serviceResponse -> {
+                    User userPro = new User();
+                    userPro.setUserName(user.getUserName());
+                    ServiceResponse<ProUser> response = userService.userNameGetUser(new ProParameter<>(userPro));
+                    if (response.getObj() != null && !response.getObj().getUserId().equals(user.getUserId())) {
+                        serviceResponse.setCode(500);
+                        serviceResponse.setMsg("此账号已经存在");
+                        return -1;
+                    }
+                    return userService.update(new ProParameter<User>(user)).getObj();
+                })
+                .exec();
+    }
 }
