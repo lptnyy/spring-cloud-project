@@ -595,14 +595,14 @@ public class Freemarker {
         dataModel.put("importPkg", importPkg);
 
         String cacheFile = System.getProperty("user.dir");
-        String gearfileUrl = cacheFile+"/generator/src/main/java/"+tableInfo.getControllerPkg().replace(".", "/")+"/";
+        String gearfileUrl = cacheFile+"/generator/vue/pro/"+stringUtil.getClassName(table.get("tableName"))+"/";
         File gearfile = new File(gearfileUrl);
         if (!gearfile.exists()) {
             gearfile.mkdirs();
         }
 
         // 第六步：创建一个Writer对象，一般创建一FileWriter对象，指定生成的文件名。
-        Writer out = new FileWriter(new File(gearfileUrl+stringUtil.getClassName(table.get("tableName"))+"Controller.java"));
+        Writer out = new FileWriter(new File(gearfileUrl+"index.vue"));
         // 第七步：调用模板对象的process方法输出文件。
         template.process(dataModel, out);
         // 第八步：关闭流。

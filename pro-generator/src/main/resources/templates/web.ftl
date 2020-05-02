@@ -1,12 +1,9 @@
-<style lang="less">
-    @import './index.less';
-</style>
 <template>
     <div>
         <Row>
             <Col span="24">
             <Card :bordered="false">
-                <p slot="title">枚举管理</p>
+                <p slot="title">${tableComment}管理</p>
                 <div class="search">
                     <Input class="input" v-model="key" placeholder="Key"/>
                     <Input class="input" v-model="type" placeholder="Type"/>
@@ -21,7 +18,7 @@
             </Col>
             <Modal
                     v-model="addFlag"
-                    title="添加枚举"
+                    title="添加${tableComment}"
                     :footer-hide=true>
                 <Form ref="formInline" :model="formInline" :rules="ruleValidate">
                     <FormItem label="Key" prop="keystr">
@@ -45,11 +42,11 @@
 
 <script>
     import Tables from '_c/tables'
-    import { getEnumPageList, deleteEnum, updateEnum, saveEnum, idsDelete } from '@/api/enum'
+    import { get${className}PageList, delete${className}, update${className}, save${className}, ids${className}Delete } from '@/api/${smClassName}'
     import userStore from '@/store/module/user'
 
     export default {
-        name: 'enum',
+        name: '${className}',
         components: {
             Tables
         },
@@ -66,15 +63,11 @@
                 total: 0,
                 formInline: this.initFromInput(),
                 ruleValidate: {
-                    keystr: [
-                        { required: true, message: 'Key不能为空', trigger: 'blur' }
+                    <#list fields as field>
+                    ${field.fieldName}: [
+                        { required: true, message: '请输入内容', trigger: 'blur' }
                     ],
-                    valuestr: [
-                        { required: true, message: 'Value不能为空', trigger: 'blur' }
-                    ],
-                    type: [
-                        { required: true, message: 'Type不能为空', trigger: 'blur' }
-                    ]
+                    </#list>
                 },
                 columns: [
                     {
@@ -82,29 +75,13 @@
                         width: 60,
                         fixed: 'left'
                     },
+                    <#list fields as field>
                     {
-                        title: 'Key',
-                        key: 'keystr',
+                        title: '${field.comment}',
+                        key: '${field.fieldName}',
                         fixed: 'left'
                     },
-                    {
-                        title: 'Value',
-                        key: 'valuestr',
-                        width: 100,
-                        fixed: 'left'
-                    },
-                    {
-                        title: 'Type',
-                        key: 'type',
-                        width: 100,
-                        fixed: 'left'
-                    },
-                    {
-                        title: '创建时间',
-                        width: 150,
-                        key: 'createTime',
-                        fixed: 'left'
-                    },
+                    </#list>
                     {
                         title: '操作',
                         key: 'action',
@@ -144,10 +121,9 @@
         methods: {
             initFromInput () {
                 var formInline = {
-                    enumId: null,
-                    keystr: '',
-                    valuestr: '',
-                    type: ''
+                    <#list fields as field>
+                    ${field.fieldName}: null,
+                    </#list>
                 }
                 return formInline
             },
@@ -257,7 +233,6 @@
                 this.initData()
             },
             initData () {
-                console.log(this.selection)
                 var params = {}
                 params.keystr = this.key
                 params.type = this.type
@@ -280,5 +255,23 @@
         }
     }
 </script>
-<style>
+<style lang="less">
+    .page {
+        margin-top: 10px;
+    }
+    .search {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    .input{
+        width: 150px;
+        margin-right: 10px;
+    }
+    }
+    .add_button {
+        margin-left: 10px;
+    }
+    .foodl{
+        text-align: center;
+        width: 100%;
+    }
 </style>
