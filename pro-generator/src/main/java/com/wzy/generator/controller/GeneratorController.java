@@ -66,6 +66,17 @@ public class GeneratorController {
     }
 
     /**
+     * 生成文件
+     * @param tableInfo
+     * @return
+     */
+    @RequestMapping(path = "/generatorWeb")
+    public ServiceResponse generatorWeb(@RequestBody TableInfo tableInfo) throws SQLException, ClassNotFoundException, IOException, TemplateException {
+        freemarker.web(tableInfo, generatorService.getTableList(tableInfo).get(0), generatorService.getTableInfo(tableInfo));
+        return new ServiceResponse().setCode(200);
+    }
+
+    /**
      * 下载导出来的文件
      * @return
      */
