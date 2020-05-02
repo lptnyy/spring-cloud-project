@@ -8,7 +8,7 @@ import com.wzy.system.dto.ProEnum;
     * </p>
  *
  * @author 王振宇
- * @since 2020-03-06
+ * @since 2020-05-02
  */
 public interface ProEnumMapper extends BaseMapper<ProEnum> {
 

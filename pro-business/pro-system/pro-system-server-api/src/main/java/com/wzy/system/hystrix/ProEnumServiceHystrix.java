@@ -7,6 +7,15 @@ import org.springframework.stereotype.Component;
 import com.wzy.system.dto.ProEnum;
 import com.wzy.system.request.ProEnumRequest;
 import com.wzy.system.IProEnumService;
+
+/**
+ * <p>
+    * 枚举表 
+    * </p>
+ *
+ * @author 王振宇
+ * @since 2020-05-02
+ */
 @Component
 public class ProEnumServiceHystrix implements IProEnumService {
 
@@ -77,4 +86,13 @@ public class ProEnumServiceHystrix implements IProEnumService {
     public ServiceResponse<Integer> idsDelete(ProParameter<ProEnumRequest> proParameter) {
         return ServiceResponse.getFAIL();
     }
+
+    /**
+     * 批量插入
+     * @param proParameter
+     * @return
+     */
+     public ServiceResponse<List<ProEnum>> batchSave(ProParameter<List<ProEnumRequest>> proParameter) {
+         return ServiceResponse.getFAIL();
+     }
 }

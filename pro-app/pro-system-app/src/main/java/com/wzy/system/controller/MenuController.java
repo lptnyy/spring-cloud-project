@@ -240,7 +240,12 @@ public class MenuController {
                     response.checkState();
 
                     // 查询所有菜单
-                    List<Integer> menuIds = response.getObj().stream().map(ProRoleMenu::getMenuId).distinct().collect(Collectors.toList());
+                    List<Integer> menuIds = response.getObj()
+                            .stream()
+                            .map(ProRoleMenu::getMenuId)
+                            .distinct()
+                            .collect(Collectors.toList());
+
                     ProMenuRequest proMenuRequest = new ProMenuRequest();
                     proMenuRequest.setMenuId(1);
                     proMenuRequest.setIds(menuIds);
@@ -254,11 +259,13 @@ public class MenuController {
                     List<ProMenu> resultList = proMyMeunResponse.getObj();
 
                     // 筛选处根目录
-                    List<ProMenu> rootMenuList = resultList.stream().filter(proMenu -> proMenu.getParentId().equals(0))
+                    List<ProMenu> rootMenuList = resultList.stream()
+                            .filter(proMenu -> proMenu.getParentId().equals(0))
                             .collect(Collectors.toList());
 
                     // 拼接菜单
-                    List<Menu> menus = rootMenuList.stream().map(proMenu -> {
+                    List<Menu> menus = rootMenuList.stream()
+                            .map(proMenu -> {
                         Menu menu = new Menu();
                         MenuMeta menuMeta = new MenuMeta();
                         menuMeta.setIcon(proMenu.getIcon());
@@ -267,6 +274,7 @@ public class MenuController {
                         menu.setType(proMenu.getType());
                         menu.setPath(proMenu.getPath());
                         menu.setMeta(menuMeta);
+
                         // 查找子菜单
                         menu.setChildren(
                                 resultList.stream().filter(proMenu1 -> proMenu1.getParentId().equals(proMenu.getMenuId()))

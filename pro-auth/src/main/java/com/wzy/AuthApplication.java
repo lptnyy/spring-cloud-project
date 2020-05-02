@@ -1,5 +1,4 @@
 package com.wzy;
-
 import com.wzy.common.aspect.LogAnnotationAspect;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
