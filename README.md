@@ -1,12 +1,12 @@
 # 项目说明
 #### 搭建的微服务脚手架，欢迎大家随便用,内置代码生成器，后台管理功能陆续完善中。
 # 架构图  
-![Image text](image/Framework.jpg) 
+![Image text](image/Framework.jpg)   
 # 项目源码
-    Web管理端 https://gitee.com/lptnyy/spring-cloud-project-vue
-    Web管理端 https://github.com/lptnyy/spring-cloud-project-vue
-    后端服务 https://gitee.com/lptnyy/spring-cloud-project
-    后端服务 https://github.com/lptnyy/spring-cloud-project
+    Web管理端 https://gitee.com/lptnyy/spring-cloud-project-vue   
+    Web管理端 https://github.com/lptnyy/spring-cloud-project-vue    
+    后端服务 https://gitee.com/lptnyy/spring-cloud-project   
+    后端服务 https://github.com/lptnyy/spring-cloud-project   
 # 前端展示
 ![Image text](image/1.png)   
 ![Image text](image/2.png)   
