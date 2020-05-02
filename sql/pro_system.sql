@@ -1,7 +1,7 @@
 /*
  Navicat Premium Data Transfer
 
- Source Server         : localhost
+ Source Server         : 本机
  Source Server Type    : MySQL
  Source Server Version : 50728
  Source Host           : localhost:3306
@@ -11,7 +11,7 @@
  Target Server Version : 50728
  File Encoding         : 65001
 
- Date: 01/05/2020 22:48:07
+ Date: 02/05/2020 15:56:50
 */
 
 SET NAMES utf8mb4;
@@ -28,7 +28,7 @@ CREATE TABLE `pro_enum` (
   `type` varchar(32) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT 'type',
   `create_time` timestamp NULL DEFAULT CURRENT_TIMESTAMP COMMENT 'create_time',
   PRIMARY KEY (`enum_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='枚举表 ';
+) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='枚举表 ';
 
 -- ----------------------------
 -- Table structure for pro_menu
@@ -46,7 +46,7 @@ CREATE TABLE `pro_menu` (
   `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建事件',
   `title` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`menu_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=64 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='菜单表 ';
+) ENGINE=InnoDB AUTO_INCREMENT=65 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='菜单表 ';
 
 -- ----------------------------
 -- Records of pro_menu
@@ -61,6 +61,7 @@ INSERT INTO `pro_menu` VALUES (60, NULL, NULL, NULL, NULL, 59, '2', 'addmenu', '
 INSERT INTO `pro_menu` VALUES (61, NULL, NULL, NULL, NULL, 58, '2', 'addadmin', '2020-04-20 00:09:19', '添加管理员');
 INSERT INTO `pro_menu` VALUES (62, NULL, NULL, NULL, NULL, 57, '2', 'addrole', '2020-04-20 00:09:38', '添加角色');
 INSERT INTO `pro_menu` VALUES (63, NULL, NULL, NULL, NULL, 56, '2', 'gen:connecnt', '2020-04-20 00:10:06', '连接');
+INSERT INTO `pro_menu` VALUES (64, 'enum', NULL, 'ios-settings', '/pro/system/enum/index', 55, '1', NULL, '2020-05-02 11:45:08', '枚举管理');
 COMMIT;
 
 -- ----------------------------
@@ -111,30 +112,32 @@ CREATE TABLE `pro_role_menu` (
   `menu_id` int(11) DEFAULT NULL COMMENT '菜单id',
   `create_time` datetime DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
   PRIMARY KEY (`rm_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=241 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='角色菜单关系表';
+) ENGINE=InnoDB AUTO_INCREMENT=261 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='角色菜单关系表';
 
 -- ----------------------------
 -- Records of pro_role_menu
 -- ----------------------------
 BEGIN;
-INSERT INTO `pro_role_menu` VALUES (212, 17, 55, '2020-04-20 01:38:57');
-INSERT INTO `pro_role_menu` VALUES (213, 17, 59, '2020-04-20 01:38:57');
-INSERT INTO `pro_role_menu` VALUES (214, 17, 60, '2020-04-20 01:38:57');
-INSERT INTO `pro_role_menu` VALUES (215, 17, 58, '2020-04-20 01:38:57');
-INSERT INTO `pro_role_menu` VALUES (216, 17, 61, '2020-04-20 01:38:57');
-INSERT INTO `pro_role_menu` VALUES (217, 17, 57, '2020-04-20 01:38:57');
-INSERT INTO `pro_role_menu` VALUES (218, 17, 62, '2020-04-20 01:38:57');
-INSERT INTO `pro_role_menu` VALUES (219, 17, 56, '2020-04-20 01:38:57');
-INSERT INTO `pro_role_menu` VALUES (220, 17, 63, '2020-04-20 01:38:57');
-INSERT INTO `pro_role_menu` VALUES (232, 18, 55, '2020-05-01 22:24:05');
-INSERT INTO `pro_role_menu` VALUES (233, 18, 59, '2020-05-01 22:24:05');
-INSERT INTO `pro_role_menu` VALUES (234, 18, 60, '2020-05-01 22:24:05');
-INSERT INTO `pro_role_menu` VALUES (235, 18, 58, '2020-05-01 22:24:05');
-INSERT INTO `pro_role_menu` VALUES (236, 18, 61, '2020-05-01 22:24:05');
-INSERT INTO `pro_role_menu` VALUES (237, 18, 57, '2020-05-01 22:24:05');
-INSERT INTO `pro_role_menu` VALUES (238, 18, 62, '2020-05-01 22:24:05');
-INSERT INTO `pro_role_menu` VALUES (239, 18, 56, '2020-05-01 22:24:05');
-INSERT INTO `pro_role_menu` VALUES (240, 18, 63, '2020-05-01 22:24:05');
+INSERT INTO `pro_role_menu` VALUES (241, 18, 55, '2020-05-02 11:46:24');
+INSERT INTO `pro_role_menu` VALUES (242, 18, 64, '2020-05-02 11:46:24');
+INSERT INTO `pro_role_menu` VALUES (243, 18, 59, '2020-05-02 11:46:24');
+INSERT INTO `pro_role_menu` VALUES (244, 18, 60, '2020-05-02 11:46:24');
+INSERT INTO `pro_role_menu` VALUES (245, 18, 58, '2020-05-02 11:46:24');
+INSERT INTO `pro_role_menu` VALUES (246, 18, 61, '2020-05-02 11:46:24');
+INSERT INTO `pro_role_menu` VALUES (247, 18, 57, '2020-05-02 11:46:24');
+INSERT INTO `pro_role_menu` VALUES (248, 18, 62, '2020-05-02 11:46:24');
+INSERT INTO `pro_role_menu` VALUES (249, 18, 56, '2020-05-02 11:46:24');
+INSERT INTO `pro_role_menu` VALUES (250, 18, 63, '2020-05-02 11:46:24');
+INSERT INTO `pro_role_menu` VALUES (251, 17, 55, '2020-05-02 11:46:31');
+INSERT INTO `pro_role_menu` VALUES (252, 17, 64, '2020-05-02 11:46:31');
+INSERT INTO `pro_role_menu` VALUES (253, 17, 59, '2020-05-02 11:46:31');
+INSERT INTO `pro_role_menu` VALUES (254, 17, 60, '2020-05-02 11:46:31');
+INSERT INTO `pro_role_menu` VALUES (255, 17, 58, '2020-05-02 11:46:31');
+INSERT INTO `pro_role_menu` VALUES (256, 17, 61, '2020-05-02 11:46:31');
+INSERT INTO `pro_role_menu` VALUES (257, 17, 57, '2020-05-02 11:46:31');
+INSERT INTO `pro_role_menu` VALUES (258, 17, 62, '2020-05-02 11:46:31');
+INSERT INTO `pro_role_menu` VALUES (259, 17, 56, '2020-05-02 11:46:31');
+INSERT INTO `pro_role_menu` VALUES (260, 17, 63, '2020-05-02 11:46:31');
 COMMIT;
 
 -- ----------------------------
@@ -171,7 +174,7 @@ CREATE TABLE `pro_user_role` (
   `user_id` int(11) NOT NULL COMMENT '用户ID',
   `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
   PRIMARY KEY (`ur_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='用户角色关系表 ';
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='用户角色关系表 ';
 
 -- ----------------------------
 -- Records of pro_user_role
@@ -179,6 +182,8 @@ CREATE TABLE `pro_user_role` (
 BEGIN;
 INSERT INTO `pro_user_role` VALUES (4, 18, 3, '2020-04-20 00:38:01');
 INSERT INTO `pro_user_role` VALUES (5, 17, 3, '2020-04-20 00:38:01');
-INSERT INTO `pro_user_role` VALUES (8, 18, 1, '2020-05-01 22:26:03');
-INSERT INTO `pro_user_role` VALUES (9, 17, 1, '2020-05-01 22:26:03');
+INSERT INTO `pro_user_role` VALUES (10, 18, 1, '2020-05-02 10:04:25');
+INSERT INTO `pro_user_role` VALUES (11, 17, 1, '2020-05-02 10:04:25');
 COMMIT;
+
+SET FOREIGN_KEY_CHECKS = 1;
