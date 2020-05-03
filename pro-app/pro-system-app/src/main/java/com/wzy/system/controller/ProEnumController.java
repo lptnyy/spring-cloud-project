@@ -93,6 +93,37 @@ public class ProEnumController {
                 .exec();
     }
 
+    @PostMapping(value = "/getList")
+    @ApiOperation(value = "获取单条信息")
+    public ServiceResponse<List<ProEnumVo> > getList(@RequestBody ProEnumRequest request){
+        return new ServiceResponse<List<ProEnumVo> >()
+                .run(serviceResponse -> {
+
+                    // 获取调用服务返回结果 通过返回结果 进行业务判断 以及 手动控制 分布式事务回滚
+                    ServiceResponse<List<ProEnum>> response = proEnumService.getList(new ProParameter<>(request));
+
+                    // 获取调用服务状态
+                    response.checkState();
+
+                    // 获取服务返回的结果
+                    List<ProEnum> resultList = response.getObj();
+
+                    // 组装vo 返回数据 也可以不组装直接返回原始数据
+                    List<ProEnumVo> returnList = resultList.stream()
+                            .map(proEnum -> {
+                                ProEnumVo proEnumvo = new ProEnumVo();
+                                BeanUtils.copyProperties(proEnum,proEnumvo);
+                                proEnumvo.setCreateTime(DateUtil.getyyMMddHHmmss(proEnum.getCreateTime()));
+                                // vo.set 格式化一些特定的字段比如时间类型 自定义多种返回类型 应对视图层的需要
+                                return proEnumvo;
+                            })
+                            .collect(Collectors.toList());
+
+                    return returnList;
+                })
+                .exec();
+    }
+
     @PostMapping(value = "/save")
     @ApiOperation(value = "保存")
     public ServiceResponse<ProEnumVo> save(@RequestBody ProEnumRequest request){

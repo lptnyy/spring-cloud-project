@@ -118,6 +118,9 @@ public class ${className}Controller {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
 
+                    // 标记通过enumid删除
+                    request.set${pri}(1);
+
                     // 获取调用服务返回结果 通过返回结果 进行业务判断 以及 手动控制 分布式事务回滚
                     ServiceResponse<Integer> response = ${smClassName}Service.idsDelete(new ProParameter<>(request));
 

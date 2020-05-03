@@ -512,6 +512,9 @@ public class Freemarker {
             genDto.setPkg(dtoUtil.dbType(stringStringMap.get("dataType")).pkg);
             genDto.setFieldName2(stringUtil.getInitialsCapitalization(genDto.getFieldName()));
             fields.add(genDto);
+            if (stringStringMap.get("columnKey").toLowerCase().equals("pri")) {
+                dataModel.put("pri", genDto.getFieldName());
+            }
         });
 
         // 筛选引入的包
