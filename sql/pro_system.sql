@@ -11,7 +11,7 @@
  Target Server Version : 50728
  File Encoding         : 65001
 
- Date: 02/05/2020 15:56:50
+ Date: 03/05/2020 23:40:09
 */
 
 SET NAMES utf8mb4;
@@ -28,7 +28,17 @@ CREATE TABLE `pro_enum` (
   `type` varchar(32) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT 'type',
   `create_time` timestamp NULL DEFAULT CURRENT_TIMESTAMP COMMENT 'create_time',
   PRIMARY KEY (`enum_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='枚举表 ';
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='枚举表 ';
+
+-- ----------------------------
+-- Records of pro_enum
+-- ----------------------------
+BEGIN;
+INSERT INTO `pro_enum` VALUES (1, 'image', '图片', 'oss', '2020-05-03 23:08:26');
+INSERT INTO `pro_enum` VALUES (2, 'video', '视频', 'oss', '2020-05-03 23:08:59');
+INSERT INTO `pro_enum` VALUES (3, 'audio', '音乐', 'oss', '2020-05-03 23:09:16');
+INSERT INTO `pro_enum` VALUES (4, 'file', '文件', 'oss', '2020-05-03 23:09:26');
+COMMIT;
 
 -- ----------------------------
 -- Table structure for pro_menu
@@ -46,7 +56,7 @@ CREATE TABLE `pro_menu` (
   `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建事件',
   `title` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`menu_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=65 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='菜单表 ';
+) ENGINE=InnoDB AUTO_INCREMENT=66 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='菜单表 ';
 
 -- ----------------------------
 -- Records of pro_menu
@@ -62,6 +72,7 @@ INSERT INTO `pro_menu` VALUES (61, NULL, NULL, NULL, NULL, 58, '2', 'addadmin', 
 INSERT INTO `pro_menu` VALUES (62, NULL, NULL, NULL, NULL, 57, '2', 'addrole', '2020-04-20 00:09:38', '添加角色');
 INSERT INTO `pro_menu` VALUES (63, NULL, NULL, NULL, NULL, 56, '2', 'gen:connecnt', '2020-04-20 00:10:06', '连接');
 INSERT INTO `pro_menu` VALUES (64, 'enum', NULL, 'ios-settings', '/pro/system/enum/index', 55, '1', NULL, '2020-05-02 11:45:08', '枚举管理');
+INSERT INTO `pro_menu` VALUES (65, 'file', NULL, 'ios-settings', '/pro/system/file/index', 55, '1', NULL, '2020-05-03 22:26:27', '文件管理');
 COMMIT;
 
 -- ----------------------------
@@ -92,7 +103,7 @@ CREATE TABLE `pro_role` (
   `name` varchar(64) COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '角色名称',
   `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
   PRIMARY KEY (`role_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='系统角色表 ';
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='系统角色表 ';
 
 -- ----------------------------
 -- Records of pro_role
@@ -112,32 +123,34 @@ CREATE TABLE `pro_role_menu` (
   `menu_id` int(11) DEFAULT NULL COMMENT '菜单id',
   `create_time` datetime DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
   PRIMARY KEY (`rm_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=261 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='角色菜单关系表';
+) ENGINE=InnoDB AUTO_INCREMENT=283 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='角色菜单关系表';
 
 -- ----------------------------
 -- Records of pro_role_menu
 -- ----------------------------
 BEGIN;
-INSERT INTO `pro_role_menu` VALUES (241, 18, 55, '2020-05-02 11:46:24');
-INSERT INTO `pro_role_menu` VALUES (242, 18, 64, '2020-05-02 11:46:24');
-INSERT INTO `pro_role_menu` VALUES (243, 18, 59, '2020-05-02 11:46:24');
-INSERT INTO `pro_role_menu` VALUES (244, 18, 60, '2020-05-02 11:46:24');
-INSERT INTO `pro_role_menu` VALUES (245, 18, 58, '2020-05-02 11:46:24');
-INSERT INTO `pro_role_menu` VALUES (246, 18, 61, '2020-05-02 11:46:24');
-INSERT INTO `pro_role_menu` VALUES (247, 18, 57, '2020-05-02 11:46:24');
-INSERT INTO `pro_role_menu` VALUES (248, 18, 62, '2020-05-02 11:46:24');
-INSERT INTO `pro_role_menu` VALUES (249, 18, 56, '2020-05-02 11:46:24');
-INSERT INTO `pro_role_menu` VALUES (250, 18, 63, '2020-05-02 11:46:24');
-INSERT INTO `pro_role_menu` VALUES (251, 17, 55, '2020-05-02 11:46:31');
-INSERT INTO `pro_role_menu` VALUES (252, 17, 64, '2020-05-02 11:46:31');
-INSERT INTO `pro_role_menu` VALUES (253, 17, 59, '2020-05-02 11:46:31');
-INSERT INTO `pro_role_menu` VALUES (254, 17, 60, '2020-05-02 11:46:31');
-INSERT INTO `pro_role_menu` VALUES (255, 17, 58, '2020-05-02 11:46:31');
-INSERT INTO `pro_role_menu` VALUES (256, 17, 61, '2020-05-02 11:46:31');
-INSERT INTO `pro_role_menu` VALUES (257, 17, 57, '2020-05-02 11:46:31');
-INSERT INTO `pro_role_menu` VALUES (258, 17, 62, '2020-05-02 11:46:31');
-INSERT INTO `pro_role_menu` VALUES (259, 17, 56, '2020-05-02 11:46:31');
-INSERT INTO `pro_role_menu` VALUES (260, 17, 63, '2020-05-02 11:46:31');
+INSERT INTO `pro_role_menu` VALUES (261, 18, 55, '2020-05-03 22:27:02');
+INSERT INTO `pro_role_menu` VALUES (262, 18, 65, '2020-05-03 22:27:02');
+INSERT INTO `pro_role_menu` VALUES (263, 18, 64, '2020-05-03 22:27:02');
+INSERT INTO `pro_role_menu` VALUES (264, 18, 59, '2020-05-03 22:27:02');
+INSERT INTO `pro_role_menu` VALUES (265, 18, 60, '2020-05-03 22:27:02');
+INSERT INTO `pro_role_menu` VALUES (266, 18, 58, '2020-05-03 22:27:02');
+INSERT INTO `pro_role_menu` VALUES (267, 18, 61, '2020-05-03 22:27:02');
+INSERT INTO `pro_role_menu` VALUES (268, 18, 57, '2020-05-03 22:27:02');
+INSERT INTO `pro_role_menu` VALUES (269, 18, 62, '2020-05-03 22:27:02');
+INSERT INTO `pro_role_menu` VALUES (270, 18, 56, '2020-05-03 22:27:02');
+INSERT INTO `pro_role_menu` VALUES (271, 18, 63, '2020-05-03 22:27:02');
+INSERT INTO `pro_role_menu` VALUES (272, 17, 55, '2020-05-03 22:27:04');
+INSERT INTO `pro_role_menu` VALUES (273, 17, 65, '2020-05-03 22:27:04');
+INSERT INTO `pro_role_menu` VALUES (274, 17, 64, '2020-05-03 22:27:04');
+INSERT INTO `pro_role_menu` VALUES (275, 17, 59, '2020-05-03 22:27:04');
+INSERT INTO `pro_role_menu` VALUES (276, 17, 60, '2020-05-03 22:27:04');
+INSERT INTO `pro_role_menu` VALUES (277, 17, 58, '2020-05-03 22:27:04');
+INSERT INTO `pro_role_menu` VALUES (278, 17, 61, '2020-05-03 22:27:04');
+INSERT INTO `pro_role_menu` VALUES (279, 17, 57, '2020-05-03 22:27:04');
+INSERT INTO `pro_role_menu` VALUES (280, 17, 62, '2020-05-03 22:27:04');
+INSERT INTO `pro_role_menu` VALUES (281, 17, 56, '2020-05-03 22:27:04');
+INSERT INTO `pro_role_menu` VALUES (282, 17, 63, '2020-05-03 22:27:04');
 COMMIT;
 
 -- ----------------------------
