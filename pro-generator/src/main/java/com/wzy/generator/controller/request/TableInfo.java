@@ -17,4 +17,5 @@ public class TableInfo {
     String msyqlPass;
     String tableName;
     String feignClientService;
+    String gateWayPath;
 }

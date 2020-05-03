@@ -1,12 +1,12 @@
 import axios from '@/libs/api.request'
 
 /**
- * 查询数据库表列表
+ * 查询
  * @param {} params
  */
 export const get${className}PageList = (params) => {
   return axios.request({
-    url: '/system/${smClassName}/getPageList',
+    url: '${gateway}/${smClassName}/getPageList',
     method: 'post',
     data: params
   })
@@ -18,7 +18,7 @@ export const get${className}PageList = (params) => {
  */
 export const delete${className} = (params) => {
   return axios.request({
-    url: '/system/${smClassName}/delete',
+    url: '${gateway}/${smClassName}/delete',
     method: 'post',
     data: params
   })
@@ -30,7 +30,7 @@ export const delete${className} = (params) => {
  */
 export const ids${className}Delete = (params) => {
   return axios.request({
-    url: '/system/${smClassName}/idsDelete',
+    url: '${gateway}/${smClassName}/idsDelete',
     method: 'post',
     data: params
   })
@@ -42,19 +42,19 @@ export const ids${className}Delete = (params) => {
  */
 export const update${className} = (params) => {
   return axios.request({
-    url: '/system/${smClassName}/update',
+    url: '${gateway}/${smClassName}/update',
     method: 'post',
     data: params
   })
 }
 
 /**
- * 删除
+ * 保存
  * @param {} params
  */
 export const save${className} = (params) => {
   return axios.request({
-    url: '/system/${smClassName}/save',
+    url: '${gateway}/${smClassName}/save',
     method: 'post',
     data: params
   })

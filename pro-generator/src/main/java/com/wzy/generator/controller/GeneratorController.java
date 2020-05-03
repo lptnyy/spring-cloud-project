@@ -107,6 +107,7 @@ public class GeneratorController {
         if (zipFile.exists()) {
             zipFile.delete();
         }
+        delFile(new File(url));
         return responseEntity;
     }
 
@@ -142,5 +143,26 @@ public class GeneratorController {
         byte imgdata[]=bytestream.toByteArray();
         bytestream.close();
         return imgdata;
+    }
+
+    /**
+     * 删除文件夹
+     * @param file
+     * @return
+     */
+    boolean delFile(File file) {
+        if (!file.exists()) {
+            return false;
+        }
+
+        if (file.isFile()) {
+            return file.delete();
+        } else {
+            File[] files = file.listFiles();
+            for (File f : files) {
+                delFile(f);
+            }
+            return file.delete();
+        }
     }
 }

@@ -583,6 +583,9 @@ public class Freemarker {
             genDto.setPkg(dtoUtil.dbType(stringStringMap.get("dataType")).pkg);
             genDto.setFieldName2(stringUtil.getInitialsCapitalization(genDto.getFieldName()));
             fields.add(genDto);
+            if (stringStringMap.get("columnKey").toLowerCase().equals("pri")) {
+                dataModel.put("pri", genDto.getFieldName());
+            }
         });
 
         // 筛选引入的包
@@ -641,6 +644,7 @@ public class Freemarker {
         dataModel.put("mapperClassPath",tableInfo.getMapperPkg()+"."+dataModel.get("className")+"Mapper");
         dataModel.put("voClassPath",tableInfo.getVoPkg()+"."+dataModel.get("className")+"Vo");
         dataModel.put("genpkg", tableInfo.getControllerPkg());
+        dataModel.put("gateway", tableInfo.getGateWayPath());
         List<GenDto> fields = new ArrayList<>();
 
         // 遍历组装字段格式
@@ -660,6 +664,7 @@ public class Freemarker {
         List<String> importPkg = fields.stream().map(GenDto::getPkg)
                 .distinct()
                 .collect(Collectors.toList());
+
 
         // 存放生成的字段信息
         dataModel.put("fields", fields);

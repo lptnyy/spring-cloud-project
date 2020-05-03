@@ -5,8 +5,9 @@
         <Card :bordered="false">
           <p slot="title">${tableComment}管理</p>
             <div class="search">
-              <Input class="input" v-model="key" placeholder="Key"/>
-              <Input class="input" v-model="type" placeholder="Type"/>
+              <#list fields as field>
+              <Input class="input" v-model="${field.fieldName}" placeholder="请输入内容"/>
+              </#list>
               <Button @click="search">查询</Button>
               <Button class="add_button" @click="reset">重置</Button>
               <Button class="add_button" @click="deleteBathBtnClick" type="warning">删除</Button>
@@ -21,15 +22,11 @@
         title="添加${tableComment}"
         :footer-hide=true>
           <Form ref="formInline" :model="formInline" :rules="ruleValidate">
-            <FormItem label="Key" prop="keystr">
-              <Input v-model="formInline.keystr" placeholder="Key"/>
+            <#list fields as field>
+            <FormItem label="${field.comment}" prop="${field.fieldName}">
+              <Input v-model="formInline.${field.fieldName}" placeholder="请输入内容"/>
             </FormItem>
-            <FormItem label="Value" prop="valuestr">
-              <Input v-model="formInline.valuestr" placeholder="Value"/>
-            </FormItem>
-            <FormItem label="Type" prop="type">
-              <Input v-model="formInline.type" placeholder="Type"/>
-            </FormItem>
+            </#list>
           </Form>
           <div class="foodl">
               <Button @click="cancel">取消</Button>
@@ -54,8 +51,9 @@ export default {
     return {
       selection: [],
       addFlag: false,
-      key: '',
-      type: '',
+      <#list fields as field>
+      ${field.fieldName}: <#if field.type == 'String'>''<#else>null</#if>,
+      </#list>
       uploadUrl: userStore.state.baseUrl,
       downloadUrl: userStore.state.downloadUrl,
       pageSize: 10,
@@ -122,14 +120,15 @@ export default {
     initFromInput () {
       var formInline = {
         <#list fields as field>
-        ${field.fieldName}: null,
+        ${field.fieldName}: <#if field.type == 'String'>''<#else>null</#if>,
         </#list>
       }
       return formInline
     },
     reset () {
-      this.key = ''
-      this.type = ''
+      <#list fields as field>
+      this.${field.fieldName} = <#if field.type == 'String'>''<#else>null</#if>
+      </#list>
       this.pageNum = 1
       this.initData()
     },
@@ -145,11 +144,10 @@ export default {
       this.formInline = this.initFromInput()
     },
     editBtnClick (index) {
-      let enumVo = this.tableData[index]
-      this.formInline.enumId = enumVo.enumId
-      this.formInline.keystr = enumVo.keystr
-      this.formInline.valuestr = enumVo.valuestr
-      this.formInline.type = enumVo.type
+      let tableRow = this.tableData[index]
+      <#list fields as field>
+      this.formInline.${field.fieldName} = tableRow.${field.fieldName}
+      </#list>
       this.addFlag = true
     },
     deleteBathBtnClick () {
@@ -158,7 +156,7 @@ export default {
       } else {
         var ids = []
         for (let i = 0; i < this.selection.length; i++) {
-          ids.push(this.selection[i].enumId)
+          ids.push(this.selection[i].${pri})
         }
         var params = {
           ids: ids
@@ -180,9 +178,9 @@ export default {
       this.selection = selection
     },
     deleteBtnClick (index) {
-      let enumVo = this.tableData[index]
+      let table = this.tableData[index]
       var params = {
-        enumId: enumVo.enumId
+        ${pri}: table.${pri}
       }
       this.$Modal.confirm({
         title: '是否删除枚举?',
@@ -198,7 +196,7 @@ export default {
     handleSubmit () {
       this.$refs['formInline'].validate((valid) => {
         if (valid) {
-          if (this.formInline.enumId !== null) {
+          if (this.formInline.${pri} !== null) {
             update${className}(this.formInline)
               .then(res => {
                 if (res.data.code === 200) {
@@ -234,8 +232,9 @@ export default {
     },
     initData () {
       var params = {}
-      params.keystr = this.key
-      params.type = this.type
+      <#list fields as field>
+      params.${field.fieldName} = this.${field.fieldName}
+      </#list>
       params.pageNum = this.pageNum
       params.pageSize = this.pageSize
       get${className}PageList(params)
