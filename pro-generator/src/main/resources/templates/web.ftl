@@ -8,8 +8,8 @@
               <#list fields as field>
               <Input class="input" v-model="${field.fieldName}" placeholder="请输入内容"/>
               </#list>
-              <Button @click="search">查询</Button>
-              <Button class="add_button" @click="reset">重置</Button>
+              <Button @click="search" :disabled="!isRetrieve">查询</Button>
+              <Button class="add_button" :disabled="!isRetrieve" @click="reset">重置</Button>
               <Button class="add_button" :disabled="!isDelete" @click="deleteBathBtnClick" type="warning">删除</Button>
               <Button class="add_button" :disabled="!isCreate" @click="addBtnClick" type="primary">添加</Button>
             </div>
@@ -237,6 +237,7 @@ export default {
       this.initData()
     },
     initData () {
+      if (!this.isRetrieve) return
       var params = {}
       <#list fields as field>
       params.${field.fieldName} = this.${field.fieldName}
