@@ -4,7 +4,7 @@ spring:
   cloud:
     config:
       profile: ${spring.profiles.active}
-      name: eureka-middleware,zipkin-service,mysql-zipkinsqldata
+      name: eureka-middleware,zipkin-service
       discovery:
         enabled: false
       override-none: true

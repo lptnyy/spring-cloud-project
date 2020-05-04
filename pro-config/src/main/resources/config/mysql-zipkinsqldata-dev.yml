@@ -1,5 +1,0 @@
-spring:
-  datasource:
-    url: jdbc:mysql://127.0.0.1:3306/zipkin?zeroDateTimeBehavior=convertToNull&serverTimezone=GMT%2b8&charset=utf8mb4&useSSL=false
-    username: root
-    password: wangyang
