@@ -32,23 +32,24 @@ public class AliOss implements Oss{
 
     @Override
     public FIleVo upload(MultipartFile file) {
-        FIleVo fIleVo = new FIleVo();
-        fIleVo.setSuffix(StringUtil.getFileSuffix(file.getOriginalFilename()));
-        fIleVo.setFileName(file.getOriginalFilename());
-        fIleVo.setMd5(Md5Util.getMd5(file));
-        String randomFileName = RandomUtil.getOrderNum()+"."+fIleVo.getSuffix();
-        fIleVo.setPath(randomFileName);
-        fIleVo.setRandomFileName(randomFileName);
-        fIleVo.setUploadTime(new SimpleDateFormat("yyyy-MM-dd hh:mm:ss").format(new Date()));
-        fIleVo.setSourceType("ali");
-        fIleVo.setFileDns(ossConfiguration.getFileDnsUrl());
+        FIleVo fileVo = new FIleVo();
+        fileVo.setSuffix(StringUtil.getFileSuffix(file.getOriginalFilename()));
+        fileVo.setFileName(file.getOriginalFilename());
+        fileVo.setMd5(Md5Util.getMd5(file));
+        String randomFileName = RandomUtil.getOrderNum()+"."+fileVo.getSuffix();
+        fileVo.setPath(randomFileName);
+        fileVo.setRandomFileName(randomFileName);
+        fileVo.setUploadTime(new SimpleDateFormat("yyyy-MM-dd hh:mm:ss").format(new Date()));
+        fileVo.setSourceType("ali");
+        fileVo.setFileSize(file.getSize());
+        fileVo.setFileDns(ossConfiguration.getFileDnsUrl());
         InputStream inputStream = null;
         OSS ossClient = null;
         try {
             byte[] imgBytes = file.getBytes();
             ossClient = getOSS();
             inputStream = new ByteArrayInputStream(imgBytes);
-            ossClient.putObject(ossConfiguration.getBucketName(), fIleVo.getRandomFileName(), inputStream);
+            ossClient.putObject(ossConfiguration.getBucketName(), fileVo.getRandomFileName(), inputStream);
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
@@ -63,7 +64,7 @@ public class AliOss implements Oss{
                 ossClient.shutdown();
             }
         }
-        return fIleVo;
+        return fileVo;
     }
 
     @Override

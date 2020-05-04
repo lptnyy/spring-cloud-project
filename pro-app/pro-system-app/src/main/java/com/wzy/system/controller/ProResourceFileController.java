@@ -114,6 +114,19 @@ public class ProResourceFileController {
                 .exec();
     }
 
+    @PostMapping(value = "/saveBatch")
+    @ApiOperation(value = "保存")
+    public ServiceResponse<List<ProResourceFile>> saveBatch(@RequestBody List<ProResourceFileRequest> request){
+        return new ServiceResponse<List<ProResourceFile>>()
+                .run(serviceResponse -> {
+
+                    // 获取返回结果 包括数据库插入id
+                    List<ProResourceFile> proResourceFiles = proResourceFileService.batchSave(new ProParameter<>(request)).getObj();
+                    return proResourceFiles;
+                })
+                .exec();
+    }
+
     @PostMapping(value = "/idsDelete")
     @ApiOperation(value = "批量删除")
     public ServiceResponse<Integer> idsDelete(@RequestBody ProResourceFileRequest request){

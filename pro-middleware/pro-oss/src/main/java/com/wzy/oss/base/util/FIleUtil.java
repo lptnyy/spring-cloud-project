@@ -22,7 +22,7 @@ public class FIleUtil {
      * @return
      */
     public FIleVo saveFileCache(MultipartFile file) {
-        FIleVo fIleVo = new FIleVo();
+        FIleVo fileVo = new FIleVo();
         String baseCacheFileStr = System.getProperty("user.dir");
         if (!ossConfiguration.getLocalFilePath().equals("system.dir")) {
             baseCacheFileStr = ossConfiguration.getLocalFilePath();
@@ -32,28 +32,29 @@ public class FIleUtil {
         if (!baseFile.exists()) {
             baseFile.mkdirs();
         }
-        fIleVo.setSuffix(StringUtil.getFileSuffix(file.getOriginalFilename()));
-        fIleVo.setFileName(file.getOriginalFilename());
-        fIleVo.setMd5(Md5Util.getMd5(file));
-        String randomFileName = RandomUtil.getOrderNum()+"."+fIleVo.getSuffix();
-        String path = "/"+fIleVo.getSuffix();
+        fileVo.setSuffix(StringUtil.getFileSuffix(file.getOriginalFilename()));
+        fileVo.setFileName(file.getOriginalFilename());
+        fileVo.setMd5(Md5Util.getMd5(file));
+        String randomFileName = RandomUtil.getOrderNum()+"."+fileVo.getSuffix();
+        String path = "/"+fileVo.getSuffix();
         File pathFile = new File(baseFile.getPath()+path);
         if (!pathFile.exists()) {
             pathFile.mkdirs();
         }
-        fIleVo.setPath(path+"/"+randomFileName);
-        fIleVo.setRandomFileName(randomFileName);
-        fIleVo.setUploadTime(new SimpleDateFormat("yyyy-MM-dd hh:mm:ss").format(new Date()));
-        fIleVo.setPhysicsPath(baseFile.getPath()+path);
-        fIleVo.setSourceType("file");
-        fIleVo.setFileDns(ossConfiguration.getFileDnsUrl());
+        fileVo.setPath(path+"/"+randomFileName);
+        fileVo.setRandomFileName(randomFileName);
+        fileVo.setUploadTime(new SimpleDateFormat("yyyy-MM-dd hh:mm:ss").format(new Date()));
+        fileVo.setPhysicsPath(baseFile.getPath()+path);
+        fileVo.setSourceType("file");
+        fileVo.setFileSize(file.getSize());
+        fileVo.setFileDns(ossConfiguration.getFileDnsUrl());
         try {
-            file.transferTo(new File(baseFile.getPath()+fIleVo.getPath()));
+            file.transferTo(new File(baseFile.getPath()+fileVo.getPath()));
             //file.getInputStream().close();
         } catch (IOException e) {
             e.printStackTrace();
         }
-        return fIleVo;
+        return fileVo;
     }
 
     /**

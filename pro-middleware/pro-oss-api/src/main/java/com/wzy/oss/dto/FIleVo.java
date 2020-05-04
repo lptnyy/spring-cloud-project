@@ -13,5 +13,6 @@ public class FIleVo {
     String uploadTime;
     String suffix;
     String fileDns;
+    Long fileSize;
     byte[] fileDatas;
 }
