@@ -10,8 +10,8 @@
               </#list>
               <Button @click="search">查询</Button>
               <Button class="add_button" @click="reset">重置</Button>
-              <Button class="add_button" @click="deleteBathBtnClick" type="warning">删除</Button>
-              <Button class="add_button" @click="addBtnClick" type="primary">添加</Button>
+              <Button class="add_button" :disabled="!isDelete" @click="deleteBathBtnClick" type="warning">删除</Button>
+              <Button class="add_button" :disabled="!isCreate" @click="addBtnClick" type="primary">添加</Button>
             </div>
             <Table border @on-selection-change="tableOnSelect" ref="selection" :columns="columns" :data="tableData"></Table>
             <Page class="page" @on-page-size-change="onPageSizeChange" show-total show-sizer @on-change="tableOnChange" :total="total" show-elevator />
@@ -30,7 +30,7 @@
           </Form>
           <div class="foodl">
               <Button @click="cancel">取消</Button>
-              &nbsp;&nbsp;<Button type="primary" @click="handleSubmit('formInline')">确定</Button>
+              &nbsp;&nbsp;<Button type="primary" :disabled="!isCreate" @click="handleSubmit('formInline')">确定</Button>
           </div>
       </Modal>
     </Row>
@@ -49,6 +49,10 @@ export default {
   },
   data () {
     return {
+      isCreate: this.authorities('权限值'),
+      isDelete: this.authorities('权限值'),
+      isUpdate: this.authorities('权限值'),
+      isRetrieve: this.authorities('权限值'),
       selection: [],
       addFlag: false,
       <#list fields as field>
@@ -90,7 +94,8 @@ export default {
               h('Button', {
                 props: {
                   type: 'text',
-                  size: 'small'
+                  size: 'small',
+                  disabled: !isUpdate
                 },
                 on: {
                   click: () => {
@@ -101,7 +106,8 @@ export default {
               h('Button', {
                 props: {
                   type: 'text',
-                  size: 'small'
+                  size: 'small',
+                  disabled: !isDelete
                 },
                 on: {
                   click: () => {
