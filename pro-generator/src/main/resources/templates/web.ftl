@@ -95,7 +95,7 @@ export default {
                 props: {
                   type: 'text',
                   size: 'small',
-                  disabled: !isUpdate
+                  disabled: !this.isUpdate
                 },
                 on: {
                   click: () => {
@@ -107,7 +107,7 @@ export default {
                 props: {
                   type: 'text',
                   size: 'small',
-                  disabled: !isDelete
+                  disabled: !this.isDelete
                 },
                 on: {
                   click: () => {
