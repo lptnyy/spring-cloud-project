@@ -1,13 +1,14 @@
 # 项目说明
 #### 搭建的微服务脚手架，欢迎大家随便用,内置代码生成器，后台管理功能陆续完善中。
 # 更新内容
+    2020-05-02 生成器增加前端CRUD代码生成。
     2020-05-04 增加文件管理功能，对应服务OSS，数据库脚本也需要更新。
 # 架构图  
 ![Image text](image/Framework.jpg)   
 # 项目源码
-    Web管理端 https://gitee.com/lptnyy/spring-cloud-project-vue   
-    Web管理端 https://github.com/lptnyy/spring-cloud-project-vue    
-    后端服务 https://gitee.com/lptnyy/spring-cloud-project   
+    Web管理端 https://gitee.com/lptnyy/spring-cloud-project-vue  后台账号 lptnyy 密码wangyang
+    Web管理端 https://github.com/lptnyy/spring-cloud-project-vue  后台账号 lptnyy 密码wangyang
+    后端服务 https://gitee.com/lptnyy/spring-cloud-project    
     后端服务 https://github.com/lptnyy/spring-cloud-project   
 # 项目展示
 ![Image text](image/1.png)       
