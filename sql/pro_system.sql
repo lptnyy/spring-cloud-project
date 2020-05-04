@@ -11,7 +11,7 @@
  Target Server Version : 50728
  File Encoding         : 65001
 
- Date: 03/05/2020 23:40:09
+ Date: 04/05/2020 21:06:15
 */
 
 SET NAMES utf8mb4;
@@ -56,7 +56,7 @@ CREATE TABLE `pro_menu` (
   `create_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP COMMENT '创建事件',
   `title` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`menu_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=66 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='菜单表 ';
+) ENGINE=InnoDB AUTO_INCREMENT=68 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='菜单表 ';
 
 -- ----------------------------
 -- Records of pro_menu
@@ -72,7 +72,9 @@ INSERT INTO `pro_menu` VALUES (61, NULL, NULL, NULL, NULL, 58, '2', 'addadmin', 
 INSERT INTO `pro_menu` VALUES (62, NULL, NULL, NULL, NULL, 57, '2', 'addrole', '2020-04-20 00:09:38', '添加角色');
 INSERT INTO `pro_menu` VALUES (63, NULL, NULL, NULL, NULL, 56, '2', 'gen:connecnt', '2020-04-20 00:10:06', '连接');
 INSERT INTO `pro_menu` VALUES (64, 'enum', NULL, 'ios-settings', '/pro/system/enum/index', 55, '1', NULL, '2020-05-02 11:45:08', '枚举管理');
-INSERT INTO `pro_menu` VALUES (65, 'file', NULL, 'ios-settings', '/pro/system/file/index', 55, '1', NULL, '2020-05-03 22:26:27', '文件管理');
+INSERT INTO `pro_menu` VALUES (65, 'file', NULL, 'ios-settings', '/pro/system/file/index', 55, '1', 'file_select', '2020-05-03 22:26:27', '文件管理');
+INSERT INTO `pro_menu` VALUES (66, NULL, NULL, NULL, NULL, 65, '2', 'file_add', '2020-05-04 20:56:24', '上传文件');
+INSERT INTO `pro_menu` VALUES (67, NULL, NULL, NULL, NULL, 65, '2', 'file_del', '2020-05-04 21:04:59', '文件删除');
 COMMIT;
 
 -- ----------------------------
@@ -92,7 +94,14 @@ CREATE TABLE `pro_resource_file` (
   `source_type` varchar(32) COLLATE utf8mb4_unicode_ci DEFAULT NULL COMMENT '储存源',
   `upload_time` datetime DEFAULT CURRENT_TIMESTAMP COMMENT '上传时间',
   PRIMARY KEY (`file_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='系统资源文件表 ';
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='系统资源文件表 ';
+
+-- ----------------------------
+-- Records of pro_resource_file
+-- ----------------------------
+BEGIN;
+INSERT INTO `pro_resource_file` VALUES (1, '王振宇的简历.pdf', NULL, '2020050420570427761.pdf', '900c442c3e313dbf8e5235eb15beffe6', 101183, 'https://wzyfiles.oss-cn-beijing.aliyuncs.com/', '文件', 'pdf', 'ali', '2020-05-04 20:57:10');
+COMMIT;
 
 -- ----------------------------
 -- Table structure for pro_role
@@ -123,7 +132,7 @@ CREATE TABLE `pro_role_menu` (
   `menu_id` int(11) DEFAULT NULL COMMENT '菜单id',
   `create_time` datetime DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
   PRIMARY KEY (`rm_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=283 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='角色菜单关系表';
+) ENGINE=InnoDB AUTO_INCREMENT=308 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='角色菜单关系表';
 
 -- ----------------------------
 -- Records of pro_role_menu
@@ -140,17 +149,19 @@ INSERT INTO `pro_role_menu` VALUES (268, 18, 57, '2020-05-03 22:27:02');
 INSERT INTO `pro_role_menu` VALUES (269, 18, 62, '2020-05-03 22:27:02');
 INSERT INTO `pro_role_menu` VALUES (270, 18, 56, '2020-05-03 22:27:02');
 INSERT INTO `pro_role_menu` VALUES (271, 18, 63, '2020-05-03 22:27:02');
-INSERT INTO `pro_role_menu` VALUES (272, 17, 55, '2020-05-03 22:27:04');
-INSERT INTO `pro_role_menu` VALUES (273, 17, 65, '2020-05-03 22:27:04');
-INSERT INTO `pro_role_menu` VALUES (274, 17, 64, '2020-05-03 22:27:04');
-INSERT INTO `pro_role_menu` VALUES (275, 17, 59, '2020-05-03 22:27:04');
-INSERT INTO `pro_role_menu` VALUES (276, 17, 60, '2020-05-03 22:27:04');
-INSERT INTO `pro_role_menu` VALUES (277, 17, 58, '2020-05-03 22:27:04');
-INSERT INTO `pro_role_menu` VALUES (278, 17, 61, '2020-05-03 22:27:04');
-INSERT INTO `pro_role_menu` VALUES (279, 17, 57, '2020-05-03 22:27:04');
-INSERT INTO `pro_role_menu` VALUES (280, 17, 62, '2020-05-03 22:27:04');
-INSERT INTO `pro_role_menu` VALUES (281, 17, 56, '2020-05-03 22:27:04');
-INSERT INTO `pro_role_menu` VALUES (282, 17, 63, '2020-05-03 22:27:04');
+INSERT INTO `pro_role_menu` VALUES (295, 17, 55, '2020-05-04 21:05:08');
+INSERT INTO `pro_role_menu` VALUES (296, 17, 65, '2020-05-04 21:05:08');
+INSERT INTO `pro_role_menu` VALUES (297, 17, 67, '2020-05-04 21:05:08');
+INSERT INTO `pro_role_menu` VALUES (298, 17, 66, '2020-05-04 21:05:08');
+INSERT INTO `pro_role_menu` VALUES (299, 17, 64, '2020-05-04 21:05:08');
+INSERT INTO `pro_role_menu` VALUES (300, 17, 59, '2020-05-04 21:05:08');
+INSERT INTO `pro_role_menu` VALUES (301, 17, 60, '2020-05-04 21:05:08');
+INSERT INTO `pro_role_menu` VALUES (302, 17, 58, '2020-05-04 21:05:08');
+INSERT INTO `pro_role_menu` VALUES (303, 17, 61, '2020-05-04 21:05:08');
+INSERT INTO `pro_role_menu` VALUES (304, 17, 57, '2020-05-04 21:05:08');
+INSERT INTO `pro_role_menu` VALUES (305, 17, 62, '2020-05-04 21:05:08');
+INSERT INTO `pro_role_menu` VALUES (306, 17, 56, '2020-05-04 21:05:08');
+INSERT INTO `pro_role_menu` VALUES (307, 17, 63, '2020-05-04 21:05:08');
 COMMIT;
 
 -- ----------------------------
