@@ -5,5 +5,7 @@ import java.lang.annotation.*;
 @Target(ElementType.METHOD)
 @Retention(RetentionPolicy.RUNTIME)
 public @interface Log {
-    String name() default "info";
+    String value() default ""; // 日志内容
+    String name() default ""; // 日志名称
+    String source() default ""; // 添加来源用于区分日志来源 比如某某功能 某某服务 某某业务
 }
