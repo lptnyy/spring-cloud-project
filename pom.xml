@@ -27,6 +27,7 @@
 		<module>pro-generator</module>
 		<module>pro-middleware/pro-oss</module>
 		<module>pro-middleware/pro-oss-api</module>
+		<module>pro-seata</module>
 	</modules>
 
 	<parent>
