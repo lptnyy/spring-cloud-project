@@ -14,6 +14,7 @@ import io.swagger.annotations.ApiOperation;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.RestController;
 import javax.annotation.Resource;
 import java.util.List;
@@ -30,7 +31,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     @ApiOperation(value = "获取用户信息", notes = "通过属性查询相对应的数据")
-    public ServiceResponse<ProUser> userNameGetUser(ProParameter<User> proParameter) {
+    public ServiceResponse<ProUser> userNameGetUser(ProParameter<User> proParameter) throws Exception {
        return new ServiceResponse<ProUser>()
                 .run((serviceResponse) -> {
                     return proUserMapper.selectOne(
@@ -40,7 +41,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public ServiceResponse<List<ProUser>> getList(ProParameter<User> proParameter) {
+    public ServiceResponse<List<ProUser>> getList(ProParameter<User> proParameter) throws Exception {
         return new ServiceResponse<List<ProUser>>()
                 .run((serviceResponse) -> {
                     return proUserMapper.selectList(
@@ -50,7 +51,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public ServiceResponse<List<ProUser>> getPageList(ProParameter<User> proParameter) {
+    public ServiceResponse<List<ProUser>> getPageList(ProParameter<User> proParameter) throws Exception {
         return new ServiceResponse<List<ProUser>>()
                 .run((serviceResponse -> {
                     LambdaQueryWrapper<ProUser> queryWrapper = new LambdaQueryWrapper<>();
@@ -68,7 +69,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public ServiceResponse<List<ProUser>> findIdsList(ProParameter<User> proParameter) {
+    public ServiceResponse<List<ProUser>> findIdsList(ProParameter<User> proParameter) throws Exception {
         return new ServiceResponse<List<ProUser>>()
                 .run(serviceResponse -> {
                     LambdaQueryWrapper<ProUser> queryWrapper = new LambdaQueryWrapper<>();
@@ -78,7 +79,8 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public ServiceResponse<Integer> update(ProParameter<User> proParameter) {
+    @Transactional
+    public ServiceResponse<Integer> update(ProParameter<User> proParameter) throws Exception {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
                     ProUser proUser = new ProUser();
@@ -90,7 +92,8 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public ServiceResponse<Integer> save(ProParameter<User> proParameter) {
+    @Transactional
+    public ServiceResponse<Integer> save(ProParameter<User> proParameter) throws Exception {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
                     ProUser proUser = new ProUser();
@@ -100,7 +103,8 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public ServiceResponse<Integer> delete(ProParameter<User> proParameter) {
+    @Transactional
+    public ServiceResponse<Integer> delete(ProParameter<User> proParameter) throws Exception {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
                     LambdaQueryWrapper<ProUser> queryWrapper = new LambdaQueryWrapper<>();

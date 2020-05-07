@@ -1,4 +1,5 @@
 package com.wzy.system.controller;
+import com.wzy.common.annotation.Log;
 import com.wzy.common.method.ProParameter;
 import com.wzy.common.util.ServiceResponse;
 import com.wzy.redis.RedisService;
@@ -6,6 +7,7 @@ import com.wzy.system.IProUserRoleService;
 import com.wzy.system.dto.ProUserRole;
 import com.wzy.system.request.ProUserRoleRequest;
 import com.wzy.system.vo.ProUserRoleVo;
+import io.seata.spring.annotation.GlobalTransactional;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.BeanUtils;
@@ -38,7 +40,8 @@ public class ProUserRoleController {
 
     @PostMapping(value = "/getPageList")
     @ApiOperation(value = "分页查询列表")
-    public ServiceResponse<List<ProUserRoleVo>> getPageList(@RequestBody ProUserRoleRequest request){
+    @Log(name = "用户角色关系表", value = "分页查询列表", source = "system-service-app")
+    public ServiceResponse<List<ProUserRoleVo>> getPageList(@RequestBody ProUserRoleRequest request) throws Exception {
         return new ServiceResponse<List<ProUserRoleVo>>()
                 .run(serviceResponse -> {
 
@@ -72,7 +75,8 @@ public class ProUserRoleController {
 
     @PostMapping(value = "/get")
     @ApiOperation(value = "获取单条信息")
-    public ServiceResponse<ProUserRoleVo> get(@RequestBody ProUserRoleRequest request){
+    @Log(name = "用户角色关系表", value = "获取单条信息", source = "system-service-app")
+    public ServiceResponse<ProUserRoleVo> get(@RequestBody ProUserRoleRequest request) throws Exception {
         return new ServiceResponse<ProUserRoleVo>()
                 .run(serviceResponse -> {
 
@@ -91,7 +95,9 @@ public class ProUserRoleController {
 
     @PostMapping(value = "/save")
     @ApiOperation(value = "保存")
-    public ServiceResponse<List<ProUserRole>> save(@RequestBody ProUserRoleRequest request){
+    @GlobalTransactional
+    @Log(name = "用户角色关系表", value = "保存", source = "system-service-app")
+    public ServiceResponse<List<ProUserRole>> save(@RequestBody ProUserRoleRequest request) throws Exception {
         return new ServiceResponse<List<ProUserRole>>()
                 .run(serviceResponse -> {
 
@@ -128,7 +134,9 @@ public class ProUserRoleController {
 
     @PostMapping(value = "/idsDelete")
     @ApiOperation(value = "批量删除")
-    public ServiceResponse<Integer> idsDelete(@RequestBody ProUserRoleRequest request){
+    @GlobalTransactional
+    @Log(name = "用户角色关系表", value = "批量删除", source = "system-service-app")
+    public ServiceResponse<Integer> idsDelete(@RequestBody ProUserRoleRequest request) throws Exception {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
 
@@ -144,8 +152,10 @@ public class ProUserRoleController {
     }
 
     @PostMapping(value = "/delete")
-    @ApiOperation(value = "批量删除")
-    public ServiceResponse<Integer> delete(@RequestBody ProUserRoleRequest request){
+    @ApiOperation(value = "删除")
+    @GlobalTransactional
+    @Log(name = "用户角色关系表", value = "删除", source = "system-service-app")
+    public ServiceResponse<Integer> delete(@RequestBody ProUserRoleRequest request) throws Exception {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
 
@@ -162,7 +172,9 @@ public class ProUserRoleController {
 
     @PostMapping(value = "/update")
     @ApiOperation(value = "修改")
-    public ServiceResponse<Integer> update(@RequestBody ProUserRoleRequest request){
+    @GlobalTransactional
+    @Log(name = "用户角色关系表", value = "修改", source = "system-service-app")
+    public ServiceResponse<Integer> update(@RequestBody ProUserRoleRequest request) throws Exception {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
 

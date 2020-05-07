@@ -28,21 +28,21 @@ public interface IProEnumService {
      * @return
      */
     @RequestMapping(path = "/ProEnum/getUser", method = RequestMethod.POST)
-    ServiceResponse<ProEnum> get(@RequestBody ProParameter<ProEnumRequest> proParameter);
+    ServiceResponse<ProEnum> get(@RequestBody ProParameter<ProEnumRequest> proParameter) throws Exception;
 
     /**
      * 根据查询条件获取所有数据
      * @return
      */
     @RequestMapping(path = "/ProEnum/getList", method = RequestMethod.POST)
-    ServiceResponse<List<ProEnum>> getList(@RequestBody ProParameter<ProEnumRequest> proParameter);
+    ServiceResponse<List<ProEnum>> getList(@RequestBody ProParameter<ProEnumRequest> proParameter) throws Exception;
 
     /**
      * 分页查询所有数据
      * @return
      */
     @RequestMapping(path = "/ProEnum/getPageList", method = RequestMethod.POST)
-    ServiceResponse<List<ProEnum>> getPageList(@RequestBody ProParameter<ProEnumRequest> proParameter);
+    ServiceResponse<List<ProEnum>> getPageList(@RequestBody ProParameter<ProEnumRequest> proParameter) throws Exception;
 
 
     /**
@@ -50,7 +50,7 @@ public interface IProEnumService {
      * @return
      */
     @RequestMapping(path = "/ProEnum/getIdsList", method = RequestMethod.POST)
-    ServiceResponse<List<ProEnum>> findIdsList(@RequestBody ProParameter<ProEnumRequest> proParameter);
+    ServiceResponse<List<ProEnum>> findIdsList(@RequestBody ProParameter<ProEnumRequest> proParameter) throws Exception;
 
     /**
      * 修改数据
@@ -58,7 +58,7 @@ public interface IProEnumService {
      * @return
      */
     @RequestMapping(path = "/ProEnum/update", method = RequestMethod.POST)
-    ServiceResponse<Integer> update(@RequestBody ProParameter<ProEnumRequest> proParameter);
+    ServiceResponse<Integer> update(@RequestBody ProParameter<ProEnumRequest> proParameter) throws Exception;
 
     /**
      * 保存数据
@@ -66,7 +66,7 @@ public interface IProEnumService {
      * @return
      */
     @RequestMapping(path = "/ProEnum/save", method = RequestMethod.POST)
-    ServiceResponse<ProEnum> save(@RequestBody ProParameter<ProEnumRequest> proParameter);
+    ServiceResponse<ProEnum> save(@RequestBody ProParameter<ProEnumRequest> proParameter) throws Exception;
 
     /**
      * 删除数据
@@ -74,7 +74,7 @@ public interface IProEnumService {
      * @return
      */
     @RequestMapping(path = "/ProEnum/delete", method = RequestMethod.POST)
-    ServiceResponse<Integer> delete(@RequestBody ProParameter<ProEnumRequest> proParameter);
+    ServiceResponse<Integer> delete(@RequestBody ProParameter<ProEnumRequest> proParameter) throws Exception;
 
     /**
      * 通过id数组批量删除数据
@@ -82,7 +82,7 @@ public interface IProEnumService {
      * @return
      */
     @RequestMapping(path = "/ProEnum/idsDelete", method = RequestMethod.POST)
-    ServiceResponse<Integer> idsDelete(@RequestBody ProParameter<ProEnumRequest> proParameter);
+    ServiceResponse<Integer> idsDelete(@RequestBody ProParameter<ProEnumRequest> proParameter) throws Exception;
 
     /**
      * 批量保存
@@ -90,5 +90,5 @@ public interface IProEnumService {
      * @return
     */
     @RequestMapping(path = "/ProEnum/batchSave", method = RequestMethod.POST)
-    ServiceResponse<List<ProEnum>> batchSave(@RequestBody ProParameter<List<ProEnumRequest>> proParameter);
+    ServiceResponse<List<ProEnum>> batchSave(@RequestBody ProParameter<List<ProEnumRequest>> proParameter) throws Exception;
 }

@@ -11,6 +11,7 @@ import com.wzy.system.dto.ProUserRole;
 import com.wzy.system.request.ProUserRoleRequest;
 import com.wzy.system.request.User;
 import com.wzy.system.vo.UserVo;
+import io.seata.spring.annotation.GlobalTransactional;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.BeanUtils;
@@ -40,7 +41,7 @@ public class UserController {
     @PostMapping(value = "/userPageList")
     @ApiOperation(value = "分页查询管理员列表")
     @Log(name = "管理员日志", value = "分页查询管理员列表", source = "system-app")
-    public ServiceResponse<List<UserVo>> getUsers(@RequestBody User user){
+    public ServiceResponse<List<UserVo>> getUsers(@RequestBody User user) throws Exception {
         return new ServiceResponse<List<UserVo>>()
                 .run(serviceResponse -> {
 
@@ -93,7 +94,8 @@ public class UserController {
     @PostMapping(value = "/delete")
     @ApiOperation(value = "删除用户")
     @Log(name = "管理员日志", value = "删除用户", source = "system-app")
-    public ServiceResponse<Integer> delete(@RequestBody User user){
+    @GlobalTransactional
+    public ServiceResponse<Integer> delete(@RequestBody User user) throws Exception {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
                     return userService.delete(new ProParameter<User>(user)).getObj();
@@ -104,7 +106,8 @@ public class UserController {
     @PostMapping(value = "/save")
     @ApiOperation(value = "添加用户")
     @Log(name = "管理员日志", value = "添加用户", source = "system-app")
-    public ServiceResponse<Integer> save(@RequestBody User user){
+    @GlobalTransactional
+    public ServiceResponse<Integer> save(@RequestBody User user) throws Exception {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
                     User userPro = new User();
@@ -125,7 +128,8 @@ public class UserController {
     @PostMapping(value = "/updateStats")
     @ApiOperation(value = "修改用户状态")
     @Log(name = "管理员日志", value = "修改用户状态", source = "system-app")
-    public ServiceResponse<Integer> updateStats(@RequestBody User user){
+    @GlobalTransactional
+    public ServiceResponse<Integer> updateStats(@RequestBody User user) throws Exception {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
                     return userService.update(new ProParameter<User>(user)).getObj();
@@ -136,7 +140,8 @@ public class UserController {
     @PostMapping(value = "/update")
     @ApiOperation(value = "修改用户")
     @Log(name = "管理员日志", value = "修改用户", source = "system-app")
-    public ServiceResponse<Integer> update(@RequestBody User user){
+    @GlobalTransactional
+    public ServiceResponse<Integer> update(@RequestBody User user) throws Exception {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
                     User userPro = new User();

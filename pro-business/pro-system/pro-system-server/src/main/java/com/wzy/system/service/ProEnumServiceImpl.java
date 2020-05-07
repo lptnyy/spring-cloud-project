@@ -7,6 +7,7 @@ import com.wzy.common.util.ServiceResponse;
 import io.swagger.annotations.Api;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.BeanUtils;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.RestController;
 import javax.annotation.Resource;
 import java.util.List;
@@ -32,12 +33,12 @@ public class ProEnumServiceImpl implements IProEnumService {
     ProEnumMapper mapper;
 
     @Override
-    public ServiceResponse<ProEnum> get(ProParameter<ProEnumRequest> proParameter) {
+    public ServiceResponse<ProEnum> get(ProParameter<ProEnumRequest> proParameter) throws Exception {
         return new ServiceResponse<ProEnum>()
                 .run((serviceResponse) -> {
                     LambdaQueryWrapper<ProEnum> lambdaQueryWrapper = new LambdaQueryWrapper<>();
                     ProEnumRequest request = proParameter.getObj();
-                    if(request.getEnumId() != null){
+                    if (request.getEnumId() != null) {
                         lambdaQueryWrapper.eq(ProEnum::getEnumId,request.getEnumId());
                     }
                     if(!StringUtils.isEmpty(request.getKeystr())){
@@ -58,7 +59,7 @@ public class ProEnumServiceImpl implements IProEnumService {
     }
 
     @Override
-    public ServiceResponse<List<ProEnum>> getList(ProParameter<ProEnumRequest> proParameter) {
+    public ServiceResponse<List<ProEnum>> getList(ProParameter<ProEnumRequest> proParameter) throws Exception {
         return new ServiceResponse<List<ProEnum>>()
                 .run((serviceResponse) -> {
                     LambdaQueryWrapper<ProEnum> lambdaQueryWrapper = new LambdaQueryWrapper<>();
@@ -84,7 +85,7 @@ public class ProEnumServiceImpl implements IProEnumService {
     }
 
     @Override
-    public ServiceResponse<List<ProEnum>> getPageList(ProParameter<ProEnumRequest> proParameter) {
+    public ServiceResponse<List<ProEnum>> getPageList(ProParameter<ProEnumRequest> proParameter) throws Exception{
         return new ServiceResponse<List<ProEnum>>()
                 .run((serviceResponse -> {
                     LambdaQueryWrapper<ProEnum> lambdaQueryWrapper = new LambdaQueryWrapper<>();
@@ -116,7 +117,7 @@ public class ProEnumServiceImpl implements IProEnumService {
     }
 
     @Override
-    public ServiceResponse<List<ProEnum>> findIdsList(ProParameter<ProEnumRequest> proParameter) {
+    public ServiceResponse<List<ProEnum>> findIdsList(ProParameter<ProEnumRequest> proParameter) throws Exception{
         return new ServiceResponse<List<ProEnum>>()
                 .run(serviceResponse -> {
                     LambdaQueryWrapper<ProEnum> queryWrapper = new LambdaQueryWrapper<>();
@@ -142,7 +143,8 @@ public class ProEnumServiceImpl implements IProEnumService {
     }
 
     @Override
-    public ServiceResponse<Integer> update(ProParameter<ProEnumRequest> proParameter) {
+    @Transactional
+    public ServiceResponse<Integer> update(ProParameter<ProEnumRequest> proParameter) throws Exception{
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
                     ProEnum bean = new ProEnum();
@@ -152,7 +154,8 @@ public class ProEnumServiceImpl implements IProEnumService {
     }
 
     @Override
-    public ServiceResponse<ProEnum> save(ProParameter<ProEnumRequest> proParameter) {
+    @Transactional
+    public ServiceResponse<ProEnum> save(ProParameter<ProEnumRequest> proParameter) throws Exception{
         return new ServiceResponse<ProEnum>()
                 .run(serviceResponse -> {
                     ProEnum bean = new ProEnum();
@@ -163,7 +166,8 @@ public class ProEnumServiceImpl implements IProEnumService {
     }
 
     @Override
-    public ServiceResponse<List<ProEnum>> batchSave(ProParameter<List<ProEnumRequest>> proParameter) {
+    @Transactional
+    public ServiceResponse<List<ProEnum>> batchSave(ProParameter<List<ProEnumRequest>> proParameter) throws Exception{
        return new ServiceResponse<List<ProEnum>>()
                .run(serviceResponse -> {
                    List<ProEnum> roles = proParameter.getObj()
@@ -179,7 +183,8 @@ public class ProEnumServiceImpl implements IProEnumService {
      }
 
     @Override
-    public ServiceResponse<Integer> delete(ProParameter<ProEnumRequest> proParameter) {
+    @Transactional
+    public ServiceResponse<Integer> delete(ProParameter<ProEnumRequest> proParameter) throws Exception{
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
                     LambdaQueryWrapper<ProEnum> lambdaQueryWrapper = new LambdaQueryWrapper<>();
@@ -204,7 +209,8 @@ public class ProEnumServiceImpl implements IProEnumService {
     }
 
     @Override
-    public ServiceResponse<Integer> idsDelete(ProParameter<ProEnumRequest> proParameter) {
+    @Transactional
+    public ServiceResponse<Integer> idsDelete(ProParameter<ProEnumRequest> proParameter) throws Exception{
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
                      LambdaQueryWrapper<ProEnum> queryWrapper = new LambdaQueryWrapper<>();

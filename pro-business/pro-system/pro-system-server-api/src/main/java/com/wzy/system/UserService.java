@@ -19,28 +19,28 @@ public interface UserService {
      * @return
      */
     @RequestMapping(path = "/user/getUser", method = RequestMethod.POST)
-    ServiceResponse<ProUser> userNameGetUser(@RequestBody ProParameter<User> proParameter);
+    ServiceResponse<ProUser> userNameGetUser(@RequestBody ProParameter<User> proParameter) throws Exception;
 
     /**
      * 查询所有数据
      * @return
      */
     @RequestMapping(path = "/user/getList", method = RequestMethod.POST)
-    ServiceResponse<List<ProUser>> getList(@RequestBody ProParameter<User> proParameter);
+    ServiceResponse<List<ProUser>> getList(@RequestBody ProParameter<User> proParameter) throws Exception;
 
     /**
      * 分页查询所有数据
      * @return
      */
     @RequestMapping(path = "/user/getPageList", method = RequestMethod.POST)
-    ServiceResponse<List<ProUser>> getPageList(@RequestBody ProParameter<User> proParameter);
+    ServiceResponse<List<ProUser>> getPageList(@RequestBody ProParameter<User> proParameter) throws Exception;
 
     /**
      * 同多Id数组查询数据
      * @return
      */
     @RequestMapping(path = "/user/findIdsList", method = RequestMethod.POST)
-    ServiceResponse<List<ProUser>> findIdsList(@RequestBody ProParameter<User> proParameter);
+    ServiceResponse<List<ProUser>> findIdsList(@RequestBody ProParameter<User> proParameter) throws Exception;
 
     /**
      * 修改数据
@@ -48,7 +48,7 @@ public interface UserService {
      * @return
      */
     @RequestMapping(path = "/user/update", method = RequestMethod.POST)
-    ServiceResponse<Integer> update(@RequestBody ProParameter<User> proParameter);
+    ServiceResponse<Integer> update(@RequestBody ProParameter<User> proParameter) throws Exception;
 
     /**
      * 保存数据
@@ -56,7 +56,7 @@ public interface UserService {
      * @return
      */
     @RequestMapping(path = "/user/save", method = RequestMethod.POST)
-    ServiceResponse<Integer> save(@RequestBody ProParameter<User> proParameter);
+    ServiceResponse<Integer> save(@RequestBody ProParameter<User> proParameter) throws Exception;
 
     /**
      * 删除数据
@@ -64,5 +64,5 @@ public interface UserService {
      * @return
      */
     @RequestMapping(path = "/user/delete", method = RequestMethod.POST)
-    ServiceResponse<Integer> delete(@RequestBody ProParameter<User> proParameter);
+    ServiceResponse<Integer> delete(@RequestBody ProParameter<User> proParameter) throws Exception;
 }

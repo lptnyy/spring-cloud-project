@@ -18,7 +18,7 @@ public class OssServiceImpl implements OssService {
     Oss oss;
 
     @Override
-    public ServiceResponse<FIleVo> uploadMultipartFile(MultipartFile file) {
+    public ServiceResponse<FIleVo> uploadMultipartFile(MultipartFile file)  throws Exception {
         return new ServiceResponse<FIleVo>()
                 .run(serviceResponse -> {
                     return oss.upload(file);

@@ -16,6 +16,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 		"com.wzy.system"
 })
 @ComponentScans({
+		@ComponentScan("com.wzy.common.exception"), // 载入全局异常管理
 		@ComponentScan("com.wzy.redis"),
 		@ComponentScan("com.wzy.common.feign"),
 		@ComponentScan("com.wzy.common.aspect")

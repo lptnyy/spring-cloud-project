@@ -94,12 +94,13 @@ public class ServiceResponse<T> implements Serializable {
     }
 
     Exceutor<T> exceutor;
-    public ServiceResponse exec(){
+    public ServiceResponse exec() throws Exception {
         try{
             this.obj = exceutor.run(this);
         } catch (Exception e){
             this.setMsg(e.getMessage());
             this.setCode(MessageType.FAIL.getValue());
+            throw e;
         }
         return this;
     }

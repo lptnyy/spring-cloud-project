@@ -7,6 +7,7 @@ import com.wzy.common.util.ServiceResponse;
 import io.swagger.annotations.Api;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.BeanUtils;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.RestController;
 import javax.annotation.Resource;
 import java.util.List;
@@ -32,7 +33,7 @@ public class ProResourceFileServiceImpl implements IProResourceFileService {
     ProResourceFileMapper mapper;
 
     @Override
-    public ServiceResponse<ProResourceFile> get(ProParameter<ProResourceFileRequest> proParameter) {
+    public ServiceResponse<ProResourceFile> get(ProParameter<ProResourceFileRequest> proParameter) throws Exception {
         return new ServiceResponse<ProResourceFile>()
                 .run((serviceResponse) -> {
                     LambdaQueryWrapper<ProResourceFile> lambdaQueryWrapper = new LambdaQueryWrapper<>();
@@ -76,7 +77,7 @@ public class ProResourceFileServiceImpl implements IProResourceFileService {
     }
 
     @Override
-    public ServiceResponse<List<ProResourceFile>> getList(ProParameter<ProResourceFileRequest> proParameter) {
+    public ServiceResponse<List<ProResourceFile>> getList(ProParameter<ProResourceFileRequest> proParameter) throws Exception {
         return new ServiceResponse<List<ProResourceFile>>()
                 .run((serviceResponse) -> {
                     LambdaQueryWrapper<ProResourceFile> lambdaQueryWrapper = new LambdaQueryWrapper<>();
@@ -120,7 +121,7 @@ public class ProResourceFileServiceImpl implements IProResourceFileService {
     }
 
     @Override
-    public ServiceResponse<List<ProResourceFile>> getPageList(ProParameter<ProResourceFileRequest> proParameter) {
+    public ServiceResponse<List<ProResourceFile>> getPageList(ProParameter<ProResourceFileRequest> proParameter) throws Exception {
         return new ServiceResponse<List<ProResourceFile>>()
                 .run((serviceResponse -> {
                     LambdaQueryWrapper<ProResourceFile> lambdaQueryWrapper = new LambdaQueryWrapper<>();
@@ -170,7 +171,7 @@ public class ProResourceFileServiceImpl implements IProResourceFileService {
     }
 
     @Override
-    public ServiceResponse<List<ProResourceFile>> findIdsList(ProParameter<ProResourceFileRequest> proParameter) {
+    public ServiceResponse<List<ProResourceFile>> findIdsList(ProParameter<ProResourceFileRequest> proParameter) throws Exception {
         return new ServiceResponse<List<ProResourceFile>>()
                 .run(serviceResponse -> {
                     LambdaQueryWrapper<ProResourceFile> queryWrapper = new LambdaQueryWrapper<>();
@@ -214,7 +215,8 @@ public class ProResourceFileServiceImpl implements IProResourceFileService {
     }
 
     @Override
-    public ServiceResponse<Integer> update(ProParameter<ProResourceFileRequest> proParameter) {
+    @Transactional
+    public ServiceResponse<Integer> update(ProParameter<ProResourceFileRequest> proParameter) throws Exception {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
                     ProResourceFile bean = new ProResourceFile();
@@ -224,7 +226,8 @@ public class ProResourceFileServiceImpl implements IProResourceFileService {
     }
 
     @Override
-    public ServiceResponse<ProResourceFile> save(ProParameter<ProResourceFileRequest> proParameter) {
+    @Transactional
+    public ServiceResponse<ProResourceFile> save(ProParameter<ProResourceFileRequest> proParameter) throws Exception {
         return new ServiceResponse<ProResourceFile>()
                 .run(serviceResponse -> {
                     ProResourceFile bean = new ProResourceFile();
@@ -235,7 +238,8 @@ public class ProResourceFileServiceImpl implements IProResourceFileService {
     }
 
     @Override
-    public ServiceResponse<List<ProResourceFile>> batchSave(ProParameter<List<ProResourceFileRequest>> proParameter) {
+    @Transactional
+    public ServiceResponse<List<ProResourceFile>> batchSave(ProParameter<List<ProResourceFileRequest>> proParameter) throws Exception {
        return new ServiceResponse<List<ProResourceFile>>()
                .run(serviceResponse -> {
                    List<ProResourceFile> roles = proParameter.getObj()
@@ -251,7 +255,8 @@ public class ProResourceFileServiceImpl implements IProResourceFileService {
      }
 
     @Override
-    public ServiceResponse<Integer> delete(ProParameter<ProResourceFileRequest> proParameter) {
+    @Transactional
+    public ServiceResponse<Integer> delete(ProParameter<ProResourceFileRequest> proParameter) throws Exception {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
                     LambdaQueryWrapper<ProResourceFile> lambdaQueryWrapper = new LambdaQueryWrapper<>();
@@ -294,7 +299,8 @@ public class ProResourceFileServiceImpl implements IProResourceFileService {
     }
 
     @Override
-    public ServiceResponse<Integer> idsDelete(ProParameter<ProResourceFileRequest> proParameter) {
+    @Transactional
+    public ServiceResponse<Integer> idsDelete(ProParameter<ProResourceFileRequest> proParameter) throws Exception {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
                      LambdaQueryWrapper<ProResourceFile> queryWrapper = new LambdaQueryWrapper<>();

@@ -1,29 +1,29 @@
-package ${genpkg}.hystrix;
+package com.wzy.system.hystrix;
 import com.wzy.common.method.ProParameter;
 import com.wzy.common.util.ServiceResponse;
 import java.util.List;
 import java.lang.Integer;
 import org.springframework.stereotype.Component;
-import ${dtoClassPath};
-import ${requestClassPath};
-import ${serviceClassPath};
+import com.wzy.system.dto.ProLog;
+import com.wzy.system.request.ProLogRequest;
+import com.wzy.system.IProLogService;
 
 /**
  * <p>
-    * ${tableComment}
+    * 操作日志
     * </p>
  *
  * @author 王振宇
- * @since ${generatorDate}
+ * @since 2020-05-07
  */
 @Component
-public class ${className}ServiceHystrix implements I${className}Service {
+public class ProLogServiceHystrix implements IProLogService {
 
     /*
      * 获得单个信息
      * @return
      */
-    public ServiceResponse<${className}> get(ProParameter<${className}Request> proParameter) throws Exception {
+    public ServiceResponse<ProLog> get(ProParameter<ProLogRequest> proParameter) throws Exception {
         return ServiceResponse.getFAIL();
     }
 
@@ -31,7 +31,7 @@ public class ${className}ServiceHystrix implements I${className}Service {
      * 根据查询条件获取所有数据
      * @return
      */
-    public ServiceResponse<List<${className}>> getList(ProParameter<${className}Request> proParameter) throws Exception {
+    public ServiceResponse<List<ProLog>> getList(ProParameter<ProLogRequest> proParameter) throws Exception {
         return ServiceResponse.getFAIL();
     }
 
@@ -39,7 +39,7 @@ public class ${className}ServiceHystrix implements I${className}Service {
      * 分页查询所有数据
      * @return
      */
-    public ServiceResponse<List<${className}>> getPageList(ProParameter<${className}Request> proParameter) throws Exception {
+    public ServiceResponse<List<ProLog>> getPageList(ProParameter<ProLogRequest> proParameter) throws Exception {
         return ServiceResponse.getFAIL();
     }
 
@@ -47,7 +47,7 @@ public class ${className}ServiceHystrix implements I${className}Service {
      * ids数组In查询数据
      * @return
      */
-    public ServiceResponse<List<${className}>> findIdsList(ProParameter<${className}Request> proParameter) throws Exception {
+    public ServiceResponse<List<ProLog>> findIdsList(ProParameter<ProLogRequest> proParameter) throws Exception {
         return ServiceResponse.getFAIL();
     }
 
@@ -56,7 +56,7 @@ public class ${className}ServiceHystrix implements I${className}Service {
      * @param proParameter
      * @return
      */
-    public ServiceResponse<Integer> update(ProParameter<${className}Request> proParameter) throws Exception {
+    public ServiceResponse<Integer> update(ProParameter<ProLogRequest> proParameter) throws Exception {
         return ServiceResponse.getFAIL();
     }
 
@@ -65,7 +65,7 @@ public class ${className}ServiceHystrix implements I${className}Service {
      * @param proParameter
      * @return
      */
-    public ServiceResponse<${className}> save(ProParameter<${className}Request> proParameter) throws Exception {
+    public ServiceResponse<ProLog> save(ProParameter<ProLogRequest> proParameter) throws Exception {
         return ServiceResponse.getFAIL();
     }
 
@@ -74,7 +74,7 @@ public class ${className}ServiceHystrix implements I${className}Service {
      * @param proParameter
      * @return
      */
-    public ServiceResponse<Integer> delete(ProParameter<${className}Request> proParameter) throws Exception {
+    public ServiceResponse<Integer> delete(ProParameter<ProLogRequest> proParameter) throws Exception {
         return ServiceResponse.getFAIL();
     }
 
@@ -83,7 +83,7 @@ public class ${className}ServiceHystrix implements I${className}Service {
      * @param proParameter
      * @return
      */
-    public ServiceResponse<Integer> idsDelete(ProParameter<${className}Request> proParameter) throws Exception {
+    public ServiceResponse<Integer> idsDelete(ProParameter<ProLogRequest> proParameter) throws Exception {
         return ServiceResponse.getFAIL();
     }
 
@@ -92,7 +92,7 @@ public class ${className}ServiceHystrix implements I${className}Service {
      * @param proParameter
      * @return
      */
-     public ServiceResponse<List<${className}>> batchSave(ProParameter<List<${className}Request>> proParameter) throws Exception {
+     public ServiceResponse<List<ProLog>> batchSave(ProParameter<List<ProLogRequest>> proParameter) throws Exception {
          return ServiceResponse.getFAIL();
      }
 }

@@ -1,4 +1,5 @@
 package com.wzy.system.controller;
+import com.wzy.common.annotation.Log;
 import com.wzy.common.method.ProParameter;
 import com.wzy.common.util.DateUtil;
 import com.wzy.common.util.ServiceResponse;
@@ -7,6 +8,7 @@ import com.wzy.system.IProResourceFileService;
 import com.wzy.system.dto.ProResourceFile;
 import com.wzy.system.request.ProResourceFileRequest;
 import com.wzy.system.vo.ProResourceFileVo;
+import io.seata.spring.annotation.GlobalTransactional;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.BeanUtils;
@@ -39,7 +41,8 @@ public class ProResourceFileController {
 
     @PostMapping(value = "/getPageList")
     @ApiOperation(value = "分页查询列表")
-    public ServiceResponse<List<ProResourceFileVo>> getPageList(@RequestBody ProResourceFileRequest request){
+    @Log(name = "系统资源文件表", value = "分页查询列表", source = "system-service-app")
+    public ServiceResponse<List<ProResourceFileVo>> getPageList(@RequestBody ProResourceFileRequest request) throws Exception {
         return new ServiceResponse<List<ProResourceFileVo>>()
                 .run(serviceResponse -> {
 
@@ -74,7 +77,8 @@ public class ProResourceFileController {
 
     @PostMapping(value = "/get")
     @ApiOperation(value = "获取单条信息")
-    public ServiceResponse<ProResourceFileVo> get(@RequestBody ProResourceFileRequest request){
+    @Log(name = "系统资源文件表", value = "获取单条信息", source = "system-service-app")
+    public ServiceResponse<ProResourceFileVo> get(@RequestBody ProResourceFileRequest request) throws Exception {
         return new ServiceResponse<ProResourceFileVo>()
                 .run(serviceResponse -> {
 
@@ -95,7 +99,9 @@ public class ProResourceFileController {
 
     @PostMapping(value = "/save")
     @ApiOperation(value = "保存")
-    public ServiceResponse<ProResourceFileVo> save(@RequestBody ProResourceFileRequest request){
+    @GlobalTransactional
+    @Log(name = "系统资源文件表", value = "保存", source = "system-service-app")
+    public ServiceResponse<ProResourceFileVo> save(@RequestBody ProResourceFileRequest request) throws Exception {
         return new ServiceResponse<ProResourceFileVo>()
                 .run(serviceResponse -> {
 
@@ -116,7 +122,9 @@ public class ProResourceFileController {
 
     @PostMapping(value = "/saveBatch")
     @ApiOperation(value = "保存")
-    public ServiceResponse<List<ProResourceFile>> saveBatch(@RequestBody List<ProResourceFileRequest> request){
+    @GlobalTransactional
+    @Log(name = "系统资源文件表", value = "保存", source = "system-service-app")
+    public ServiceResponse<List<ProResourceFile>> saveBatch(@RequestBody List<ProResourceFileRequest> request) throws Exception {
         return new ServiceResponse<List<ProResourceFile>>()
                 .run(serviceResponse -> {
 
@@ -129,7 +137,9 @@ public class ProResourceFileController {
 
     @PostMapping(value = "/idsDelete")
     @ApiOperation(value = "批量删除")
-    public ServiceResponse<Integer> idsDelete(@RequestBody ProResourceFileRequest request){
+    @GlobalTransactional
+    @Log(name = "系统资源文件表", value = "批量删除", source = "system-service-app")
+    public ServiceResponse<Integer> idsDelete(@RequestBody ProResourceFileRequest request) throws Exception {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
 
@@ -148,8 +158,10 @@ public class ProResourceFileController {
     }
 
     @PostMapping(value = "/delete")
-    @ApiOperation(value = "批量删除")
-    public ServiceResponse<Integer> delete(@RequestBody ProResourceFileRequest request){
+    @ApiOperation(value = "删除")
+    @GlobalTransactional
+    @Log(name = "系统资源文件表", value = "删除", source = "system-service-app")
+    public ServiceResponse<Integer> delete(@RequestBody ProResourceFileRequest request) throws Exception {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
 
@@ -166,7 +178,9 @@ public class ProResourceFileController {
 
     @PostMapping(value = "/update")
     @ApiOperation(value = "修改")
-    public ServiceResponse<Integer> update(@RequestBody ProResourceFileRequest request){
+    @GlobalTransactional
+    @Log(name = "系统资源文件表", value = "修改", source = "system-service-app")
+    public ServiceResponse<Integer> update(@RequestBody ProResourceFileRequest request) throws Exception {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
 

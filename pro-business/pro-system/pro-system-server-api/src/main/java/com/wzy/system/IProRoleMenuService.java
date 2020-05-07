@@ -28,21 +28,21 @@ public interface IProRoleMenuService {
      * @return
      */
     @RequestMapping(path = "/ProRoleMenu/getUser", method = RequestMethod.POST)
-    ServiceResponse<ProRoleMenu> get(@RequestBody ProParameter<ProRoleMenuRequest> proParameter);
+    ServiceResponse<ProRoleMenu> get(@RequestBody ProParameter<ProRoleMenuRequest> proParameter) throws Exception;
 
     /**
      * 根据查询条件获取所有数据
      * @return
      */
     @RequestMapping(path = "/ProRoleMenu/getList", method = RequestMethod.POST)
-    ServiceResponse<List<ProRoleMenu>> getList(@RequestBody ProParameter<ProRoleMenuRequest> proParameter);
+    ServiceResponse<List<ProRoleMenu>> getList(@RequestBody ProParameter<ProRoleMenuRequest> proParameter) throws Exception;
 
     /**
      * 分页查询所有数据
      * @return
      */
     @RequestMapping(path = "/ProRoleMenu/getPageList", method = RequestMethod.POST)
-    ServiceResponse<List<ProRoleMenu>> getPageList(@RequestBody ProParameter<ProRoleMenuRequest> proParameter);
+    ServiceResponse<List<ProRoleMenu>> getPageList(@RequestBody ProParameter<ProRoleMenuRequest> proParameter) throws Exception;
 
 
     /**
@@ -50,7 +50,7 @@ public interface IProRoleMenuService {
      * @return
      */
     @RequestMapping(path = "/ProRoleMenu/getIdsList", method = RequestMethod.POST)
-    ServiceResponse<List<ProRoleMenu>> findIdsList(@RequestBody ProParameter<ProRoleMenuRequest> proParameter);
+    ServiceResponse<List<ProRoleMenu>> findIdsList(@RequestBody ProParameter<ProRoleMenuRequest> proParameter) throws Exception;
 
     /**
      * 修改数据
@@ -58,7 +58,7 @@ public interface IProRoleMenuService {
      * @return
      */
     @RequestMapping(path = "/ProRoleMenu/update", method = RequestMethod.POST)
-    ServiceResponse<Integer> update(@RequestBody ProParameter<ProRoleMenuRequest> proParameter);
+    ServiceResponse<Integer> update(@RequestBody ProParameter<ProRoleMenuRequest> proParameter) throws Exception;
 
     /**
      * 保存数据
@@ -66,7 +66,7 @@ public interface IProRoleMenuService {
      * @return
      */
     @RequestMapping(path = "/ProRoleMenu/save", method = RequestMethod.POST)
-    ServiceResponse<ProRoleMenu> save(@RequestBody ProParameter<ProRoleMenuRequest> proParameter);
+    ServiceResponse<ProRoleMenu> save(@RequestBody ProParameter<ProRoleMenuRequest> proParameter) throws Exception;
 
     /**
      * 删除数据
@@ -74,7 +74,7 @@ public interface IProRoleMenuService {
      * @return
      */
     @RequestMapping(path = "/ProRoleMenu/delete", method = RequestMethod.POST)
-    ServiceResponse<Integer> delete(@RequestBody ProParameter<ProRoleMenuRequest> proParameter);
+    ServiceResponse<Integer> delete(@RequestBody ProParameter<ProRoleMenuRequest> proParameter) throws Exception;
 
     /**
      * 通过id数组批量删除数据
@@ -82,7 +82,7 @@ public interface IProRoleMenuService {
      * @return
      */
     @RequestMapping(path = "/ProRoleMenu/idsDelete", method = RequestMethod.POST)
-    ServiceResponse<Integer> idsDelete(@RequestBody ProParameter<ProRoleMenuRequest> proParameter);
+    ServiceResponse<Integer> idsDelete(@RequestBody ProParameter<ProRoleMenuRequest> proParameter) throws Exception;
 
     /**
      * 批量保存
@@ -90,5 +90,5 @@ public interface IProRoleMenuService {
      * @return
     */
     @RequestMapping(path = "/ProRoleMenu/batchSave", method = RequestMethod.POST)
-    ServiceResponse<List<ProRoleMenu>> batchSave(@RequestBody ProParameter<List<ProRoleMenuRequest>> proParameter);
+    ServiceResponse<List<ProRoleMenu>> batchSave(@RequestBody ProParameter<List<ProRoleMenuRequest>> proParameter) throws Exception;
 }

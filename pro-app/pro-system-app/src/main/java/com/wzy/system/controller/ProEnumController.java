@@ -1,4 +1,5 @@
 package com.wzy.system.controller;
+import com.wzy.common.annotation.Log;
 import com.wzy.common.method.ProParameter;
 import com.wzy.common.util.DateUtil;
 import com.wzy.common.util.ServiceResponse;
@@ -7,6 +8,7 @@ import com.wzy.system.IProEnumService;
 import com.wzy.system.dto.ProEnum;
 import com.wzy.system.request.ProEnumRequest;
 import com.wzy.system.vo.ProEnumVo;
+import io.seata.spring.annotation.GlobalTransactional;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.BeanUtils;
@@ -39,7 +41,8 @@ public class ProEnumController {
 
     @PostMapping(value = "/getPageList")
     @ApiOperation(value = "分页查询列表")
-    public ServiceResponse<List<ProEnumVo>> getPageList(@RequestBody ProEnumRequest request){
+    @Log(name = "枚举表", value = "分页查询列表", source = "system-service-app")
+    public ServiceResponse<List<ProEnumVo>> getPageList(@RequestBody ProEnumRequest request) throws Exception {
         return new ServiceResponse<List<ProEnumVo>>()
                 .run(serviceResponse -> {
 
@@ -74,7 +77,8 @@ public class ProEnumController {
 
     @PostMapping(value = "/get")
     @ApiOperation(value = "获取单条信息")
-    public ServiceResponse<ProEnumVo> get(@RequestBody ProEnumRequest request){
+    @Log(name = "枚举表", value = "获取单条信息", source = "system-service-app")
+    public ServiceResponse<ProEnumVo> get(@RequestBody ProEnumRequest request) throws Exception {
         return new ServiceResponse<ProEnumVo>()
                 .run(serviceResponse -> {
 
@@ -94,8 +98,9 @@ public class ProEnumController {
     }
 
     @PostMapping(value = "/getList")
-    @ApiOperation(value = "获取单条信息")
-    public ServiceResponse<List<ProEnumVo> > getList(@RequestBody ProEnumRequest request){
+    @ApiOperation(value = "获取列表")
+    @Log(name = "枚举表", value = "获取列表", source = "system-service-app")
+    public ServiceResponse<List<ProEnumVo> > getList(@RequestBody ProEnumRequest request) throws Exception {
         return new ServiceResponse<List<ProEnumVo> >()
                 .run(serviceResponse -> {
 
@@ -126,7 +131,9 @@ public class ProEnumController {
 
     @PostMapping(value = "/save")
     @ApiOperation(value = "保存")
-    public ServiceResponse<ProEnumVo> save(@RequestBody ProEnumRequest request){
+    @GlobalTransactional
+    @Log(name = "枚举表", value = "保存", source = "system-service-app")
+    public ServiceResponse<ProEnumVo> save(@RequestBody ProEnumRequest request) throws Exception {
         return new ServiceResponse<ProEnumVo>()
                 .run(serviceResponse -> {
 
@@ -141,7 +148,9 @@ public class ProEnumController {
 
     @PostMapping(value = "/idsDelete")
     @ApiOperation(value = "批量删除")
-    public ServiceResponse<Integer> idsDelete(@RequestBody ProEnumRequest request){
+    @GlobalTransactional
+    @Log(name = "枚举表", value = "批量删除", source = "system-service-app")
+    public ServiceResponse<Integer> idsDelete(@RequestBody ProEnumRequest request) throws Exception {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
 
@@ -160,8 +169,10 @@ public class ProEnumController {
     }
 
     @PostMapping(value = "/delete")
-    @ApiOperation(value = "批量删除")
-    public ServiceResponse<Integer> delete(@RequestBody ProEnumRequest request){
+    @ApiOperation(value = "删除")
+    @GlobalTransactional
+    @Log(name = "枚举表", value = "删除", source = "system-service-app")
+    public ServiceResponse<Integer> delete(@RequestBody ProEnumRequest request) throws Exception {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
 
@@ -178,7 +189,9 @@ public class ProEnumController {
 
     @PostMapping(value = "/update")
     @ApiOperation(value = "修改")
-    public ServiceResponse<Integer> update(@RequestBody ProEnumRequest request){
+    @GlobalTransactional
+    @Log(name = "枚举表", value = "修改", source = "system-service-app")
+    public ServiceResponse<Integer> update(@RequestBody ProEnumRequest request) throws Exception {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
 

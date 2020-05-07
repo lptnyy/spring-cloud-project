@@ -45,7 +45,12 @@ public class OAuth2UserService implements UserDetailsService {
     public UserDetails loadUserByUsername(String s) throws UsernameNotFoundException {
         User userPar = new User();
         userPar.setUserName(s);
-        ServiceResponse<ProUser> response = userService.userNameGetUser(new ProParameter<User>().setObj(userPar));
+        ServiceResponse<ProUser> response = null;
+        try {
+            response = userService.userNameGetUser(new ProParameter<User>().setObj(userPar));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         if (response.getCode() == MessageType.SUCCESS.getValue()){
             ProUser user = response.getObj();
             VaUser vaUser = null;

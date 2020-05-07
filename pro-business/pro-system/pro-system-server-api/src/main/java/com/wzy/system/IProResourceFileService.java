@@ -28,21 +28,21 @@ public interface IProResourceFileService {
      * @return
      */
     @RequestMapping(path = "/ProResourceFile/getUser", method = RequestMethod.POST)
-    ServiceResponse<ProResourceFile> get(@RequestBody ProParameter<ProResourceFileRequest> proParameter);
+    ServiceResponse<ProResourceFile> get(@RequestBody ProParameter<ProResourceFileRequest> proParameter) throws Exception;
 
     /**
      * 根据查询条件获取所有数据
      * @return
      */
     @RequestMapping(path = "/ProResourceFile/getList", method = RequestMethod.POST)
-    ServiceResponse<List<ProResourceFile>> getList(@RequestBody ProParameter<ProResourceFileRequest> proParameter);
+    ServiceResponse<List<ProResourceFile>> getList(@RequestBody ProParameter<ProResourceFileRequest> proParameter) throws Exception;
 
     /**
      * 分页查询所有数据
      * @return
      */
     @RequestMapping(path = "/ProResourceFile/getPageList", method = RequestMethod.POST)
-    ServiceResponse<List<ProResourceFile>> getPageList(@RequestBody ProParameter<ProResourceFileRequest> proParameter);
+    ServiceResponse<List<ProResourceFile>> getPageList(@RequestBody ProParameter<ProResourceFileRequest> proParameter) throws Exception;
 
 
     /**
@@ -50,7 +50,7 @@ public interface IProResourceFileService {
      * @return
      */
     @RequestMapping(path = "/ProResourceFile/getIdsList", method = RequestMethod.POST)
-    ServiceResponse<List<ProResourceFile>> findIdsList(@RequestBody ProParameter<ProResourceFileRequest> proParameter);
+    ServiceResponse<List<ProResourceFile>> findIdsList(@RequestBody ProParameter<ProResourceFileRequest> proParameter) throws Exception;
 
     /**
      * 修改数据
@@ -58,7 +58,7 @@ public interface IProResourceFileService {
      * @return
      */
     @RequestMapping(path = "/ProResourceFile/update", method = RequestMethod.POST)
-    ServiceResponse<Integer> update(@RequestBody ProParameter<ProResourceFileRequest> proParameter);
+    ServiceResponse<Integer> update(@RequestBody ProParameter<ProResourceFileRequest> proParameter) throws Exception;
 
     /**
      * 保存数据
@@ -66,7 +66,7 @@ public interface IProResourceFileService {
      * @return
      */
     @RequestMapping(path = "/ProResourceFile/save", method = RequestMethod.POST)
-    ServiceResponse<ProResourceFile> save(@RequestBody ProParameter<ProResourceFileRequest> proParameter);
+    ServiceResponse<ProResourceFile> save(@RequestBody ProParameter<ProResourceFileRequest> proParameter) throws Exception;
 
     /**
      * 删除数据
@@ -74,7 +74,7 @@ public interface IProResourceFileService {
      * @return
      */
     @RequestMapping(path = "/ProResourceFile/delete", method = RequestMethod.POST)
-    ServiceResponse<Integer> delete(@RequestBody ProParameter<ProResourceFileRequest> proParameter);
+    ServiceResponse<Integer> delete(@RequestBody ProParameter<ProResourceFileRequest> proParameter) throws Exception;
 
     /**
      * 通过id数组批量删除数据
@@ -82,7 +82,7 @@ public interface IProResourceFileService {
      * @return
      */
     @RequestMapping(path = "/ProResourceFile/idsDelete", method = RequestMethod.POST)
-    ServiceResponse<Integer> idsDelete(@RequestBody ProParameter<ProResourceFileRequest> proParameter);
+    ServiceResponse<Integer> idsDelete(@RequestBody ProParameter<ProResourceFileRequest> proParameter) throws Exception;
 
     /**
      * 批量保存
@@ -90,5 +90,5 @@ public interface IProResourceFileService {
      * @return
     */
     @RequestMapping(path = "/ProResourceFile/batchSave", method = RequestMethod.POST)
-    ServiceResponse<List<ProResourceFile>> batchSave(@RequestBody ProParameter<List<ProResourceFileRequest>> proParameter);
+    ServiceResponse<List<ProResourceFile>> batchSave(@RequestBody ProParameter<List<ProResourceFileRequest>> proParameter) throws Exception;
 }

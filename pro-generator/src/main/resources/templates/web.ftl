@@ -6,7 +6,7 @@
           <p slot="title">${tableComment}管理</p>
             <div class="search">
               <#list fields as field>
-              <Input class="input" v-model="${field.fieldName}" placeholder="请输入内容"/>
+              <Input class="input" v-model="${field.fieldName}" placeholder="${field.comment}"/>
               </#list>
               <Button @click="search" :disabled="!isRetrieve">查询</Button>
               <Button class="add_button" :disabled="!isRetrieve" @click="reset">重置</Button>
@@ -24,7 +24,7 @@
           <Form ref="formInline" :model="formInline" :rules="ruleValidate">
             <#list fields as field>
             <FormItem label="${field.comment}" prop="${field.fieldName}">
-              <Input v-model="formInline.${field.fieldName}" placeholder="请输入内容"/>
+              <Input v-model="formInline.${field.fieldName}" placeholder="请输入${field.comment}"/>
             </FormItem>
             </#list>
           </Form>
@@ -67,7 +67,7 @@ export default {
       ruleValidate: {
         <#list fields as field>
         ${field.fieldName}: [
-          { required: true, message: '请输入内容', trigger: 'blur' }
+          { required: true, message: '请输入${field.comment}', trigger: 'blur' }
         ],
         </#list>
       },

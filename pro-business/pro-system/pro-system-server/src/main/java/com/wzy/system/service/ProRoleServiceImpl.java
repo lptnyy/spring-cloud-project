@@ -8,6 +8,7 @@ import com.wzy.system.dto.ProMenu;
 import io.swagger.annotations.Api;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.BeanUtils;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.RestController;
 import javax.annotation.Resource;
 import java.util.List;
@@ -34,7 +35,7 @@ public class ProRoleServiceImpl implements IProRoleService {
     ProRoleMapper mapper;
 
     @Override
-    public ServiceResponse<ProRole> get(ProParameter<ProRoleRequest> proParameter) {
+    public ServiceResponse<ProRole> get(ProParameter<ProRoleRequest> proParameter) throws Exception {
         return new ServiceResponse<ProRole>()
                 .run((serviceResponse) -> {
                     LambdaQueryWrapper<ProRole> lambdaQueryWrapper = new LambdaQueryWrapper<>();
@@ -54,7 +55,7 @@ public class ProRoleServiceImpl implements IProRoleService {
     }
 
     @Override
-    public ServiceResponse<List<ProRole>> getList(ProParameter<ProRoleRequest> proParameter) {
+    public ServiceResponse<List<ProRole>> getList(ProParameter<ProRoleRequest> proParameter) throws Exception {
         return new ServiceResponse<List<ProRole>>()
                 .run((serviceResponse) -> {
                     LambdaQueryWrapper<ProRole> lambdaQueryWrapper = new LambdaQueryWrapper<>();
@@ -74,7 +75,7 @@ public class ProRoleServiceImpl implements IProRoleService {
     }
 
     @Override
-    public ServiceResponse<List<ProRole>> getPageList(ProParameter<ProRoleRequest> proParameter) {
+    public ServiceResponse<List<ProRole>> getPageList(ProParameter<ProRoleRequest> proParameter) throws Exception {
         return new ServiceResponse<List<ProRole>>()
                 .run((serviceResponse -> {
                     LambdaQueryWrapper<ProRole> lambdaQueryWrapper = new LambdaQueryWrapper<>();
@@ -100,7 +101,7 @@ public class ProRoleServiceImpl implements IProRoleService {
     }
 
     @Override
-    public ServiceResponse<List<ProRole>> findIdsList(ProParameter<ProRoleRequest> proParameter) {
+    public ServiceResponse<List<ProRole>> findIdsList(ProParameter<ProRoleRequest> proParameter) throws Exception {
         return new ServiceResponse<List<ProRole>>()
                 .run(serviceResponse -> {
                     LambdaQueryWrapper<ProRole> queryWrapper = new LambdaQueryWrapper<>();
@@ -110,7 +111,8 @@ public class ProRoleServiceImpl implements IProRoleService {
     }
 
     @Override
-    public ServiceResponse<Integer> update(ProParameter<ProRoleRequest> proParameter) {
+    @Transactional
+    public ServiceResponse<Integer> update(ProParameter<ProRoleRequest> proParameter) throws Exception {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
                     ProRole bean = new ProRole();
@@ -120,7 +122,8 @@ public class ProRoleServiceImpl implements IProRoleService {
     }
 
     @Override
-    public ServiceResponse<ProRole> save(ProParameter<ProRoleRequest> proParameter) {
+    @Transactional
+    public ServiceResponse<ProRole> save(ProParameter<ProRoleRequest> proParameter) throws Exception {
         return new ServiceResponse<ProRole>()
                 .run(serviceResponse -> {
                     ProRole bean = new ProRole();
@@ -131,7 +134,8 @@ public class ProRoleServiceImpl implements IProRoleService {
     }
 
     @Override
-    public ServiceResponse<List<ProRole>> batchSave(ProParameter<List<ProRoleRequest>> proParameter) {
+    @Transactional
+    public ServiceResponse<List<ProRole>> batchSave(ProParameter<List<ProRoleRequest>> proParameter) throws Exception {
         return new ServiceResponse<List<ProRole>>()
                 .run(serviceResponse -> {
                     List<ProRole> roles = proParameter.getObj()
@@ -147,7 +151,8 @@ public class ProRoleServiceImpl implements IProRoleService {
     }
 
     @Override
-    public ServiceResponse<Integer> delete(ProParameter<ProRoleRequest> proParameter) {
+    @Transactional
+    public ServiceResponse<Integer> delete(ProParameter<ProRoleRequest> proParameter) throws Exception {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
                     LambdaQueryWrapper<ProRole> lambdaQueryWrapper = new LambdaQueryWrapper<>();
@@ -166,7 +171,8 @@ public class ProRoleServiceImpl implements IProRoleService {
     }
 
     @Override
-    public ServiceResponse<Integer> idsDelete(ProParameter<ProRoleRequest> proParameter) {
+    @Transactional
+    public ServiceResponse<Integer> idsDelete(ProParameter<ProRoleRequest> proParameter) throws Exception {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
                     ProRoleRequest request = proParameter.getObj();

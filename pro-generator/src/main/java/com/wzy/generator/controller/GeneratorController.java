@@ -37,7 +37,7 @@ public class GeneratorController {
      * @return
      */
     @RequestMapping(path = "/tableList")
-    public ServiceResponse<List<Map<String,String>>> getTableList(@RequestBody TableInfo tableInfo) {
+    public ServiceResponse<List<Map<String,String>>> getTableList(@RequestBody TableInfo tableInfo) throws Exception {
         return new ServiceResponse<List<Map<String,String>>>()
                 .run(serviceResponse -> {
                     return generatorService.getTableList(tableInfo);

@@ -1,4 +1,5 @@
 package com.wzy.system.controller;
+import com.wzy.common.annotation.Log;
 import com.wzy.common.method.ProParameter;
 import com.wzy.common.util.ServiceResponse;
 import com.wzy.redis.RedisService;
@@ -14,6 +15,7 @@ import com.wzy.system.request.ProUserRoleRequest;
 import com.wzy.system.vo.Menu;
 import com.wzy.system.vo.MenuMeta;
 import com.wzy.system.vo.ProMenuVo;
+import io.seata.spring.annotation.GlobalTransactional;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.BeanUtils;
@@ -44,7 +46,8 @@ public class MenuController {
 
     @PostMapping(value = "/getPageList")
     @ApiOperation(value = "分页查询列表")
-    public ServiceResponse<List<ProMenuVo>> getPageList(@RequestBody ProMenuRequest request){
+    @Log(name = "菜单", value = "分页查询列表", source = "system-service-app")
+    public ServiceResponse<List<ProMenuVo>> getPageList(@RequestBody ProMenuRequest request) throws Exception {
         return new ServiceResponse<List<ProMenuVo>>()
                 .run(serviceResponse -> {
 
@@ -108,7 +111,8 @@ public class MenuController {
 
     @PostMapping(value = "/get")
     @ApiOperation(value = "获取单条信息")
-    public ServiceResponse<ProMenuVo> get(@RequestBody ProMenuRequest request){
+    @Log(name = "菜单", value = "获取单条信息", source = "system-service-app")
+    public ServiceResponse<ProMenuVo> get(@RequestBody ProMenuRequest request) throws Exception {
         return new ServiceResponse<ProMenuVo>()
                 .run(serviceResponse -> {
 
@@ -129,7 +133,9 @@ public class MenuController {
 
     @PostMapping(value = "/save")
     @ApiOperation(value = "保存")
-    public ServiceResponse<ProMenuVo> save(@RequestBody ProMenuRequest request){
+    @GlobalTransactional
+    @Log(name = "菜单", value = "保存", source = "system-service-app")
+    public ServiceResponse<ProMenuVo> save(@RequestBody ProMenuRequest request) throws Exception {
         return new ServiceResponse<ProMenuVo>()
                 .run(serviceResponse -> {
 
@@ -161,7 +167,9 @@ public class MenuController {
 
     @PostMapping(value = "/idsDelete")
     @ApiOperation(value = "批量删除")
-    public ServiceResponse<Integer> idsDelete(@RequestBody ProMenuRequest request){
+    @GlobalTransactional
+    @Log(name = "菜单", value = "批量删除", source = "system-service-app")
+    public ServiceResponse<Integer> idsDelete(@RequestBody ProMenuRequest request) throws Exception {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
 
@@ -178,7 +186,9 @@ public class MenuController {
 
     @PostMapping(value = "/delete")
     @ApiOperation(value = "删除")
-    public ServiceResponse<Integer> delete(@RequestBody ProMenuRequest request){
+    @GlobalTransactional
+    @Log(name = "菜单", value = "删除", source = "system-service-app")
+    public ServiceResponse<Integer> delete(@RequestBody ProMenuRequest request) throws Exception {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
 
@@ -195,7 +205,9 @@ public class MenuController {
 
     @PostMapping(value = "/update")
     @ApiOperation(value = "修改")
-    public ServiceResponse<Integer> update(@RequestBody ProMenuRequest request){
+    @GlobalTransactional
+    @Log(name = "菜单", value = "修改", source = "system-service-app")
+    public ServiceResponse<Integer> update(@RequestBody ProMenuRequest request) throws Exception {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
 
@@ -212,7 +224,8 @@ public class MenuController {
 
     @PostMapping(value = "/getUserMenus")
     @ApiOperation(value = "获取登陆用户相关的设置的menu菜单")
-    public ServiceResponse<List<Menu>> getUserMenus(@RequestBody ProUserRoleRequest request){
+    @Log(name = "菜单", value = "获取登陆用户相关的设置的menu菜单", source = "system-service-app")
+    public ServiceResponse<List<Menu>> getUserMenus(@RequestBody ProUserRoleRequest request) throws Exception {
         return new ServiceResponse<List<Menu>>()
                 .run(serviceResponse -> {
 

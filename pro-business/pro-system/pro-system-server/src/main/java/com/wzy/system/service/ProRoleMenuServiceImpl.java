@@ -6,6 +6,7 @@ import com.wzy.common.method.ProParameter;
 import com.wzy.common.util.ServiceResponse;
 import io.swagger.annotations.Api;
 import org.springframework.beans.BeanUtils;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.RestController;
 import javax.annotation.Resource;
 import java.util.List;
@@ -31,7 +32,7 @@ public class ProRoleMenuServiceImpl implements IProRoleMenuService {
     ProRoleMenuMapper mapper;
 
     @Override
-    public ServiceResponse<ProRoleMenu> get(ProParameter<ProRoleMenuRequest> proParameter) {
+    public ServiceResponse<ProRoleMenu> get(ProParameter<ProRoleMenuRequest> proParameter) throws Exception {
         return new ServiceResponse<ProRoleMenu>()
                 .run((serviceResponse) -> {
                     LambdaQueryWrapper<ProRoleMenu> lambdaQueryWrapper = new LambdaQueryWrapper<>();
@@ -54,7 +55,7 @@ public class ProRoleMenuServiceImpl implements IProRoleMenuService {
     }
 
     @Override
-    public ServiceResponse<List<ProRoleMenu>> getList(ProParameter<ProRoleMenuRequest> proParameter) {
+    public ServiceResponse<List<ProRoleMenu>> getList(ProParameter<ProRoleMenuRequest> proParameter) throws Exception {
         return new ServiceResponse<List<ProRoleMenu>>()
                 .run((serviceResponse) -> {
                     LambdaQueryWrapper<ProRoleMenu> lambdaQueryWrapper = new LambdaQueryWrapper<>();
@@ -77,7 +78,7 @@ public class ProRoleMenuServiceImpl implements IProRoleMenuService {
     }
 
     @Override
-    public ServiceResponse<List<ProRoleMenu>> getPageList(ProParameter<ProRoleMenuRequest> proParameter) {
+    public ServiceResponse<List<ProRoleMenu>> getPageList(ProParameter<ProRoleMenuRequest> proParameter) throws Exception {
         return new ServiceResponse<List<ProRoleMenu>>()
                 .run((serviceResponse -> {
                     LambdaQueryWrapper<ProRoleMenu> lambdaQueryWrapper = new LambdaQueryWrapper<>();
@@ -106,7 +107,7 @@ public class ProRoleMenuServiceImpl implements IProRoleMenuService {
     }
 
     @Override
-    public ServiceResponse<List<ProRoleMenu>> findIdsList(ProParameter<ProRoleMenuRequest> proParameter) {
+    public ServiceResponse<List<ProRoleMenu>> findIdsList(ProParameter<ProRoleMenuRequest> proParameter) throws Exception {
         return new ServiceResponse<List<ProRoleMenu>>()
                 .run(serviceResponse -> {
                     LambdaQueryWrapper<ProRoleMenu> queryWrapper = new LambdaQueryWrapper<>();
@@ -129,7 +130,8 @@ public class ProRoleMenuServiceImpl implements IProRoleMenuService {
     }
 
     @Override
-    public ServiceResponse<Integer> update(ProParameter<ProRoleMenuRequest> proParameter) {
+    @Transactional
+    public ServiceResponse<Integer> update(ProParameter<ProRoleMenuRequest> proParameter) throws Exception {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
                     ProRoleMenu bean = new ProRoleMenu();
@@ -139,7 +141,8 @@ public class ProRoleMenuServiceImpl implements IProRoleMenuService {
     }
 
     @Override
-    public ServiceResponse<ProRoleMenu> save(ProParameter<ProRoleMenuRequest> proParameter) {
+    @Transactional
+    public ServiceResponse<ProRoleMenu> save(ProParameter<ProRoleMenuRequest> proParameter) throws Exception {
         return new ServiceResponse<ProRoleMenu>()
                 .run(serviceResponse -> {
                     ProRoleMenu bean = new ProRoleMenu();
@@ -150,7 +153,8 @@ public class ProRoleMenuServiceImpl implements IProRoleMenuService {
     }
 
     @Override
-    public ServiceResponse<List<ProRoleMenu>> batchSave(ProParameter<List<ProRoleMenuRequest>> proParameter) {
+    @Transactional
+    public ServiceResponse<List<ProRoleMenu>> batchSave(ProParameter<List<ProRoleMenuRequest>> proParameter) throws Exception {
        return new ServiceResponse<List<ProRoleMenu>>()
                .run(serviceResponse -> {
                    List<ProRoleMenu> roles = proParameter.getObj()
@@ -166,7 +170,8 @@ public class ProRoleMenuServiceImpl implements IProRoleMenuService {
      }
 
     @Override
-    public ServiceResponse<Integer> delete(ProParameter<ProRoleMenuRequest> proParameter) {
+    @Transactional
+    public ServiceResponse<Integer> delete(ProParameter<ProRoleMenuRequest> proParameter) throws Exception {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
                     LambdaQueryWrapper<ProRoleMenu> lambdaQueryWrapper = new LambdaQueryWrapper<>();
@@ -188,7 +193,8 @@ public class ProRoleMenuServiceImpl implements IProRoleMenuService {
     }
 
     @Override
-    public ServiceResponse<Integer> idsDelete(ProParameter<ProRoleMenuRequest> proParameter) {
+    @Transactional
+    public ServiceResponse<Integer> idsDelete(ProParameter<ProRoleMenuRequest> proParameter) throws Exception {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
                      LambdaQueryWrapper<ProRoleMenu> queryWrapper = new LambdaQueryWrapper<>();

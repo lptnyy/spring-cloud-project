@@ -17,7 +17,9 @@ public class DtoUtil {
     HashMap<String, String> typesMap = new HashMap() {
         {
             put("varchar", "String");
+            put("text", "String");
             put("int", "Integer");
+            put("float", "Float");
             put("datetime", "Date");
             put("timestamp", "Date");
         }
@@ -29,7 +31,9 @@ public class DtoUtil {
     static HashMap<String, String>  typesPkgMap = new HashMap() {
         {
             put("varchar", "java.lang.String");
+            put("text", "java.lang.String");
             put("int", "java.lang.Integer");
+            put("float", "java.lang.Float");
             put("datetime", "java.util.Date");
             put("timestamp", "java.util.Date");
         }

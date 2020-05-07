@@ -492,6 +492,7 @@ public class Freemarker {
         dataModel.put("generatorDate", new SimpleDateFormat("yyyy-MM-dd").format(new Date()));
         dataModel.put("tableName", table.get("tableName"));
         dataModel.put("className", stringUtil.getClassName(table.get("tableName")));
+        dataModel.put("fegionService", tableInfo.getFeignClientService());
         dataModel.put("smClassName", stringUtil.getFieldName(table.get("tableName")));
         dataModel.put("dtoClassPath",tableInfo.getDtoPgk()+"."+dataModel.get("className"));
         dataModel.put("serviceClassPath",tableInfo.getServicePkg()+".I"+dataModel.get("className")+"Service");

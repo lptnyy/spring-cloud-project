@@ -4,6 +4,9 @@ spring:
   application:
     name: system-service
   cloud:
+    alibaba:
+      seata:
+        tx-service-group: wzy_tx_group
     config:
       profile: ${spring.profiles.active}
       name: eureka-middleware,system-service,rabbitmq-middleware,zipkin-middleware,admin-middleware,oauth2-res
@@ -11,7 +14,6 @@ spring:
         enabled: false
       override-none: true
       uri: http://${ZUUL-SERVICE}:8101/config
-
 pro:
   swagger2:
     pkg: com.wzy.system

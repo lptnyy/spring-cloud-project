@@ -1,5 +1,4 @@
 package com.wzy.system.configuration.oauth;
-
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
