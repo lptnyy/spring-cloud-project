@@ -1,12 +1,11 @@
 package com.wzy.system.configuration.aspect;
 import com.alibaba.fastjson.JSON;
 import com.wzy.common.annotation.Log;
-import com.wzy.common.aspect.LogAfter;
+import com.wzy.common.aspect.ProAfter;
 import com.wzy.common.method.ProParameter;
 import com.wzy.common.util.ServiceResponse;
 import com.wzy.common.util.SystemClock;
 import com.wzy.system.IProLogService;
-import com.wzy.system.dto.ProLog;
 import com.wzy.system.request.ProLogRequest;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.reflect.MethodSignature;
@@ -19,7 +18,7 @@ import java.lang.reflect.Method;
  * 实现一个自定义日志收集aop拦截器，对应注解 com.wzy.common.annotation.Log 最好使用异步处理日志
  */
 @Component
-public class LogConfiguration implements LogAfter {
+public class LogConfiguration implements ProAfter {
 
     @Autowired
     IProLogService proLogService;

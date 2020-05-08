@@ -1,6 +1,4 @@
 package com.wzy.system.configuration.aspect;
-import com.wzy.common.aspect.AuthorityAfter;
-import com.wzy.common.util.ServiceResponse;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.springframework.stereotype.Component;
 
