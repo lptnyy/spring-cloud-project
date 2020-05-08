@@ -83,6 +83,12 @@ public class ProLogRequest extends RequestPage {
     @TableField(value = "return_body")
     private String returnBody;
 
+    @ApiModelProperty(value = "开始时间", name = "startTime")
+    private String startTime;
+
+    @ApiModelProperty(value = "结束时间", name = "endTime")
+    private String endTime;
+
    /**
     * in 查询操作
     */

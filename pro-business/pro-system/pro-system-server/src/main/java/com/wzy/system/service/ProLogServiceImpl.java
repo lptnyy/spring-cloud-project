@@ -65,6 +65,12 @@ public class ProLogServiceImpl implements IProLogService {
                     if(request.getCreateTime() != null){
                         lambdaQueryWrapper.eq(ProLog::getCreateTime,request.getCreateTime());
                     }
+                    if (!StringUtils.isEmpty(request.getStartTime())) {
+                        lambdaQueryWrapper.ge(ProLog::getCreateTime, request.getStartTime());
+                    }
+                    if (!StringUtils.isEmpty(request.getEndTime())) {
+                        lambdaQueryWrapper.le(ProLog::getCreateTime, request.getEndTime());
+                    }
                     lambdaQueryWrapper.orderByDesc(ProLog::getCreateTime);
                     return mapper.selectOne(lambdaQueryWrapper);
                 }).exec();
@@ -103,6 +109,12 @@ public class ProLogServiceImpl implements IProLogService {
                     if(request.getCreateTime() != null){
                         lambdaQueryWrapper.eq(ProLog::getCreateTime,request.getCreateTime());
                     }
+                    if (!StringUtils.isEmpty(request.getStartTime())) {
+                        lambdaQueryWrapper.ge(ProLog::getCreateTime, request.getStartTime());
+                    }
+                    if (!StringUtils.isEmpty(request.getEndTime())) {
+                        lambdaQueryWrapper.le(ProLog::getCreateTime, request.getEndTime());
+                    }
                     lambdaQueryWrapper.orderByDesc(ProLog::getCreateTime);
                     return mapper.selectList(lambdaQueryWrapper);
                 }).exec();
@@ -140,6 +152,12 @@ public class ProLogServiceImpl implements IProLogService {
                     }
                     if(request.getCreateTime() != null){
                         lambdaQueryWrapper.eq(ProLog::getCreateTime,request.getCreateTime());
+                    }
+                    if (!StringUtils.isEmpty(request.getStartTime())) {
+                        lambdaQueryWrapper.ge(ProLog::getCreateTime, request.getStartTime());
+                    }
+                    if (!StringUtils.isEmpty(request.getEndTime())) {
+                        lambdaQueryWrapper.le(ProLog::getCreateTime, request.getEndTime());
                     }
                     lambdaQueryWrapper.orderByDesc(ProLog::getCreateTime);
                     Page<ProLog> page = new Page<>(proParameter.getRequestPage().getPageNum(),proParameter.getRequestPage().getPageSize());

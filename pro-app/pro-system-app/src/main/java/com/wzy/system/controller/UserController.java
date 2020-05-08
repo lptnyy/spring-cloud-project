@@ -1,4 +1,5 @@
 package com.wzy.system.controller;
+import com.wzy.common.annotation.Authority;
 import com.wzy.common.annotation.Log;
 import com.wzy.common.method.ProParameter;
 import com.wzy.common.util.DateUtil;
@@ -41,6 +42,7 @@ public class UserController {
     @PostMapping(value = "/userPageList")
     @ApiOperation(value = "分页查询管理员列表")
     @Log(name = "管理员日志", value = "分页查询管理员列表", source = "system-app")
+    @Authority(values = {"123"})
     public ServiceResponse<List<UserVo>> getUsers(@RequestBody User user) throws Exception {
         return new ServiceResponse<List<UserVo>>()
                 .run(serviceResponse -> {

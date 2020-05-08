@@ -21,4 +21,4 @@ pro:
     description: 所有接口文档
     termsOfServiceUrl: https://github.com/lptnyy/spring-cloud-project
     version: 1.0
-    other-services: GEN:GENERATOR-SERVICE     #路由：：服务名  多swagger 配置
+    other-services: SYSTEM:SYSTEM-SERVICE-APP,OSS:OSS-SERVICE  #路由：：服务名  多swagger 配置
