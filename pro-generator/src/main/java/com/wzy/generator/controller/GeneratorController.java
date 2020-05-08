@@ -12,6 +12,7 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import java.io.*;
 import java.sql.SQLException;
@@ -36,7 +37,7 @@ public class GeneratorController {
      * @param tableInfo
      * @return
      */
-    @RequestMapping(path = "/tableList")
+    @RequestMapping(path = "/tableList", method = RequestMethod.POST)
     public ServiceResponse<List<Map<String,String>>> getTableList(@RequestBody TableInfo tableInfo) throws Exception {
         return new ServiceResponse<List<Map<String,String>>>()
                 .run(serviceResponse -> {
@@ -45,13 +46,12 @@ public class GeneratorController {
                 .exec();
     }
 
-
     /**
      * 生成文件
      * @param tableInfo
      * @return
      */
-    @RequestMapping(path = "/generator")
+    @RequestMapping(path = "/generator", method = RequestMethod.POST)
     public ServiceResponse generator(@RequestBody TableInfo tableInfo) throws SQLException, ClassNotFoundException, IOException, TemplateException {
         freemarker.dto(tableInfo, generatorService.getTableList(tableInfo).get(0), generatorService.getTableInfo(tableInfo));
         freemarker.mapper(tableInfo, generatorService.getTableList(tableInfo).get(0), generatorService.getTableInfo(tableInfo));
@@ -70,7 +70,7 @@ public class GeneratorController {
      * @param tableInfo
      * @return
      */
-    @RequestMapping(path = "/generatorWeb")
+    @RequestMapping(path = "/generatorWeb", method = RequestMethod.POST)
     public ServiceResponse generatorWeb(@RequestBody TableInfo tableInfo) throws SQLException, ClassNotFoundException, IOException, TemplateException {
         freemarker.web(tableInfo, generatorService.getTableList(tableInfo).get(0), generatorService.getTableInfo(tableInfo));
         freemarker.webjs(tableInfo, generatorService.getTableList(tableInfo).get(0), generatorService.getTableInfo(tableInfo));
@@ -81,7 +81,7 @@ public class GeneratorController {
      * 下载导出来的文件
      * @return
      */
-    @RequestMapping(path = "/downloadZip")
+    @RequestMapping(path = "/downloadZip", method = RequestMethod.POST)
     public ResponseEntity<byte[]> downloadZip() {
         String url = System.getProperty("user.dir")+"/generator";
         File sourceDir = new File(url);

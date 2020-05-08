@@ -13,3 +13,12 @@ spring:
     admin:
       client:
         url: http://${ADMIN-SERVICE}:8003
+
+pro:
+  swagger2:
+    pkg: com.wzy.gateway
+    title: 接口服务
+    description: 所有接口文档
+    termsOfServiceUrl: https://github.com/lptnyy/spring-cloud-project
+    version: 1.0
+    other-services: GEN:GENERATOR-SERVICE     #路由：：服务名  多swagger 配置

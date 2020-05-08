@@ -11,3 +11,11 @@ spring:
         enabled: false
       override-none: true
       uri: http://${ZUUL-SERVICE}:8101/config
+
+pro:
+  swagger2:
+    pkg: com.wzy.generator
+    title: 生成服务
+    description: 对内接口文档
+    termsOfServiceUrl: https://github.com/lptnyy/spring-cloud-project
+    version: 1.0
