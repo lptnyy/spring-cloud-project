@@ -12,6 +12,6 @@ public class AuthortiyConfiguration implements AuthorityAfter {
 
     @Override
     public Object aroundMethod(ProceedingJoinPoint pjd) {
-        return ServiceResponse.getFAIL();
+        return null;
     }
 }

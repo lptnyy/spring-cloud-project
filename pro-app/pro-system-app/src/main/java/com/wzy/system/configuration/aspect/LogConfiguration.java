@@ -15,11 +15,10 @@ import org.springframework.stereotype.Component;
 
 import java.lang.reflect.Method;
 
-
-@Component
 /**
  * 实现一个自定义日志收集aop拦截器，对应注解 com.wzy.common.annotation.Log 最好使用异步处理日志
  */
+@Component
 public class LogConfiguration implements LogAfter {
 
     @Autowired
