@@ -81,7 +81,7 @@ public class GeneratorController {
      * 下载导出来的文件
      * @return
      */
-    @RequestMapping(path = "/downloadZip", method = RequestMethod.POST)
+    @RequestMapping(path = "/downloadZip", method = RequestMethod.GET)
     public ResponseEntity<byte[]> downloadZip() {
         String url = System.getProperty("user.dir")+"/generator";
         File sourceDir = new File(url);

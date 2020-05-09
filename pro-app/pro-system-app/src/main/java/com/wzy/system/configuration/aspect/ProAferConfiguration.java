@@ -7,7 +7,6 @@ import com.wzy.common.method.ProParameter;
 import com.wzy.common.util.ServiceResponse;
 import com.wzy.common.util.SystemClock;
 import com.wzy.system.IProLogService;
-import com.wzy.system.dto.ProUser;
 import com.wzy.system.request.ProLogRequest;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.reflect.MethodSignature;

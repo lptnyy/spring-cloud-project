@@ -19,7 +19,7 @@
       </Col>
       <Modal
         v-model="addFlag"
-        title="添加${tableComment}"
+        :title="title"
         :footer-hide=true>
           <Form ref="formInline" :model="formInline" :rules="ruleValidate">
             <#list fields as field>
@@ -49,6 +49,7 @@ export default {
   },
   data () {
     return {
+      title: '添加${tableComment}',
       isCreate: this.authorities('权限值'),
       isDelete: this.authorities('权限值'),
       isUpdate: this.authorities('权限值'),
@@ -142,6 +143,7 @@ export default {
       this.initData()
     },
     addBtnClick () {
+      this.title = '添加${tableComment}'
       this.formInline = this.initFromInput()
       this.addFlag = true
     },
@@ -150,6 +152,7 @@ export default {
       this.formInline = this.initFromInput()
     },
     editBtnClick (index) {
+      this.title = '编辑${tableComment}'
       let tableRow = this.tableData[index]
       <#list fields as field>
       this.formInline.${field.fieldName} = tableRow.${field.fieldName}

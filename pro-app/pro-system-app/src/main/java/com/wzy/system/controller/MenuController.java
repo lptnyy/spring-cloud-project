@@ -173,6 +173,9 @@ public class MenuController {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
 
+                    // 标记通过menuId
+                    request.setMenuId(1);
+
                     // 获取调用服务返回结果 通过返回结果 进行业务判断 以及 手动控制 分布式事务回滚
                     ServiceResponse<Integer> response = proMenuService.idsDelete(new ProParameter<>(request));
 

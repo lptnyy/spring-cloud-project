@@ -17,7 +17,7 @@ public class ProAspect {
     ProAfter proAfter;
 
 
-    @Pointcut("@annotation(com.wzy.common.annotation.Log) && @annotation(com.wzy.common.annotation.Authority)")
+    @Pointcut("@annotation(com.wzy.common.annotation.Log) || @annotation(com.wzy.common.annotation.Authority)")
     public void annotationPoint(){}
 
     /**
