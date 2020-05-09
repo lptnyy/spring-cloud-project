@@ -42,7 +42,7 @@ public class UserController {
     @PostMapping(value = "/userPageList")
     @ApiOperation(value = "分页查询管理员列表")
     @Log(name = "管理员日志", value = "分页查询管理员列表", source = "system-app")
-    @Authority(values = {"123"})
+    @Authority(values = {"admin_select"})
     public ServiceResponse<List<UserVo>> getUsers(@RequestBody User user) throws Exception {
         return new ServiceResponse<List<UserVo>>()
                 .run(serviceResponse -> {
@@ -97,6 +97,7 @@ public class UserController {
     @ApiOperation(value = "删除用户")
     @Log(name = "管理员日志", value = "删除用户", source = "system-app")
     @GlobalTransactional
+    @Authority(values = {"admin_del"})
     public ServiceResponse<Integer> delete(@RequestBody User user) throws Exception {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
@@ -109,6 +110,7 @@ public class UserController {
     @ApiOperation(value = "添加用户")
     @Log(name = "管理员日志", value = "添加用户", source = "system-app")
     @GlobalTransactional
+    @Authority(values = {"addadmin"})
     public ServiceResponse<Integer> save(@RequestBody User user) throws Exception {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
@@ -131,6 +133,7 @@ public class UserController {
     @ApiOperation(value = "修改用户状态")
     @Log(name = "管理员日志", value = "修改用户状态", source = "system-app")
     @GlobalTransactional
+    @Authority(values = {"admin_edit"})
     public ServiceResponse<Integer> updateStats(@RequestBody User user) throws Exception {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
@@ -143,6 +146,7 @@ public class UserController {
     @ApiOperation(value = "修改用户")
     @Log(name = "管理员日志", value = "修改用户", source = "system-app")
     @GlobalTransactional
+    @Authority(values = {"admin_edit"})
     public ServiceResponse<Integer> update(@RequestBody User user) throws Exception {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {

@@ -213,22 +213,22 @@ public class ProEnumServiceImpl implements IProEnumService {
     public ServiceResponse<Integer> idsDelete(ProParameter<ProEnumRequest> proParameter) throws Exception{
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
-                     LambdaQueryWrapper<ProEnum> queryWrapper = new LambdaQueryWrapper<>();
-                     ProEnumRequest request = proParameter.getObj();
-                     if(request.getEnumId() != null){
-                          queryWrapper.in(ProEnum::getEnumId,request.getIds());
-                     }
+                    LambdaQueryWrapper<ProEnum> queryWrapper = new LambdaQueryWrapper<>();
+                    ProEnumRequest request = proParameter.getObj();
+                    if(request.getEnumId() != null){
+                        queryWrapper.in(ProEnum::getEnumId,request.getIds());
+                    }
                      if(!StringUtils.isEmpty(request.getKeystr())){
-                          queryWrapper.in(ProEnum::getKeystr,request.getIds());
+                        queryWrapper.in(ProEnum::getKeystr,request.getIds());
                      }
                      if(!StringUtils.isEmpty(request.getValuestr())){
-                          queryWrapper.in(ProEnum::getValuestr,request.getIds());
+                        queryWrapper.in(ProEnum::getValuestr,request.getIds());
                      }
                      if(!StringUtils.isEmpty(request.getType())){
-                          queryWrapper.in(ProEnum::getType,request.getIds());
+                        queryWrapper.in(ProEnum::getType,request.getIds());
                      }
                      if(request.getCreateTime() != null){
-                          queryWrapper.in(ProEnum::getCreateTime,request.getIds());
+                        queryWrapper.in(ProEnum::getCreateTime,request.getIds());
                      }
                     return mapper.delete(queryWrapper);
                 }).exec();

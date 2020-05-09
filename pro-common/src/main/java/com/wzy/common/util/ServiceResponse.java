@@ -29,6 +29,7 @@ public class ServiceResponse<T> implements Serializable {
 
     public static ServiceResponse SUCCESSServiceResponse = new ServiceResponse();
     public static ServiceResponse FAILServiceResponse = new ServiceResponse();
+    public static ServiceResponse AuthFAILServiceResponse = new ServiceResponse();
 
     public static ServiceResponse getSUCCESS(){
         SUCCESSServiceResponse.setCode(MessageType.SUCCESS.getValue());
@@ -54,6 +55,12 @@ public class ServiceResponse<T> implements Serializable {
         FAILServiceResponse.setCode(MessageType.FAIL.getValue());
         FAILServiceResponse.setMsg("操作异常");
         return FAILServiceResponse;
+    }
+
+    public static ServiceResponse getAuthFAIL(){
+        AuthFAILServiceResponse.setCode(MessageType.AUTHFAIL.getValue());
+        AuthFAILServiceResponse.setMsg("操作异常");
+        return AuthFAILServiceResponse;
     }
 
     public ServiceResponse<T> run(Exceutor<T> exceutor) {

@@ -5,6 +5,7 @@ package com.wzy.common.util;
  */
 public enum MessageType {
     SUCCESS(200),
+    AUTHFAIL(401),
     FAIL(500);
 
     int value;
