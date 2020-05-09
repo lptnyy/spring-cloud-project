@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.wzy.common.method.ProParameter;
 import com.wzy.common.util.ServiceResponse;
+import io.seata.spring.annotation.GlobalTransactional;
 import io.swagger.annotations.Api;
 import org.springframework.beans.BeanUtils;
 import org.springframework.transaction.annotation.Transactional;
@@ -118,7 +119,7 @@ public class ProUserRoleServiceImpl implements IProUserRoleService {
     }
 
     @Override
-    @Transactional
+    @GlobalTransactional
     public ServiceResponse<Integer> update(ProParameter<ProUserRoleRequest> proParameter) throws Exception {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
@@ -129,7 +130,7 @@ public class ProUserRoleServiceImpl implements IProUserRoleService {
     }
 
     @Override
-    @Transactional
+    @GlobalTransactional
     public ServiceResponse<ProUserRole> save(ProParameter<ProUserRoleRequest> proParameter) throws Exception {
         return new ServiceResponse<ProUserRole>()
                 .run(serviceResponse -> {
@@ -141,7 +142,7 @@ public class ProUserRoleServiceImpl implements IProUserRoleService {
     }
 
     @Override
-    @Transactional
+    @GlobalTransactional
     public ServiceResponse<List<ProUserRole>> batchSave(ProParameter<List<ProUserRoleRequest>> proParameter) throws Exception {
        return new ServiceResponse<List<ProUserRole>>()
                .run(serviceResponse -> {
@@ -158,7 +159,7 @@ public class ProUserRoleServiceImpl implements IProUserRoleService {
      }
 
     @Override
-    @Transactional
+    @GlobalTransactional
     public ServiceResponse<Integer> delete(ProParameter<ProUserRoleRequest> proParameter) throws Exception {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
@@ -181,7 +182,7 @@ public class ProUserRoleServiceImpl implements IProUserRoleService {
     }
 
     @Override
-    @Transactional
+    @GlobalTransactional
     public ServiceResponse<Integer> idsDelete(ProParameter<ProUserRoleRequest> proParameter) throws Exception {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {

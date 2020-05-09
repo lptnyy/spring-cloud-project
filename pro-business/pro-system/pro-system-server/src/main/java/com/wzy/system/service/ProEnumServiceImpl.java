@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.wzy.common.method.ProParameter;
 import com.wzy.common.util.ServiceResponse;
+import io.seata.spring.annotation.GlobalTransactional;
 import io.swagger.annotations.Api;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.BeanUtils;
@@ -143,7 +144,7 @@ public class ProEnumServiceImpl implements IProEnumService {
     }
 
     @Override
-    @Transactional
+    @GlobalTransactional
     public ServiceResponse<Integer> update(ProParameter<ProEnumRequest> proParameter) throws Exception{
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
@@ -154,7 +155,7 @@ public class ProEnumServiceImpl implements IProEnumService {
     }
 
     @Override
-    @Transactional
+    @GlobalTransactional
     public ServiceResponse<ProEnum> save(ProParameter<ProEnumRequest> proParameter) throws Exception{
         return new ServiceResponse<ProEnum>()
                 .run(serviceResponse -> {
@@ -166,7 +167,7 @@ public class ProEnumServiceImpl implements IProEnumService {
     }
 
     @Override
-    @Transactional
+    @GlobalTransactional
     public ServiceResponse<List<ProEnum>> batchSave(ProParameter<List<ProEnumRequest>> proParameter) throws Exception{
        return new ServiceResponse<List<ProEnum>>()
                .run(serviceResponse -> {
@@ -183,7 +184,7 @@ public class ProEnumServiceImpl implements IProEnumService {
      }
 
     @Override
-    @Transactional
+    @GlobalTransactional
     public ServiceResponse<Integer> delete(ProParameter<ProEnumRequest> proParameter) throws Exception{
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
@@ -209,7 +210,7 @@ public class ProEnumServiceImpl implements IProEnumService {
     }
 
     @Override
-    @Transactional
+    @GlobalTransactional
     public ServiceResponse<Integer> idsDelete(ProParameter<ProEnumRequest> proParameter) throws Exception{
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {

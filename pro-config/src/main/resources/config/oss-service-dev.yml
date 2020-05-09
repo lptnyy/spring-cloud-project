@@ -69,6 +69,6 @@ mybatis:
   type-aliases-package: com.wzy.oss.dto
   mapper-locations: classpath:mapper/*.xml
 
-mybatis-plus:
-  configuration:
-    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+#mybatis-plus:
+#  configuration:
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl

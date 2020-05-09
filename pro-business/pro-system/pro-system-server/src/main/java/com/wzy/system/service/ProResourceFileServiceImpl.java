@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.wzy.common.method.ProParameter;
 import com.wzy.common.util.ServiceResponse;
+import io.seata.spring.annotation.GlobalTransactional;
 import io.swagger.annotations.Api;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.BeanUtils;
@@ -215,7 +216,7 @@ public class ProResourceFileServiceImpl implements IProResourceFileService {
     }
 
     @Override
-    @Transactional
+    @GlobalTransactional
     public ServiceResponse<Integer> update(ProParameter<ProResourceFileRequest> proParameter) throws Exception {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
@@ -226,7 +227,7 @@ public class ProResourceFileServiceImpl implements IProResourceFileService {
     }
 
     @Override
-    @Transactional
+    @GlobalTransactional
     public ServiceResponse<ProResourceFile> save(ProParameter<ProResourceFileRequest> proParameter) throws Exception {
         return new ServiceResponse<ProResourceFile>()
                 .run(serviceResponse -> {
@@ -238,7 +239,7 @@ public class ProResourceFileServiceImpl implements IProResourceFileService {
     }
 
     @Override
-    @Transactional
+    @GlobalTransactional
     public ServiceResponse<List<ProResourceFile>> batchSave(ProParameter<List<ProResourceFileRequest>> proParameter) throws Exception {
        return new ServiceResponse<List<ProResourceFile>>()
                .run(serviceResponse -> {
@@ -255,7 +256,7 @@ public class ProResourceFileServiceImpl implements IProResourceFileService {
      }
 
     @Override
-    @Transactional
+    @GlobalTransactional
     public ServiceResponse<Integer> delete(ProParameter<ProResourceFileRequest> proParameter) throws Exception {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
@@ -299,7 +300,7 @@ public class ProResourceFileServiceImpl implements IProResourceFileService {
     }
 
     @Override
-    @Transactional
+    @GlobalTransactional
     public ServiceResponse<Integer> idsDelete(ProParameter<ProResourceFileRequest> proParameter) throws Exception {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {

@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.wzy.common.method.ProParameter;
 import com.wzy.common.util.ServiceResponse;
+import io.seata.spring.annotation.GlobalTransactional;
 import io.swagger.annotations.Api;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.BeanUtils;
@@ -191,7 +192,7 @@ public class ProMenuServiceImpl implements IProMenuService {
     }
 
     @Override
-    @Transactional
+    @GlobalTransactional
     public ServiceResponse<Integer> update(ProParameter<ProMenuRequest> proParameter) throws Exception {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
@@ -202,7 +203,7 @@ public class ProMenuServiceImpl implements IProMenuService {
     }
 
     @Override
-    @Transactional
+    @GlobalTransactional
     public ServiceResponse<ProMenu> save(ProParameter<ProMenuRequest> proParameter) throws Exception {
         return new ServiceResponse<ProMenu>()
                 .run(serviceResponse -> {
@@ -214,7 +215,7 @@ public class ProMenuServiceImpl implements IProMenuService {
     }
 
     @Override
-    @Transactional
+    @GlobalTransactional
     public ServiceResponse<List<ProMenu>> batchSave(ProParameter<List<ProMenuRequest>> proParameter) throws Exception {
        return new ServiceResponse<List<ProMenu>>()
                .run(serviceResponse -> {
@@ -231,7 +232,7 @@ public class ProMenuServiceImpl implements IProMenuService {
      }
 
     @Override
-    @Transactional
+    @GlobalTransactional
     public ServiceResponse<Integer> delete(ProParameter<ProMenuRequest> proParameter) throws Exception {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
@@ -269,7 +270,7 @@ public class ProMenuServiceImpl implements IProMenuService {
     }
 
     @Override
-    @Transactional
+    @GlobalTransactional
     public ServiceResponse<Integer> idsDelete(ProParameter<ProMenuRequest> proParameter) throws Exception {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {

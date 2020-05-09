@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.wzy.common.method.ProParameter;
 import com.wzy.common.util.ServiceResponse;
+import io.seata.spring.annotation.GlobalTransactional;
 import io.swagger.annotations.Api;
 import org.springframework.beans.BeanUtils;
 import org.springframework.transaction.annotation.Transactional;
@@ -130,7 +131,7 @@ public class ProRoleMenuServiceImpl implements IProRoleMenuService {
     }
 
     @Override
-    @Transactional
+    @GlobalTransactional
     public ServiceResponse<Integer> update(ProParameter<ProRoleMenuRequest> proParameter) throws Exception {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
@@ -141,7 +142,7 @@ public class ProRoleMenuServiceImpl implements IProRoleMenuService {
     }
 
     @Override
-    @Transactional
+    @GlobalTransactional
     public ServiceResponse<ProRoleMenu> save(ProParameter<ProRoleMenuRequest> proParameter) throws Exception {
         return new ServiceResponse<ProRoleMenu>()
                 .run(serviceResponse -> {
@@ -153,7 +154,7 @@ public class ProRoleMenuServiceImpl implements IProRoleMenuService {
     }
 
     @Override
-    @Transactional
+    @GlobalTransactional
     public ServiceResponse<List<ProRoleMenu>> batchSave(ProParameter<List<ProRoleMenuRequest>> proParameter) throws Exception {
        return new ServiceResponse<List<ProRoleMenu>>()
                .run(serviceResponse -> {
@@ -170,7 +171,7 @@ public class ProRoleMenuServiceImpl implements IProRoleMenuService {
      }
 
     @Override
-    @Transactional
+    @GlobalTransactional
     public ServiceResponse<Integer> delete(ProParameter<ProRoleMenuRequest> proParameter) throws Exception {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
@@ -193,7 +194,7 @@ public class ProRoleMenuServiceImpl implements IProRoleMenuService {
     }
 
     @Override
-    @Transactional
+    @GlobalTransactional
     public ServiceResponse<Integer> idsDelete(ProParameter<ProRoleMenuRequest> proParameter) throws Exception {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {

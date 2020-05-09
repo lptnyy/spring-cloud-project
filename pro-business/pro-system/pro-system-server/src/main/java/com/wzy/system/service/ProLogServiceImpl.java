@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.wzy.common.method.ProParameter;
 import com.wzy.common.util.ServiceResponse;
+import io.seata.spring.annotation.GlobalTransactional;
 import io.swagger.annotations.Api;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.BeanUtils;
@@ -209,7 +210,7 @@ public class ProLogServiceImpl implements IProLogService {
     }
 
     @Override
-    @Transactional
+    @GlobalTransactional
     public ServiceResponse<Integer> update(ProParameter<ProLogRequest> proParameter) throws Exception {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
@@ -220,7 +221,7 @@ public class ProLogServiceImpl implements IProLogService {
     }
 
     @Override
-    @Transactional
+    @GlobalTransactional
     public ServiceResponse<ProLog> save(ProParameter<ProLogRequest> proParameter) throws Exception {
         return new ServiceResponse<ProLog>()
                 .run(serviceResponse -> {
@@ -232,7 +233,7 @@ public class ProLogServiceImpl implements IProLogService {
     }
 
     @Override
-    @Transactional
+    @GlobalTransactional
     public ServiceResponse<List<ProLog>> batchSave(ProParameter<List<ProLogRequest>> proParameter) throws Exception {
        return new ServiceResponse<List<ProLog>>()
                .run(serviceResponse -> {
@@ -249,7 +250,7 @@ public class ProLogServiceImpl implements IProLogService {
      }
 
     @Override
-    @Transactional
+    @GlobalTransactional
     public ServiceResponse<Integer> delete(ProParameter<ProLogRequest> proParameter) throws Exception {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
@@ -287,7 +288,7 @@ public class ProLogServiceImpl implements IProLogService {
     }
 
     @Override
-    @Transactional
+    @GlobalTransactional
     public ServiceResponse<Integer> idsDelete(ProParameter<ProLogRequest> proParameter) throws Exception {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {

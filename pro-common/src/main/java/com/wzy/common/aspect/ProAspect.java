@@ -29,7 +29,7 @@ public class ProAspect {
      * @return 此方法需要返回值,返回值视为目标方法的返回值
      */
     @Around("annotationPoint()")
-    public Object aroundMethod(ProceedingJoinPoint pjd){
+    public Object aroundMethod(ProceedingJoinPoint pjd) throws Exception {
         Object result = null;
         if (proAfter != null) {
             result = proAfter.aroundMethod(pjd);

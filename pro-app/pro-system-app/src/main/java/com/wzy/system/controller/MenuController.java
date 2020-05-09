@@ -71,7 +71,7 @@ public class MenuController {
                                 ProMenuVo menuVo = new ProMenuVo();
                                 BeanUtils.copyProperties(proMenu,menuVo);
                                 menuVo.setTitle(menuVo.getTitle());
-                                menuVo.setExpand(true);
+                                menuVo.setExpand(false);
 
                                 // 筛选出子节点
                                 List<ProMenuVo> childs = resultList.stream()
@@ -80,7 +80,7 @@ public class MenuController {
                                             ProMenuVo childVo = new ProMenuVo();
                                             BeanUtils.copyProperties(child,childVo);
                                             childVo.setTitle(childVo.getTitle());
-                                            childVo.setExpand(true);
+                                            childVo.setExpand(false);
 
                                             // 获得三级 功能列表
                                             List<ProMenuVo> threeChilds = resultList.stream()
@@ -89,7 +89,7 @@ public class MenuController {
                                                         ProMenuVo threeChildVo = new ProMenuVo();
                                                         BeanUtils.copyProperties(threeChild,threeChildVo);
                                                         threeChildVo.setTitle(threeChildVo.getTitle());
-                                                        threeChildVo.setExpand(true);
+                                                        threeChildVo.setExpand(false);
                                                         return threeChildVo;
                                                     })
                                                     .collect(Collectors.toList());

@@ -108,9 +108,9 @@ public class UserController {
 
     @PostMapping(value = "/save")
     @ApiOperation(value = "添加用户")
-    @Log(name = "管理员日志", value = "添加用户", source = "system-app")
-    @GlobalTransactional
     @Authority(values = {"addadmin"})
+    @Log(name = "管理员日志", value = "添加", source = "system-app")
+    @GlobalTransactional(rollbackFor = Exception.class)
     public ServiceResponse<Integer> save(@RequestBody User user) throws Exception {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
@@ -120,7 +120,7 @@ public class UserController {
                     if (response.getObj() != null) {
                         serviceResponse.setCode(500);
                         serviceResponse.setMsg("此账号已经存在");
-                        return -1;
+                        throw new Exception("sss");
                     }
                     ServiceResponse<Integer> saveResponse = userService.save(new ProParameter<User>(user));
                     saveResponse.copyState(serviceResponse);
@@ -132,8 +132,8 @@ public class UserController {
     @PostMapping(value = "/updateStats")
     @ApiOperation(value = "修改用户状态")
     @Log(name = "管理员日志", value = "修改用户状态", source = "system-app")
-    @GlobalTransactional
     @Authority(values = {"admin_edit"})
+    @GlobalTransactional
     public ServiceResponse<Integer> updateStats(@RequestBody User user) throws Exception {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {

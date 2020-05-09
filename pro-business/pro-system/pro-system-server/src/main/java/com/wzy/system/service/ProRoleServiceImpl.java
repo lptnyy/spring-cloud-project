@@ -5,6 +5,7 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.wzy.common.method.ProParameter;
 import com.wzy.common.util.ServiceResponse;
 import com.wzy.system.dto.ProMenu;
+import io.seata.spring.annotation.GlobalTransactional;
 import io.swagger.annotations.Api;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.BeanUtils;
@@ -111,7 +112,7 @@ public class ProRoleServiceImpl implements IProRoleService {
     }
 
     @Override
-    @Transactional
+    @GlobalTransactional
     public ServiceResponse<Integer> update(ProParameter<ProRoleRequest> proParameter) throws Exception {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
@@ -122,7 +123,7 @@ public class ProRoleServiceImpl implements IProRoleService {
     }
 
     @Override
-    @Transactional
+    @GlobalTransactional
     public ServiceResponse<ProRole> save(ProParameter<ProRoleRequest> proParameter) throws Exception {
         return new ServiceResponse<ProRole>()
                 .run(serviceResponse -> {
@@ -134,7 +135,7 @@ public class ProRoleServiceImpl implements IProRoleService {
     }
 
     @Override
-    @Transactional
+    @GlobalTransactional
     public ServiceResponse<List<ProRole>> batchSave(ProParameter<List<ProRoleRequest>> proParameter) throws Exception {
         return new ServiceResponse<List<ProRole>>()
                 .run(serviceResponse -> {
@@ -151,7 +152,7 @@ public class ProRoleServiceImpl implements IProRoleService {
     }
 
     @Override
-    @Transactional
+    @GlobalTransactional
     public ServiceResponse<Integer> delete(ProParameter<ProRoleRequest> proParameter) throws Exception {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
@@ -171,7 +172,7 @@ public class ProRoleServiceImpl implements IProRoleService {
     }
 
     @Override
-    @Transactional
+    @GlobalTransactional
     public ServiceResponse<Integer> idsDelete(ProParameter<ProRoleRequest> proParameter) throws Exception {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
