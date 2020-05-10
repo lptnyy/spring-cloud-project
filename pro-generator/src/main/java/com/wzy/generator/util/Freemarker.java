@@ -489,6 +489,7 @@ public class Freemarker {
         Map dataModel = new HashMap<>();
 
         dataModel.put("tableComment", table.get("tableComment"));
+        dataModel.put("logSourceName", tableInfo.getLogSourceName());
         dataModel.put("generatorDate", new SimpleDateFormat("yyyy-MM-dd").format(new Date()));
         dataModel.put("tableName", table.get("tableName"));
         dataModel.put("className", stringUtil.getClassName(table.get("tableName")));

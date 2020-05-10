@@ -90,5 +90,5 @@ public interface IProRoleMenuService {
      * @return
     */
     @RequestMapping(path = "/ProRoleMenu/batchSave", method = RequestMethod.POST)
-    ServiceResponse<List<ProRoleMenu>> batchSave(@RequestBody ProParameter<List<ProRoleMenuRequest>> proParameter) throws Exception;
+    ServiceResponse<Integer> batchSave(@RequestBody ProParameter<List<ProRoleMenuRequest>> proParameter) throws Exception;
 }

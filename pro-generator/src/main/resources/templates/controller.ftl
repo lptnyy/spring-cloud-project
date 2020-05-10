@@ -40,7 +40,7 @@ public class ${className}Controller {
 
     @PostMapping(value = "/getPageList")
     @ApiOperation(value = "分页查询列表")
-    @Log(name = "${tableComment}", value = "分页查询列表", source = "${fegionService}")
+    @Log(name = "${tableComment}", value = "分页查询列表", source = "${logSourceName}")
     public ServiceResponse<List<${className}Vo>> getPageList(@RequestBody ${className}Request request) throws Exception {
         return new ServiceResponse<List<${className}Vo>>()
                 .run(serviceResponse -> {
@@ -75,7 +75,7 @@ public class ${className}Controller {
 
     @PostMapping(value = "/get")
     @ApiOperation(value = "获取单条信息")
-    @Log(name = "${tableComment}", value = "获取单条信息", source = "${fegionService}")
+    @Log(name = "${tableComment}", value = "获取单条信息", source = "${logSourceName}")
     public ServiceResponse<${className}Vo> get(@RequestBody ${className}Request request) throws Exception {
         return new ServiceResponse<${className}Vo>()
                 .run(serviceResponse -> {
@@ -98,7 +98,7 @@ public class ${className}Controller {
     @PostMapping(value = "/save")
     @ApiOperation(value = "保存")
     @GlobalTransactional
-    @Log(name = "${tableComment}", value = "保存", source = "${fegionService}")
+    @Log(name = "${tableComment}", value = "保存", source = "${logSourceName}")
     public ServiceResponse<${className}Vo> save(@RequestBody ${className}Request request) throws Exception {
         return new ServiceResponse<${className}Vo>()
                 .run(serviceResponse -> {
@@ -121,7 +121,7 @@ public class ${className}Controller {
     @PostMapping(value = "/idsDelete")
     @ApiOperation(value = "批量删除")
     @GlobalTransactional
-    @Log(name = "${tableComment}", value = "批量删除", source = "${fegionService}")
+    @Log(name = "${tableComment}", value = "批量删除", source = "${logSourceName}")
     public ServiceResponse<Integer> idsDelete(@RequestBody ${className}Request request) throws Exception {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
@@ -143,7 +143,7 @@ public class ${className}Controller {
     @PostMapping(value = "/delete")
     @ApiOperation(value = "删除")
     @GlobalTransactional
-    @Log(name = "${tableComment}", value = "删除", source = "${fegionService}")
+    @Log(name = "${tableComment}", value = "删除", source = "${logSourceName}")
     public ServiceResponse<Integer> delete(@RequestBody ${className}Request request) throws Exception {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
@@ -162,7 +162,7 @@ public class ${className}Controller {
     @PostMapping(value = "/update")
     @ApiOperation(value = "修改")
     @GlobalTransactional
-    @Log(name = "${tableComment}", value = "修改", source = "${fegionService}")
+    @Log(name = "${tableComment}", value = "修改", source = "${logSourceName}")
     public ServiceResponse<Integer> update(@RequestBody ${className}Request request) throws Exception {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {

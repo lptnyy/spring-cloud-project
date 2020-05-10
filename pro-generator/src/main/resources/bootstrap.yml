@@ -6,7 +6,7 @@ spring:
   cloud:
     config:
       profile: ${spring.profiles.active}
-      name: eureka-middleware,generator-service,rabbitmq-middleware,zipkin-middleware,admin-middleware,oauth2-res
+      name: eureka-middleware,generator-service,rabbitmq-middleware,zipkin-middleware,admin-middleware,oauth2-res,hystrix-timeout
       discovery:
         enabled: false
       override-none: true

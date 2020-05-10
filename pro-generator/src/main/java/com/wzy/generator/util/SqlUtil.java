@@ -20,7 +20,7 @@ public class SqlUtil {
     public Connection getConnection(TableInfo tableInfo) throws SQLException, ClassNotFoundException {
         // 注册 JDBC 驱动
         Class.forName(tableInfo.getMysqlDev());
-        Connection connection = DriverManager.getConnection(tableInfo.getMysql(),tableInfo.getMysqlUser(),tableInfo.getMsyqlPass());
+        Connection connection = DriverManager.getConnection(tableInfo.getMysql(),tableInfo.getMysqlUser(),tableInfo.getMysqlPass());
         return connection;
     }
 }

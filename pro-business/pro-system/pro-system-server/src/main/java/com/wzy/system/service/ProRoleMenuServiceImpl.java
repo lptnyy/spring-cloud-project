@@ -10,8 +10,9 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.RestController;
 import javax.annotation.Resource;
+import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
+
 import com.wzy.system.dto.ProRoleMenu;
 import com.wzy.system.request.ProRoleMenuRequest;
 import com.wzy.system.IProRoleMenuService;
@@ -155,18 +156,18 @@ public class ProRoleMenuServiceImpl implements IProRoleMenuService {
 
     @Override
     @GlobalTransactional
-    public ServiceResponse<List<ProRoleMenu>> batchSave(ProParameter<List<ProRoleMenuRequest>> proParameter) throws Exception {
-       return new ServiceResponse<List<ProRoleMenu>>()
+    public ServiceResponse<Integer> batchSave(ProParameter<List<ProRoleMenuRequest>> proParameter) throws Exception {
+       return new ServiceResponse<Integer>()
                .run(serviceResponse -> {
-                   List<ProRoleMenu> roles = proParameter.getObj()
-                       .stream()
-                       .map(proRoleMenuRequest -> {
-                            ProRoleMenu proRoleMenu = new ProRoleMenu();
-                            BeanUtils.copyProperties(proRoleMenuRequest, proRoleMenu);
-                            mapper.insert(proRoleMenu);
-                            return proRoleMenu;
-                       }).collect(Collectors.toList());
-                   return roles;
+                   List<ProRoleMenuRequest> roles = proParameter.getObj();
+                   List<ProRoleMenu> proRoleMenus = new ArrayList<>();
+                   for(ProRoleMenuRequest proRoleMenuRequest: roles) {
+                       ProRoleMenu proRoleMenu = new ProRoleMenu();
+                       BeanUtils.copyProperties(proRoleMenuRequest, proRoleMenu);
+                       proRoleMenus.add(proRoleMenu);
+                       this.mapper.insert(proRoleMenu);
+                   }
+                   return proRoleMenus.size();
                }).exec();
      }
 

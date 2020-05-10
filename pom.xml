@@ -14,7 +14,7 @@
 		<module>pro-common</module>
 		<module>pro-business/pro-system/pro-system-server-api</module>
 		<module>pro-business/pro-system/pro-system-server</module>
-		<module>pro-app/pro-system-app</module>
+		<module>pro-app/pro-admin-app</module>
 		<module>pro-middleware/pro-redis</module>
 		<module>pro-middleware/pro-redis-api</module>
 		<module>pro-monitor/pro-zipkin</module>

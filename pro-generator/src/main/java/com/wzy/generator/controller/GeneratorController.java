@@ -3,6 +3,7 @@ import com.wzy.common.util.ServiceResponse;
 import com.wzy.common.zip.ZipFilesUtil;
 import com.wzy.generator.controller.request.TableInfo;
 import com.wzy.generator.service.GeneratorService;
+import com.wzy.generator.service.IProGeneratorService;
 import com.wzy.generator.util.Freemarker;
 import freemarker.template.TemplateException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,9 +33,11 @@ public class GeneratorController {
     @Autowired
     Freemarker freemarker;
 
+    @Autowired
+    IProGeneratorService proGeneratorService;
+
     /**
      * 获取数据库表列表
-     * @param tableInfo
      * @return
      */
     @RequestMapping(path = "/tableList", method = RequestMethod.POST)

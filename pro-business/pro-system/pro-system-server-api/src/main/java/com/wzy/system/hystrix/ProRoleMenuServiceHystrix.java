@@ -92,7 +92,7 @@ public class ProRoleMenuServiceHystrix implements IProRoleMenuService {
      * @param proParameter
      * @return
      */
-     public ServiceResponse<List<ProRoleMenu>> batchSave(ProParameter<List<ProRoleMenuRequest>> proParameter) {
+     public ServiceResponse<Integer> batchSave(ProParameter<List<ProRoleMenuRequest>> proParameter) {
          return ServiceResponse.getFAIL();
      }
 }

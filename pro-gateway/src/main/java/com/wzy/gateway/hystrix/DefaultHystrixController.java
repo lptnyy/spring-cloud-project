@@ -16,6 +16,6 @@ public class DefaultHystrixController {
 
     @RequestMapping("/defaultfallback")
     public ServiceResponse defaultfallback(){
-        return ServiceResponse.getFAIL();
+        return ServiceResponse.getBEBUSYFAIL();
     }
 }

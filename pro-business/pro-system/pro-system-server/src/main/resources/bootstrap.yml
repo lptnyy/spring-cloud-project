@@ -9,7 +9,7 @@ spring:
         tx-service-group: wzy_tx_group
     config:
       profile: ${spring.profiles.active}
-      name: eureka-middleware,system-service,rabbitmq-middleware,zipkin-middleware,admin-middleware,oauth2-res
+      name: eureka-middleware,system-service,rabbitmq-middleware,zipkin-middleware,admin-middleware,oauth2-res,hystrix-timeout
       discovery:
         enabled: false
       override-none: true
