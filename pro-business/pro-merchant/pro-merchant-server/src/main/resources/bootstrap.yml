@@ -1,0 +1,23 @@
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  application:
+    name: merchant-service
+  cloud:
+    alibaba:
+      seata:
+        tx-service-group: wzy_tx_group
+    config:
+      profile: ${spring.profiles.active}
+      name: eureka-middleware,merchant-service,rabbitmq-middleware,zipkin-middleware,admin-middleware,oauth2-res,hystrix-timeout
+      discovery:
+        enabled: false
+      override-none: true
+      uri: http://${ZUUL-SERVICE}:8101/config
+pro:
+  swagger2:
+    pkg: com.wzy.merchant
+    title: 商户服务
+    description: 对内接口文档
+    termsOfServiceUrl: https://github.com/lptnyy/spring-cloud-project
+    version: 1.0
