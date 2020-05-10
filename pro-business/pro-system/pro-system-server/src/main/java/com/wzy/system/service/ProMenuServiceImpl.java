@@ -4,9 +4,11 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.wzy.common.method.ProParameter;
 import com.wzy.common.util.ServiceResponse;
+import io.seata.spring.annotation.GlobalTransactional;
 import io.swagger.annotations.Api;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.BeanUtils;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.RestController;
 import javax.annotation.Resource;
 import java.util.List;
@@ -32,7 +34,7 @@ public class ProMenuServiceImpl implements IProMenuService {
     ProMenuMapper mapper;
 
     @Override
-    public ServiceResponse<ProMenu> get(ProParameter<ProMenuRequest> proParameter) {
+    public ServiceResponse<ProMenu> get(ProParameter<ProMenuRequest> proParameter) throws Exception {
         return new ServiceResponse<ProMenu>()
                 .run((serviceResponse) -> {
                     LambdaQueryWrapper<ProMenu> lambdaQueryWrapper = new LambdaQueryWrapper<>();
@@ -70,7 +72,7 @@ public class ProMenuServiceImpl implements IProMenuService {
     }
 
     @Override
-    public ServiceResponse<List<ProMenu>> getList(ProParameter<ProMenuRequest> proParameter) {
+    public ServiceResponse<List<ProMenu>> getList(ProParameter<ProMenuRequest> proParameter) throws Exception {
         return new ServiceResponse<List<ProMenu>>()
                 .run((serviceResponse) -> {
                     LambdaQueryWrapper<ProMenu> lambdaQueryWrapper = new LambdaQueryWrapper<>();
@@ -108,7 +110,7 @@ public class ProMenuServiceImpl implements IProMenuService {
     }
 
     @Override
-    public ServiceResponse<List<ProMenu>> getPageList(ProParameter<ProMenuRequest> proParameter) {
+    public ServiceResponse<List<ProMenu>> getPageList(ProParameter<ProMenuRequest> proParameter) throws Exception {
         return new ServiceResponse<List<ProMenu>>()
                 .run((serviceResponse -> {
                     LambdaQueryWrapper<ProMenu> lambdaQueryWrapper = new LambdaQueryWrapper<>();
@@ -152,7 +154,7 @@ public class ProMenuServiceImpl implements IProMenuService {
     }
 
     @Override
-    public ServiceResponse<List<ProMenu>> findIdsList(ProParameter<ProMenuRequest> proParameter) {
+    public ServiceResponse<List<ProMenu>> findIdsList(ProParameter<ProMenuRequest> proParameter) throws Exception {
         return new ServiceResponse<List<ProMenu>>()
                 .run(serviceResponse -> {
                     LambdaQueryWrapper<ProMenu> queryWrapper = new LambdaQueryWrapper<>();
@@ -190,7 +192,8 @@ public class ProMenuServiceImpl implements IProMenuService {
     }
 
     @Override
-    public ServiceResponse<Integer> update(ProParameter<ProMenuRequest> proParameter) {
+    @GlobalTransactional
+    public ServiceResponse<Integer> update(ProParameter<ProMenuRequest> proParameter) throws Exception {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
                     ProMenu bean = new ProMenu();
@@ -200,7 +203,8 @@ public class ProMenuServiceImpl implements IProMenuService {
     }
 
     @Override
-    public ServiceResponse<ProMenu> save(ProParameter<ProMenuRequest> proParameter) {
+    @GlobalTransactional
+    public ServiceResponse<ProMenu> save(ProParameter<ProMenuRequest> proParameter) throws Exception {
         return new ServiceResponse<ProMenu>()
                 .run(serviceResponse -> {
                     ProMenu bean = new ProMenu();
@@ -211,7 +215,8 @@ public class ProMenuServiceImpl implements IProMenuService {
     }
 
     @Override
-    public ServiceResponse<List<ProMenu>> batchSave(ProParameter<List<ProMenuRequest>> proParameter) {
+    @GlobalTransactional
+    public ServiceResponse<List<ProMenu>> batchSave(ProParameter<List<ProMenuRequest>> proParameter) throws Exception {
        return new ServiceResponse<List<ProMenu>>()
                .run(serviceResponse -> {
                    List<ProMenu> roles = proParameter.getObj()
@@ -227,7 +232,8 @@ public class ProMenuServiceImpl implements IProMenuService {
      }
 
     @Override
-    public ServiceResponse<Integer> delete(ProParameter<ProMenuRequest> proParameter) {
+    @GlobalTransactional
+    public ServiceResponse<Integer> delete(ProParameter<ProMenuRequest> proParameter) throws Exception {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
                     LambdaQueryWrapper<ProMenu> lambdaQueryWrapper = new LambdaQueryWrapper<>();
@@ -264,7 +270,8 @@ public class ProMenuServiceImpl implements IProMenuService {
     }
 
     @Override
-    public ServiceResponse<Integer> idsDelete(ProParameter<ProMenuRequest> proParameter) {
+    @GlobalTransactional
+    public ServiceResponse<Integer> idsDelete(ProParameter<ProMenuRequest> proParameter) throws Exception {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
                      LambdaQueryWrapper<ProMenu> queryWrapper = new LambdaQueryWrapper<>();

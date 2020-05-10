@@ -1,5 +1,5 @@
 package com.wzy;
-import com.wzy.common.aspect.LogAnnotationAspect;
+import com.wzy.common.aspect.ProAspect;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.openfeign.EnableFeignClients;
@@ -12,7 +12,7 @@ import org.springframework.context.annotation.FilterType;
         {"com.wzy.system"
                 ,"com.wzy.redis"})
 @ComponentScan(excludeFilters = {
-        @ComponentScan.Filter(type = FilterType.ASSIGNABLE_TYPE, classes = {LogAnnotationAspect.class})})
+        @ComponentScan.Filter(type = FilterType.ASSIGNABLE_TYPE, classes = {ProAspect.class})})
 @ComponentScans({
         @ComponentScan("com.wzy.redis"),
         @ComponentScan("com.wzy.system")

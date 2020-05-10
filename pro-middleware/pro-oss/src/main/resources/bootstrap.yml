@@ -2,9 +2,12 @@ spring:
   application:
     name: oss-service
   cloud:
+    alibaba:
+      seata:
+        tx-service-group: wzy_tx_group
     config:
       profile: ${spring.profiles.active}
-      name: eureka-middleware,oss-service,redis-nosql,rabbitmq-middleware,zipkin-middleware,admin-middleware,oauth2-res
+      name: eureka-middleware,oss-service,redis-nosql,rabbitmq-middleware,zipkin-middleware,admin-middleware,oauth2-res,hystrix-timeout
       discovery:
         enabled: false
       override-none: true

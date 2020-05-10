@@ -6,7 +6,7 @@
           <p slot="title">${tableComment}管理</p>
             <div class="search">
               <#list fields as field>
-              <Input class="input" v-model="${field.fieldName}" placeholder="请输入内容"/>
+              <Input class="input" v-model="${field.fieldName}" placeholder="${field.comment}"/>
               </#list>
               <Button @click="search" :disabled="!isRetrieve">查询</Button>
               <Button class="add_button" :disabled="!isRetrieve" @click="reset">重置</Button>
@@ -19,12 +19,12 @@
       </Col>
       <Modal
         v-model="addFlag"
-        title="添加${tableComment}"
+        :title="title"
         :footer-hide=true>
           <Form ref="formInline" :model="formInline" :rules="ruleValidate">
             <#list fields as field>
             <FormItem label="${field.comment}" prop="${field.fieldName}">
-              <Input v-model="formInline.${field.fieldName}" placeholder="请输入内容"/>
+              <Input v-model="formInline.${field.fieldName}" placeholder="请输入${field.comment}"/>
             </FormItem>
             </#list>
           </Form>
@@ -49,6 +49,7 @@ export default {
   },
   data () {
     return {
+      title: '添加${tableComment}',
       isCreate: this.authorities('权限值'),
       isDelete: this.authorities('权限值'),
       isUpdate: this.authorities('权限值'),
@@ -67,7 +68,7 @@ export default {
       ruleValidate: {
         <#list fields as field>
         ${field.fieldName}: [
-          { required: true, message: '请输入内容', trigger: 'blur' }
+          { required: true, message: '请输入${field.comment}', trigger: 'blur' }
         ],
         </#list>
       },
@@ -142,6 +143,7 @@ export default {
       this.initData()
     },
     addBtnClick () {
+      this.title = '添加${tableComment}'
       this.formInline = this.initFromInput()
       this.addFlag = true
     },
@@ -150,6 +152,7 @@ export default {
       this.formInline = this.initFromInput()
     },
     editBtnClick (index) {
+      this.title = '编辑${tableComment}'
       let tableRow = this.tableData[index]
       <#list fields as field>
       this.formInline.${field.fieldName} = tableRow.${field.fieldName}

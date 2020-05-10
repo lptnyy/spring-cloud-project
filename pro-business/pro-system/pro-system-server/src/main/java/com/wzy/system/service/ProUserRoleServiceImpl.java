@@ -4,8 +4,10 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.wzy.common.method.ProParameter;
 import com.wzy.common.util.ServiceResponse;
+import io.seata.spring.annotation.GlobalTransactional;
 import io.swagger.annotations.Api;
 import org.springframework.beans.BeanUtils;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.RestController;
 import javax.annotation.Resource;
 import java.util.List;
@@ -31,7 +33,7 @@ public class ProUserRoleServiceImpl implements IProUserRoleService {
     ProUserRoleMapper mapper;
 
     @Override
-    public ServiceResponse<ProUserRole> get(ProParameter<ProUserRoleRequest> proParameter) {
+    public ServiceResponse<ProUserRole> get(ProParameter<ProUserRoleRequest> proParameter) throws Exception {
         return new ServiceResponse<ProUserRole>()
                 .run((serviceResponse) -> {
                     LambdaQueryWrapper<ProUserRole> lambdaQueryWrapper = new LambdaQueryWrapper<>();
@@ -54,7 +56,7 @@ public class ProUserRoleServiceImpl implements IProUserRoleService {
     }
 
     @Override
-    public ServiceResponse<List<ProUserRole>> getList(ProParameter<ProUserRoleRequest> proParameter) {
+    public ServiceResponse<List<ProUserRole>> getList(ProParameter<ProUserRoleRequest> proParameter) throws Exception {
         return new ServiceResponse<List<ProUserRole>>()
                 .run((serviceResponse) -> {
                     LambdaQueryWrapper<ProUserRole> lambdaQueryWrapper = new LambdaQueryWrapper<>();
@@ -77,7 +79,7 @@ public class ProUserRoleServiceImpl implements IProUserRoleService {
     }
 
     @Override
-    public ServiceResponse<List<ProUserRole>> getPageList(ProParameter<ProUserRoleRequest> proParameter) {
+    public ServiceResponse<List<ProUserRole>> getPageList(ProParameter<ProUserRoleRequest> proParameter) throws Exception {
         return new ServiceResponse<List<ProUserRole>>()
                 .run((serviceResponse -> {
                     LambdaQueryWrapper<ProUserRole> lambdaQueryWrapper = new LambdaQueryWrapper<>();
@@ -106,7 +108,7 @@ public class ProUserRoleServiceImpl implements IProUserRoleService {
     }
 
     @Override
-    public ServiceResponse<List<ProUserRole>> findIdsList(ProParameter<ProUserRoleRequest> proParameter) {
+    public ServiceResponse<List<ProUserRole>> findIdsList(ProParameter<ProUserRoleRequest> proParameter) throws Exception {
         return new ServiceResponse<List<ProUserRole>>()
                 .run(serviceResponse -> {
                     LambdaQueryWrapper<ProUserRole> queryWrapper = new LambdaQueryWrapper<>();
@@ -117,7 +119,8 @@ public class ProUserRoleServiceImpl implements IProUserRoleService {
     }
 
     @Override
-    public ServiceResponse<Integer> update(ProParameter<ProUserRoleRequest> proParameter) {
+    @GlobalTransactional
+    public ServiceResponse<Integer> update(ProParameter<ProUserRoleRequest> proParameter) throws Exception {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
                     ProUserRole bean = new ProUserRole();
@@ -127,7 +130,8 @@ public class ProUserRoleServiceImpl implements IProUserRoleService {
     }
 
     @Override
-    public ServiceResponse<ProUserRole> save(ProParameter<ProUserRoleRequest> proParameter) {
+    @GlobalTransactional
+    public ServiceResponse<ProUserRole> save(ProParameter<ProUserRoleRequest> proParameter) throws Exception {
         return new ServiceResponse<ProUserRole>()
                 .run(serviceResponse -> {
                     ProUserRole bean = new ProUserRole();
@@ -138,7 +142,8 @@ public class ProUserRoleServiceImpl implements IProUserRoleService {
     }
 
     @Override
-    public ServiceResponse<List<ProUserRole>> batchSave(ProParameter<List<ProUserRoleRequest>> proParameter) {
+    @GlobalTransactional
+    public ServiceResponse<List<ProUserRole>> batchSave(ProParameter<List<ProUserRoleRequest>> proParameter) throws Exception {
        return new ServiceResponse<List<ProUserRole>>()
                .run(serviceResponse -> {
                    List<ProUserRole> roles = proParameter.getObj()
@@ -154,7 +159,8 @@ public class ProUserRoleServiceImpl implements IProUserRoleService {
      }
 
     @Override
-    public ServiceResponse<Integer> delete(ProParameter<ProUserRoleRequest> proParameter) {
+    @GlobalTransactional
+    public ServiceResponse<Integer> delete(ProParameter<ProUserRoleRequest> proParameter) throws Exception {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
                     LambdaQueryWrapper<ProUserRole> lambdaQueryWrapper = new LambdaQueryWrapper<>();
@@ -176,7 +182,8 @@ public class ProUserRoleServiceImpl implements IProUserRoleService {
     }
 
     @Override
-    public ServiceResponse<Integer> idsDelete(ProParameter<ProUserRoleRequest> proParameter) {
+    @GlobalTransactional
+    public ServiceResponse<Integer> idsDelete(ProParameter<ProUserRoleRequest> proParameter) throws Exception {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
                     ProUserRoleRequest request = proParameter.getObj();

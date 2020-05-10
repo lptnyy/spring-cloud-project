@@ -1,4 +1,5 @@
 package com.wzy.common.annotation;
+
 import java.lang.annotation.*;
 
 @Documented

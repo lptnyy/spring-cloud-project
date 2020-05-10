@@ -23,7 +23,7 @@ public class ${className}ServiceHystrix implements I${className}Service {
      * 获得单个信息
      * @return
      */
-    public ServiceResponse<${className}> get(ProParameter<${className}Request> proParameter) {
+    public ServiceResponse<${className}> get(ProParameter<${className}Request> proParameter) throws Exception {
         return ServiceResponse.getFAIL();
     }
 
@@ -31,7 +31,7 @@ public class ${className}ServiceHystrix implements I${className}Service {
      * 根据查询条件获取所有数据
      * @return
      */
-    public ServiceResponse<List<${className}>> getList(ProParameter<${className}Request> proParameter) {
+    public ServiceResponse<List<${className}>> getList(ProParameter<${className}Request> proParameter) throws Exception {
         return ServiceResponse.getFAIL();
     }
 
@@ -39,7 +39,7 @@ public class ${className}ServiceHystrix implements I${className}Service {
      * 分页查询所有数据
      * @return
      */
-    public ServiceResponse<List<${className}>> getPageList(ProParameter<${className}Request> proParameter) {
+    public ServiceResponse<List<${className}>> getPageList(ProParameter<${className}Request> proParameter) throws Exception {
         return ServiceResponse.getFAIL();
     }
 
@@ -47,7 +47,7 @@ public class ${className}ServiceHystrix implements I${className}Service {
      * ids数组In查询数据
      * @return
      */
-    public ServiceResponse<List<${className}>> findIdsList(ProParameter<${className}Request> proParameter) {
+    public ServiceResponse<List<${className}>> findIdsList(ProParameter<${className}Request> proParameter) throws Exception {
         return ServiceResponse.getFAIL();
     }
 
@@ -56,7 +56,7 @@ public class ${className}ServiceHystrix implements I${className}Service {
      * @param proParameter
      * @return
      */
-    public ServiceResponse<Integer> update(ProParameter<${className}Request> proParameter) {
+    public ServiceResponse<Integer> update(ProParameter<${className}Request> proParameter) throws Exception {
         return ServiceResponse.getFAIL();
     }
 
@@ -65,7 +65,7 @@ public class ${className}ServiceHystrix implements I${className}Service {
      * @param proParameter
      * @return
      */
-    public ServiceResponse<${className}> save(ProParameter<${className}Request> proParameter) {
+    public ServiceResponse<${className}> save(ProParameter<${className}Request> proParameter) throws Exception {
         return ServiceResponse.getFAIL();
     }
 
@@ -74,7 +74,7 @@ public class ${className}ServiceHystrix implements I${className}Service {
      * @param proParameter
      * @return
      */
-    public ServiceResponse<Integer> delete(ProParameter<${className}Request> proParameter) {
+    public ServiceResponse<Integer> delete(ProParameter<${className}Request> proParameter) throws Exception {
         return ServiceResponse.getFAIL();
     }
 
@@ -83,7 +83,7 @@ public class ${className}ServiceHystrix implements I${className}Service {
      * @param proParameter
      * @return
      */
-    public ServiceResponse<Integer> idsDelete(ProParameter<${className}Request> proParameter) {
+    public ServiceResponse<Integer> idsDelete(ProParameter<${className}Request> proParameter) throws Exception {
         return ServiceResponse.getFAIL();
     }
 
@@ -92,7 +92,7 @@ public class ${className}ServiceHystrix implements I${className}Service {
      * @param proParameter
      * @return
      */
-     public ServiceResponse<List<${className}>> batchSave(ProParameter<List<${className}Request>> proParameter) {
+     public ServiceResponse<List<${className}>> batchSave(ProParameter<List<${className}Request>> proParameter) throws Exception {
          return ServiceResponse.getFAIL();
      }
 }

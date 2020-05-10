@@ -2,6 +2,7 @@ package ${genpkg};
 import com.wzy.common.method.ProParameter;
 import com.wzy.common.util.ServiceResponse;
 import com.wzy.redis.RedisService;
+import com.wzy.common.annotation.Log;
 import ${serviceClassPath};
 import ${dtoClassPath};
 import ${requestClassPath};
@@ -16,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 import java.util.stream.Collectors;
+import io.seata.spring.annotation.GlobalTransactional;
 
 /**
  * <p>
@@ -38,7 +40,8 @@ public class ${className}Controller {
 
     @PostMapping(value = "/getPageList")
     @ApiOperation(value = "分页查询列表")
-    public ServiceResponse<List<${className}Vo>> getPageList(@RequestBody ${className}Request request){
+    @Log(name = "${tableComment}", value = "分页查询列表", source = "${logSourceName}")
+    public ServiceResponse<List<${className}Vo>> getPageList(@RequestBody ${className}Request request) throws Exception {
         return new ServiceResponse<List<${className}Vo>>()
                 .run(serviceResponse -> {
 
@@ -72,7 +75,8 @@ public class ${className}Controller {
 
     @PostMapping(value = "/get")
     @ApiOperation(value = "获取单条信息")
-    public ServiceResponse<${className}Vo> get(@RequestBody ${className}Request request){
+    @Log(name = "${tableComment}", value = "获取单条信息", source = "${logSourceName}")
+    public ServiceResponse<${className}Vo> get(@RequestBody ${className}Request request) throws Exception {
         return new ServiceResponse<${className}Vo>()
                 .run(serviceResponse -> {
 
@@ -93,7 +97,9 @@ public class ${className}Controller {
 
     @PostMapping(value = "/save")
     @ApiOperation(value = "保存")
-    public ServiceResponse<${className}Vo> save(@RequestBody ${className}Request request){
+    @GlobalTransactional
+    @Log(name = "${tableComment}", value = "保存", source = "${logSourceName}")
+    public ServiceResponse<${className}Vo> save(@RequestBody ${className}Request request) throws Exception {
         return new ServiceResponse<${className}Vo>()
                 .run(serviceResponse -> {
 
@@ -114,7 +120,9 @@ public class ${className}Controller {
 
     @PostMapping(value = "/idsDelete")
     @ApiOperation(value = "批量删除")
-    public ServiceResponse<Integer> idsDelete(@RequestBody ${className}Request request){
+    @GlobalTransactional
+    @Log(name = "${tableComment}", value = "批量删除", source = "${logSourceName}")
+    public ServiceResponse<Integer> idsDelete(@RequestBody ${className}Request request) throws Exception {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
 
@@ -133,8 +141,10 @@ public class ${className}Controller {
     }
 
     @PostMapping(value = "/delete")
-    @ApiOperation(value = "批量删除")
-    public ServiceResponse<Integer> delete(@RequestBody ${className}Request request){
+    @ApiOperation(value = "删除")
+    @GlobalTransactional
+    @Log(name = "${tableComment}", value = "删除", source = "${logSourceName}")
+    public ServiceResponse<Integer> delete(@RequestBody ${className}Request request) throws Exception {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
 
@@ -151,7 +161,9 @@ public class ${className}Controller {
 
     @PostMapping(value = "/update")
     @ApiOperation(value = "修改")
-    public ServiceResponse<Integer> update(@RequestBody ${className}Request request){
+    @GlobalTransactional
+    @Log(name = "${tableComment}", value = "修改", source = "${logSourceName}")
+    public ServiceResponse<Integer> update(@RequestBody ${className}Request request) throws Exception {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
 

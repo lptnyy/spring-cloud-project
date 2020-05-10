@@ -4,7 +4,7 @@ spring:
   cloud:
     config:
       profile: ${spring.profiles.active}
-      name: eureka-middleware,gateway-service,redis-nosql,rabbitmq-middleware,zipkin-middleware,oauth2-res
+      name: eureka-middleware,gateway-service,redis-nosql,rabbitmq-middleware,zipkin-middleware,oauth2-res,hystrix-timeout
       discovery:
         enabled: false
       override-none: true
@@ -13,3 +13,12 @@ spring:
     admin:
       client:
         url: http://${ADMIN-SERVICE}:8003
+
+pro:
+  swagger2:
+    pkg: com.wzy.gateway
+    title: 接口服务
+    description: 所有接口文档
+    termsOfServiceUrl: https://github.com/lptnyy/spring-cloud-project
+    version: 1.0
+    other-services: SYSTEM:admin-app,OSS:OSS-SERVICE  #路由：：服务名  多swagger 配置

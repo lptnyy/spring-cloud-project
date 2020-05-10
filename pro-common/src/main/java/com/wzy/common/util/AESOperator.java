@@ -1,10 +1,8 @@
 package com.wzy.common.util;
-
 import com.alibaba.fastjson.JSON;
 import com.wzy.common.util.jsonvo.JsonVo;
 import sun.misc.BASE64Decoder;
 import sun.misc.BASE64Encoder;
-
 import javax.crypto.Cipher;
 import javax.crypto.spec.IvParameterSpec;
 import javax.crypto.spec.SecretKeySpec;

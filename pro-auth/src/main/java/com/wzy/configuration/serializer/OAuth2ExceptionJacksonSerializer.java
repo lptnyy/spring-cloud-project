@@ -5,7 +5,6 @@ import com.fasterxml.jackson.databind.SerializerProvider;
 import com.fasterxml.jackson.databind.ser.std.StdSerializer;
 import com.wzy.configuration.exception.ProOAuth2Exception;
 import org.springframework.web.util.HtmlUtils;
-
 import java.io.IOException;
 import java.util.Map;
 

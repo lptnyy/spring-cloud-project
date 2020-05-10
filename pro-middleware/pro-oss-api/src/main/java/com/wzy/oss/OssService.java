@@ -20,7 +20,7 @@ public interface OssService {
      * @return
      */
     @RequestMapping(path = "/file/uploadMultipartFile", method = RequestMethod.POST)
-    ServiceResponse<FIleVo> uploadMultipartFile(@RequestPart(value = "file", required = false) MultipartFile file);
+    ServiceResponse<FIleVo> uploadMultipartFile(@RequestPart(value = "file", required = false) MultipartFile file) throws Exception;
 
     /**
      * 下载文件
@@ -28,5 +28,5 @@ public interface OssService {
      * @return
      */
     @RequestMapping(path = "/file/download", method = RequestMethod.GET)
-    ResponseEntity<byte[]> download(@RequestParam(value = "path") String path);
+    ResponseEntity<byte[]> download(@RequestParam(value = "path") String path) throws Exception;
 }

@@ -11,6 +11,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableEurekaClient
 @EnableSwagger2
 @ComponentScans({
+        @ComponentScan("com.wzy.common.exception"), // 载入全局异常管理
         @ComponentScan("com.wzy.common.feign") // 解决 服务调用之间传递 oauth2 头信息
 })
 @EnableHystrix

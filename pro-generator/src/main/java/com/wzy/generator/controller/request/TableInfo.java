@@ -14,8 +14,9 @@ public class TableInfo {
     String mapperPkg;
     String dtoPgk;
     String mysqlUser;
-    String msyqlPass;
+    String mysqlPass;
     String tableName;
     String feignClientService;
     String gateWayPath;
+    String logSourceName;
 }

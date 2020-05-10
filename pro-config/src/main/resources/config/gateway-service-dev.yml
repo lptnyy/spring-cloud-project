@@ -9,8 +9,8 @@ spring:
         locator:      #路由访问方式：http://Gateway_HOST:Gateway_PORT/大写的serviceId/**，其中微服务应用名默认大写访问。
           enabled: true
       routes:
-      - id: SYSTEM-SERVICE-APP                #从注册中心获取服务
-        uri: lb://SYSTEM-SERVICE-APP
+      - id: ADMIN-APP              #从注册中心获取服务
+        uri: lb://ADMIN-APP
         predicates:
         - Path=/system/**
         filters:
@@ -141,12 +141,4 @@ feign:
 ribbon:
   eager-load:
     enabled: true
-    clients: SYSTEM-SERVICE,AUTH-SERVICE,CONFIG-SERVICE,GENERATOR-SERVICE,SYSTEM-SERVICE-APP,ADMIN-SERVICE,OSS-SERVICE
-
-hystrix:
-  command:
-    default:
-      execution:
-        isolation:
-          thread:
-            timeoutInMilliseconds: 5000
+    clients: AUTH-SERVICE,CONFIG-SERVICE,GENERATOR-SERVICE,ADMIN-APP,ADMIN-SERVICE,OSS-SERVICE

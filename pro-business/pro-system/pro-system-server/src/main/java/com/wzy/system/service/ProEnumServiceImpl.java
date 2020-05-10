@@ -4,9 +4,11 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.wzy.common.method.ProParameter;
 import com.wzy.common.util.ServiceResponse;
+import io.seata.spring.annotation.GlobalTransactional;
 import io.swagger.annotations.Api;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.BeanUtils;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.RestController;
 import javax.annotation.Resource;
 import java.util.List;
@@ -32,12 +34,12 @@ public class ProEnumServiceImpl implements IProEnumService {
     ProEnumMapper mapper;
 
     @Override
-    public ServiceResponse<ProEnum> get(ProParameter<ProEnumRequest> proParameter) {
+    public ServiceResponse<ProEnum> get(ProParameter<ProEnumRequest> proParameter) throws Exception {
         return new ServiceResponse<ProEnum>()
                 .run((serviceResponse) -> {
                     LambdaQueryWrapper<ProEnum> lambdaQueryWrapper = new LambdaQueryWrapper<>();
                     ProEnumRequest request = proParameter.getObj();
-                    if(request.getEnumId() != null){
+                    if (request.getEnumId() != null) {
                         lambdaQueryWrapper.eq(ProEnum::getEnumId,request.getEnumId());
                     }
                     if(!StringUtils.isEmpty(request.getKeystr())){
@@ -58,7 +60,7 @@ public class ProEnumServiceImpl implements IProEnumService {
     }
 
     @Override
-    public ServiceResponse<List<ProEnum>> getList(ProParameter<ProEnumRequest> proParameter) {
+    public ServiceResponse<List<ProEnum>> getList(ProParameter<ProEnumRequest> proParameter) throws Exception {
         return new ServiceResponse<List<ProEnum>>()
                 .run((serviceResponse) -> {
                     LambdaQueryWrapper<ProEnum> lambdaQueryWrapper = new LambdaQueryWrapper<>();
@@ -84,7 +86,7 @@ public class ProEnumServiceImpl implements IProEnumService {
     }
 
     @Override
-    public ServiceResponse<List<ProEnum>> getPageList(ProParameter<ProEnumRequest> proParameter) {
+    public ServiceResponse<List<ProEnum>> getPageList(ProParameter<ProEnumRequest> proParameter) throws Exception{
         return new ServiceResponse<List<ProEnum>>()
                 .run((serviceResponse -> {
                     LambdaQueryWrapper<ProEnum> lambdaQueryWrapper = new LambdaQueryWrapper<>();
@@ -116,7 +118,7 @@ public class ProEnumServiceImpl implements IProEnumService {
     }
 
     @Override
-    public ServiceResponse<List<ProEnum>> findIdsList(ProParameter<ProEnumRequest> proParameter) {
+    public ServiceResponse<List<ProEnum>> findIdsList(ProParameter<ProEnumRequest> proParameter) throws Exception{
         return new ServiceResponse<List<ProEnum>>()
                 .run(serviceResponse -> {
                     LambdaQueryWrapper<ProEnum> queryWrapper = new LambdaQueryWrapper<>();
@@ -142,7 +144,8 @@ public class ProEnumServiceImpl implements IProEnumService {
     }
 
     @Override
-    public ServiceResponse<Integer> update(ProParameter<ProEnumRequest> proParameter) {
+    @GlobalTransactional
+    public ServiceResponse<Integer> update(ProParameter<ProEnumRequest> proParameter) throws Exception{
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
                     ProEnum bean = new ProEnum();
@@ -152,7 +155,8 @@ public class ProEnumServiceImpl implements IProEnumService {
     }
 
     @Override
-    public ServiceResponse<ProEnum> save(ProParameter<ProEnumRequest> proParameter) {
+    @GlobalTransactional
+    public ServiceResponse<ProEnum> save(ProParameter<ProEnumRequest> proParameter) throws Exception{
         return new ServiceResponse<ProEnum>()
                 .run(serviceResponse -> {
                     ProEnum bean = new ProEnum();
@@ -163,7 +167,8 @@ public class ProEnumServiceImpl implements IProEnumService {
     }
 
     @Override
-    public ServiceResponse<List<ProEnum>> batchSave(ProParameter<List<ProEnumRequest>> proParameter) {
+    @GlobalTransactional
+    public ServiceResponse<List<ProEnum>> batchSave(ProParameter<List<ProEnumRequest>> proParameter) throws Exception{
        return new ServiceResponse<List<ProEnum>>()
                .run(serviceResponse -> {
                    List<ProEnum> roles = proParameter.getObj()
@@ -179,7 +184,8 @@ public class ProEnumServiceImpl implements IProEnumService {
      }
 
     @Override
-    public ServiceResponse<Integer> delete(ProParameter<ProEnumRequest> proParameter) {
+    @GlobalTransactional
+    public ServiceResponse<Integer> delete(ProParameter<ProEnumRequest> proParameter) throws Exception{
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
                     LambdaQueryWrapper<ProEnum> lambdaQueryWrapper = new LambdaQueryWrapper<>();
@@ -204,25 +210,26 @@ public class ProEnumServiceImpl implements IProEnumService {
     }
 
     @Override
-    public ServiceResponse<Integer> idsDelete(ProParameter<ProEnumRequest> proParameter) {
+    @GlobalTransactional
+    public ServiceResponse<Integer> idsDelete(ProParameter<ProEnumRequest> proParameter) throws Exception{
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
-                     LambdaQueryWrapper<ProEnum> queryWrapper = new LambdaQueryWrapper<>();
-                     ProEnumRequest request = proParameter.getObj();
-                     if(request.getEnumId() != null){
-                          queryWrapper.in(ProEnum::getEnumId,request.getIds());
-                     }
+                    LambdaQueryWrapper<ProEnum> queryWrapper = new LambdaQueryWrapper<>();
+                    ProEnumRequest request = proParameter.getObj();
+                    if(request.getEnumId() != null){
+                        queryWrapper.in(ProEnum::getEnumId,request.getIds());
+                    }
                      if(!StringUtils.isEmpty(request.getKeystr())){
-                          queryWrapper.in(ProEnum::getKeystr,request.getIds());
+                        queryWrapper.in(ProEnum::getKeystr,request.getIds());
                      }
                      if(!StringUtils.isEmpty(request.getValuestr())){
-                          queryWrapper.in(ProEnum::getValuestr,request.getIds());
+                        queryWrapper.in(ProEnum::getValuestr,request.getIds());
                      }
                      if(!StringUtils.isEmpty(request.getType())){
-                          queryWrapper.in(ProEnum::getType,request.getIds());
+                        queryWrapper.in(ProEnum::getType,request.getIds());
                      }
                      if(request.getCreateTime() != null){
-                          queryWrapper.in(ProEnum::getCreateTime,request.getIds());
+                        queryWrapper.in(ProEnum::getCreateTime,request.getIds());
                      }
                     return mapper.delete(queryWrapper);
                 }).exec();

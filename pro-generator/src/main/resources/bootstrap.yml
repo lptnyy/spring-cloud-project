@@ -6,8 +6,16 @@ spring:
   cloud:
     config:
       profile: ${spring.profiles.active}
-      name: eureka-middleware,generator-service,rabbitmq-middleware,zipkin-middleware,admin-middleware,oauth2-res
+      name: eureka-middleware,generator-service,rabbitmq-middleware,zipkin-middleware,admin-middleware,oauth2-res,hystrix-timeout
       discovery:
         enabled: false
       override-none: true
       uri: http://${ZUUL-SERVICE}:8101/config
+
+pro:
+  swagger2:
+    pkg: com.wzy.generator
+    title: 生成服务
+    description: 对内接口文档
+    termsOfServiceUrl: https://github.com/lptnyy/spring-cloud-project
+    version: 1.0
