@@ -2,7 +2,6 @@ package com.wzy.generator.util;
 
 import lombok.Data;
 import org.springframework.stereotype.Component;
-
 import java.util.HashMap;
 
 /**
@@ -22,6 +21,8 @@ public class DtoUtil {
             put("float", "Float");
             put("datetime", "Date");
             put("timestamp", "Date");
+            put("bigint", "Integer");
+            put("decimal", "BigDecimal");
         }
     };
 
@@ -36,6 +37,8 @@ public class DtoUtil {
             put("float", "java.lang.Float");
             put("datetime", "java.util.Date");
             put("timestamp", "java.util.Date");
+            put("bigint", "java.lang.Integer");
+            put("decimal", "java.math.BigDecimal");
         }
     };
 
