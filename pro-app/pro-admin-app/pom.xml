@@ -10,7 +10,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>pro-system-app</artifactId>
+    <artifactId>pro-admin-app</artifactId>
 
     <properties>
         <codingapi.txlcn.version>5.0.2.RELEASE</codingapi.txlcn.version>
@@ -51,6 +51,11 @@
         <dependency>
             <groupId>com.wzy</groupId>
             <artifactId>pro-system-server-api</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.wzy</groupId>
+            <artifactId>pro-merchant-server-api</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
         <dependency>
