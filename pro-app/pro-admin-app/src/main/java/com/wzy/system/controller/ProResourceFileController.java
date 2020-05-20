@@ -42,7 +42,7 @@ public class ProResourceFileController {
     @PostMapping(value = "/getPageList")
     @ApiOperation(value = "分页查询列表")
     @Log(name = "系统资源文件表", value = "分页查询列表", source = "admin-app")
-    public ServiceResponse<List<ProResourceFileVo>> getPageList(@RequestBody ProResourceFileRequest request) throws Exception {
+    public ServiceResponse<List<ProResourceFileVo>> getPageList(@RequestBody ProResourceFileRequest request) {
         return new ServiceResponse<List<ProResourceFileVo>>()
                 .run(serviceResponse -> {
 
@@ -78,7 +78,7 @@ public class ProResourceFileController {
     @PostMapping(value = "/get")
     @ApiOperation(value = "获取单条信息")
     @Log(name = "系统资源文件表", value = "获取单条信息", source = "admin-app")
-    public ServiceResponse<ProResourceFileVo> get(@RequestBody ProResourceFileRequest request) throws Exception {
+    public ServiceResponse<ProResourceFileVo> get(@RequestBody ProResourceFileRequest request) {
         return new ServiceResponse<ProResourceFileVo>()
                 .run(serviceResponse -> {
 
@@ -101,7 +101,7 @@ public class ProResourceFileController {
     @ApiOperation(value = "保存")
     @GlobalTransactional
     @Log(name = "系统资源文件表", value = "保存", source = "admin-app")
-    public ServiceResponse<ProResourceFileVo> save(@RequestBody ProResourceFileRequest request) throws Exception {
+    public ServiceResponse<ProResourceFileVo> save(@RequestBody ProResourceFileRequest request) {
         return new ServiceResponse<ProResourceFileVo>()
                 .run(serviceResponse -> {
 
@@ -124,7 +124,7 @@ public class ProResourceFileController {
     @ApiOperation(value = "保存")
     @GlobalTransactional
     @Log(name = "系统资源文件表", value = "保存", source = "admin-app")
-    public ServiceResponse<List<ProResourceFile>> saveBatch(@RequestBody List<ProResourceFileRequest> request) throws Exception {
+    public ServiceResponse<List<ProResourceFile>> saveBatch(@RequestBody List<ProResourceFileRequest> request) {
         return new ServiceResponse<List<ProResourceFile>>()
                 .run(serviceResponse -> {
 
@@ -139,7 +139,7 @@ public class ProResourceFileController {
     @ApiOperation(value = "批量删除")
     @GlobalTransactional
     @Log(name = "系统资源文件表", value = "批量删除", source = "admin-app")
-    public ServiceResponse<Integer> idsDelete(@RequestBody ProResourceFileRequest request) throws Exception {
+    public ServiceResponse<Integer> idsDelete(@RequestBody ProResourceFileRequest request) {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
 
@@ -161,7 +161,7 @@ public class ProResourceFileController {
     @ApiOperation(value = "删除")
     @GlobalTransactional
     @Log(name = "系统资源文件表", value = "删除", source = "admin-app")
-    public ServiceResponse<Integer> delete(@RequestBody ProResourceFileRequest request) throws Exception {
+    public ServiceResponse<Integer> delete(@RequestBody ProResourceFileRequest request) {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
 
@@ -180,7 +180,7 @@ public class ProResourceFileController {
     @ApiOperation(value = "修改")
     @GlobalTransactional
     @Log(name = "系统资源文件表", value = "修改", source = "admin-app")
-    public ServiceResponse<Integer> update(@RequestBody ProResourceFileRequest request) throws Exception {
+    public ServiceResponse<Integer> update(@RequestBody ProResourceFileRequest request) {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
 

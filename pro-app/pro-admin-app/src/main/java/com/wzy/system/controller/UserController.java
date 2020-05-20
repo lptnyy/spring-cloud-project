@@ -43,7 +43,7 @@ public class UserController {
     @ApiOperation(value = "分页查询管理员列表")
     @Log(name = "管理员日志", value = "分页查询管理员列表", source = "system-app")
     @Authority(values = {"admin_select"})
-    public ServiceResponse<List<UserVo>> getUsers(@RequestBody User user) throws Exception {
+    public ServiceResponse<List<UserVo>> getUsers(@RequestBody User user) {
         return new ServiceResponse<List<UserVo>>()
                 .run(serviceResponse -> {
 
@@ -98,7 +98,7 @@ public class UserController {
     @Log(name = "管理员日志", value = "删除用户", source = "system-app")
     @GlobalTransactional
     @Authority(values = {"admin_del"})
-    public ServiceResponse<Integer> delete(@RequestBody User user) throws Exception {
+    public ServiceResponse<Integer> delete(@RequestBody User user) {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
                     return userService.delete(new ProParameter<User>(user)).getObj();
@@ -111,7 +111,7 @@ public class UserController {
     @Authority(values = {"addadmin"})
     @Log(name = "管理员日志", value = "添加", source = "system-app")
     @GlobalTransactional(rollbackFor = Exception.class)
-    public ServiceResponse<Integer> save(@RequestBody User user) throws Exception {
+    public ServiceResponse<Integer> save(@RequestBody User user) {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
                     User userPro = new User();
@@ -134,7 +134,7 @@ public class UserController {
     @Log(name = "管理员日志", value = "修改用户状态", source = "system-app")
     @Authority(values = {"admin_edit"})
     @GlobalTransactional
-    public ServiceResponse<Integer> updateStats(@RequestBody User user) throws Exception {
+    public ServiceResponse<Integer> updateStats(@RequestBody User user) {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
                     return userService.update(new ProParameter<User>(user)).getObj();
@@ -147,7 +147,7 @@ public class UserController {
     @Log(name = "管理员日志", value = "修改用户", source = "system-app")
     @GlobalTransactional
     @Authority(values = {"admin_edit"})
-    public ServiceResponse<Integer> update(@RequestBody User user) throws Exception {
+    public ServiceResponse<Integer> update(@RequestBody User user) {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
                     User userPro = new User();

@@ -52,7 +52,7 @@ public class ProRoleController {
     @PostMapping(value = "/getPageList")
     @ApiOperation(value = "分页查询列表")
     @Log(name = "系统角色表", value = "分页查询列表", source = "admin-app")
-    public ServiceResponse<List<ProRoleVo>> getPageList(@RequestBody ProRoleRequest request) throws Exception {
+    public ServiceResponse<List<ProRoleVo>> getPageList(@RequestBody ProRoleRequest request) {
         return new ServiceResponse<List<ProRoleVo>>()
                 .run(serviceResponse -> {
 
@@ -107,7 +107,7 @@ public class ProRoleController {
     @PostMapping(value = "/get")
     @ApiOperation(value = "获取单条信息")
     @Log(name = "系统角色表", value = "获取单条信息", source = "admin-app")
-    public ServiceResponse<ProRoleVo> get(@RequestBody ProRoleRequest request) throws Exception {
+    public ServiceResponse<ProRoleVo> get(@RequestBody ProRoleRequest request) {
         return new ServiceResponse<ProRoleVo>()
                 .run(serviceResponse -> {
 
@@ -129,7 +129,7 @@ public class ProRoleController {
     @PostMapping(value = "/getList")
     @ApiOperation(value = "获取所有角色信息")
     @Log(name = "系统角色表", value = "获取所有角色信息", source = "admin-app")
-    public ServiceResponse<List<ProRole>> getList(@RequestBody ProRoleRequest request) throws Exception {
+    public ServiceResponse<List<ProRole>> getList(@RequestBody ProRoleRequest request) {
         return new ServiceResponse<List<ProRole>>()
                 .run(serviceResponse -> {
 
@@ -148,7 +148,7 @@ public class ProRoleController {
     @ApiOperation(value = "保存")
     @GlobalTransactional
     @Log(name = "系统角色表", value = "保存", source = "admin-apps")
-    public ServiceResponse<ProRoleVo> save(@RequestBody ProRoleRequest request) throws Exception {
+    public ServiceResponse<ProRoleVo> save(@RequestBody ProRoleRequest request) {
         return new ServiceResponse<ProRoleVo>()
                 .run(serviceResponse -> {
 
@@ -171,7 +171,7 @@ public class ProRoleController {
     @ApiOperation(value = "批量删除")
     @GlobalTransactional
     @Log(name = "系统角色表", value = "批量删除", source = "admin-app")
-    public ServiceResponse<Integer> idsDelete(@RequestBody ProRoleRequest request) throws Exception {
+    public ServiceResponse<Integer> idsDelete(@RequestBody ProRoleRequest request) {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
 
@@ -190,7 +190,7 @@ public class ProRoleController {
     @ApiOperation(value = "删除")
     @GlobalTransactional
     @Log(name = "系统角色表", value = "删除", source = "admin-app")
-    public ServiceResponse<Integer> delete(@RequestBody ProRoleRequest request) throws Exception {
+    public ServiceResponse<Integer> delete(@RequestBody ProRoleRequest request) {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
 
@@ -214,7 +214,7 @@ public class ProRoleController {
     @ApiOperation(value = "修改")
     @GlobalTransactional
     @Log(name = "系统角色表", value = "修改", source = "admin-app")
-    public ServiceResponse<Integer> update(@RequestBody ProRoleRequest request) throws Exception {
+    public ServiceResponse<Integer> update(@RequestBody ProRoleRequest request) {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
 

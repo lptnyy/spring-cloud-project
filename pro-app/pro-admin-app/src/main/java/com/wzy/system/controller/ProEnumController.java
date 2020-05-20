@@ -42,7 +42,7 @@ public class ProEnumController {
     @PostMapping(value = "/getPageList")
     @ApiOperation(value = "分页查询列表")
     @Log(name = "枚举表", value = "分页查询列表", source = "admin-app")
-    public ServiceResponse<List<ProEnumVo>> getPageList(@RequestBody ProEnumRequest request) throws Exception {
+    public ServiceResponse<List<ProEnumVo>> getPageList(@RequestBody ProEnumRequest request) {
         return new ServiceResponse<List<ProEnumVo>>()
                 .run(serviceResponse -> {
 
@@ -78,7 +78,7 @@ public class ProEnumController {
     @PostMapping(value = "/get")
     @ApiOperation(value = "获取单条信息")
     @Log(name = "枚举表", value = "获取单条信息", source = "admin-app")
-    public ServiceResponse<ProEnumVo> get(@RequestBody ProEnumRequest request) throws Exception {
+    public ServiceResponse<ProEnumVo> get(@RequestBody ProEnumRequest request) {
         return new ServiceResponse<ProEnumVo>()
                 .run(serviceResponse -> {
 
@@ -100,7 +100,7 @@ public class ProEnumController {
     @PostMapping(value = "/getList")
     @ApiOperation(value = "获取列表")
     @Log(name = "枚举表", value = "获取列表", source = "admin-app")
-    public ServiceResponse<List<ProEnumVo> > getList(@RequestBody ProEnumRequest request) throws Exception {
+    public ServiceResponse<List<ProEnumVo> > getList(@RequestBody ProEnumRequest request) {
         return new ServiceResponse<List<ProEnumVo> >()
                 .run(serviceResponse -> {
 
@@ -133,7 +133,7 @@ public class ProEnumController {
     @ApiOperation(value = "保存")
     @GlobalTransactional
     @Log(name = "枚举表", value = "保存", source = "admin-app")
-    public ServiceResponse<ProEnumVo> save(@RequestBody ProEnumRequest request) throws Exception {
+    public ServiceResponse<ProEnumVo> save(@RequestBody ProEnumRequest request) {
         return new ServiceResponse<ProEnumVo>()
                 .run(serviceResponse -> {
 
@@ -150,7 +150,7 @@ public class ProEnumController {
     @ApiOperation(value = "批量删除")
     @GlobalTransactional
     @Log(name = "枚举表", value = "批量删除", source = "admin-app")
-    public ServiceResponse<Integer> idsDelete(@RequestBody ProEnumRequest request) throws Exception {
+    public ServiceResponse<Integer> idsDelete(@RequestBody ProEnumRequest request) {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
 
@@ -172,7 +172,7 @@ public class ProEnumController {
     @ApiOperation(value = "删除")
     @GlobalTransactional
     @Log(name = "枚举表", value = "删除", source = "admin-app")
-    public ServiceResponse<Integer> delete(@RequestBody ProEnumRequest request) throws Exception {
+    public ServiceResponse<Integer> delete(@RequestBody ProEnumRequest request) {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
 
@@ -191,7 +191,7 @@ public class ProEnumController {
     @ApiOperation(value = "修改")
     @GlobalTransactional
     @Log(name = "枚举表", value = "修改", source = "admin-app")
-    public ServiceResponse<Integer> update(@RequestBody ProEnumRequest request) throws Exception {
+    public ServiceResponse<Integer> update(@RequestBody ProEnumRequest request) {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
 

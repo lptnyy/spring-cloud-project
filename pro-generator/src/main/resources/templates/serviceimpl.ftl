@@ -32,7 +32,7 @@ public class ${className}ServiceImpl implements I${className}Service {
     ${className}Mapper mapper;
 
     @Override
-    public ServiceResponse<${className}> get(ProParameter<${className}Request> proParameter) throws Exception {
+    public ServiceResponse<${className}> get(ProParameter<${className}Request> proParameter) {
         return new ServiceResponse<${className}>()
                 .run((serviceResponse) -> {
                     LambdaQueryWrapper<${className}> lambdaQueryWrapper = new LambdaQueryWrapper<>();
@@ -54,7 +54,7 @@ public class ${className}ServiceImpl implements I${className}Service {
     }
 
     @Override
-    public ServiceResponse<List<${className}>> getList(ProParameter<${className}Request> proParameter) throws Exception {
+    public ServiceResponse<List<${className}>> getList(ProParameter<${className}Request> proParameter) {
         return new ServiceResponse<List<${className}>>()
                 .run((serviceResponse) -> {
                     LambdaQueryWrapper<${className}> lambdaQueryWrapper = new LambdaQueryWrapper<>();
@@ -76,7 +76,7 @@ public class ${className}ServiceImpl implements I${className}Service {
     }
 
     @Override
-    public ServiceResponse<List<${className}>> getPageList(ProParameter<${className}Request> proParameter) throws Exception {
+    public ServiceResponse<List<${className}>> getPageList(ProParameter<${className}Request> proParameter) {
         return new ServiceResponse<List<${className}>>()
                 .run((serviceResponse -> {
                     LambdaQueryWrapper<${className}> lambdaQueryWrapper = new LambdaQueryWrapper<>();
@@ -104,7 +104,7 @@ public class ${className}ServiceImpl implements I${className}Service {
     }
 
     @Override
-    public ServiceResponse<List<${className}>> findIdsList(ProParameter<${className}Request> proParameter) throws Exception {
+    public ServiceResponse<List<${className}>> findIdsList(ProParameter<${className}Request> proParameter) {
         return new ServiceResponse<List<${className}>>()
                 .run(serviceResponse -> {
                     LambdaQueryWrapper<${className}> queryWrapper = new LambdaQueryWrapper<>();
@@ -127,7 +127,7 @@ public class ${className}ServiceImpl implements I${className}Service {
 
     @Override
     @GlobalTransactional
-    public ServiceResponse<Integer> update(ProParameter<${className}Request> proParameter) throws Exception {
+    public ServiceResponse<Integer> update(ProParameter<${className}Request> proParameter) {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
                     ${className} bean = new ${className}();
@@ -138,7 +138,7 @@ public class ${className}ServiceImpl implements I${className}Service {
 
     @Override
     @GlobalTransactional
-    public ServiceResponse<${className}> save(ProParameter<${className}Request> proParameter) throws Exception {
+    public ServiceResponse<${className}> save(ProParameter<${className}Request> proParameter) {
         return new ServiceResponse<${className}>()
                 .run(serviceResponse -> {
                     ${className} bean = new ${className}();
@@ -150,7 +150,7 @@ public class ${className}ServiceImpl implements I${className}Service {
 
     @Override
     @GlobalTransactional
-    public ServiceResponse<List<${className}>> batchSave(ProParameter<List<${className}Request>> proParameter) throws Exception {
+    public ServiceResponse<List<${className}>> batchSave(ProParameter<List<${className}Request>> proParameter) {
        return new ServiceResponse<List<${className}>>()
                .run(serviceResponse -> {
                    List<${className}> roles = proParameter.getObj()
@@ -167,7 +167,7 @@ public class ${className}ServiceImpl implements I${className}Service {
 
     @Override
     @GlobalTransactional
-    public ServiceResponse<Integer> delete(ProParameter<${className}Request> proParameter) throws Exception {
+    public ServiceResponse<Integer> delete(ProParameter<${className}Request> proParameter) {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
                     LambdaQueryWrapper<${className}> lambdaQueryWrapper = new LambdaQueryWrapper<>();
@@ -189,7 +189,7 @@ public class ${className}ServiceImpl implements I${className}Service {
 
     @Override
     @GlobalTransactional
-    public ServiceResponse<Integer> idsDelete(ProParameter<${className}Request> proParameter) throws Exception {
+    public ServiceResponse<Integer> idsDelete(ProParameter<${className}Request> proParameter) {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
                      LambdaQueryWrapper<${className}> queryWrapper = new LambdaQueryWrapper<>();

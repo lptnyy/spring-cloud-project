@@ -7,47 +7,341 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="pro-admin" />
+        <module name="pro-admin-app" />
         <module name="pro-auth" />
         <module name="pro-common" />
         <module name="pro-config" />
         <module name="pro-eureka" />
         <module name="pro-gateway" />
         <module name="pro-generator" />
+        <module name="pro-merchant-server" />
+        <module name="pro-merchant-server-api" />
+        <module name="pro-oss" />
+        <module name="pro-oss-api" />
         <module name="pro-redis" />
         <module name="pro-redis-api" />
-        <module name="pro-system-app" />
         <module name="pro-system-server" />
         <module name="pro-system-server-api" />
         <module name="pro-weixin-server" />
         <module name="pro-weixin-server-api" />
         <module name="pro-zipkin" />
+        <module name="seata-all" />
+      </profile>
+      <profile name="Annotation profile for spring-cloud" enabled="true">
+        <sourceOutputDir name="../target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="seata-common" />
+        <module name="seata-core" />
+        <module name="seata-rm" />
+        <module name="seata-rm-datasource" />
+        <module name="seata-server" />
+        <module name="seata-spring" />
+        <module name="seata-spring-boot-starter" />
+        <module name="seata-tcc" />
+        <module name="seata-test" />
+        <module name="seata-tm" />
+      </profile>
+      <profile name="Annotation profile for seata-discovery-redis" enabled="true">
+        <sourceOutputDir name="../../target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../../target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="seata-discovery-redis" />
+      </profile>
+      <profile name="Annotation profile for seata-config-apollo" enabled="true">
+        <sourceOutputDir name="../../target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../../target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="seata-config-apollo" />
+      </profile>
+      <profile name="Annotation profile for seata-dubbo" enabled="true">
+        <sourceOutputDir name="../../target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../../target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="seata-dubbo" />
+      </profile>
+      <profile name="Annotation profile for seata-discovery-zk" enabled="true">
+        <sourceOutputDir name="../../target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../../target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="seata-discovery-zk" />
+      </profile>
+      <profile name="Annotation profile for seata-config-consul" enabled="true">
+        <sourceOutputDir name="../../target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../../target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="seata-config-consul" />
+      </profile>
+      <profile name="Annotation profile for seata-saga-engine-store" enabled="true">
+        <sourceOutputDir name="../../target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../../target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="seata-saga-engine-store" />
+      </profile>
+      <profile name="Annotation profile for seata-discovery-consul" enabled="true">
+        <sourceOutputDir name="../../target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../../target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="seata-discovery-consul" />
+      </profile>
+      <profile name="Annotation profile for seata-compressor-bzip2" enabled="true">
+        <sourceOutputDir name="../../target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../../target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="seata-compressor-bzip2" />
+      </profile>
+      <profile name="Annotation profile for seata-motan" enabled="true">
+        <sourceOutputDir name="../../target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../../target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="seata-motan" />
+      </profile>
+      <profile name="Annotation profile for seata-saga-statelang" enabled="true">
+        <sourceOutputDir name="../../target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../../target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="seata-saga-statelang" />
+      </profile>
+      <profile name="Annotation profile for seata-config-custom" enabled="true">
+        <sourceOutputDir name="../../target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../../target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="seata-config-custom" />
+      </profile>
+      <profile name="Annotation profile for seata-discovery-core" enabled="true">
+        <sourceOutputDir name="../../target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../../target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="seata-discovery-core" />
+      </profile>
+      <profile name="Annotation profile for seata-discovery-all" enabled="true">
+        <sourceOutputDir name="../../target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../../target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="seata-discovery-all" />
+      </profile>
+      <profile name="Annotation profile for seata-saga-rm" enabled="true">
+        <sourceOutputDir name="../../target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../../target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="seata-saga-rm" />
+      </profile>
+      <profile name="Annotation profile for seata-discovery-custom" enabled="true">
+        <sourceOutputDir name="../../target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../../target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="seata-discovery-custom" />
+      </profile>
+      <profile name="Annotation profile for seata-sofa-rpc" enabled="true">
+        <sourceOutputDir name="../../target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../../target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="seata-sofa-rpc" />
+      </profile>
+      <profile name="Annotation profile for seata-serializer-fst" enabled="true">
+        <sourceOutputDir name="../../target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../../target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="seata-serializer-fst" />
+      </profile>
+      <profile name="Annotation profile for seata-serializer-all" enabled="true">
+        <sourceOutputDir name="../../target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../../target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="seata-serializer-all" />
+      </profile>
+      <profile name="Annotation profile for seata-serializer-hessian" enabled="true">
+        <sourceOutputDir name="../../target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../../target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="seata-serializer-hessian" />
+      </profile>
+      <profile name="Annotation profile for seata-config-spring-cloud" enabled="true">
+        <sourceOutputDir name="../../target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../../target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="seata-config-spring-cloud" />
+      </profile>
+      <profile name="Annotation profile for seata-compressor-7z" enabled="true">
+        <sourceOutputDir name="../../target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../../target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="seata-compressor-7z" />
+      </profile>
+      <profile name="Annotation profile for seata-config-zk" enabled="true">
+        <sourceOutputDir name="../../target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../../target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="seata-config-zk" />
+      </profile>
+      <profile name="Annotation profile for seata-metrics-api" enabled="true">
+        <sourceOutputDir name="../../target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../../target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="seata-metrics-api" />
+      </profile>
+      <profile name="Annotation profile for seata-metrics-all" enabled="true">
+        <sourceOutputDir name="../../target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../../target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="seata-metrics-all" />
+      </profile>
+      <profile name="Annotation profile for seata-saga-tm" enabled="true">
+        <sourceOutputDir name="../../target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../../target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="seata-saga-tm" />
+      </profile>
+      <profile name="Annotation profile for seata-saga-engine" enabled="true">
+        <sourceOutputDir name="../../target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../../target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="seata-saga-engine" />
+      </profile>
+      <profile name="Annotation profile for seata-serializer-kryo" enabled="true">
+        <sourceOutputDir name="../../target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../../target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="seata-serializer-kryo" />
+      </profile>
+      <profile name="Annotation profile for seata-discovery-eureka" enabled="true">
+        <sourceOutputDir name="../../target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../../target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="seata-discovery-eureka" />
+      </profile>
+      <profile name="Annotation profile for seata-serializer-protobuf" enabled="true">
+        <sourceOutputDir name="../../target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../../target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="seata-serializer-protobuf" />
+      </profile>
+      <profile name="Annotation profile for seata-config-core" enabled="true">
+        <sourceOutputDir name="../../target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../../target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="seata-config-core" />
+      </profile>
+      <profile name="Annotation profile for seata-discovery-sofa" enabled="true">
+        <sourceOutputDir name="../../target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../../target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="seata-discovery-sofa" />
+      </profile>
+      <profile name="Annotation profile for seata-config-all" enabled="true">
+        <sourceOutputDir name="../../target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../../target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="seata-config-all" />
+      </profile>
+      <profile name="Annotation profile for seata-dubbo-alibaba" enabled="true">
+        <sourceOutputDir name="../../target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../../target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="seata-dubbo-alibaba" />
+      </profile>
+      <profile name="Annotation profile for seata-metrics-core" enabled="true">
+        <sourceOutputDir name="../../target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../../target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="seata-metrics-core" />
+      </profile>
+      <profile name="Annotation profile for seata-grpc" enabled="true">
+        <sourceOutputDir name="../../target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../../target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="seata-grpc" />
+      </profile>
+      <profile name="Annotation profile for seata-compressor-lz4" enabled="true">
+        <sourceOutputDir name="../../target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../../target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="seata-compressor-lz4" />
+      </profile>
+      <profile name="Annotation profile for seata-compressor-all" enabled="true">
+        <sourceOutputDir name="../../target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../../target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="seata-compressor-all" />
+      </profile>
+      <profile name="Annotation profile for seata-serializer-seata" enabled="true">
+        <sourceOutputDir name="../../target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../../target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="seata-serializer-seata" />
+      </profile>
+      <profile name="Annotation profile for seata-discovery-etcd3" enabled="true">
+        <sourceOutputDir name="../../target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../../target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="seata-discovery-etcd3" />
+      </profile>
+      <profile name="Annotation profile for seata-sqlparser-core" enabled="true">
+        <sourceOutputDir name="../../target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../../target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="seata-sqlparser-core" />
+      </profile>
+      <profile name="Annotation profile for seata-saga-processctrl" enabled="true">
+        <sourceOutputDir name="../../target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../../target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="seata-saga-processctrl" />
+      </profile>
+      <profile name="Annotation profile for seata-metrics-registry-compact" enabled="true">
+        <sourceOutputDir name="../../target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../../target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="seata-metrics-registry-compact" />
+      </profile>
+      <profile name="Annotation profile for seata-http" enabled="true">
+        <sourceOutputDir name="../../target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../../target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="seata-http" />
+      </profile>
+      <profile name="Annotation profile for seata-config-etcd3" enabled="true">
+        <sourceOutputDir name="../../target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../../target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="seata-config-etcd3" />
+      </profile>
+      <profile name="Annotation profile for seata-compressor-zip" enabled="true">
+        <sourceOutputDir name="../../target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../../target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="seata-compressor-zip" />
+      </profile>
+      <profile name="Annotation profile for seata-discovery-nacos" enabled="true">
+        <sourceOutputDir name="../../target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../../target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="seata-discovery-nacos" />
+      </profile>
+      <profile name="Annotation profile for seata-config-nacos" enabled="true">
+        <sourceOutputDir name="../../target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../../target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="seata-config-nacos" />
+      </profile>
+      <profile name="Annotation profile for seata-metrics-exporter-prometheus" enabled="true">
+        <sourceOutputDir name="../../target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../../target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="seata-metrics-exporter-prometheus" />
+      </profile>
+      <profile name="Annotation profile for seata-sqlparser-druid" enabled="true">
+        <sourceOutputDir name="../../target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../../target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="seata-sqlparser-druid" />
+      </profile>
+      <profile name="Annotation profile for seata-compressor-gzip" enabled="true">
+        <sourceOutputDir name="../../target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../../target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="seata-compressor-gzip" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="pro-common-mapper" target="1.8" />
-      <module name="pro-common-pojo" target="1.8" />
-      <module name="pro-tasks" target="1.8" />
-      <module name="pro-zuul" target="1.8" />
-      <module name="tx-lcn" target="1.8" />
-      <module name="txlcn-common" target="1.8" />
-      <module name="txlcn-logger" target="1.8" />
-      <module name="txlcn-tc" target="1.8" />
-      <module name="txlcn-tm" target="1.8" />
-      <module name="txlcn-tracing" target="1.8" />
-      <module name="txlcn-txmsg" target="1.8" />
-      <module name="txlcn-txmsg-netty" target="1.8" />
-    </bytecodeTargetLevel>
-  </component>
-  <component name="JavacSettings">
-    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="tx-lcn" options="-Xlint:deprecation" />
-      <module name="txlcn-common" options="-Xlint:deprecation" />
-      <module name="txlcn-logger" options="-Xlint:deprecation" />
-      <module name="txlcn-tc" options="-Xlint:deprecation" />
-      <module name="txlcn-tm" options="-Xlint:deprecation" />
-      <module name="txlcn-tracing" options="-Xlint:deprecation" />
-      <module name="txlcn-txmsg" options="-Xlint:deprecation" />
-      <module name="txlcn-txmsg-netty" options="-Xlint:deprecation" />
-    </option>
   </component>
 </project>

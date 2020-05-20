@@ -41,7 +41,7 @@ public class ProRoleMenuController {
     @PostMapping(value = "/getPageList")
     @ApiOperation(value = "分页查询列表")
     @Log(name = "角色菜单关系表", value = "分页查询列表", source = "admin-app")
-    public ServiceResponse<List<ProRoleMenuVo>> getPageList(@RequestBody ProRoleMenuRequest request) throws Exception {
+    public ServiceResponse<List<ProRoleMenuVo>> getPageList(@RequestBody ProRoleMenuRequest request) {
         return new ServiceResponse<List<ProRoleMenuVo>>()
                 .run(serviceResponse -> {
 
@@ -73,7 +73,7 @@ public class ProRoleMenuController {
     @PostMapping(value = "/get")
     @ApiOperation(value = "获取单条信息")
     @Log(name = "角色菜单关系表", value = "获取单条信息", source = "admin-app")
-    public ServiceResponse<ProRoleMenuVo> get(@RequestBody ProRoleMenuRequest request) throws Exception {
+    public ServiceResponse<ProRoleMenuVo> get(@RequestBody ProRoleMenuRequest request) {
         return new ServiceResponse<ProRoleMenuVo>()
                 .run(serviceResponse -> {
 
@@ -96,7 +96,7 @@ public class ProRoleMenuController {
     @ApiOperation(value = "保存")
     @Log(name = "角色菜单关系表", value = "保存", source = "admin-app")
     @GlobalTransactional
-    public ServiceResponse<Integer> save(@RequestBody ProRoleMenuRequest request) throws Exception {
+    public ServiceResponse<Integer> save(@RequestBody ProRoleMenuRequest request) {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
 
@@ -123,7 +123,7 @@ public class ProRoleMenuController {
     @ApiOperation(value = "批量删除")
     @Log(name = "角色菜单关系表", value = "批量删除", source = "admin-app")
     @GlobalTransactional
-    public ServiceResponse<Integer> idsDelete(@RequestBody ProRoleMenuRequest request) throws Exception {
+    public ServiceResponse<Integer> idsDelete(@RequestBody ProRoleMenuRequest request) {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
 
@@ -142,7 +142,7 @@ public class ProRoleMenuController {
     @ApiOperation(value = "删除")
     @Log(name = "角色菜单关系表", value = "删除", source = "admin-app")
     @GlobalTransactional
-    public ServiceResponse<Integer> delete(@RequestBody ProRoleMenuRequest request) throws Exception {
+    public ServiceResponse<Integer> delete(@RequestBody ProRoleMenuRequest request) {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
 
@@ -161,7 +161,7 @@ public class ProRoleMenuController {
     @ApiOperation(value = "修改")
     @Log(name = "角色菜单关系表", value = "修改", source = "admin-app")
     @GlobalTransactional
-    public ServiceResponse<Integer> update(@RequestBody ProRoleMenuRequest request) throws Exception {
+    public ServiceResponse<Integer> update(@RequestBody ProRoleMenuRequest request) {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
 

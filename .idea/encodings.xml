@@ -2,25 +2,90 @@
 <project version="4">
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-app/pro-admin-app" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/pro-app/pro-system-app" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/pro-auth" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-business/pro-merchant/pro-merchant-server" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/pro-business/pro-system/pro-system-server" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/pro-business/pro-weixin/pro-weixin-server" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/pro-config" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/pro-eureka" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/pro-gateway" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/pro-generator" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-middleware/pro-oss" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/pro-middleware/pro-redis" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/pro-monitor/pro-admin" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/pro-monitor/pro-zipkin" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/pro-tasks" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/tx-lcn" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/tx-lcn/txlcn-common" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/tx-lcn/txlcn-logger" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/tx-lcn/txlcn-tc" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/tx-lcn/txlcn-tm" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/tx-lcn/txlcn-tracing" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/tx-lcn/txlcn-txmsg" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/tx-lcn/txlcn-txmsg-netty" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-seata" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-seata/all" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-seata/bom" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-seata/common" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-seata/compressor" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-seata/compressor/seata-compressor-7z" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-seata/compressor/seata-compressor-all" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-seata/compressor/seata-compressor-bzip2" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-seata/compressor/seata-compressor-gzip" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-seata/compressor/seata-compressor-lz4" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-seata/compressor/seata-compressor-zip" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-seata/config" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-seata/config/seata-config-all" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-seata/config/seata-config-apollo" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-seata/config/seata-config-consul" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-seata/config/seata-config-core" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-seata/config/seata-config-custom" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-seata/config/seata-config-etcd3" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-seata/config/seata-config-nacos" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-seata/config/seata-config-spring-cloud" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-seata/config/seata-config-zk" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-seata/core" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-seata/discovery" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-seata/discovery/seata-discovery-all" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-seata/discovery/seata-discovery-consul" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-seata/discovery/seata-discovery-core" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-seata/discovery/seata-discovery-custom" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-seata/discovery/seata-discovery-etcd3" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-seata/discovery/seata-discovery-eureka" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-seata/discovery/seata-discovery-nacos" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-seata/discovery/seata-discovery-redis" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-seata/discovery/seata-discovery-sofa" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-seata/discovery/seata-discovery-zk" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-seata/distribution" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-seata/integration/dubbo" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-seata/integration/dubbo-alibaba" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-seata/integration/grpc" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-seata/integration/http" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-seata/integration/motan" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-seata/integration/sofa-rpc" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-seata/metrics" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-seata/metrics/seata-metrics-all" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-seata/metrics/seata-metrics-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-seata/metrics/seata-metrics-core" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-seata/metrics/seata-metrics-exporter-prometheus" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-seata/metrics/seata-metrics-registry-compact" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-seata/rm" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-seata/rm-datasource" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-seata/saga" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-seata/saga/seata-saga-engine" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-seata/saga/seata-saga-engine-store" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-seata/saga/seata-saga-processctrl" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-seata/saga/seata-saga-rm" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-seata/saga/seata-saga-statelang" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-seata/saga/seata-saga-tm" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-seata/seata-spring-boot-starter" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-seata/serializer" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-seata/serializer/seata-serializer-all" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-seata/serializer/seata-serializer-fst" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-seata/serializer/seata-serializer-hessian" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-seata/serializer/seata-serializer-kryo" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-seata/serializer/seata-serializer-protobuf" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-seata/serializer/seata-serializer-seata" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-seata/server" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-seata/spring" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-seata/sqlparser" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-seata/sqlparser/seata-sqlparser-core" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-seata/sqlparser/seata-sqlparser-druid" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-seata/tcc" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-seata/test" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/pro-seata/tm" charset="UTF-8" />
   </component>
 </project>

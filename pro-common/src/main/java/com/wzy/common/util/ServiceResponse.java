@@ -1,6 +1,9 @@
 package com.wzy.common.util;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.wzy.common.page.RequestPage;
+import io.seata.core.context.RootContext;
+import io.seata.core.exception.TransactionException;
+import io.seata.tm.api.GlobalTransactionContext;
 
 import java.io.Serializable;
 import java.sql.SQLException;
@@ -21,6 +24,7 @@ public class ServiceResponse<T> implements Serializable {
     public T getObj() {
         return obj;
     }
+    boolean transaction = false;
     ObjectMapper mapper = new ObjectMapper();
 
     public ServiceResponse builder(){
@@ -108,13 +112,12 @@ public class ServiceResponse<T> implements Serializable {
     }
 
     Exceutor<T> exceutor;
-    public ServiceResponse exec() throws Exception {
+    public ServiceResponse exec() {
         try{
             this.obj = exceutor.run(this);
         } catch (Exception e){
             this.setMsg(e.getMessage());
             this.setCode(MessageType.FAIL.getValue());
-            throw e;
         }
         return this;
     }
@@ -159,10 +162,26 @@ public class ServiceResponse<T> implements Serializable {
         return this;
     }
 
+    // 服务调用验证如果开启事务 回滚事务
     public void checkState() throws Exception {
         if (this.code != 200) {
+            if (transaction) {
+                GlobalTransactionContext.reload(RootContext.getXID()).rollback();
+            }
             throw new Exception("服务器调用异常");
         }
+    }
+
+    /**
+     * 标记开启事务
+     */
+    public void beginTransaction() {
+        this.transaction = true;
+    }
+
+    // 事务回滚
+    public void rollback() throws TransactionException {
+        GlobalTransactionContext.reload(RootContext.getXID()).rollback();
     }
 
     public T toObjClass(Class srClass) {

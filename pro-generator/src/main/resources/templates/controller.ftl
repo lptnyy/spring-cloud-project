@@ -41,7 +41,7 @@ public class ${className}Controller {
     @PostMapping(value = "/getPageList")
     @ApiOperation(value = "分页查询列表")
     @Log(name = "${tableComment}", value = "分页查询列表", source = "${logSourceName}")
-    public ServiceResponse<List<${className}Vo>> getPageList(@RequestBody ${className}Request request) throws Exception {
+    public ServiceResponse<List<${className}Vo>> getPageList(@RequestBody ${className}Request request) {
         return new ServiceResponse<List<${className}Vo>>()
                 .run(serviceResponse -> {
 
@@ -76,7 +76,7 @@ public class ${className}Controller {
     @PostMapping(value = "/get")
     @ApiOperation(value = "获取单条信息")
     @Log(name = "${tableComment}", value = "获取单条信息", source = "${logSourceName}")
-    public ServiceResponse<${className}Vo> get(@RequestBody ${className}Request request) throws Exception {
+    public ServiceResponse<${className}Vo> get(@RequestBody ${className}Request request) {
         return new ServiceResponse<${className}Vo>()
                 .run(serviceResponse -> {
 
@@ -99,18 +99,24 @@ public class ${className}Controller {
     @ApiOperation(value = "保存")
     @GlobalTransactional
     @Log(name = "${tableComment}", value = "保存", source = "${logSourceName}")
-    public ServiceResponse<${className}Vo> save(@RequestBody ${className}Request request) throws Exception {
+    public ServiceResponse<${className}Vo> save(@RequestBody ${className}Request request) {
         return new ServiceResponse<${className}Vo>()
                 .run(serviceResponse -> {
 
-                    // 获取调用服务返回结果 通过返回结果 进行业务判断 以及 手动控制 分布式事务回滚
+                    // 开启事务标记 验证服务是否执行成功 失败回滚分布式事务
                     ServiceResponse<${className}> response = ${smClassName}Service.get(new ProParameter<>(request));
+                    response.beginTransaction();
 
                     // 获取调用服务状态
                     response.checkState();
 
-                    // 获取返回结果 包括数据库插入id
-                    ${className} ${smClassName} = ${smClassName}Service.save(new ProParameter<>(request)).getObj();
+                    // 保存数据 开启事务标记 验证服务是否执行成功 失败回滚分布式事务
+                    response = ${smClassName}Service.save(new ProParameter<>(request));
+                    response.beginTransaction();
+                    response.checkState();
+
+                    // 获取返回数据
+                    ${className} ${smClassName} = response.getObj();
                     ${className}Vo ${smClassName}Vo = new ${className}Vo();
                     BeanUtils.copyProperties(${smClassName},${smClassName}Vo);
                     return ${smClassName}Vo;
@@ -122,7 +128,7 @@ public class ${className}Controller {
     @ApiOperation(value = "批量删除")
     @GlobalTransactional
     @Log(name = "${tableComment}", value = "批量删除", source = "${logSourceName}")
-    public ServiceResponse<Integer> idsDelete(@RequestBody ${className}Request request) throws Exception {
+    public ServiceResponse<Integer> idsDelete(@RequestBody ${className}Request request) {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
 
@@ -131,6 +137,7 @@ public class ${className}Controller {
 
                     // 获取调用服务返回结果 通过返回结果 进行业务判断 以及 手动控制 分布式事务回滚
                     ServiceResponse<Integer> response = ${smClassName}Service.idsDelete(new ProParameter<>(request));
+                    response.beginTransaction();
 
                     // 获取调用服务状态
                     response.checkState();
@@ -144,12 +151,13 @@ public class ${className}Controller {
     @ApiOperation(value = "删除")
     @GlobalTransactional
     @Log(name = "${tableComment}", value = "删除", source = "${logSourceName}")
-    public ServiceResponse<Integer> delete(@RequestBody ${className}Request request) throws Exception {
+    public ServiceResponse<Integer> delete(@RequestBody ${className}Request request) {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
 
                     // 获取调用服务返回结果 通过返回结果 进行业务判断 以及 手动控制 分布式事务回滚
                     ServiceResponse<Integer> response = ${smClassName}Service.delete(new ProParameter<>(request));
+                    response.beginTransaction();
 
                     // 获取调用服务状态
                     response.checkState();
@@ -163,12 +171,13 @@ public class ${className}Controller {
     @ApiOperation(value = "修改")
     @GlobalTransactional
     @Log(name = "${tableComment}", value = "修改", source = "${logSourceName}")
-    public ServiceResponse<Integer> update(@RequestBody ${className}Request request) throws Exception {
+    public ServiceResponse<Integer> update(@RequestBody ${className}Request request) {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
 
                     // 获取调用服务返回结果 通过返回结果 进行业务判断 以及 手动控制 分布式事务回滚
                     ServiceResponse<Integer> response = ${smClassName}Service.update(new ProParameter<>(request));
+                    response.beginTransaction();
 
                     // 获取调用服务状态
                     response.checkState();

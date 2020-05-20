@@ -42,7 +42,7 @@ public class ProMerchantController {
     @PostMapping(value = "/getPageList")
     @ApiOperation(value = "分页查询列表")
     @Log(name = "商户表 ", value = "分页查询列表", source = "merchant-service")
-    public ServiceResponse<List<ProMerchantVo>> getPageList(@RequestBody ProMerchantRequest request) throws Exception {
+    public ServiceResponse<List<ProMerchantVo>> getPageList(@RequestBody ProMerchantRequest request) {
         return new ServiceResponse<List<ProMerchantVo>>()
                 .run(serviceResponse -> {
 
@@ -78,7 +78,7 @@ public class ProMerchantController {
     @PostMapping(value = "/get")
     @ApiOperation(value = "获取单条信息")
     @Log(name = "商户表 ", value = "获取单条信息", source = "merchant-service")
-    public ServiceResponse<ProMerchantVo> get(@RequestBody ProMerchantRequest request) throws Exception {
+    public ServiceResponse<ProMerchantVo> get(@RequestBody ProMerchantRequest request) {
         return new ServiceResponse<ProMerchantVo>()
                 .run(serviceResponse -> {
 
@@ -101,7 +101,7 @@ public class ProMerchantController {
     @ApiOperation(value = "保存")
     @GlobalTransactional
     @Log(name = "商户表 ", value = "保存", source = "merchant-service")
-    public ServiceResponse<ProMerchantVo> save(@RequestBody ProMerchantRequest request) throws Exception {
+    public ServiceResponse<ProMerchantVo> save(@RequestBody ProMerchantRequest request) {
         return new ServiceResponse<ProMerchantVo>()
                 .run(serviceResponse -> {
 
@@ -124,7 +124,7 @@ public class ProMerchantController {
     @ApiOperation(value = "批量删除")
     @GlobalTransactional
     @Log(name = "商户表 ", value = "批量删除", source = "merchant-service")
-    public ServiceResponse<Integer> idsDelete(@RequestBody ProMerchantRequest request) throws Exception {
+    public ServiceResponse<Integer> idsDelete(@RequestBody ProMerchantRequest request) {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
 
@@ -146,7 +146,7 @@ public class ProMerchantController {
     @ApiOperation(value = "删除")
     @GlobalTransactional
     @Log(name = "商户表 ", value = "删除", source = "merchant-service")
-    public ServiceResponse<Integer> delete(@RequestBody ProMerchantRequest request) throws Exception {
+    public ServiceResponse<Integer> delete(@RequestBody ProMerchantRequest request) {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
 
@@ -165,7 +165,7 @@ public class ProMerchantController {
     @ApiOperation(value = "修改")
     @GlobalTransactional
     @Log(name = "商户表 ", value = "修改", source = "merchant-service")
-    public ServiceResponse<Integer> update(@RequestBody ProMerchantRequest request) throws Exception {
+    public ServiceResponse<Integer> update(@RequestBody ProMerchantRequest request) {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
 
