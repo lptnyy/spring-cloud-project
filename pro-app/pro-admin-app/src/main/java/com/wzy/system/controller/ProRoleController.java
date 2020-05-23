@@ -52,7 +52,7 @@ public class ProRoleController {
     @PostMapping(value = "/getPageList")
     @ApiOperation(value = "分页查询列表")
     @Log(name = "系统角色表", value = "分页查询列表", source = "admin-app")
-    public ServiceResponse<List<ProRoleVo>> getPageList(@RequestBody ProRoleRequest request) throws Exception {
+    public ServiceResponse<List<ProRoleVo>> getPageList(@RequestBody ProRoleRequest request) {
         return new ServiceResponse<List<ProRoleVo>>()
                 .run(serviceResponse -> {
 
@@ -67,7 +67,7 @@ public class ProRoleController {
                     List<ProRoleMenu> proRoleMenus = roleMenuResponse.getObj();
 
                     // 获取调用服务状态
-                    response.copyState(serviceResponse);
+                    response.checkState();
 
                     // 获取返回的分页信息
                     response.copyPage(serviceResponse);
@@ -107,7 +107,7 @@ public class ProRoleController {
     @PostMapping(value = "/get")
     @ApiOperation(value = "获取单条信息")
     @Log(name = "系统角色表", value = "获取单条信息", source = "admin-app")
-    public ServiceResponse<ProRoleVo> get(@RequestBody ProRoleRequest request) throws Exception {
+    public ServiceResponse<ProRoleVo> get(@RequestBody ProRoleRequest request) {
         return new ServiceResponse<ProRoleVo>()
                 .run(serviceResponse -> {
 
@@ -115,7 +115,7 @@ public class ProRoleController {
                     ServiceResponse<ProRole> response = proRoleService.get(new ProParameter<>(request));
 
                     // 获取调用服务状态
-                    response.copyState(serviceResponse);
+                    response.checkState();
 
                     // 组装返回的vo
                     ProRole proRole = response.getObj();
@@ -129,7 +129,7 @@ public class ProRoleController {
     @PostMapping(value = "/getList")
     @ApiOperation(value = "获取所有角色信息")
     @Log(name = "系统角色表", value = "获取所有角色信息", source = "admin-app")
-    public ServiceResponse<List<ProRole>> getList(@RequestBody ProRoleRequest request) throws Exception {
+    public ServiceResponse<List<ProRole>> getList(@RequestBody ProRoleRequest request) {
         return new ServiceResponse<List<ProRole>>()
                 .run(serviceResponse -> {
 
@@ -137,7 +137,7 @@ public class ProRoleController {
                     ServiceResponse<List<ProRole>> response = proRoleService.getList(new ProParameter<>(request));
 
                     // 获取调用服务状态
-                    response.copyState(serviceResponse);
+                    response.checkState();
 
                     return response.getObj();
                 })
@@ -148,18 +148,23 @@ public class ProRoleController {
     @ApiOperation(value = "保存")
     @GlobalTransactional
     @Log(name = "系统角色表", value = "保存", source = "admin-apps")
-    public ServiceResponse<ProRoleVo> save(@RequestBody ProRoleRequest request) throws Exception {
+    public ServiceResponse<ProRoleVo> save(@RequestBody ProRoleRequest request) {
         return new ServiceResponse<ProRoleVo>()
                 .run(serviceResponse -> {
 
                     // 获取调用服务返回结果 通过返回结果 进行业务判断 以及 手动控制 分布式事务回滚
                     ServiceResponse<ProRole> response = proRoleService.get(new ProParameter<>(request));
+                    response.beginTransaction();
 
                     // 获取调用服务状态
-                    response.copyState(serviceResponse);
+                    response.checkState();
 
                     // 获取返回结果 包括数据库插入id
-                    ProRole proRole = proRoleService.save(new ProParameter<>(request)).getObj();
+                    ProRole proRole = proRoleService.save(new ProParameter<>(request))
+                            .beginTransaction()
+                            .checkState()
+                            .getObj();
+
                     ProRoleVo proRoleVo = new ProRoleVo();
                     BeanUtils.copyProperties(proRole,proRoleVo);
                     return proRoleVo;
@@ -171,15 +176,16 @@ public class ProRoleController {
     @ApiOperation(value = "批量删除")
     @GlobalTransactional
     @Log(name = "系统角色表", value = "批量删除", source = "admin-app")
-    public ServiceResponse<Integer> idsDelete(@RequestBody ProRoleRequest request) throws Exception {
+    public ServiceResponse<Integer> idsDelete(@RequestBody ProRoleRequest request) {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
 
                     // 获取调用服务返回结果 通过返回结果 进行业务判断 以及 手动控制 分布式事务回滚
                     ServiceResponse<Integer> response = proRoleService.idsDelete(new ProParameter<>(request));
+                    response.beginTransaction();
 
                     // 获取调用服务状态
-                    response.copyState(serviceResponse);
+                    response.checkState();
 
                     return response.getObj();
                 })
@@ -190,20 +196,21 @@ public class ProRoleController {
     @ApiOperation(value = "删除")
     @GlobalTransactional
     @Log(name = "系统角色表", value = "删除", source = "admin-app")
-    public ServiceResponse<Integer> delete(@RequestBody ProRoleRequest request) throws Exception {
+    public ServiceResponse<Integer> delete(@RequestBody ProRoleRequest request) {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
 
                     // 获取调用服务返回结果 通过返回结果 进行业务判断 以及 手动控制 分布式事务回滚
                     ServiceResponse<Integer> response = proRoleService.delete(new ProParameter<>(request));
+                    response.beginTransaction();
+                    response.checkState();
 
                     // 删除角色下面所有的权限设置
                     ProRoleMenuRequest proRoleMenuRequest = new ProRoleMenuRequest();
                     proRoleMenuRequest.setRoleId(request.getRoleId());
                     response = proRoleMenuService.delete(new ProParameter<>(proRoleMenuRequest));
-
-                    // 获取调用服务状态
-                    response.copyState(serviceResponse);
+                    response.beginTransaction();
+                    response.checkState();
 
                     return response.getObj();
                 })
@@ -214,15 +221,16 @@ public class ProRoleController {
     @ApiOperation(value = "修改")
     @GlobalTransactional
     @Log(name = "系统角色表", value = "修改", source = "admin-app")
-    public ServiceResponse<Integer> update(@RequestBody ProRoleRequest request) throws Exception {
+    public ServiceResponse<Integer> update(@RequestBody ProRoleRequest request) {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
 
                     // 获取调用服务返回结果 通过返回结果 进行业务判断 以及 手动控制 分布式事务回滚
                     ServiceResponse<Integer> response = proRoleService.update(new ProParameter<>(request));
+                    response.beginTransaction();
 
                     // 获取调用服务状态
-                    response.copyState(serviceResponse);
+                    response.checkState();
 
                     return response.getObj();
                 })

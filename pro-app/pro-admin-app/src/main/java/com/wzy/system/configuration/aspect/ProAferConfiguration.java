@@ -30,7 +30,7 @@ public class ProAferConfiguration implements ProAfter {
     IProLogService proLogService;
 
     @Override
-    public Object aroundMethod(ProceedingJoinPoint pjd) throws Exception {
+    public Object aroundMethod(ProceedingJoinPoint pjd) {
         long startTime= SystemClock.now();
         try {
             Class<?> classTarget = pjd.getTarget().getClass();
@@ -83,8 +83,7 @@ public class ProAferConfiguration implements ProAfter {
             }
             return result;
         } catch (Throwable throwable) {
-            throwable.printStackTrace();
-            throw new Exception("调用异常");
+            return ServiceResponse.getAuthFAIL();
         }
     }
 }

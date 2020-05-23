@@ -41,7 +41,7 @@ public class ProRoleMenuController {
     @PostMapping(value = "/getPageList")
     @ApiOperation(value = "分页查询列表")
     @Log(name = "角色菜单关系表", value = "分页查询列表", source = "admin-app")
-    public ServiceResponse<List<ProRoleMenuVo>> getPageList(@RequestBody ProRoleMenuRequest request) throws Exception {
+    public ServiceResponse<List<ProRoleMenuVo>> getPageList(@RequestBody ProRoleMenuRequest request) {
         return new ServiceResponse<List<ProRoleMenuVo>>()
                 .run(serviceResponse -> {
 
@@ -73,7 +73,7 @@ public class ProRoleMenuController {
     @PostMapping(value = "/get")
     @ApiOperation(value = "获取单条信息")
     @Log(name = "角色菜单关系表", value = "获取单条信息", source = "admin-app")
-    public ServiceResponse<ProRoleMenuVo> get(@RequestBody ProRoleMenuRequest request) throws Exception {
+    public ServiceResponse<ProRoleMenuVo> get(@RequestBody ProRoleMenuRequest request) {
         return new ServiceResponse<ProRoleMenuVo>()
                 .run(serviceResponse -> {
 
@@ -96,12 +96,13 @@ public class ProRoleMenuController {
     @ApiOperation(value = "保存")
     @Log(name = "角色菜单关系表", value = "保存", source = "admin-app")
     @GlobalTransactional
-    public ServiceResponse<Integer> save(@RequestBody ProRoleMenuRequest request) throws Exception {
+    public ServiceResponse<Integer> save(@RequestBody ProRoleMenuRequest request) {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
 
                     // 删原角色权限信息
                     ServiceResponse<Integer> response = proRoleMenuService.delete(new ProParameter<>(request));
+                    response.beginTransaction();
                     response.checkState();
 
                     // 获取返回结果 包括数据库插入id
@@ -113,7 +114,9 @@ public class ProRoleMenuController {
                                 return proRoleMenuRequest;
                             }).collect(Collectors.toList());
                     ServiceResponse<Integer> proroleMenus = proRoleMenuService.batchSave(new ProParameter<List<ProRoleMenuRequest>>(roleMenuRequests));
-                    proroleMenus.checkState();
+                    proroleMenus
+                            .beginTransaction()
+                            .checkState();
                     return proroleMenus.getObj();
                 })
                 .exec();
@@ -123,15 +126,16 @@ public class ProRoleMenuController {
     @ApiOperation(value = "批量删除")
     @Log(name = "角色菜单关系表", value = "批量删除", source = "admin-app")
     @GlobalTransactional
-    public ServiceResponse<Integer> idsDelete(@RequestBody ProRoleMenuRequest request) throws Exception {
+    public ServiceResponse<Integer> idsDelete(@RequestBody ProRoleMenuRequest request) {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
 
                     // 获取调用服务返回结果 通过返回结果 进行业务判断 以及 手动控制 分布式事务回滚
                     ServiceResponse<Integer> response = proRoleMenuService.idsDelete(new ProParameter<>(request));
+                    response.beginTransaction();
 
                     // 获取调用服务状态
-                    response.copyState(serviceResponse);
+                    response.checkState();
 
                     return response.getObj();
                 })
@@ -142,15 +146,16 @@ public class ProRoleMenuController {
     @ApiOperation(value = "删除")
     @Log(name = "角色菜单关系表", value = "删除", source = "admin-app")
     @GlobalTransactional
-    public ServiceResponse<Integer> delete(@RequestBody ProRoleMenuRequest request) throws Exception {
+    public ServiceResponse<Integer> delete(@RequestBody ProRoleMenuRequest request) {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
 
                     // 获取调用服务返回结果 通过返回结果 进行业务判断 以及 手动控制 分布式事务回滚
                     ServiceResponse<Integer> response = proRoleMenuService.delete(new ProParameter<>(request));
+                    response.beginTransaction();
 
                     // 获取调用服务状态
-                    response.copyState(serviceResponse);
+                    response.checkState();
 
                     return response.getObj();
                 })
@@ -161,15 +166,16 @@ public class ProRoleMenuController {
     @ApiOperation(value = "修改")
     @Log(name = "角色菜单关系表", value = "修改", source = "admin-app")
     @GlobalTransactional
-    public ServiceResponse<Integer> update(@RequestBody ProRoleMenuRequest request) throws Exception {
+    public ServiceResponse<Integer> update(@RequestBody ProRoleMenuRequest request) {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
 
                     // 获取调用服务返回结果 通过返回结果 进行业务判断 以及 手动控制 分布式事务回滚
                     ServiceResponse<Integer> response = proRoleMenuService.update(new ProParameter<>(request));
+                    response.beginTransaction();
 
                     // 获取调用服务状态
-                    response.copyState(serviceResponse);
+                    response.checkState();
 
                     return response.getObj();
                 })

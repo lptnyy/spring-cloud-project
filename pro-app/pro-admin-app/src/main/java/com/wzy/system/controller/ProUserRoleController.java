@@ -41,7 +41,7 @@ public class ProUserRoleController {
     @PostMapping(value = "/getPageList")
     @ApiOperation(value = "分页查询列表")
     @Log(name = "用户角色关系表", value = "分页查询列表", source = "admin-app")
-    public ServiceResponse<List<ProUserRoleVo>> getPageList(@RequestBody ProUserRoleRequest request) throws Exception {
+    public ServiceResponse<List<ProUserRoleVo>> getPageList(@RequestBody ProUserRoleRequest request) {
         return new ServiceResponse<List<ProUserRoleVo>>()
                 .run(serviceResponse -> {
 
@@ -76,7 +76,7 @@ public class ProUserRoleController {
     @PostMapping(value = "/get")
     @ApiOperation(value = "获取单条信息")
     @Log(name = "用户角色关系表", value = "获取单条信息", source = "admin-app")
-    public ServiceResponse<ProUserRoleVo> get(@RequestBody ProUserRoleRequest request) throws Exception {
+    public ServiceResponse<ProUserRoleVo> get(@RequestBody ProUserRoleRequest request) {
         return new ServiceResponse<ProUserRoleVo>()
                 .run(serviceResponse -> {
 
@@ -97,7 +97,7 @@ public class ProUserRoleController {
     @ApiOperation(value = "保存")
     @GlobalTransactional
     @Log(name = "用户角色关系表", value = "保存", source = "admin-app")
-    public ServiceResponse<List<ProUserRole>> save(@RequestBody ProUserRoleRequest request) throws Exception {
+    public ServiceResponse<List<ProUserRole>> save(@RequestBody ProUserRoleRequest request) {
         return new ServiceResponse<List<ProUserRole>>()
                 .run(serviceResponse -> {
 
@@ -107,6 +107,7 @@ public class ProUserRoleController {
 
                     // 获取结果判断是否执行成功
                     ServiceResponse<Integer> response = proUserRoleService.delete(new ProParameter<>(request));
+                    response.beginTransaction();
 
                     // 验证返回结果直接异常退出
                     response.checkState();
@@ -123,6 +124,7 @@ public class ProUserRoleController {
 
                     // 保存数据
                     ServiceResponse<List<ProUserRole>> saveResponse = proUserRoleService.batchSave(new ProParameter<>(saveRoleRquests));
+                    saveResponse.beginTransaction();
 
                     // 验证返回结果直接异常退出
                     saveResponse.checkState();
@@ -136,15 +138,16 @@ public class ProUserRoleController {
     @ApiOperation(value = "批量删除")
     @GlobalTransactional
     @Log(name = "用户角色关系表", value = "批量删除", source = "admin-app")
-    public ServiceResponse<Integer> idsDelete(@RequestBody ProUserRoleRequest request) throws Exception {
+    public ServiceResponse<Integer> idsDelete(@RequestBody ProUserRoleRequest request) {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
 
                     // 获取调用服务返回结果 通过返回结果 进行业务判断 以及 手动控制 分布式事务回滚
                     ServiceResponse<Integer> response = proUserRoleService.idsDelete(new ProParameter<>(request));
+                    response.beginTransaction();
 
                     // 获取调用服务状态
-                    response.copyState(serviceResponse);
+                    response.checkState();
 
                     return response.getObj();
                 })
@@ -155,12 +158,13 @@ public class ProUserRoleController {
     @ApiOperation(value = "删除")
     @GlobalTransactional
     @Log(name = "用户角色关系表", value = "删除", source = "admin-app")
-    public ServiceResponse<Integer> delete(@RequestBody ProUserRoleRequest request) throws Exception {
+    public ServiceResponse<Integer> delete(@RequestBody ProUserRoleRequest request) {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
 
                     // 获取调用服务返回结果 通过返回结果 进行业务判断 以及 手动控制 分布式事务回滚
                     ServiceResponse<Integer> response = proUserRoleService.delete(new ProParameter<>(request));
+                    response.beginTransaction();
 
                     // 判断返回状态 异常退出
                     response.checkState();
@@ -174,12 +178,13 @@ public class ProUserRoleController {
     @ApiOperation(value = "修改")
     @GlobalTransactional
     @Log(name = "用户角色关系表", value = "修改", source = "admin-app")
-    public ServiceResponse<Integer> update(@RequestBody ProUserRoleRequest request) throws Exception {
+    public ServiceResponse<Integer> update(@RequestBody ProUserRoleRequest request) {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
 
                     // 获取调用服务返回结果 通过返回结果 进行业务判断 以及 手动控制 分布式事务回滚
                     ServiceResponse<Integer> response = proUserRoleService.update(new ProParameter<>(request));
+                    response.beginTransaction();
 
                     // 获取调用服务状态
                     response.checkState();

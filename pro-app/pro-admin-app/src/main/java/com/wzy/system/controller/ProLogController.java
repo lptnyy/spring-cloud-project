@@ -41,7 +41,7 @@ public class ProLogController {
 
     @PostMapping(value = "/getPageList")
     @ApiOperation(value = "分页查询列表")
-    public ServiceResponse<List<ProLogVo>> getPageList(@RequestBody ProLogRequest request) throws Exception {
+    public ServiceResponse<List<ProLogVo>> getPageList(@RequestBody ProLogRequest request) {
         return new ServiceResponse<List<ProLogVo>>()
                 .run(serviceResponse -> {
 
@@ -76,7 +76,7 @@ public class ProLogController {
 
     @PostMapping(value = "/get")
     @ApiOperation(value = "获取单条信息")
-    public ServiceResponse<ProLogVo> get(@RequestBody ProLogRequest request) throws Exception {
+    public ServiceResponse<ProLogVo> get(@RequestBody ProLogRequest request) {
         return new ServiceResponse<ProLogVo>()
                 .run(serviceResponse -> {
 
@@ -99,7 +99,7 @@ public class ProLogController {
     @ApiOperation(value = "保存")
     @GlobalTransactional
     @Log(name = "操作日志", value = "保存", source = "admin-app")
-    public ServiceResponse<ProLogVo> save(@RequestBody ProLogRequest request) throws Exception {
+    public ServiceResponse<ProLogVo> save(@RequestBody ProLogRequest request) {
         return new ServiceResponse<ProLogVo>()
                 .run(serviceResponse -> {
 
@@ -109,8 +109,13 @@ public class ProLogController {
                     // 获取调用服务状态
                     response.checkState();
 
-                    // 获取返回结果 包括数据库插入id
-                    ProLog proLog = proLogService.save(new ProParameter<>(request)).getObj();
+                    // 保存数据 开启事务标记 验证服务是否执行成功 失败回滚分布式事务
+                    response = proLogService.save(new ProParameter<>(request));
+                    response.beginTransaction();
+                    response.checkState();
+
+                    // 获取返回数据
+                    ProLog proLog = response.getObj();
                     ProLogVo proLogVo = new ProLogVo();
                     BeanUtils.copyProperties(proLog,proLogVo);
                     return proLogVo;
@@ -121,15 +126,16 @@ public class ProLogController {
     @PostMapping(value = "/idsDelete")
     @ApiOperation(value = "批量删除")
     @GlobalTransactional
-    public ServiceResponse<Integer> idsDelete(@RequestBody ProLogRequest request) throws Exception {
+    public ServiceResponse<Integer> idsDelete(@RequestBody ProLogRequest request) {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
 
                     // 标记通过enumid删除
                     request.setLogId(1);
 
-                    // 获取调用服务返回结果 通过返回结果 进行业务判断 以及 手动控制 分布式事务回滚
+                    // 保存数据 开启事务标记 验证服务是否执行成功 失败回滚分布式事务
                     ServiceResponse<Integer> response = proLogService.idsDelete(new ProParameter<>(request));
+                    response.beginTransaction();
 
                     // 获取调用服务状态
                     response.checkState();
@@ -142,12 +148,13 @@ public class ProLogController {
     @PostMapping(value = "/delete")
     @ApiOperation(value = "删除")
     @GlobalTransactional
-    public ServiceResponse<Integer> delete(@RequestBody ProLogRequest request) throws Exception {
+    public ServiceResponse<Integer> delete(@RequestBody ProLogRequest request) {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
 
-                    // 获取调用服务返回结果 通过返回结果 进行业务判断 以及 手动控制 分布式事务回滚
+                    // 保存数据 开启事务标记 验证服务是否执行成功 失败回滚分布式事务
                     ServiceResponse<Integer> response = proLogService.delete(new ProParameter<>(request));
+                    response.beginTransaction();
 
                     // 获取调用服务状态
                     response.checkState();
@@ -160,12 +167,13 @@ public class ProLogController {
     @PostMapping(value = "/update")
     @ApiOperation(value = "修改")
     @GlobalTransactional
-    public ServiceResponse<Integer> update(@RequestBody ProLogRequest request) throws Exception {
+    public ServiceResponse<Integer> update(@RequestBody ProLogRequest request) {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
 
-                    // 获取调用服务返回结果 通过返回结果 进行业务判断 以及 手动控制 分布式事务回滚
+                    // 开启事务标记 验证服务是否执行成功 失败回滚分布式事务
                     ServiceResponse<Integer> response = proLogService.update(new ProParameter<>(request));
+                    response.beginTransaction();
 
                     // 获取调用服务状态
                     response.checkState();

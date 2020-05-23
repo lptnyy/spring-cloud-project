@@ -13,11 +13,13 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableSwagger2
 @EnableFeignClients({
 		"com.wzy.redis",
-		"com.wzy.system"
+		"com.wzy.system",
+		"com.wzy.merchant"
 })
 @ComponentScans({
 		@ComponentScan("com.wzy.common.exception"), // 载入全局异常管理
 		@ComponentScan("com.wzy.redis"),
+		@ComponentScan("com.wzy.merchant"),
 		@ComponentScan("com.wzy.common.feign"),
 		@ComponentScan("com.wzy.common.aspect")
 })

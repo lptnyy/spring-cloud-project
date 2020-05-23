@@ -47,7 +47,7 @@ public class MenuController {
     @PostMapping(value = "/getPageList")
     @ApiOperation(value = "分页查询列表")
     @Log(name = "菜单", value = "分页查询列表", source = "admin-app")
-    public ServiceResponse<List<ProMenuVo>> getPageList(@RequestBody ProMenuRequest request) throws Exception {
+    public ServiceResponse<List<ProMenuVo>> getPageList(@RequestBody ProMenuRequest request) {
         return new ServiceResponse<List<ProMenuVo>>()
                 .run(serviceResponse -> {
 
@@ -112,7 +112,7 @@ public class MenuController {
     @PostMapping(value = "/get")
     @ApiOperation(value = "获取单条信息")
     @Log(name = "菜单", value = "获取单条信息", source = "admin-app")
-    public ServiceResponse<ProMenuVo> get(@RequestBody ProMenuRequest request) throws Exception {
+    public ServiceResponse<ProMenuVo> get(@RequestBody ProMenuRequest request) {
         return new ServiceResponse<ProMenuVo>()
                 .run(serviceResponse -> {
 
@@ -135,7 +135,7 @@ public class MenuController {
     @ApiOperation(value = "保存")
     @GlobalTransactional
     @Log(name = "菜单", value = "保存", source = "admin-app")
-    public ServiceResponse<ProMenuVo> save(@RequestBody ProMenuRequest request) throws Exception {
+    public ServiceResponse<ProMenuVo> save(@RequestBody ProMenuRequest request) {
         return new ServiceResponse<ProMenuVo>()
                 .run(serviceResponse -> {
 
@@ -157,7 +157,9 @@ public class MenuController {
                         return null;
                     }
 
-                    ProMenu proMenu = proMenuService.save(new ProParameter<>(request)).getObj();
+                    ProMenu proMenu = proMenuService.save(new ProParameter<>(request))
+                            .beginTransaction()
+                            .checkState().getObj();
                     ProMenuVo proMenuVo = new ProMenuVo();
                     BeanUtils.copyProperties(proMenu,proMenuVo);
                     return proMenuVo;
@@ -169,7 +171,7 @@ public class MenuController {
     @ApiOperation(value = "批量删除")
     @GlobalTransactional
     @Log(name = "菜单", value = "批量删除", source = "admin-app")
-    public ServiceResponse<Integer> idsDelete(@RequestBody ProMenuRequest request) throws Exception {
+    public ServiceResponse<Integer> idsDelete(@RequestBody ProMenuRequest request) {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
 
@@ -178,6 +180,7 @@ public class MenuController {
 
                     // 获取调用服务返回结果 通过返回结果 进行业务判断 以及 手动控制 分布式事务回滚
                     ServiceResponse<Integer> response = proMenuService.idsDelete(new ProParameter<>(request));
+                    response.beginTransaction();
 
                     // 获取调用服务状态
                     response.checkState();
@@ -191,12 +194,13 @@ public class MenuController {
     @ApiOperation(value = "删除")
     @GlobalTransactional
     @Log(name = "菜单", value = "删除", source = "admin-app")
-    public ServiceResponse<Integer> delete(@RequestBody ProMenuRequest request) throws Exception {
+    public ServiceResponse<Integer> delete(@RequestBody ProMenuRequest request) {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
 
                     // 获取调用服务返回结果 通过返回结果 进行业务判断 以及 手动控制 分布式事务回滚
                     ServiceResponse<Integer> response = proMenuService.delete(new ProParameter<>(request));
+                    response.beginTransaction();
 
                     // 获取调用服务状态
                     response.checkState();
@@ -210,12 +214,13 @@ public class MenuController {
     @ApiOperation(value = "修改")
     @GlobalTransactional
     @Log(name = "菜单", value = "修改", source = "admin-app")
-    public ServiceResponse<Integer> update(@RequestBody ProMenuRequest request) throws Exception {
+    public ServiceResponse<Integer> update(@RequestBody ProMenuRequest request) {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
 
                     // 获取调用服务返回结果 通过返回结果 进行业务判断 以及 手动控制 分布式事务回滚
                     ServiceResponse<Integer> response = proMenuService.update(new ProParameter<>(request));
+                    response.beginTransaction();
 
                     // 获取调用服务状态
                     response.checkState();
@@ -228,7 +233,7 @@ public class MenuController {
     @PostMapping(value = "/getUserMenus")
     @ApiOperation(value = "获取登陆用户相关的设置的menu菜单")
     @Log(name = "菜单", value = "获取登陆用户相关的设置的menu菜单", source = "admin-app")
-    public ServiceResponse<List<Menu>> getUserMenus(@RequestBody ProUserRoleRequest request) throws Exception {
+    public ServiceResponse<List<Menu>> getUserMenus(@RequestBody ProUserRoleRequest request) {
         return new ServiceResponse<List<Menu>>()
                 .run(serviceResponse -> {
 

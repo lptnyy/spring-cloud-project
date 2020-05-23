@@ -42,7 +42,7 @@ public class ProResourceFileController {
     @PostMapping(value = "/getPageList")
     @ApiOperation(value = "分页查询列表")
     @Log(name = "系统资源文件表", value = "分页查询列表", source = "admin-app")
-    public ServiceResponse<List<ProResourceFileVo>> getPageList(@RequestBody ProResourceFileRequest request) throws Exception {
+    public ServiceResponse<List<ProResourceFileVo>> getPageList(@RequestBody ProResourceFileRequest request) {
         return new ServiceResponse<List<ProResourceFileVo>>()
                 .run(serviceResponse -> {
 
@@ -78,7 +78,7 @@ public class ProResourceFileController {
     @PostMapping(value = "/get")
     @ApiOperation(value = "获取单条信息")
     @Log(name = "系统资源文件表", value = "获取单条信息", source = "admin-app")
-    public ServiceResponse<ProResourceFileVo> get(@RequestBody ProResourceFileRequest request) throws Exception {
+    public ServiceResponse<ProResourceFileVo> get(@RequestBody ProResourceFileRequest request) {
         return new ServiceResponse<ProResourceFileVo>()
                 .run(serviceResponse -> {
 
@@ -101,18 +101,23 @@ public class ProResourceFileController {
     @ApiOperation(value = "保存")
     @GlobalTransactional
     @Log(name = "系统资源文件表", value = "保存", source = "admin-app")
-    public ServiceResponse<ProResourceFileVo> save(@RequestBody ProResourceFileRequest request) throws Exception {
+    public ServiceResponse<ProResourceFileVo> save(@RequestBody ProResourceFileRequest request) {
         return new ServiceResponse<ProResourceFileVo>()
                 .run(serviceResponse -> {
 
                     // 获取调用服务返回结果 通过返回结果 进行业务判断 以及 手动控制 分布式事务回滚
                     ServiceResponse<ProResourceFile> response = proResourceFileService.get(new ProParameter<>(request));
+                    response.beginTransaction();
 
                     // 获取调用服务状态
                     response.checkState();
 
                     // 获取返回结果 包括数据库插入id
-                    ProResourceFile proResourceFile = proResourceFileService.save(new ProParameter<>(request)).getObj();
+                    ProResourceFile proResourceFile = proResourceFileService.save(new ProParameter<>(request))
+                            .beginTransaction()
+                            .checkState()
+                            .getObj();
+
                     ProResourceFileVo proResourceFileVo = new ProResourceFileVo();
                     BeanUtils.copyProperties(proResourceFile,proResourceFileVo);
                     return proResourceFileVo;
@@ -124,12 +129,15 @@ public class ProResourceFileController {
     @ApiOperation(value = "保存")
     @GlobalTransactional
     @Log(name = "系统资源文件表", value = "保存", source = "admin-app")
-    public ServiceResponse<List<ProResourceFile>> saveBatch(@RequestBody List<ProResourceFileRequest> request) throws Exception {
+    public ServiceResponse<List<ProResourceFile>> saveBatch(@RequestBody List<ProResourceFileRequest> request) {
         return new ServiceResponse<List<ProResourceFile>>()
                 .run(serviceResponse -> {
 
                     // 获取返回结果 包括数据库插入id
-                    List<ProResourceFile> proResourceFiles = proResourceFileService.batchSave(new ProParameter<>(request)).getObj();
+                    List<ProResourceFile> proResourceFiles = proResourceFileService.batchSave(new ProParameter<>(request))
+                            .beginTransaction()
+                            .checkState()
+                            .getObj();
                     return proResourceFiles;
                 })
                 .exec();
@@ -139,7 +147,7 @@ public class ProResourceFileController {
     @ApiOperation(value = "批量删除")
     @GlobalTransactional
     @Log(name = "系统资源文件表", value = "批量删除", source = "admin-app")
-    public ServiceResponse<Integer> idsDelete(@RequestBody ProResourceFileRequest request) throws Exception {
+    public ServiceResponse<Integer> idsDelete(@RequestBody ProResourceFileRequest request) {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
 
@@ -148,6 +156,7 @@ public class ProResourceFileController {
 
                     // 获取调用服务返回结果 通过返回结果 进行业务判断 以及 手动控制 分布式事务回滚
                     ServiceResponse<Integer> response = proResourceFileService.idsDelete(new ProParameter<>(request));
+                    response.beginTransaction();
 
                     // 获取调用服务状态
                     response.checkState();
@@ -161,12 +170,13 @@ public class ProResourceFileController {
     @ApiOperation(value = "删除")
     @GlobalTransactional
     @Log(name = "系统资源文件表", value = "删除", source = "admin-app")
-    public ServiceResponse<Integer> delete(@RequestBody ProResourceFileRequest request) throws Exception {
+    public ServiceResponse<Integer> delete(@RequestBody ProResourceFileRequest request) {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
 
                     // 获取调用服务返回结果 通过返回结果 进行业务判断 以及 手动控制 分布式事务回滚
                     ServiceResponse<Integer> response = proResourceFileService.delete(new ProParameter<>(request));
+                    response.beginTransaction();
 
                     // 获取调用服务状态
                     response.checkState();
@@ -180,12 +190,13 @@ public class ProResourceFileController {
     @ApiOperation(value = "修改")
     @GlobalTransactional
     @Log(name = "系统资源文件表", value = "修改", source = "admin-app")
-    public ServiceResponse<Integer> update(@RequestBody ProResourceFileRequest request) throws Exception {
+    public ServiceResponse<Integer> update(@RequestBody ProResourceFileRequest request) {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
 
                     // 获取调用服务返回结果 通过返回结果 进行业务判断 以及 手动控制 分布式事务回滚
                     ServiceResponse<Integer> response = proResourceFileService.update(new ProParameter<>(request));
+                    response.beginTransaction();
 
                     // 获取调用服务状态
                     response.checkState();

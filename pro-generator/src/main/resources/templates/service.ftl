@@ -28,21 +28,21 @@ public interface I${className}Service {
      * @return
      */
     @RequestMapping(path = "/${className}/getUser", method = RequestMethod.POST)
-    ServiceResponse<${className}> get(@RequestBody ProParameter<${className}Request> proParameter) throws Exception;
+    ServiceResponse<${className}> get(@RequestBody ProParameter<${className}Request> proParameter);
 
     /**
      * 根据查询条件获取所有数据
      * @return
      */
     @RequestMapping(path = "/${className}/getList", method = RequestMethod.POST)
-    ServiceResponse<List<${className}>> getList(@RequestBody ProParameter<${className}Request> proParameter) throws Exception;
+    ServiceResponse<List<${className}>> getList(@RequestBody ProParameter<${className}Request> proParameter);
 
     /**
      * 分页查询所有数据
      * @return
      */
     @RequestMapping(path = "/${className}/getPageList", method = RequestMethod.POST)
-    ServiceResponse<List<${className}>> getPageList(@RequestBody ProParameter<${className}Request> proParameter) throws Exception;
+    ServiceResponse<List<${className}>> getPageList(@RequestBody ProParameter<${className}Request> proParameter);
 
 
     /**
@@ -50,7 +50,7 @@ public interface I${className}Service {
      * @return
      */
     @RequestMapping(path = "/${className}/getIdsList", method = RequestMethod.POST)
-    ServiceResponse<List<${className}>> findIdsList(@RequestBody ProParameter<${className}Request> proParameter) throws Exception;
+    ServiceResponse<List<${className}>> findIdsList(@RequestBody ProParameter<${className}Request> proParameter);
 
     /**
      * 修改数据
@@ -58,7 +58,7 @@ public interface I${className}Service {
      * @return
      */
     @RequestMapping(path = "/${className}/update", method = RequestMethod.POST)
-    ServiceResponse<Integer> update(@RequestBody ProParameter<${className}Request> proParameter) throws Exception;
+    ServiceResponse<Integer> update(@RequestBody ProParameter<${className}Request> proParameter);
 
     /**
      * 保存数据
@@ -66,7 +66,7 @@ public interface I${className}Service {
      * @return
      */
     @RequestMapping(path = "/${className}/save", method = RequestMethod.POST)
-    ServiceResponse<${className}> save(@RequestBody ProParameter<${className}Request> proParameter) throws Exception;
+    ServiceResponse<${className}> save(@RequestBody ProParameter<${className}Request> proParameter);
 
     /**
      * 删除数据
@@ -74,7 +74,7 @@ public interface I${className}Service {
      * @return
      */
     @RequestMapping(path = "/${className}/delete", method = RequestMethod.POST)
-    ServiceResponse<Integer> delete(@RequestBody ProParameter<${className}Request> proParameter) throws Exception;
+    ServiceResponse<Integer> delete(@RequestBody ProParameter<${className}Request> proParameter);
 
     /**
      * 通过id数组批量删除数据
@@ -82,7 +82,7 @@ public interface I${className}Service {
      * @return
      */
     @RequestMapping(path = "/${className}/idsDelete", method = RequestMethod.POST)
-    ServiceResponse<Integer> idsDelete(@RequestBody ProParameter<${className}Request> proParameter) throws Exception;
+    ServiceResponse<Integer> idsDelete(@RequestBody ProParameter<${className}Request> proParameter);
 
     /**
      * 批量保存
@@ -90,5 +90,5 @@ public interface I${className}Service {
      * @return
     */
     @RequestMapping(path = "/${className}/batchSave", method = RequestMethod.POST)
-    ServiceResponse<List<${className}>> batchSave(@RequestBody ProParameter<List<${className}Request>> proParameter) throws Exception;
+    ServiceResponse<List<${className}>> batchSave(@RequestBody ProParameter<List<${className}Request>> proParameter);
 }
