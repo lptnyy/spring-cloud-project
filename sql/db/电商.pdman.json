@@ -179,6 +179,152 @@
             }
           ],
           "chnname": "商户表"
+        },
+        {
+          "title": "pro_member",
+          "fields": [
+            {
+              "name": "member_id",
+              "type": "Integer",
+              "remark": "",
+              "chnname": "会员id",
+              "pk": true,
+              "notNull": true,
+              "autoIncrement": true
+            },
+            {
+              "name": "member_no",
+              "type": "Name",
+              "remark": "",
+              "chnname": "会员号"
+            },
+            {
+              "name": "user_name",
+              "type": "LongKey",
+              "remark": "",
+              "chnname": "手机号（账号）"
+            },
+            {
+              "name": "pass_word",
+              "type": "LongKey",
+              "remark": "",
+              "chnname": "密码"
+            },
+            {
+              "name": "head_img",
+              "type": "LongKey",
+              "remark": "",
+              "chnname": "头像"
+            },
+            {
+              "name": "name",
+              "type": "Name",
+              "remark": "",
+              "chnname": "名称"
+            },
+            {
+              "name": "school",
+              "type": "Name",
+              "remark": "",
+              "chnname": "学校"
+            },
+            {
+              "name": "department",
+              "type": "Name",
+              "remark": "",
+              "chnname": "院系"
+            },
+            {
+              "name": "admission_time",
+              "type": "DateTime",
+              "remark": "",
+              "chnname": "入学时间"
+            },
+            {
+              "name": "education",
+              "type": "Name",
+              "remark": "",
+              "chnname": "学历"
+            },
+            {
+              "name": "display_permissions",
+              "type": "IdOrKey",
+              "remark": "",
+              "chnname": "展示范围"
+            },
+            {
+              "name": "province",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "省份"
+            },
+            {
+              "name": "city",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "城市"
+            },
+            {
+              "name": "area",
+              "type": "DefaultString",
+              "remark": "",
+              "chnname": "地区"
+            },
+            {
+              "name": "create_time",
+              "type": "DateTime",
+              "remark": "",
+              "chnname": "创建时间"
+            }
+          ],
+          "indexs": [],
+          "headers": [
+            {
+              "fieldName": "chnname",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "name",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "type",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "dataType",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "remark",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "pk",
+              "relationNoShow": false
+            },
+            {
+              "fieldName": "notNull",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "autoIncrement",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "defaultValue",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "relationNoShow",
+              "relationNoShow": true
+            },
+            {
+              "fieldName": "uiHint",
+              "relationNoShow": true
+            }
+          ],
+          "chnname": "会员表"
         }
       ],
       "graphCanvas": {
@@ -187,8 +333,8 @@
             "shape": "table",
             "title": "pro_merchant",
             "moduleName": false,
-            "x": 254.34375,
-            "y": 127,
+            "x": 240,
+            "y": 170,
             "id": "824c25d7"
           }
         ],

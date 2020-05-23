@@ -1,0 +1,20 @@
+server:
+  port: 8013
+management:
+  server:
+    port: 10013
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: ALWAYS
+feign:
+  hystrix:
+    enabled: true
+
+ribbon:
+  eager-load:
+    enabled: true
+    clients: MEMBER-SERVICE,REDIS-SERVICE

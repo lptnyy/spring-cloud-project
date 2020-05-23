@@ -16,7 +16,10 @@
 		<module>pro-business/pro-system/pro-system-server</module>
 		<module>pro-business/pro-merchant/pro-merchant-server-api</module>
 		<module>pro-business/pro-merchant/pro-merchant-server</module>
+		<module>pro-business/pro-member/pro-member-server-api</module>
+		<module>pro-business/pro-member/pro-member-server</module>
 		<module>pro-app/pro-admin-app</module>
+		<module>pro-app/pro-phone-app</module>
 		<module>pro-middleware/pro-redis</module>
 		<module>pro-middleware/pro-redis-api</module>
 		<module>pro-monitor/pro-zipkin</module>

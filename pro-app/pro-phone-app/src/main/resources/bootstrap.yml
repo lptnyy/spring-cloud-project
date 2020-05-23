@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: phone-app
+  cloud:
+    alibaba:
+      seata:
+        tx-service-group: wzy_tx_group
+    config:
+      profile: ${spring.profiles.active}
+      name: eureka-middleware,phone-app,rabbitmq-middleware,zipkin-middleware,admin-middleware,oauth2-res,hystrix-timeout
+      discovery:
+        enabled: false
+      override-none: true
+      uri: http://${ZUUL-SERVICE}:8101/config
+  main:
+    allow-bean-definition-overriding: true
+
+pro:
+  swagger2:
+    pkg: com.wzy.phone
+    title: 手机端
+    description: 对外接口文档
+    termsOfServiceUrl: https://github.com/lptnyy/spring-cloud-project
+    version: 1.0
