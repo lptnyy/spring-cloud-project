@@ -163,25 +163,28 @@ public class ServiceResponse<T> implements Serializable {
     }
 
     // 服务调用验证如果开启事务 回滚事务
-    public void checkState() throws Exception {
+    public ServiceResponse<T> checkState() throws Exception {
         if (this.code != 200) {
             if (transaction) {
                 GlobalTransactionContext.reload(RootContext.getXID()).rollback();
             }
             throw new Exception("服务器调用异常");
         }
+        return this;
     }
 
     /**
      * 标记开启事务
      */
-    public void beginTransaction() {
+    public ServiceResponse<T> beginTransaction() {
         this.transaction = true;
+        return this;
     }
 
     // 事务回滚
-    public void rollback() throws TransactionException {
+    public ServiceResponse<T> rollback() throws TransactionException {
         GlobalTransactionContext.reload(RootContext.getXID()).rollback();
+        return this;
     }
 
     public T toObjClass(Class srClass) {

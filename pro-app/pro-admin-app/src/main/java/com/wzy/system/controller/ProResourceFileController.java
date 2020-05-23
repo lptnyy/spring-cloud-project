@@ -107,12 +107,17 @@ public class ProResourceFileController {
 
                     // 获取调用服务返回结果 通过返回结果 进行业务判断 以及 手动控制 分布式事务回滚
                     ServiceResponse<ProResourceFile> response = proResourceFileService.get(new ProParameter<>(request));
+                    response.beginTransaction();
 
                     // 获取调用服务状态
                     response.checkState();
 
                     // 获取返回结果 包括数据库插入id
-                    ProResourceFile proResourceFile = proResourceFileService.save(new ProParameter<>(request)).getObj();
+                    ProResourceFile proResourceFile = proResourceFileService.save(new ProParameter<>(request))
+                            .beginTransaction()
+                            .checkState()
+                            .getObj();
+
                     ProResourceFileVo proResourceFileVo = new ProResourceFileVo();
                     BeanUtils.copyProperties(proResourceFile,proResourceFileVo);
                     return proResourceFileVo;
@@ -129,7 +134,10 @@ public class ProResourceFileController {
                 .run(serviceResponse -> {
 
                     // 获取返回结果 包括数据库插入id
-                    List<ProResourceFile> proResourceFiles = proResourceFileService.batchSave(new ProParameter<>(request)).getObj();
+                    List<ProResourceFile> proResourceFiles = proResourceFileService.batchSave(new ProParameter<>(request))
+                            .beginTransaction()
+                            .checkState()
+                            .getObj();
                     return proResourceFiles;
                 })
                 .exec();
@@ -148,6 +156,7 @@ public class ProResourceFileController {
 
                     // 获取调用服务返回结果 通过返回结果 进行业务判断 以及 手动控制 分布式事务回滚
                     ServiceResponse<Integer> response = proResourceFileService.idsDelete(new ProParameter<>(request));
+                    response.beginTransaction();
 
                     // 获取调用服务状态
                     response.checkState();
@@ -167,6 +176,7 @@ public class ProResourceFileController {
 
                     // 获取调用服务返回结果 通过返回结果 进行业务判断 以及 手动控制 分布式事务回滚
                     ServiceResponse<Integer> response = proResourceFileService.delete(new ProParameter<>(request));
+                    response.beginTransaction();
 
                     // 获取调用服务状态
                     response.checkState();
@@ -186,6 +196,7 @@ public class ProResourceFileController {
 
                     // 获取调用服务返回结果 通过返回结果 进行业务判断 以及 手动控制 分布式事务回滚
                     ServiceResponse<Integer> response = proResourceFileService.update(new ProParameter<>(request));
+                    response.beginTransaction();
 
                     // 获取调用服务状态
                     response.checkState();

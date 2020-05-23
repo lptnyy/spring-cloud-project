@@ -138,7 +138,9 @@ public class ProEnumController {
                 .run(serviceResponse -> {
 
                     // 获取返回结果 包括数据库插入id
-                    ProEnum proEnum = proEnumService.save(new ProParameter<>(request)).getObj();
+                    ProEnum proEnum = proEnumService.save(new ProParameter<>(request))
+                            .beginTransaction().checkState()
+                            .getObj();
                     ProEnumVo proEnumVo = new ProEnumVo();
                     BeanUtils.copyProperties(proEnum,proEnumVo);
                     return proEnumVo;
@@ -159,6 +161,7 @@ public class ProEnumController {
 
                     // 获取调用服务返回结果 通过返回结果 进行业务判断 以及 手动控制 分布式事务回滚
                     ServiceResponse<Integer> response = proEnumService.idsDelete(new ProParameter<>(request));
+                    response.beginTransaction();
 
                     // 获取调用服务状态
                     response.checkState();
@@ -178,6 +181,7 @@ public class ProEnumController {
 
                     // 获取调用服务返回结果 通过返回结果 进行业务判断 以及 手动控制 分布式事务回滚
                     ServiceResponse<Integer> response = proEnumService.delete(new ProParameter<>(request));
+                    response.beginTransaction();
 
                     // 获取调用服务状态
                     response.checkState();
@@ -197,6 +201,7 @@ public class ProEnumController {
 
                     // 获取调用服务返回结果 通过返回结果 进行业务判断 以及 手动控制 分布式事务回滚
                     ServiceResponse<Integer> response = proEnumService.update(new ProParameter<>(request));
+                    response.beginTransaction();
 
                     // 获取调用服务状态
                     response.checkState();

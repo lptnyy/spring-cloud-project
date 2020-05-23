@@ -107,6 +107,7 @@ public class ProUserRoleController {
 
                     // 获取结果判断是否执行成功
                     ServiceResponse<Integer> response = proUserRoleService.delete(new ProParameter<>(request));
+                    response.beginTransaction();
 
                     // 验证返回结果直接异常退出
                     response.checkState();
@@ -123,6 +124,7 @@ public class ProUserRoleController {
 
                     // 保存数据
                     ServiceResponse<List<ProUserRole>> saveResponse = proUserRoleService.batchSave(new ProParameter<>(saveRoleRquests));
+                    saveResponse.beginTransaction();
 
                     // 验证返回结果直接异常退出
                     saveResponse.checkState();
@@ -142,9 +144,10 @@ public class ProUserRoleController {
 
                     // 获取调用服务返回结果 通过返回结果 进行业务判断 以及 手动控制 分布式事务回滚
                     ServiceResponse<Integer> response = proUserRoleService.idsDelete(new ProParameter<>(request));
+                    response.beginTransaction();
 
                     // 获取调用服务状态
-                    response.copyState(serviceResponse);
+                    response.checkState();
 
                     return response.getObj();
                 })
@@ -161,6 +164,7 @@ public class ProUserRoleController {
 
                     // 获取调用服务返回结果 通过返回结果 进行业务判断 以及 手动控制 分布式事务回滚
                     ServiceResponse<Integer> response = proUserRoleService.delete(new ProParameter<>(request));
+                    response.beginTransaction();
 
                     // 判断返回状态 异常退出
                     response.checkState();
@@ -180,6 +184,7 @@ public class ProUserRoleController {
 
                     // 获取调用服务返回结果 通过返回结果 进行业务判断 以及 手动控制 分布式事务回滚
                     ServiceResponse<Integer> response = proUserRoleService.update(new ProParameter<>(request));
+                    response.beginTransaction();
 
                     // 获取调用服务状态
                     response.checkState();

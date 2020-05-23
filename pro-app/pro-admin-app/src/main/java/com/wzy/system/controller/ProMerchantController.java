@@ -107,12 +107,16 @@ public class ProMerchantController {
 
                     // 获取调用服务返回结果 通过返回结果 进行业务判断 以及 手动控制 分布式事务回滚
                     ServiceResponse<ProMerchant> response = proMerchantService.get(new ProParameter<>(request));
+                    response.beginTransaction();
 
                     // 获取调用服务状态
                     response.checkState();
 
                     // 获取返回结果 包括数据库插入id
-                    ProMerchant proMerchant = proMerchantService.save(new ProParameter<>(request)).getObj();
+                    ProMerchant proMerchant = proMerchantService.save(new ProParameter<>(request))
+                            .beginTransaction()
+                            .checkState()
+                            .getObj();
                     ProMerchantVo proMerchantVo = new ProMerchantVo();
                     BeanUtils.copyProperties(proMerchant,proMerchantVo);
                     return proMerchantVo;
@@ -133,6 +137,7 @@ public class ProMerchantController {
 
                     // 获取调用服务返回结果 通过返回结果 进行业务判断 以及 手动控制 分布式事务回滚
                     ServiceResponse<Integer> response = proMerchantService.idsDelete(new ProParameter<>(request));
+                    response.beginTransaction();
 
                     // 获取调用服务状态
                     response.checkState();
@@ -152,6 +157,7 @@ public class ProMerchantController {
 
                     // 获取调用服务返回结果 通过返回结果 进行业务判断 以及 手动控制 分布式事务回滚
                     ServiceResponse<Integer> response = proMerchantService.delete(new ProParameter<>(request));
+                    response.beginTransaction();
 
                     // 获取调用服务状态
                     response.checkState();
@@ -171,6 +177,7 @@ public class ProMerchantController {
 
                     // 获取调用服务返回结果 通过返回结果 进行业务判断 以及 手动控制 分布式事务回滚
                     ServiceResponse<Integer> response = proMerchantService.update(new ProParameter<>(request));
+                    response.beginTransaction();
 
                     // 获取调用服务状态
                     response.checkState();

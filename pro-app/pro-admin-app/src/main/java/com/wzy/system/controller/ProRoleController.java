@@ -67,7 +67,7 @@ public class ProRoleController {
                     List<ProRoleMenu> proRoleMenus = roleMenuResponse.getObj();
 
                     // 获取调用服务状态
-                    response.copyState(serviceResponse);
+                    response.checkState();
 
                     // 获取返回的分页信息
                     response.copyPage(serviceResponse);
@@ -115,7 +115,7 @@ public class ProRoleController {
                     ServiceResponse<ProRole> response = proRoleService.get(new ProParameter<>(request));
 
                     // 获取调用服务状态
-                    response.copyState(serviceResponse);
+                    response.checkState();
 
                     // 组装返回的vo
                     ProRole proRole = response.getObj();
@@ -137,7 +137,7 @@ public class ProRoleController {
                     ServiceResponse<List<ProRole>> response = proRoleService.getList(new ProParameter<>(request));
 
                     // 获取调用服务状态
-                    response.copyState(serviceResponse);
+                    response.checkState();
 
                     return response.getObj();
                 })
@@ -154,12 +154,17 @@ public class ProRoleController {
 
                     // 获取调用服务返回结果 通过返回结果 进行业务判断 以及 手动控制 分布式事务回滚
                     ServiceResponse<ProRole> response = proRoleService.get(new ProParameter<>(request));
+                    response.beginTransaction();
 
                     // 获取调用服务状态
-                    response.copyState(serviceResponse);
+                    response.checkState();
 
                     // 获取返回结果 包括数据库插入id
-                    ProRole proRole = proRoleService.save(new ProParameter<>(request)).getObj();
+                    ProRole proRole = proRoleService.save(new ProParameter<>(request))
+                            .beginTransaction()
+                            .checkState()
+                            .getObj();
+
                     ProRoleVo proRoleVo = new ProRoleVo();
                     BeanUtils.copyProperties(proRole,proRoleVo);
                     return proRoleVo;
@@ -177,9 +182,10 @@ public class ProRoleController {
 
                     // 获取调用服务返回结果 通过返回结果 进行业务判断 以及 手动控制 分布式事务回滚
                     ServiceResponse<Integer> response = proRoleService.idsDelete(new ProParameter<>(request));
+                    response.beginTransaction();
 
                     // 获取调用服务状态
-                    response.copyState(serviceResponse);
+                    response.checkState();
 
                     return response.getObj();
                 })
@@ -196,14 +202,15 @@ public class ProRoleController {
 
                     // 获取调用服务返回结果 通过返回结果 进行业务判断 以及 手动控制 分布式事务回滚
                     ServiceResponse<Integer> response = proRoleService.delete(new ProParameter<>(request));
+                    response.beginTransaction();
+                    response.checkState();
 
                     // 删除角色下面所有的权限设置
                     ProRoleMenuRequest proRoleMenuRequest = new ProRoleMenuRequest();
                     proRoleMenuRequest.setRoleId(request.getRoleId());
                     response = proRoleMenuService.delete(new ProParameter<>(proRoleMenuRequest));
-
-                    // 获取调用服务状态
-                    response.copyState(serviceResponse);
+                    response.beginTransaction();
+                    response.checkState();
 
                     return response.getObj();
                 })
@@ -220,9 +227,10 @@ public class ProRoleController {
 
                     // 获取调用服务返回结果 通过返回结果 进行业务判断 以及 手动控制 分布式事务回滚
                     ServiceResponse<Integer> response = proRoleService.update(new ProParameter<>(request));
+                    response.beginTransaction();
 
                     // 获取调用服务状态
-                    response.copyState(serviceResponse);
+                    response.checkState();
 
                     return response.getObj();
                 })

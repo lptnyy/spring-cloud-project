@@ -101,7 +101,8 @@ public class UserController {
     public ServiceResponse<Integer> delete(@RequestBody User user) {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
-                    return userService.delete(new ProParameter<User>(user)).getObj();
+                    return userService.delete(new ProParameter<User>(user))
+                            .beginTransaction().checkState().getObj();
                 })
                 .exec();
     }
@@ -123,7 +124,8 @@ public class UserController {
                         throw new Exception("sss");
                     }
                     ServiceResponse<Integer> saveResponse = userService.save(new ProParameter<User>(user));
-                    saveResponse.copyState(serviceResponse);
+                    saveResponse.beginTransaction();
+                    saveResponse.checkState();
                     return saveResponse.getObj();
                 })
                 .exec();
@@ -137,7 +139,7 @@ public class UserController {
     public ServiceResponse<Integer> updateStats(@RequestBody User user) {
         return new ServiceResponse<Integer>()
                 .run(serviceResponse -> {
-                    return userService.update(new ProParameter<User>(user)).getObj();
+                    return userService.update(new ProParameter<User>(user)).beginTransaction().checkState().getObj();
                 })
                 .exec();
     }
@@ -153,12 +155,13 @@ public class UserController {
                     User userPro = new User();
                     userPro.setUserName(user.getUserName());
                     ServiceResponse<ProUser> response = userService.userNameGetUser(new ProParameter<>(userPro));
+                    response.beginTransaction().checkState();
                     if (response.getObj() != null && !response.getObj().getUserId().equals(user.getUserId())) {
                         serviceResponse.setCode(500);
                         serviceResponse.setMsg("此账号已经存在");
                         return -1;
                     }
-                    return userService.update(new ProParameter<User>(user)).getObj();
+                    return userService.update(new ProParameter<User>(user)).beginTransaction().checkState().getObj();
                 })
                 .exec();
     }

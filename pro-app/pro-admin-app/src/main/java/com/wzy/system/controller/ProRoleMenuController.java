@@ -102,6 +102,7 @@ public class ProRoleMenuController {
 
                     // 删原角色权限信息
                     ServiceResponse<Integer> response = proRoleMenuService.delete(new ProParameter<>(request));
+                    response.beginTransaction();
                     response.checkState();
 
                     // 获取返回结果 包括数据库插入id
@@ -113,7 +114,9 @@ public class ProRoleMenuController {
                                 return proRoleMenuRequest;
                             }).collect(Collectors.toList());
                     ServiceResponse<Integer> proroleMenus = proRoleMenuService.batchSave(new ProParameter<List<ProRoleMenuRequest>>(roleMenuRequests));
-                    proroleMenus.checkState();
+                    proroleMenus
+                            .beginTransaction()
+                            .checkState();
                     return proroleMenus.getObj();
                 })
                 .exec();
@@ -129,9 +132,10 @@ public class ProRoleMenuController {
 
                     // 获取调用服务返回结果 通过返回结果 进行业务判断 以及 手动控制 分布式事务回滚
                     ServiceResponse<Integer> response = proRoleMenuService.idsDelete(new ProParameter<>(request));
+                    response.beginTransaction();
 
                     // 获取调用服务状态
-                    response.copyState(serviceResponse);
+                    response.checkState();
 
                     return response.getObj();
                 })
@@ -148,9 +152,10 @@ public class ProRoleMenuController {
 
                     // 获取调用服务返回结果 通过返回结果 进行业务判断 以及 手动控制 分布式事务回滚
                     ServiceResponse<Integer> response = proRoleMenuService.delete(new ProParameter<>(request));
+                    response.beginTransaction();
 
                     // 获取调用服务状态
-                    response.copyState(serviceResponse);
+                    response.checkState();
 
                     return response.getObj();
                 })
@@ -167,9 +172,10 @@ public class ProRoleMenuController {
 
                     // 获取调用服务返回结果 通过返回结果 进行业务判断 以及 手动控制 分布式事务回滚
                     ServiceResponse<Integer> response = proRoleMenuService.update(new ProParameter<>(request));
+                    response.beginTransaction();
 
                     // 获取调用服务状态
-                    response.copyState(serviceResponse);
+                    response.checkState();
 
                     return response.getObj();
                 })

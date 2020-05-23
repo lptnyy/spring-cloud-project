@@ -157,7 +157,9 @@ public class MenuController {
                         return null;
                     }
 
-                    ProMenu proMenu = proMenuService.save(new ProParameter<>(request)).getObj();
+                    ProMenu proMenu = proMenuService.save(new ProParameter<>(request))
+                            .beginTransaction()
+                            .checkState().getObj();
                     ProMenuVo proMenuVo = new ProMenuVo();
                     BeanUtils.copyProperties(proMenu,proMenuVo);
                     return proMenuVo;
@@ -178,6 +180,7 @@ public class MenuController {
 
                     // 获取调用服务返回结果 通过返回结果 进行业务判断 以及 手动控制 分布式事务回滚
                     ServiceResponse<Integer> response = proMenuService.idsDelete(new ProParameter<>(request));
+                    response.beginTransaction();
 
                     // 获取调用服务状态
                     response.checkState();
@@ -197,6 +200,7 @@ public class MenuController {
 
                     // 获取调用服务返回结果 通过返回结果 进行业务判断 以及 手动控制 分布式事务回滚
                     ServiceResponse<Integer> response = proMenuService.delete(new ProParameter<>(request));
+                    response.beginTransaction();
 
                     // 获取调用服务状态
                     response.checkState();
@@ -216,6 +220,7 @@ public class MenuController {
 
                     // 获取调用服务返回结果 通过返回结果 进行业务判断 以及 手动控制 分布式事务回滚
                     ServiceResponse<Integer> response = proMenuService.update(new ProParameter<>(request));
+                    response.beginTransaction();
 
                     // 获取调用服务状态
                     response.checkState();
