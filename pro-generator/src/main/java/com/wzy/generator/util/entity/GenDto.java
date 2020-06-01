@@ -11,4 +11,5 @@ public class GenDto {
     String columnKey;
     String pkg;
     String fieldName2;
+    String selectType;
 }

@@ -2,6 +2,8 @@ package com.wzy.generator.controller.request;
 
 import lombok.Data;
 
+import java.util.List;
+
 @Data
 public class TableInfo {
     String mysql;
@@ -19,4 +21,5 @@ public class TableInfo {
     String feignClientService;
     String gateWayPath;
     String logSourceName;
+    List<TableGenInfo> tableGenInfos;
 }

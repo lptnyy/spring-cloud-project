@@ -1,4 +1,5 @@
 package com.wzy.generator.util;
+import com.wzy.generator.controller.request.TableGenInfo;
 import com.wzy.generator.controller.request.TableInfo;
 import com.wzy.generator.util.entity.GenDto;
 import freemarker.template.Configuration;
@@ -363,8 +364,9 @@ public class Freemarker {
         dataModel.put("requestClassPath",tableInfo.getApiPkg()+"."+dataModel.get("className")+"Request");
         dataModel.put("mapperClassPath",tableInfo.getMapperPkg()+"."+dataModel.get("className")+"Mapper");
         dataModel.put("genpkg", tableInfo.getServiceImplPkg());
-
         List<GenDto> fields = new ArrayList<>();
+
+
 
         // 遍历组装字段格式
         tableInfos.forEach(stringStringMap -> {
@@ -376,6 +378,12 @@ public class Freemarker {
             genDto.setType(dtoUtil.dbType(stringStringMap.get("dataType")).name);
             genDto.setPkg(dtoUtil.dbType(stringStringMap.get("dataType")).pkg);
             genDto.setFieldName2(stringUtil.getInitialsCapitalization(genDto.getFieldName()));
+            Optional<TableGenInfo> tableGen = tableInfo.getTableGenInfos().stream()
+                    .filter(tableGenInfo -> tableGenInfo.getColumnName().equals(stringStringMap.get("columnName").toString()))
+                    .findFirst();
+            if (tableGen.isPresent()) {
+                genDto.setSelectType(tableGen.get().getBackSelectType());
+            }
             fields.add(genDto);
         });
 
