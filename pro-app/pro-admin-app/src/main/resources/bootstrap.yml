@@ -15,8 +15,6 @@ spring:
   main:
     allow-bean-definition-overriding: true
 
-
-
 pro:
   swagger2:
     pkg: com.wzy.system

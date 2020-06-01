@@ -50,6 +50,19 @@ public class GeneratorController {
     }
 
     /**
+     * 获取数据库表列表
+     * @return
+     */
+    @RequestMapping(path = "/tableInfo", method = RequestMethod.POST)
+    public ServiceResponse<List<Map<String,String>>> tableName(@RequestBody TableInfo tableInfo) throws Exception {
+        return new ServiceResponse<List<Map<String,String>>>()
+                .run(serviceResponse -> {
+                    return generatorService.getTableInfo(tableInfo);
+                })
+                .exec();
+    }
+
+    /**
      * 生成文件
      * @param tableInfo
      * @return

@@ -3,15 +3,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationManager;
-import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.oauth2.config.annotation.configurers.ClientDetailsServiceConfigurer;
 import org.springframework.security.oauth2.config.annotation.web.configuration.AuthorizationServerConfigurerAdapter;
 import org.springframework.security.oauth2.config.annotation.web.configuration.EnableAuthorizationServer;
-import org.springframework.security.oauth2.config.annotation.web.configuration.EnableResourceServer;
 import org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerEndpointsConfigurer;
 import org.springframework.security.oauth2.config.annotation.web.configurers.AuthorizationServerSecurityConfigurer;
+import org.springframework.security.oauth2.provider.TokenGranter;
 import org.springframework.security.oauth2.provider.error.WebResponseExceptionTranslator;
 import org.springframework.security.oauth2.provider.token.TokenStore;
 import org.springframework.security.oauth2.provider.token.store.JwtAccessTokenConverter;
@@ -19,6 +17,7 @@ import org.springframework.security.oauth2.provider.token.store.JwtAccessTokenCo
 @Configuration
 @EnableAuthorizationServer
 public class AuthorizationServerConifg extends AuthorizationServerConfigurerAdapter {
+
     @Value("${client}")
     String webClient;
     @Value("${secret}")
@@ -29,6 +28,10 @@ public class AuthorizationServerConifg extends AuthorizationServerConfigurerAdap
 
     @Autowired
     private AuthenticationManager authenticationManager;
+
+
+    @Autowired
+    private TokenGranter tokenGranter;
 
 
     @Autowired
@@ -56,7 +59,7 @@ public class AuthorizationServerConifg extends AuthorizationServerConfigurerAdap
                 .withClient(webClient)
                 .scopes("web") //此处的scopes是无用的，可以随意设置
                 .secret(webSecret)
-                .authorizedGrantTypes("password", "authorization_code", "refresh_token");
+                .authorizedGrantTypes("password", "authorization_code", "refresh_token","sms_code");
 
     }
 
@@ -67,7 +70,9 @@ public class AuthorizationServerConifg extends AuthorizationServerConfigurerAdap
      */
     @Override
     public void configure(AuthorizationServerEndpointsConfigurer endpoints) throws Exception {
-        endpoints.tokenStore(jwtTokenStore).accessTokenConverter(jwtAccessTokenConverter());
+        endpoints.tokenStore(jwtTokenStore);
+        endpoints.tokenGranter(tokenGranter);
+        endpoints.accessTokenConverter(jwtAccessTokenConverter());
         endpoints.authenticationManager(authenticationManager);
         endpoints.exceptionTranslator(authWebResponseException);
     }
