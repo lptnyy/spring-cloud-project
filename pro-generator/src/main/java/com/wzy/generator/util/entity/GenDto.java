@@ -12,4 +12,5 @@ public class GenDto {
     String pkg;
     String fieldName2;
     String selectType;
+    String sort;
 }

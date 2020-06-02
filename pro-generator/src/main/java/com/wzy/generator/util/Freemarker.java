@@ -366,8 +366,6 @@ public class Freemarker {
         dataModel.put("genpkg", tableInfo.getServiceImplPkg());
         List<GenDto> fields = new ArrayList<>();
 
-
-
         // 遍历组装字段格式
         tableInfos.forEach(stringStringMap -> {
             GenDto genDto = new GenDto();
@@ -383,6 +381,10 @@ public class Freemarker {
                     .findFirst();
             if (tableGen.isPresent()) {
                 genDto.setSelectType(tableGen.get().getBackSelectType());
+                genDto.setSort(tableGen.get().getSort());
+            } else {
+                genDto.setSelectType("zore");
+                genDto.setSort("zore");
             }
             fields.add(genDto);
         });

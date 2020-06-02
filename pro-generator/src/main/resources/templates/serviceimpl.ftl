@@ -40,11 +40,21 @@ public class ${className}ServiceImpl implements I${className}Service {
                     <#list fields as field>
                     <#if field.type == 'String'>
                     if(!StringUtils.isEmpty(request.get${field.fieldName2}())){
+                        <#if field.selectType == 'eq'>
                         lambdaQueryWrapper.eq(${className}::get${field.fieldName2},request.get${field.fieldName2}());
+                        </#if>
+                        <#if field.selectType == 'like'>
+                        lambdaQueryWrapper.like(${className}::get${field.fieldName2},request.get${field.fieldName2}());
+                        </#if>
                     }
                     <#else >
                     if(request.get${field.fieldName2}() != null){
+                        <#if field.selectType == 'eq'>
                         lambdaQueryWrapper.eq(${className}::get${field.fieldName2},request.get${field.fieldName2}());
+                        </#if>
+                        <#if field.selectType == 'like'>
+                        lambdaQueryWrapper.like(${className}::get${field.fieldName2},request.get${field.fieldName2}());
+                        </#if>
                     }
                     </#if>
                     </#list>

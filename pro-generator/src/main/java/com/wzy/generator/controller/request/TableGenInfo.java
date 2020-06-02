@@ -10,4 +10,5 @@ public class TableGenInfo {
     String columnName;
     String backSelectType;
     String webSelectType;
+    String sort;
 }
