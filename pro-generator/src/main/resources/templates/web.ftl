@@ -6,7 +6,26 @@
           <p slot="title">${tableComment}管理</p>
             <div class="search">
               <#list fields as field>
+              <#if field.webSelectType == 'text'>
               <Input class="input" v-model="${field.fieldName}" placeholder="${field.comment}"/>
+              </#if>
+              <#if field.webSelectType == 'select'>
+              <Select v-model="${field.fieldName}">
+                <Option value="0">需要编码</Option>
+              </Select>
+              </#if>
+              <#if field.webSelectType == 'radio'>
+              <RadioGroup v-model="${field.fieldName}">
+                <Radio label="需要编码" disabled></Radio>
+                <Radio label="需要编码"></Radio>
+              </RadioGroup>
+              </#if>
+              <#if field.webSelectType == 'time'>
+              <DatePicker v-model="${field.fieldName}" type="date" placeholder="${field.comment}"></DatePicker>
+              </#if>
+              <#if field.webSelectType == 'timeyyyymmdd'>
+              <DatePicker type="datetime" v-model="${field.fieldName}" placeholder="${field.comment}"></DatePicker>
+              </#if>
               </#list>
               <Button @click="search" :disabled="!isRetrieve">查询</Button>
               <Button class="add_button" :disabled="!isRetrieve" @click="reset">重置</Button>
@@ -57,7 +76,9 @@ export default {
       selection: [],
       addFlag: false,
       <#list fields as field>
+      <#if field.webSelectType != 'zore'>
       ${field.fieldName}: <#if field.type == 'String'>''<#else>null</#if>,
+      </#if>
       </#list>
       uploadUrl: userStore.state.baseUrl,
       downloadUrl: userStore.state.downloadUrl,
@@ -134,7 +155,9 @@ export default {
     },
     reset () {
       <#list fields as field>
+      <#if field.webSelectType != 'zore'>
       this.${field.fieldName} = <#if field.type == 'String'>''<#else>null</#if>
+      </#if>
       </#list>
       this.pageNum = 1
       this.initData()
@@ -243,7 +266,9 @@ export default {
       if (!this.isRetrieve) return
       var params = {}
       <#list fields as field>
+      <#if field.webSelectType != 'zore'>
       params.${field.fieldName} = this.${field.fieldName}
+      </#if>
       </#list>
       params.pageNum = this.pageNum
       params.pageSize = this.pageSize

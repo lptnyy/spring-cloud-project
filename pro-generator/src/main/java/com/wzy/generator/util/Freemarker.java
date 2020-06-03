@@ -597,6 +597,18 @@ public class Freemarker {
             genDto.setType(dtoUtil.dbType(stringStringMap.get("dataType")).name);
             genDto.setPkg(dtoUtil.dbType(stringStringMap.get("dataType")).pkg);
             genDto.setFieldName2(stringUtil.getInitialsCapitalization(genDto.getFieldName()));
+            Optional<TableGenInfo> tableGen = tableInfo.getTableGenInfos().stream()
+                    .filter(tableGenInfo -> tableGenInfo.getColumnName().equals(stringStringMap.get("columnName").toString()))
+                    .findFirst();
+            if (tableGen.isPresent()) {
+                genDto.setSelectType(tableGen.get().getBackSelectType());
+                genDto.setSort(tableGen.get().getSort());
+                genDto.setWebSelectType(tableGen.get().getWebSelectType());
+            } else {
+                genDto.setSelectType("zore");
+                genDto.setSort("zore");
+                genDto.setWebSelectType("zore");
+            }
             fields.add(genDto);
             if (stringStringMap.get("columnKey").toLowerCase().equals("pri")) {
                 dataModel.put("pri", genDto.getFieldName());

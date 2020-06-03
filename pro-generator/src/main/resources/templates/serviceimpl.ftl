@@ -59,14 +59,6 @@ public class ${className}ServiceImpl implements I${className}Service {
                     }
                     </#if>
                     </#list>
-                    <#list fields as field>
-                    <#if field.sort == 'asc'>
-                    lambdaQueryWrapper.orderByAsc(${className}::get${field.fieldName2});
-                    </#if>
-                    <#if field.sort == 'desc'>
-                    lambdaQueryWrapper.orderByDesc(${className}::get${field.fieldName2});
-                    </#if>
-                    </#list>
                     return mapper.selectOne(lambdaQueryWrapper);
                 }).exec();
     }
