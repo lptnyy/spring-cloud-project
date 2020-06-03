@@ -38,7 +38,7 @@ public class ${className}ServiceImpl implements I${className}Service {
                     LambdaQueryWrapper<${className}> lambdaQueryWrapper = new LambdaQueryWrapper<>();
                     ${className}Request request = proParameter.getObj();
                     <#list fields as field>
-                    <#if field.type == 'String'>
+                    <#if field.type == 'String' && field.selectType != 'zore'>
                     if(!StringUtils.isEmpty(request.get${field.fieldName2}())){
                         <#if field.selectType == 'eq'>
                         lambdaQueryWrapper.eq(${className}::get${field.fieldName2},request.get${field.fieldName2}());
@@ -47,18 +47,26 @@ public class ${className}ServiceImpl implements I${className}Service {
                         lambdaQueryWrapper.like(${className}::get${field.fieldName2},request.get${field.fieldName2}());
                         </#if>
                     }
-                    <#else >
+                    </#if>
+                    <#if field.type != 'String' && field.selectType != 'zore'>
                     if(request.get${field.fieldName2}() != null){
-                        <#if field.selectType == 'eq'>
+                      <#if field.selectType == 'eq'>
                         lambdaQueryWrapper.eq(${className}::get${field.fieldName2},request.get${field.fieldName2}());
-                        </#if>
-                        <#if field.selectType == 'like'>
+                      </#if>
+                      <#if field.selectType == 'like'>
                         lambdaQueryWrapper.like(${className}::get${field.fieldName2},request.get${field.fieldName2}());
-                        </#if>
+                      </#if>
                     }
                     </#if>
                     </#list>
-                    lambdaQueryWrapper.orderByDesc(${className}::getCreateTime);
+                    <#list fields as field>
+                    <#if field.sort == 'asc'>
+                    lambdaQueryWrapper.orderByAsc(${className}::get${field.fieldName2});
+                    </#if>
+                    <#if field.sort == 'desc'>
+                    lambdaQueryWrapper.orderByDesc(${className}::get${field.fieldName2});
+                    </#if>
+                    </#list>
                     return mapper.selectOne(lambdaQueryWrapper);
                 }).exec();
     }
@@ -69,18 +77,36 @@ public class ${className}ServiceImpl implements I${className}Service {
                 .run((serviceResponse) -> {
                     LambdaQueryWrapper<${className}> lambdaQueryWrapper = new LambdaQueryWrapper<>();
                     ${className}Request request = proParameter.getObj();
-         <#list fields as field>
-             <#if field.type == 'String'>
+                    <#list fields as field>
+                      <#if field.type == 'String' && field.selectType != 'zore'>
                     if(!StringUtils.isEmpty(request.get${field.fieldName2}())){
+                        <#if field.selectType == 'eq'>
                         lambdaQueryWrapper.eq(${className}::get${field.fieldName2},request.get${field.fieldName2}());
+                        </#if>
+                        <#if field.selectType == 'like'>
+                        lambdaQueryWrapper.like(${className}::get${field.fieldName2},request.get${field.fieldName2}());
+                        </#if>
                     }
-             <#else >
+                      </#if>
+                      <#if field.type != 'String' && field.selectType != 'zore'>
                     if(request.get${field.fieldName2}() != null){
+                        <#if field.selectType == 'eq'>
                         lambdaQueryWrapper.eq(${className}::get${field.fieldName2},request.get${field.fieldName2}());
+                        </#if>
+                        <#if field.selectType == 'like'>
+                        lambdaQueryWrapper.like(${className}::get${field.fieldName2},request.get${field.fieldName2}());
+                        </#if>
                     }
-             </#if>
-         </#list>
-                    lambdaQueryWrapper.orderByDesc(${className}::getCreateTime);
+                      </#if>
+                    </#list>
+                    <#list fields as field>
+                      <#if field.sort == 'asc'>
+                    lambdaQueryWrapper.orderByAsc(${className}::get${field.fieldName2});
+                      </#if>
+                      <#if field.sort == 'desc'>
+                    lambdaQueryWrapper.orderByDesc(${className}::get${field.fieldName2});
+                      </#if>
+                    </#list>
                     return mapper.selectList(lambdaQueryWrapper);
                 }).exec();
     }
@@ -91,18 +117,36 @@ public class ${className}ServiceImpl implements I${className}Service {
                 .run((serviceResponse -> {
                     LambdaQueryWrapper<${className}> lambdaQueryWrapper = new LambdaQueryWrapper<>();
                     ${className}Request request = proParameter.getObj();
-             <#list fields as field>
-                 <#if field.type == 'String'>
+                    <#list fields as field>
+                      <#if field.type == 'String' && field.selectType != 'zore'>
                     if(!StringUtils.isEmpty(request.get${field.fieldName2}())){
+                        <#if field.selectType == 'eq'>
                         lambdaQueryWrapper.eq(${className}::get${field.fieldName2},request.get${field.fieldName2}());
+                        </#if>
+                        <#if field.selectType == 'like'>
+                        lambdaQueryWrapper.like(${className}::get${field.fieldName2},request.get${field.fieldName2}());
+                        </#if>
                     }
-                 <#else >
+                      </#if>
+                      <#if field.type != 'String' && field.selectType != 'zore'>
                     if(request.get${field.fieldName2}() != null){
+                        <#if field.selectType == 'eq'>
                         lambdaQueryWrapper.eq(${className}::get${field.fieldName2},request.get${field.fieldName2}());
+                        </#if>
+                        <#if field.selectType == 'like'>
+                        lambdaQueryWrapper.like(${className}::get${field.fieldName2},request.get${field.fieldName2}());
+                        </#if>
                     }
-                 </#if>
-             </#list>
-                    lambdaQueryWrapper.orderByDesc(${className}::getCreateTime);
+                      </#if>
+                    </#list>
+                    <#list fields as field>
+                      <#if field.sort == 'asc'>
+                    lambdaQueryWrapper.orderByAsc(${className}::get${field.fieldName2});
+                      </#if>
+                      <#if field.sort == 'desc'>
+                    lambdaQueryWrapper.orderByDesc(${className}::get${field.fieldName2});
+                      </#if>
+                    </#list>
                     Page<${className}> page = new Page<>(proParameter.getRequestPage().getPageNum(),proParameter.getRequestPage().getPageSize());
                     IPage<${className}> pageResult = mapper.selectPage(page, lambdaQueryWrapper);
                     serviceResponse.setPageNo(proParameter.getRequestPage().getPageNum())

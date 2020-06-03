@@ -160,7 +160,7 @@ public class ProGeneratorServiceImpl implements IProGeneratorService {
                 .run((serviceResponse -> {
                     LambdaQueryWrapper<ProGenerator> lambdaQueryWrapper = new LambdaQueryWrapper<>();
                     ProGeneratorRequest request = proParameter.getObj();
-                    if(request.getGenId() != null){
+                    if(request.getGenId() != null) {
                         lambdaQueryWrapper.eq(ProGenerator::getGenId,request.getGenId());
                     }
                     if(!StringUtils.isEmpty(request.getMysql())){
