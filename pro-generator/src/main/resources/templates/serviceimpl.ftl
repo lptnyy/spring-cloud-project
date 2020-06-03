@@ -166,7 +166,14 @@ public class ${className}ServiceImpl implements I${className}Service {
                     }
                     </#if>
                 </#list>
-                    queryWrapper.orderByDesc(${className}::getCreateTime);
+                <#list fields as field>
+                    <#if field.sort == 'asc'>
+                        queryWrapper.orderByAsc(${className}::get${field.fieldName2});
+                    </#if>
+                    <#if field.sort == 'desc'>
+                        queryWrapper.orderByDesc(${className}::get${field.fieldName2});
+                    </#if>
+                </#list>
                     return mapper.selectList(queryWrapper);
                 }).exec();
     }
