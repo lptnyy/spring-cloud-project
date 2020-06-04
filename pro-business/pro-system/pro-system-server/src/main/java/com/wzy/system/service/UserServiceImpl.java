@@ -22,6 +22,7 @@ import java.util.List;
 
 @RestController
 @Api(value = "用户接口")
+@SuppressWarnings("unchecked")
 public class UserServiceImpl implements UserService {
 
     @Autowired

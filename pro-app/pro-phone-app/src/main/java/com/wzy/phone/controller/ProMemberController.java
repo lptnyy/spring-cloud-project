@@ -21,7 +21,7 @@ import io.seata.spring.annotation.GlobalTransactional;
 
 /**
  * <p>
-    * 会员表 
+    * 会员表
     * </p>
  *
  * @author 王振宇
@@ -30,6 +30,7 @@ import io.seata.spring.annotation.GlobalTransactional;
 @RestController
 @RequestMapping(value = "proMember")
 @Api(value = "ProMemberController", description = "会员表 ")
+@SuppressWarnings("unchecked")
 public class ProMemberController {
 
     @Autowired

@@ -19,6 +19,7 @@ import ${pkg};
  */
 @Data
 @ApiModel(value = " ${className}Vo", description = "${tableComment}")
+@SuppressWarnings("unchecked")
 public class ${className}Request extends RequestPage {
 
 <#list fields as field>

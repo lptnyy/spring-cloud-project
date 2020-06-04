@@ -21,7 +21,7 @@ import java.util.stream.Collectors;
 
 /**
  * <p>
-    * 用户角色关系表 
+    * 用户角色关系表
     * </p>
  *
  * @author 王振宇
@@ -30,6 +30,7 @@ import java.util.stream.Collectors;
 @RestController
 @RequestMapping(value = "proUserRole")
 @Api(value = "ProUserRoleController", description = "用户角色关系表 ")
+@SuppressWarnings("unchecked")
 public class ProUserRoleController {
 
     @Autowired

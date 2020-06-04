@@ -22,7 +22,7 @@ import io.seata.spring.annotation.GlobalTransactional;
 
 /**
  * <p>
-    * 商户表 
+    * 商户表
     * </p>
  *
  * @author 王振宇
@@ -31,6 +31,7 @@ import io.seata.spring.annotation.GlobalTransactional;
 @RestController
 @RequestMapping(value = "proMerchant")
 @Api(value = "ProMerchantController", description = "商户表 ")
+@SuppressWarnings("unchecked")
 public class ProMerchantController {
 
     @Autowired

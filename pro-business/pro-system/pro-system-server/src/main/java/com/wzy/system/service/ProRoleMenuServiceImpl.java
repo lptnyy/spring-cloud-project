@@ -28,6 +28,7 @@ import com.wzy.system.mapper.ProRoleMenuMapper;
  */
 @RestController
 @Api(value = "ProRoleMenuServiceImpl", description = "角色菜单关系表")
+@SuppressWarnings("unchecked")
 public class ProRoleMenuServiceImpl implements IProRoleMenuService {
 
     @Resource

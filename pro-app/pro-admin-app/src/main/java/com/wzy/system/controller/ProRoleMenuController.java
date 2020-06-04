@@ -30,6 +30,7 @@ import java.util.stream.Collectors;
 @RestController
 @RequestMapping(value = "proRoleMenu")
 @Api(value = "ProRoleMenuController", description = "角色菜单关系表")
+@SuppressWarnings("unchecked")
 public class ProRoleMenuController {
 
     @Autowired

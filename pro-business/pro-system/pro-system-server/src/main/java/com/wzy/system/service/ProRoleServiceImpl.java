@@ -22,7 +22,7 @@ import com.wzy.system.mapper.ProRoleMapper;
 
 /**
  * <p>
-    * 系统角色表 
+    * 系统角色表
     * </p>
  *
  * @author 王振宇
@@ -30,6 +30,7 @@ import com.wzy.system.mapper.ProRoleMapper;
  */
 @RestController
 @Api(value = "ProRoleServiceImpl", description = "系统角色表 ")
+@SuppressWarnings("unchecked")
 public class ProRoleServiceImpl implements IProRoleService {
 
     @Resource

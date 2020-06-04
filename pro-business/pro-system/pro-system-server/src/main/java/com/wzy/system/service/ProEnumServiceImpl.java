@@ -8,7 +8,6 @@ import io.seata.spring.annotation.GlobalTransactional;
 import io.swagger.annotations.Api;
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.BeanUtils;
-import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.RestController;
 import javax.annotation.Resource;
 import java.util.List;
@@ -20,7 +19,7 @@ import com.wzy.system.mapper.ProEnumMapper;
 
 /**
  * <p>
-    * 枚举表 
+    * 枚举表
     * </p>
  *
  * @author 王振宇
@@ -28,6 +27,7 @@ import com.wzy.system.mapper.ProEnumMapper;
  */
 @RestController
 @Api(value = "ProEnumServiceImpl", description = "枚举表 ")
+@SuppressWarnings("unchecked")
 public class ProEnumServiceImpl implements IProEnumService {
 
     @Resource
@@ -36,27 +36,27 @@ public class ProEnumServiceImpl implements IProEnumService {
     @Override
     public ServiceResponse<ProEnum> get(ProParameter<ProEnumRequest> proParameter) throws Exception {
         return new ServiceResponse<ProEnum>()
-                .run((serviceResponse) -> {
-                    LambdaQueryWrapper<ProEnum> lambdaQueryWrapper = new LambdaQueryWrapper<>();
-                    ProEnumRequest request = proParameter.getObj();
-                    if (request.getEnumId() != null) {
-                        lambdaQueryWrapper.eq(ProEnum::getEnumId,request.getEnumId());
-                    }
-                    if(!StringUtils.isEmpty(request.getKeystr())){
-                        lambdaQueryWrapper.eq(ProEnum::getKeystr,request.getKeystr());
-                    }
-                    if(!StringUtils.isEmpty(request.getValuestr())){
-                        lambdaQueryWrapper.eq(ProEnum::getValuestr,request.getValuestr());
-                    }
-                    if(!StringUtils.isEmpty(request.getType())){
-                        lambdaQueryWrapper.eq(ProEnum::getType,request.getType());
-                    }
-                    if(request.getCreateTime() != null){
-                        lambdaQueryWrapper.eq(ProEnum::getCreateTime,request.getCreateTime());
-                    }
-                    lambdaQueryWrapper.orderByDesc(ProEnum::getCreateTime);
-                    return mapper.selectOne(lambdaQueryWrapper);
-                }).exec();
+            .run((serviceResponse) -> {
+              LambdaQueryWrapper<ProEnum> lambdaQueryWrapper = new LambdaQueryWrapper<>();
+              ProEnumRequest request = proParameter.getObj();
+              if (request.getEnumId() != null) {
+                lambdaQueryWrapper.eq(ProEnum::getEnumId,request.getEnumId());
+              }
+              if(!StringUtils.isEmpty(request.getKeystr())){
+                lambdaQueryWrapper.eq(ProEnum::getKeystr,request.getKeystr());
+              }
+              if(!StringUtils.isEmpty(request.getValuestr())){
+                lambdaQueryWrapper.eq(ProEnum::getValuestr,request.getValuestr());
+              }
+              if(!StringUtils.isEmpty(request.getType())){
+                lambdaQueryWrapper.eq(ProEnum::getType,request.getType());
+              }
+              if(request.getCreateTime() != null){
+                lambdaQueryWrapper.eq(ProEnum::getCreateTime,request.getCreateTime());
+              }
+              lambdaQueryWrapper.orderByDesc(ProEnum::getCreateTime);
+              return mapper.selectOne(lambdaQueryWrapper);
+            }).exec();
     }
 
     @Override

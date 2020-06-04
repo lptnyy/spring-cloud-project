@@ -28,6 +28,7 @@ import java.util.stream.Collectors;
 @RestController
 @RequestMapping(value = "user")
 @Api(value = "管理员操作接口")
+@SuppressWarnings("unchecked")
 public class UserController {
 
     @Autowired

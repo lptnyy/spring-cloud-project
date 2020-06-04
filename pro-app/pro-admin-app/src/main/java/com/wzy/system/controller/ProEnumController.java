@@ -22,7 +22,7 @@ import java.util.stream.Collectors;
 
 /**
  * <p>
-    * 枚举表 
+    * 枚举表
     * </p>
  *
  * @author 王振宇
@@ -31,6 +31,7 @@ import java.util.stream.Collectors;
 @RestController
 @RequestMapping(value = "proEnum")
 @Api(value = "ProEnumController", description = "枚举表 ")
+@SuppressWarnings("unchecked")
 public class ProEnumController {
 
     @Autowired

@@ -26,7 +26,7 @@ import java.util.stream.Collectors;
 
 /**
  * <p>
-    * 系统角色表 
+    * 系统角色表
     * </p>
  *
  * @author 王振宇
@@ -35,6 +35,7 @@ import java.util.stream.Collectors;
 @RestController
 @RequestMapping(value = "proRole")
 @Api(value = "ProRoleController", description = "系统角色表 ")
+@SuppressWarnings("unchecked")
 public class ProRoleController {
 
     @Autowired

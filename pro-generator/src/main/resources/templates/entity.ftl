@@ -23,6 +23,7 @@ import ${pkg};
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
 @TableName(value = "${tableName}")
+@SuppressWarnings("unchecked")
 public class ${className} implements Serializable {
 
     <#list fields as field>

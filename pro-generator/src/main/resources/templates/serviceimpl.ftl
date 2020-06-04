@@ -26,6 +26,7 @@ import ${mapperClassPath};
  */
 @RestController
 @Api(value = "${className}ServiceImpl", description = "${tableComment}")
+@SuppressWarnings("unchecked")
 public class ${className}ServiceImpl implements I${className}Service {
 
     @Resource
@@ -38,24 +39,14 @@ public class ${className}ServiceImpl implements I${className}Service {
                     LambdaQueryWrapper<${className}> lambdaQueryWrapper = new LambdaQueryWrapper<>();
                     ${className}Request request = proParameter.getObj();
                     <#list fields as field>
-                    <#if field.type == 'String' && field.selectType != 'zore'>
+                    <#if field.type == 'String'>
                     if(!StringUtils.isEmpty(request.get${field.fieldName2}())){
-                        <#if field.selectType == 'eq'>
-                        lambdaQueryWrapper.eq(${className}::get${field.fieldName2},request.get${field.fieldName2}());
-                        </#if>
-                        <#if field.selectType == 'like'>
-                        lambdaQueryWrapper.like(${className}::get${field.fieldName2},request.get${field.fieldName2}());
-                        </#if>
+                      lambdaQueryWrapper.eq(${className}::get${field.fieldName2},request.get${field.fieldName2}());
                     }
                     </#if>
-                    <#if field.type != 'String' && field.selectType != 'zore'>
+                    <#if field.type != 'String'>
                     if(request.get${field.fieldName2}() != null){
-                      <#if field.selectType == 'eq'>
-                        lambdaQueryWrapper.eq(${className}::get${field.fieldName2},request.get${field.fieldName2}());
-                      </#if>
-                      <#if field.selectType == 'like'>
-                        lambdaQueryWrapper.like(${className}::get${field.fieldName2},request.get${field.fieldName2}());
-                      </#if>
+                      lambdaQueryWrapper.eq(${className}::get${field.fieldName2},request.get${field.fieldName2}());
                     }
                     </#if>
                     </#list>
@@ -73,20 +64,20 @@ public class ${className}ServiceImpl implements I${className}Service {
                       <#if field.type == 'String' && field.selectType != 'zore'>
                     if(!StringUtils.isEmpty(request.get${field.fieldName2}())){
                         <#if field.selectType == 'eq'>
-                        lambdaQueryWrapper.eq(${className}::get${field.fieldName2},request.get${field.fieldName2}());
+                      lambdaQueryWrapper.eq(${className}::get${field.fieldName2},request.get${field.fieldName2}());
                         </#if>
                         <#if field.selectType == 'like'>
-                        lambdaQueryWrapper.like(${className}::get${field.fieldName2},request.get${field.fieldName2}());
+                      lambdaQueryWrapper.like(${className}::get${field.fieldName2},request.get${field.fieldName2}());
                         </#if>
                     }
                       </#if>
                       <#if field.type != 'String' && field.selectType != 'zore'>
                     if(request.get${field.fieldName2}() != null){
                         <#if field.selectType == 'eq'>
-                        lambdaQueryWrapper.eq(${className}::get${field.fieldName2},request.get${field.fieldName2}());
+                      lambdaQueryWrapper.eq(${className}::get${field.fieldName2},request.get${field.fieldName2}());
                         </#if>
                         <#if field.selectType == 'like'>
-                        lambdaQueryWrapper.like(${className}::get${field.fieldName2},request.get${field.fieldName2}());
+                      lambdaQueryWrapper.like(${className}::get${field.fieldName2},request.get${field.fieldName2}());
                         </#if>
                     }
                       </#if>
@@ -113,20 +104,20 @@ public class ${className}ServiceImpl implements I${className}Service {
                       <#if field.type == 'String' && field.selectType != 'zore'>
                     if(!StringUtils.isEmpty(request.get${field.fieldName2}())){
                         <#if field.selectType == 'eq'>
-                        lambdaQueryWrapper.eq(${className}::get${field.fieldName2},request.get${field.fieldName2}());
+                      lambdaQueryWrapper.eq(${className}::get${field.fieldName2},request.get${field.fieldName2}());
                         </#if>
                         <#if field.selectType == 'like'>
-                        lambdaQueryWrapper.like(${className}::get${field.fieldName2},request.get${field.fieldName2}());
+                      lambdaQueryWrapper.like(${className}::get${field.fieldName2},request.get${field.fieldName2}());
                         </#if>
                     }
                       </#if>
                       <#if field.type != 'String' && field.selectType != 'zore'>
                     if(request.get${field.fieldName2}() != null){
                         <#if field.selectType == 'eq'>
-                        lambdaQueryWrapper.eq(${className}::get${field.fieldName2},request.get${field.fieldName2}());
+                      lambdaQueryWrapper.eq(${className}::get${field.fieldName2},request.get${field.fieldName2}());
                         </#if>
                         <#if field.selectType == 'like'>
-                        lambdaQueryWrapper.like(${className}::get${field.fieldName2},request.get${field.fieldName2}());
+                      lambdaQueryWrapper.like(${className}::get${field.fieldName2},request.get${field.fieldName2}());
                         </#if>
                     }
                       </#if>
@@ -158,20 +149,20 @@ public class ${className}ServiceImpl implements I${className}Service {
                 <#list fields as field>
                     <#if field.type == 'String'>
                     if(!StringUtils.isEmpty(request.get${field.fieldName2}())){
-                        queryWrapper.in(${className}::get${field.fieldName2},request.getIds());
+                      queryWrapper.in(${className}::get${field.fieldName2},request.getIds());
                     }
                     <#else >
                     if(request.get${field.fieldName2}() != null){
-                        queryWrapper.in(${className}::get${field.fieldName2},request.getIds());
+                      queryWrapper.in(${className}::get${field.fieldName2},request.getIds());
                     }
                     </#if>
                 </#list>
                 <#list fields as field>
                     <#if field.sort == 'asc'>
-                        queryWrapper.orderByAsc(${className}::get${field.fieldName2});
+                      queryWrapper.orderByAsc(${className}::get${field.fieldName2});
                     </#if>
                     <#if field.sort == 'desc'>
-                        queryWrapper.orderByDesc(${className}::get${field.fieldName2});
+                      queryWrapper.orderByDesc(${className}::get${field.fieldName2});
                     </#if>
                 </#list>
                     return mapper.selectList(queryWrapper);
@@ -228,11 +219,11 @@ public class ${className}ServiceImpl implements I${className}Service {
              <#list fields as field>
                  <#if field.type == 'String'>
                     if(!StringUtils.isEmpty(request.get${field.fieldName2}())){
-                        lambdaQueryWrapper.eq(${className}::get${field.fieldName2},request.get${field.fieldName2}());
+                      lambdaQueryWrapper.eq(${className}::get${field.fieldName2},request.get${field.fieldName2}());
                     }
                  <#else >
                     if(request.get${field.fieldName2}() != null){
-                        lambdaQueryWrapper.eq(${className}::get${field.fieldName2},request.get${field.fieldName2}());
+                      lambdaQueryWrapper.eq(${className}::get${field.fieldName2},request.get${field.fieldName2}());
                     }
                  </#if>
              </#list>
@@ -250,11 +241,11 @@ public class ${className}ServiceImpl implements I${className}Service {
                      <#list fields as field>
                       <#if field.type == 'String'>
                      if(!StringUtils.isEmpty(request.get${field.fieldName2}())){
-                          queryWrapper.in(${className}::get${field.fieldName2},request.getIds());
+                        queryWrapper.in(${className}::get${field.fieldName2},request.getIds());
                      }
                       <#else >
                      if(request.get${field.fieldName2}() != null){
-                          queryWrapper.in(${className}::get${field.fieldName2},request.getIds());
+                        queryWrapper.in(${className}::get${field.fieldName2},request.getIds());
                      }
                       </#if>
                      </#list>

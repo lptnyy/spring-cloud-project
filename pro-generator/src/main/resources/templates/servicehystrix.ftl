@@ -17,6 +17,7 @@ import ${serviceClassPath};
  * @since ${generatorDate}
  */
 @Component
+@SuppressWarnings("unchecked")
 public class ${className}ServiceHystrix implements I${className}Service {
 
     /*

@@ -28,6 +28,7 @@ import com.wzy.system.mapper.ProLogMapper;
  */
 @RestController
 @Api(value = "ProLogServiceImpl", description = "操作日志")
+@SuppressWarnings("unchecked")
 public class ProLogServiceImpl implements IProLogService {
 
     @Resource

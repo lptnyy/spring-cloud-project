@@ -21,6 +21,7 @@ import ${pkg};
 @EqualsAndHashCode(callSuper = false)
 @Accessors(chain = true)
 @ApiModel(value = " ${className}Vo", description = "${tableComment}")
+@SuppressWarnings("unchecked")
 public class ${className}Vo {
 
 <#list fields as field>

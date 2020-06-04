@@ -21,6 +21,7 @@ import ${hustrixclassPage};
  * @since ${generatorDate}
  */
 @FeignClient(value = "${fegionService}", configuration = FeignRequestInterceptor.class,fallback = ${className}ServiceHystrix.class)
+@SuppressWarnings("unchecked")
 public interface I${className}Service {
 
     /*

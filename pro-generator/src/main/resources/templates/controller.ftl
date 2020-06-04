@@ -30,6 +30,7 @@ import io.seata.spring.annotation.GlobalTransactional;
 @RestController
 @RequestMapping(value = "${smClassName}")
 @Api(value = "${className}Controller", description = "${tableComment}")
+@SuppressWarnings("unchecked")
 public class ${className}Controller {
 
     @Autowired

@@ -20,7 +20,7 @@ import com.wzy.system.mapper.ProResourceFileMapper;
 
 /**
  * <p>
-    * 系统资源文件表 
+    * 系统资源文件表
     * </p>
  *
  * @author 王振宇
@@ -28,6 +28,7 @@ import com.wzy.system.mapper.ProResourceFileMapper;
  */
 @RestController
 @Api(value = "ProResourceFileServiceImpl", description = "系统资源文件表 ")
+@SuppressWarnings("unchecked")
 public class ProResourceFileServiceImpl implements IProResourceFileService {
 
     @Resource

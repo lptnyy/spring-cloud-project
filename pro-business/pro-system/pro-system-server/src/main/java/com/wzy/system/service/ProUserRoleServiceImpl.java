@@ -19,7 +19,7 @@ import com.wzy.system.mapper.ProUserRoleMapper;
 
 /**
  * <p>
-    * 用户角色关系表 
+    * 用户角色关系表
     * </p>
  *
  * @author 王振宇
@@ -27,6 +27,7 @@ import com.wzy.system.mapper.ProUserRoleMapper;
  */
 @RestController
 @Api(value = "ProUserRoleServiceImpl", description = "用户角色关系表 ")
+@SuppressWarnings("unchecked")
 public class ProUserRoleServiceImpl implements IProUserRoleService {
 
     @Resource

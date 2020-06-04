@@ -31,6 +31,7 @@ import io.seata.spring.annotation.GlobalTransactional;
 @RestController
 @RequestMapping(value = "proLog")
 @Api(value = "ProLogController", description = "操作日志")
+@SuppressWarnings("unchecked")
 public class ProLogController {
 
     @Autowired

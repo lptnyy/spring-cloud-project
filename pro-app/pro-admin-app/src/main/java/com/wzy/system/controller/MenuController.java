@@ -30,6 +30,7 @@ import java.util.stream.Collectors;
 @RestController
 @RequestMapping(value = "menu")
 @Api(value = "MenuController", description = "菜单")
+@SuppressWarnings("unchecked")
 public class MenuController {
 
     @Autowired

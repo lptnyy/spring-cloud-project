@@ -20,7 +20,7 @@ import com.wzy.system.mapper.ProMenuMapper;
 
 /**
  * <p>
-    * 菜单表 
+    * 菜单表
     * </p>
  *
  * @author 王振宇
@@ -28,6 +28,7 @@ import com.wzy.system.mapper.ProMenuMapper;
  */
 @RestController
 @Api(value = "ProMenuServiceImpl", description = "菜单表 ")
+@SuppressWarnings("unchecked")
 public class ProMenuServiceImpl implements IProMenuService {
 
     @Resource

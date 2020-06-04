@@ -22,7 +22,7 @@ import java.util.stream.Collectors;
 
 /**
  * <p>
-    * 系统资源文件表 
+    * 系统资源文件表
     * </p>
  *
  * @author 王振宇
@@ -31,6 +31,7 @@ import java.util.stream.Collectors;
 @RestController
 @RequestMapping(value = "proResourceFile")
 @Api(value = "ProResourceFileController", description = "系统资源文件表 ")
+@SuppressWarnings("unchecked")
 public class ProResourceFileController {
 
     @Autowired
